@@ -36,8 +36,29 @@ edit, always.
 The routine holds a copy of the text below. **This file is the canonical
 version**: edit here, then paste into the routine so the two do not drift.
 
-`PUSH_TARGET` is the one line that differs between the test phase and
-production.
+**The text below is the production prompt: `PUSH_TARGET: main` publishes
+straight to the live site.** Pasting it into the routine is the act that puts a
+week in front of readers — there is no second confirmation anywhere after it.
+
+`PUSH_TARGET` is the only line that changes between a rehearsal and production,
+and rehearsals edit it *in the routine*, never here. Set it to
+`routine-test/<window_start>` to have a run do the whole pipeline and push to a
+throwaway branch without touching the site; set it back to `main` — by pasting
+this block unmodified — to publish. Keep this file on `main` so a paste is never
+accidentally a rehearsal.
+
+**Before the first paste that carries `main`, both of these must hold**, because
+no automated gate in this project checks either:
+
+- the environment's research egress works — a run can actually fetch a tier-1
+  venue calendar, proven by both `curl` and `WebFetch`, not merely by the
+  allowlist appearing set;
+- a rehearsal run to `routine-test/<window_start>` has completed and a human has
+  read its digest.
+
+Until then the installed routine is expected to differ from this file on that
+one line. That is the only drift permitted, and it is permitted in one direction
+only — the routine may be *more* conservative than this file, never less.
 
 ```
 You are compiling and publishing this week's Culture Vulture digest for the
