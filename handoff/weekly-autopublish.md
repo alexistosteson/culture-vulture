@@ -1,16 +1,118 @@
 # Handoff — unattended weekly publish (spec 0.6)
 
-State at 2026-08-16. Branch `spec/weekly-autopublish`, worktree
-`../bay-week-autopublish`, commits `cf14996` (spec) + `865b7ed` (runbook +
-backlog row). **Unmerged, local only.**
+State at 2026-08-16, 15:30 UTC. Branch `spec/weekly-autopublish`, worktree
+`../bay-week-autopublish`. **Unmerged**, except the sources expansion, which
+was merged to `main` and pushed (`dcd84e1`).
 
-**The push problem is FIXED. Only the research egress is still open.** The A/B
-question was settled as A (no write scope), the owner granted the GitHub App
-read/write on the repo, and pushes now work — verified by actually pushing.
-Everything below the "Where it stands" section is the diagnostic record; read
-**Current state** first, it is the only part you need to act on.
+**Research egress is fixed. The site has still never been published to by a
+routine, and the push to `main` has still never been attempted.** Everything
+below the "Superseded" marker is the earlier diagnostic record — accurate when
+written, but read this section first.
 
-## Current state — 2026-08-16, read this first
+## Current state — 2026-08-16 afternoon, read this first
+
+| Capability | State | Evidence |
+|---|---|---|
+| Push a new branch | Works | `c9c4345` on `routine-test/2026-08-17` |
+| Push to an existing branch | Works | `cse_01QX2tqNBqDscFMrpvgLryB6` |
+| **Push to `main`** | **Never attempted** | — |
+| Delete a branch | Blocked, 403, no documented fix | two runs |
+| Venue fetches, apex host | **Works** | `cse_01QgrvpBt1hgaK2xo5LbQFBH` |
+| Venue fetches, `www.` subdomain | **Blocked** | same run |
+
+### What changed today
+
+**The allowlist was never saved.** Every hypothesis in the older section below
+— wrong environment, cache needing a rebuild — was wrong. Environment `First`
+(`env_012gzvmeBx7V662M3KyXRCCo`) was simply still on **Trusted**; a screenshot
+of its dialog settled it in one look. It is now on **Custom** with the 41 apex
+hosts.
+
+**Apex entries do not cover subdomains.** With `theindependentsf.com`
+allowlisted, the apex returns `301` to `www.theindependentsf.com`, which is then
+refused with `CONNECT tunnel failed, response 403`. Most venues redirect this
+way, so roughly twenty tier-1 sources are still unreachable. **Wildcards are
+supported** — a leading `*.` matches every subdomain — so the fix is
+`example.com` plus `*.example.com` per host, or simply setting Network access to
+**Full**, which is what `handoff/cloud-provisioning.md` recommends and what this
+project should probably do: there is no API for environments, so every allowlist
+edit is a manual console edit forever.
+
+**The environment editor has no page and no URL.** It is the cloud icon in the
+row above the message box at claude.ai/code, and the same control below the
+**Instructions** box in the routine *edit* form — not the routine detail page.
+That cost this session and the two before it real time.
+
+### The first properly-sourced week exists
+
+Run `cse_01QgrvpBt1hgaK2xo5LbQFBH` (14:31Z, manual **Run now**) produced
+`c9c4345` on `routine-test/2026-08-17`: **138 events**, validator clean on the
+first pass, 0 errors, 0 warnings, schema errors 0. Confidence 65 high / 64
+medium / 9 low, against 44 events and 6 low / 15 medium on the blocked run.
+Regions: sf 88, east-bay 22, south-bay 20, peninsula 8, **outer 0** — the run
+cloned `main` before the sources merge landed, so it had no `outer` venues.
+
+**That branch contains a rebuilt `docs/events.json`. Merging it publishes the
+week.** Reviewing it is the gate; merging it is the act.
+
+### Repo changes
+
+- **`dcd84e1` on `main`** (merged, pushed) — `config/sources.yml` gains an
+  `outer` tier-1 group (Catalyst, Felton, Sweetwater), Roxie, and five East Bay
+  venues, plus six editorial outlets in tier 2. `brief.yml` has always had an
+  `outer` region that this file never covered.
+- **`beb85fb` on this branch** — `RUNBOOK-weekly.md` now states that its prompt
+  block is production (`PUSH_TARGET: main` publishes live), names the two
+  conditions gating the first production paste, and fixes the direction of
+  permitted drift: the installed routine may be more conservative than the file,
+  never less.
+- **`handoff/cloud-provisioning.md`** (this commit) — the from-scratch guide.
+
+### The routine
+
+`trig_01PbVtXqFUdYDFam4JGQEWUY`, weekly prompt restored, `PUSH_TARGET:
+routine-test/2026-08-17`, cron unchanged, next fire Mon 2026-08-17 13:07Z.
+
+**A trap worth not repeating: the previous handoff claimed the weekly prompt had
+been restored, and it had not.** The routine was still holding a diagnostic
+prompt that would have burned Monday's fire on a network test. Verify the
+installed prompt with `RemoteTrigger get` rather than trusting a note that says
+it was put back.
+
+### What is actually owed now
+
+1. **Decide Full vs Custom+wildcards** on `First`, and set it.
+2. **Prove the push to `main`.** It has never been tried. The routine form has
+   an undocumented **Allow unrestricted git push** toggle with an open bug
+   (#58141) reporting 403 even when enabled. This is the one unknown standing
+   between here and unattended publishing — see `handoff/cloud-provisioning.md`,
+   which specifies an isolated probe for exactly this, and is honest that the
+   two-routine fallback does not rescue it, since the merge routine needs the
+   same permission.
+3. **Merge `spec/weekly-autopublish`** so `RUNBOOK-weekly.md` exists on `main`.
+   A guide that says "paste the block from the runbook" is useless while the
+   runbook is only on a branch.
+4. Read the digest for 17–23 Aug and decide whether to publish that week.
+5. Decide how `routine-test/*` branches get cleaned up. Deletion is unavailable
+   to routines and no setting changes it, so this is manual, forever.
+6. Phase 2 proper: break it on purpose, confirm it publishes nothing.
+
+### Accepted risk, unchanged
+
+Auto-publish with no review gate. `validate.py` checks schema, vocabulary and
+window — never facts. A wrong date or an invented lineup can go live before
+anyone reads it. That trade was made deliberately.
+
+---
+
+# Superseded — the earlier record
+
+Everything below was written this morning. Where it disagrees with the above,
+the above wins. Its conclusions about the allowlist not taking effect were
+resolved: the setting had never been saved.
+
+## Earlier state — 2026-08-16 morning
+
 
 | Capability | State | Evidence |
 |---|---|---|
