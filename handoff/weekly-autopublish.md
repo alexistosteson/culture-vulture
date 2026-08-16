@@ -4,9 +4,177 @@ State at 2026-08-16. Branch `spec/weekly-autopublish`, worktree
 `../bay-week-autopublish`, commits `cf14996` (spec) + `865b7ed` (runbook +
 backlog row). **Unmerged, local only.**
 
-**The A/B question is settled — the answer is A, no write scope.** See the
-settled section below; the open-question section that follows it is kept only
-as the record of how it was framed.
+**The push problem is FIXED. Only the research egress is still open.** The A/B
+question was settled as A (no write scope), the owner granted the GitHub App
+read/write on the repo, and pushes now work — verified by actually pushing.
+Everything below the "Where it stands" section is the diagnostic record; read
+**Current state** first, it is the only part you need to act on.
+
+## Current state — 2026-08-16, read this first
+
+| Capability | State | Evidence |
+|---|---|---|
+| Push a new branch | **Works** | `cse_01LjwLXgq9M2syg7FKctpCXU` |
+| Push to an existing branch (= `main`) | **Works** | `cse_01QX2tqNBqDscFMrpvgLryB6`, `4a524da..84bc057` |
+| Delete a branch | **Blocked**, HTTP 403 | same two runs |
+| Force-push | Untested; assume blocked | — |
+| Direct venue fetches | **Still blocked, 0/41** | `cse_01QX2tqNBqDscFMrpvgLryB6` |
+| WebSearch | Works | every run |
+
+**The only thing standing between here and publishing to `main` is the research
+egress.** Every git capability the weekly job needs has been demonstrated.
+
+Routine and remote are both back to normal: weekly prompt restored, cron
+`0 13 * * 1` unchanged, next fire Mon 2026-08-17 13:07Z, `PUSH_TARGET` still
+`routine-test/2026-08-17`. `git ls-remote --heads origin` shows only `main` at
+`d5dfbb1` — every probe branch was cleaned up.
+
+**Monday, as configured, will push to `routine-test/2026-08-17` and the site
+will not change.** That is a safe end-to-end rehearsal. Flipping `PUSH_TARGET`
+to `main` is now technically unblocked but should wait until the research is
+trustworthy — see the gate below.
+
+### The fix that worked
+
+The owner added `culture-vulture` to the Claude GitHub App's repository
+permissions with **read/write**. That was the whole fix; nothing in the repo,
+the prompt, the branch names or the network config needed to change.
+
+### Two traps, both of which cost time here
+
+**1. The API `permissions` object is worthless as a check.** It reports
+
+    { "admin": false, "maintain": false, "push": false, "triage": false, "pull": false }
+
+*even when pushes work.* `GH_TOKEN` in the environment is the 14-character
+literal string `proxy-injected`, so any `curl -H "Authorization: Bearer
+$GH_TOKEN"` is an anonymous request against a public repo. The real credential
+exists only inside the egress proxy, on git's path. **The only valid test of
+write access is an actual `git push`.** This check reported failure moments
+before a push succeeded, and would have talked us out of a fix that had already
+landed.
+
+**2. `git branch --show-current` returns empty.** Sessions are provisioned
+**detached at `refs/heads/main`**, so the natural
+`git push origin HEAD:$(git branch --show-current)` dies locally on
+`fatal: invalid refspec 'HEAD:'` without ever touching the network — a false
+negative that looks like nothing happened. Name the branch explicitly.
+
+### Deletes are blocked — a standing consequence
+
+`git push origin --delete <branch>` returns:
+
+    error: RPC failed; HTTP 403
+    send-pack: unexpected disconnect while reading sideband packet
+
+The environment permits creating and updating refs but refuses to delete them.
+This does not affect the weekly job, which only creates and updates. It does
+mean **the routine cannot clean up after itself**, so any `routine-test/*`
+branches accumulate until removed by hand from a credentialed local checkout.
+Worth an explicit decision rather than discovering a pile of them later.
+
+## The one open problem — research egress
+
+**Setting the allowlist did not work.** On 2026-08-16 the owner set the
+environment's Network access to Custom with the 41 venue hosts. A run
+immediately afterwards (`cse_01QX2tqNBqDscFMrpvgLryB6`) found **all 41 still
+blocked**, every one identically:
+
+    curl: (56) CONNECT tunnel failed, response 403   → HTTP 000
+
+Not one request reached an origin — no DNS, no TLS handshake. `WebFetch` fails
+the same way with `{"error_type":"EGRESS_BLOCKED"}`, which matters because the
+research prompt uses WebFetch, not curl. Controls confirm the proxy is on its
+**old** policy rather than a broken new one: `pypi.org` → 200 (it is on
+`no_proxy`), `example.com` → blocked.
+
+**Unresolved, and where the next session should start.** Any of these fits:
+
+- the setting was applied to a different environment — the routine is pinned to
+  **`env_012gzvmeBx7V662M3KyXRCCo`**, and that is the one that must change;
+- it did not persist;
+- it only takes effect on newly-built environments, so the environment needs a
+  rebuild before a run picks it up.
+
+Confirm which before re-testing; a second identical attempt tells you nothing
+new.
+
+**The exact host list**, regenerated from `config/sources.yml` (41 hosts). Note
+`sf.funcheap.com` — an earlier draft of this file said `*.funcheap.com`, which
+is not what the config contains:
+
+    augusthallsf.com          gamh.com                  ritzsanjose.com
+    bandsintown.com           guildtheatre.com          sanjose.events
+    bimbos365club.com         hammertheatre.com         sanjosetheaters.org
+    bottomofthehill.com       ivyroom.com               sapcenter.com
+    brickandmortarmusic.com   jambase.com               sf.funcheap.com
+    cafedunord.com            livenation.com            sfjazz.org
+    castrotheatre.com         mountainwinery.com        sfstation.com
+    dnalounge.com             museumca.org              songkick.com
+    dothebay.com              paramountoakland.org      sterngrove.org
+    downtownsf.org            publicsf.com              thechapelsf.com
+    filoli.org                redwoodcity.org           theestorkclubopakland.com
+                              rickshawstop.com          thefoxoakland.com
+                                                        thegreekberkeley.com
+                                                        theindependentsf.com
+                                                        thenewparkway.com
+                                                        thewarfieldtheatre.com
+                                                        visitoakland.com
+                                                        yoshis.com
+
+Keep "also include default list of common package managers" checked —
+`validate.py` needs PyPI. Regenerate the list rather than trusting this copy if
+`sources.yml` has changed:
+
+    python3 - <<'PY'
+    import re
+    raw = open('config/sources.yml').read()
+    hosts = {m.group(1).lower().removeprefix('www.')
+             for m in re.finditer(r'https?://([^/\s"\')]+)', raw)}
+    print('\n'.join(sorted(hosts)), len(hosts), sep='\n---- count: ')
+    PY
+
+**Setting it is not proof.** A run that actually fetches a tier-1 calendar is
+the proof, and it must test WebFetch as well as curl.
+
+## The gate before `PUSH_TARGET` becomes `main`
+
+Fixing egress makes the research *sourced*, not *verified*. `validate.py`
+checks schema, vocabulary and window — never facts. So "accurate and complete"
+cannot be established by any automated gate in this project. Suggested order:
+
+1. Fix the allowlist on `env_012gzvmeBx7V662M3KyXRCCo`; prove a tier-1 fetch
+   works via both curl and WebFetch.
+2. Run the weekly publish to `routine-test/<window>` and read the digest
+   yourself.
+3. Only then flip `PUSH_TARGET` to `main` — in `RUNBOOK-weekly.md` first, which
+   is canonical, then paste into the routine.
+
+## How to run a diagnostic against the real routine
+
+Getting the environment right is the whole difficulty; an ad-hoc cloud session
+does not reproduce it. Swap **only the prompt** on
+`trig_01PbVtXqFUdYDFam4JGQEWUY` via the remote-trigger API (`update`), keeping
+`environment_id`, `session_context.model`, `allowed_tools`, `sources` and
+`mcp_connections` byte-identical — send the whole `job_config` back rather than
+a partial, and save the weekly prompt first so it can be restored. Read results
+with `list_runs` then `get_run_log`.
+
+Four practical notes:
+
+- Firing programmatically is **blocked by the permission classifier**; a human
+  clicks **Run now** in the console.
+- `persist_session: false` — the container is destroyed at the end, so the
+  run's final message is the only record. Demand everything verbatim in it.
+- **Restore the weekly prompt immediately.** A diagnostic left installed is what
+  the next cron fires.
+- Have the run leave probe branches in place and delete them yourself locally;
+  the run cannot.
+
+## Diagnostic record
+
+Everything below is how the above was established. It is history, not
+instructions.
 
 ## Where it stands
 
@@ -197,14 +365,17 @@ that actually fetches a tier-1 calendar is the proof.
 
 ## Still owed
 
-- **Grant the routine write access to the repo — this blocks everything else.**
-  Then re-run phase 1. Until it lands, the routine can research, validate and
-  build, and will always fail at the last step.
+- ~~Grant the routine write access.~~ **Done 2026-08-16** — App granted
+  read/write on the repo; pushes verified working.
+- **Fix the research egress on `env_012gzvmeBx7V662M3KyXRCCo`.** The only
+  remaining blocker. See the open-problem section above.
+- Run the weekly publish to a test branch and read the digest, before any flip
+  to `main`.
 - Phase 2 proper: break it on purpose, confirm it publishes nothing.
-- Flip `PUSH_TARGET` to `main` in both the routine and `RUNBOOK-weekly.md`
-  (the runbook is canonical — edit there, paste into the routine). Now known to
-  be safe on its own terms — the branch was never what broke the push — but it
-  changes nothing until write access exists.
+- Flip `PUSH_TARGET` to `main` in `RUNBOOK-weekly.md` (canonical), then paste
+  into the routine. Technically unblocked; gated on the two items above.
+- Decide how `routine-test/*` branches get cleaned up, since the routine cannot
+  delete them.
 - Merge `spec/weekly-autopublish` once the design is confirmed to work.
 
 ## How to run a diagnostic against the real routine
