@@ -1,15 +1,112 @@
 # Handoff — unattended weekly publish (spec 0.6)
 
-State at 2026-08-16, 15:30 UTC. Branch `spec/weekly-autopublish`, worktree
+State at 2026-08-16, 16:20 UTC. Branch `spec/weekly-autopublish`, worktree
 `../bay-week-autopublish`. **Unmerged**, except the sources expansion, which
 was merged to `main` and pushed (`dcd84e1`).
 
 **Research egress is fixed. The site has still never been published to by a
-routine, and the push to `main` has still never been attempted.** Everything
-below the "Superseded" marker is the earlier diagnostic record — accurate when
-written, but read this section first.
+routine, and the push to `main` has still never been attempted.** Sections are
+newest-first; each was accurate when written, and where they disagree the
+higher one wins.
 
-## Current state — 2026-08-16 afternoon, read this first
+## Current state — 2026-08-16 evening, read this first
+
+A second routine now exists, provisioned per `handoff/cloud-provisioning.md`,
+and **three of that guide's assumptions turned out to be false.** The push to
+`main` is still the one open question.
+
+### The routine
+
+**`trig_01U3f8NYCvzd7WEbYSNEbvNK` — "CultureVulture 2"**, created via
+`RemoteTrigger`, **disabled**, and it must stay disabled until the probe below
+passes. <https://claude.ai/code/routines/trig_01U3f8NYCvzd7WEbYSNEbvNK>
+
+| Field | Value |
+|---|---|
+| Cron | `0 3 * * 1` UTC — the form renders it **"Runs every Sunday at 8:00 PM PDT"** |
+| `PUSH_TARGET` | **`main`** — production, no review gate |
+| Prompt | the `RUNBOOK-weekly.md` block verbatim, only that one line differing from the file |
+| Environment | `bay-area-weekly` = **`env_0121fxAwdYCNbLp5CWDLB5uW`**, Network access **Full** |
+| Model / tools / sources | cloned from `trig_01PbVtXqFUdYDFam4JGQEWUY` |
+
+The owner chose `main` over the rehearsal target knowing the guide's two gates
+are unmet. The original routine is untouched.
+
+Cron is fixed UTC, so in PST this fires Sunday 19:00 local. The window is
+unaffected either way — 03:00 UTC Monday is already Monday, which is what
+`date -u` returns and what the prompt anchors on.
+
+### Three things `cloud-provisioning.md` gets wrong
+
+**1. The "Allow unrestricted git push" toggle does not exist.** There is no
+Permissions section in the current routine edit form. The tab strip is
+Connectors / Behavior / Notifications; **Behavior** holds only "Auto-fix pull
+requests", and the repository chip is inert when clicked. Stage 6.2.1 is
+unrunnable as written. Note [#44949](https://github.com/anthropics/claude-code/issues/44949)
+reports a scheduled task pushing to `main` with no toggle at all, so its
+absence is not by itself a blocker — untested, not disproven.
+
+**2. Saving through the UI injects an output branch.** After the owner's save,
+`job_config.ccr.session_context` carries a field the API-created routine did
+not have:
+
+    outcomes: [{git_repository: {git_info: {repo: "alexistosteson/culture-vulture",
+                                           branches: ["claude/fervent-clarke"]}}}]
+
+Unverified whether it binds. **If it does, the run lands on
+`claude/fervent-clarke` regardless of `PUSH_TARGET: main` and the site never
+updates — green everywhere, nothing published.** Plausibly this form models
+"which branch the work lands on" as the replacement for the missing toggle. It
+can be stripped with `RemoteTrigger update`, but a later UI save would re-add
+it. Settle it against the probe's result before trusting a real run.
+
+**3. An ad-hoc cloud session now does reproduce the environment.** The guide
+says it does not, and that is stale — the composer at `claude.ai/code` has an
+environment picker (cloud chip → **Cloud**), so a hand-driven session runs in
+`bay-area-weekly` on the same credential path. This is why the probe below
+needs no routine.
+
+### Two smaller findings
+
+**Environment ids are not surfaced anywhere in the UI**, and nothing in the
+console needs them — environments are selected by name. `RemoteTrigger get` on
+a routine pointed at one is how to read an id, which is what established
+`env_0121fxAwdYCNbLp5CWDLB5uW`.
+
+**The permission classifier refuses to create a routine whose prompt pushes to
+`main`.** It permitted the weekly routine and blocked a minimal push probe. Any
+future Stage-6.2-shaped experiment is a human action in the console, not a
+`RemoteTrigger create`.
+
+### Next — the owner's action, and nothing else should happen first
+
+At <https://claude.ai/code>, select environment **`bay-area-weekly`**, attach
+`alexistosteson/culture-vulture`, and run this as an ordinary session:
+
+    Stay on the main branch; do not create or check out any branch.
+    Append one line to digests/push-probe.log recording today's date and the
+    value of CLAUDE_CODE_REMOTE_SESSION_ID. Commit only that file.
+    Then run: git push origin main
+    Report the exact output of the push command, success or failure, verbatim.
+    Also report the output of `git rev-parse HEAD`.
+    Do nothing else. Do not use --force. Do not delete anything.
+
+Nothing under `docs/` changes, so the published page is byte-identical either
+way. **Push succeeds** → resolve finding 2, then enable
+`trig_01U3f8NYCvzd7WEbYSNEbvNK` and Sunday publishes for real. **Push 403s** →
+the missing toggle is the blocker, findings 2 and 3 are moot, and Reference F.0
+is the next move.
+
+### Still owed, beyond the probe
+
+- **Merge `spec/weekly-autopublish`.** `RUNBOOK-weekly.md` is still only on
+  this branch, so the routine's prompt has no canonical copy on `main` and the
+  two can drift unnoticed. This is the second handoff to say so.
+- Everything in the older list below that the probe does not settle.
+
+---
+
+## Current state — 2026-08-16 afternoon
 
 | Capability | State | Evidence |
 |---|---|---|
