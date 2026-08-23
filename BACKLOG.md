@@ -2,7 +2,7 @@
 state: active
 next: Nothing blocking. To publish a week: run the research prompt in `prompts/weekly-research.md` against `config/brief.yml`, save the result as `data/<monday>.json`, then in this repo run `python3 scripts/validate.py && python3 scripts/build.py` and commit — see [CLAUDE.md](CLAUDE.md) for the pipeline. Specs go in a root-level `specs/`, never `docs/` (the Pages web root); each declares its own tier per `delivery-tiers`.
 tool: claude-code
-updated: 2026-08-15
+updated: 2026-08-22
 ---
 
 # Backlog — culture-vulture
