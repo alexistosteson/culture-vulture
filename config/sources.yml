@@ -51,8 +51,8 @@ tier_1_venues:
         note: "Galleries free every Wednesday. State the free day, it is the point." }
     - { name: San Francisco Playhouse, url: "https://www.sfplayhouse.org/calendar/", cap: 199,
         note: "Two stages running concurrently. SF theatre coverage in this file was nil before 2026-08-18, which is why the digest kept reporting thin theatre weeks." }
-    - { name: Z Space,               url: "https://www.zspace.org/calendar", cap: 300,
-        note: "Experimental theatre and dance in the Mission." }
+    - { name: Z Space,               url: "https://www.zspace.org/", cap: 300,
+        note: "Experimental theatre and dance in the Mission. URL corrected 2026-08-24 — /calendar returns 404 and the site has no central calendar path; shows are linked individually off the homepage (/sfmt, /lear, ...), so this one needs a click-through rather than a single fetch." }
     - { name: Fort Mason Center,     url: "https://fortmason.org/calendar/", cap: null,
         note: "Arts campus — festivals, fairs and one-offs across several halls." }
     - { name: 1015 Folsom,           url: "https://1015.com/", cap: 1000 }
@@ -70,7 +70,8 @@ tier_1_venues:
     - { name: Yoshi's,                url: "https://yoshis.com/",                      cap: 400 }
     - { name: The Greek Theatre,      url: "https://thegreekberkeley.com/",            cap: 8500 }
     - { name: The New Parkway,        url: "https://thenewparkway.com/",               cap: 200 }
-    - { name: Thee Stork Club,        url: "https://www.theestorkclubopakland.com/",   cap: 150 }
+    - { name: Thee Stork Club, url: "https://theestorkclub.com/calendar/", cap: 150,
+        note: "URL corrected 2026-08-24 — theestorkclubopakland.com does not resolve (DNS NXDOMAIN), so this venue had been silently dark. The real domain has no 'oakland' in it. /calendar/ renders client-side and fetches empty; https://www.jambase.com/venue/thee-stork-club is the reliable read." }
     - { name: Ivy Room, url: "https://www.jambase.com/venue/the-ivy-room", cap: 150,
         note: "ivyroom.com/shows renders client-side and fetches empty." }
     - { name: Oakland Museum of California, url: "https://museumca.org/on-view/", cap: null }
