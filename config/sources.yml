@@ -56,7 +56,8 @@ tier_1_venues:
     - { name: Fort Mason Center,     url: "https://fortmason.org/calendar/", cap: null,
         note: "Arts campus — festivals, fairs and one-offs across several halls." }
     - { name: 1015 Folsom,           url: "https://1015.com/", cap: 1000 }
-    - { name: The Foundry SF,        url: "https://www.thefoundrysf.com/", cap: 500 }
+    - { name: The Foundry SF, url: "https://www.thefoundry.club/", cap: 500,
+        note: "URL corrected 2026-09-21 — thefoundrysf.com 308-redirects here and the fetch path does not follow cross-host redirects, so the old URL returned nothing." }
     - { name: Kilowatt,              url: "https://www.kilowattbar.com/", cap: 150 }
     - { name: Chase Center,          url: "https://www.chasecenter.com/events", cap: 18000,
         note: "Arena. `deprioritize` in brief.yml — list for completeness, never feature." }

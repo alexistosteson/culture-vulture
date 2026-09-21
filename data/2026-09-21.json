@@ -1,0 +1,5138 @@
+{
+  "meta": {
+    "window_start": "2026-09-21",
+    "window_end": "2026-09-27",
+    "compiled": "2026-09-21",
+    "origin": {
+      "label": "Mountain View",
+      "lat": 37.3861,
+      "lng": -122.0839
+    },
+    "geos": [
+      {
+        "id": "south-bay",
+        "label": "South Bay",
+        "rank": 1,
+        "blurb": "San Jose, Saratoga, Sunnyvale, Mountain View"
+      },
+      {
+        "id": "peninsula",
+        "label": "Peninsula",
+        "rank": 2,
+        "blurb": "Los Altos to Colma"
+      },
+      {
+        "id": "sf",
+        "label": "San Francisco",
+        "rank": 3,
+        "blurb": "City and county"
+      },
+      {
+        "id": "east-bay",
+        "label": "Berkeley & Oakland",
+        "rank": 4,
+        "blurb": "Across the bay"
+      },
+      {
+        "id": "outer",
+        "label": "Worth the Drive",
+        "rank": 5,
+        "blurb": "Santa Cruz, Marin, North Bay"
+      }
+    ],
+    "vocab": {
+      "type": [
+        "concert",
+        "festival",
+        "market",
+        "museum",
+        "theater",
+        "dance",
+        "film",
+        "sports",
+        "food",
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": [
+        "club",
+        "amphitheater",
+        "arena",
+        "convention-center",
+        "theater",
+        "concert-hall",
+        "church",
+        "park",
+        "street",
+        "gallery",
+        "museum",
+        "civic",
+        "winery",
+        "estate",
+        "ballpark",
+        "bar",
+        "rooftop"
+      ],
+      "cost": [
+        "free",
+        "free-ticketed",
+        "ticketed"
+      ]
+    },
+    "standfirst": "Arts, music, and worthwhile oddities, ordered by remove from Mountain View."
+  },
+  "events": [
+    {
+      "id": "0921-independent-sondrelerche",
+      "date": "2026-09-21",
+      "start": "20:00",
+      "title": "Sondre Lerche",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.theindependentsf.com/",
+      "note": "Norwegian songwriter twenty years into a career of restless, jazz-inflected pop that keeps refusing to settle into one idiom. The Saxophones open — an Oakland duo whose becalmed, reverb-heavy ballads are a good tonal match."
+    },
+    {
+      "id": "0921-4star-marlonmagnee",
+      "date": "2026-09-21",
+      "start": "20:00",
+      "title": "Marlon Magnée (of La Femme)",
+      "venue": "4 Star Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "indie and art rock",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "The Chapel moved this one to the 4 Star, so check your ticket for the address. Magnée is half the engine of La Femme, the French band that welds cold-wave synths to yé-yé melody; solo he leans further into the synth side."
+    },
+    {
+      "id": "0921-rickshaw-friko",
+      "date": "2026-09-21",
+      "start": "20:00",
+      "title": "FRIKO",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$26–29",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "Chicago duo who make loud, unembarrassed guitar music with the dynamics of a much older band — quiet verse, cathartic detonation. A 400-cap room is already small for them."
+    },
+    {
+      "id": "0921-warfield-peterhook",
+      "date": "2026-09-21",
+      "start": "20:00",
+      "title": "Peter Hook & The Light",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.thewarfieldtheatre.com/",
+      "note": "Joy Division and New Order's bassist playing the catalogue he wrote the best parts of. He plays Mountain Winery tomorrow night too, outdoors and in Saratoga — pick by geography, the set is the same idea."
+    },
+    {
+      "id": "0921-fillmore-waylonwyatt",
+      "date": "2026-09-21",
+      "title": "Waylon Wyatt",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "country"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://www.jambase.com/venue/the-fillmore",
+      "note": "Arkansas country singer riding a streaming surge into rooms much larger than his last tour. Time and support not posted at the time of compiling."
+    },
+    {
+      "id": "0921-roxie-barbaraforever",
+      "date": "2026-09-21",
+      "start": "18:00",
+      "title": "Barbara Forever",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Documentary portrait running a short engagement at the Roxie. Also screens Tuesday at the same hour if tonight is crowded."
+    },
+    {
+      "id": "0921-roxie-batch81",
+      "date": "2026-09-21",
+      "start": "18:00",
+      "title": "Batch '81",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Part of FiliKula. Mike de Leon's 1982 fraternity-hazing thriller, long one of the hardest Philippine films of its era to see in a decent print — the restoration is the reason to go."
+    },
+    {
+      "id": "0921-roxie-filipinana",
+      "date": "2026-09-21",
+      "start": "20:10",
+      "title": "Filipiñana",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Also FiliKula, and it plays four times this week — a class-conscious drama set among the caddies of a Manila golf course."
+    },
+    {
+      "id": "0921-gracecathedral-rosewindow",
+      "date": "2026-09-21",
+      "start": "20:00",
+      "title": "Rose Window Laser Light Show",
+      "venue": "Grace Cathedral",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "church",
+      "cost": "free",
+      "note": "Runs nightly this week, 8pm to midnight, and costs nothing — the cathedral's rose window rendered in light across the Nob Hill facade. Ten minutes of looking up, then go get dinner."
+    },
+    {
+      "id": "0921-madrone-motown",
+      "date": "2026-09-21",
+      "start": "19:00",
+      "title": "Motown on Mondays",
+      "venue": "Madrone Art Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "free",
+      "note": "Free before 8pm, $5 after, and running most Mondays for well over a decade. Straight 45s soul and Motown to a room that actually dances on a work night."
+    },
+    {
+      "id": "0921-freight-bobbymcferrin",
+      "date": "2026-09-21",
+      "title": "Bobby McFerrin",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/freight-salvage",
+      "note": "McFerrin in a 600-seat listening room is the kind of mismatch this digest exists to point at. His improvised solo work depends on hearing every overtone, and the Freight is built for exactly that."
+    },
+    {
+      "id": "0921-gilman-happydays",
+      "date": "2026-09-21",
+      "start": "18:30",
+      "title": "Happy Days: Inconvenient Truth, Mankind, Wroht, Spawn, 40 Oz Felony",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Five bands for five dollars, all ages, volunteer-run. The first of five Gilman nights this week as the club works toward its 40th anniversary."
+    },
+    {
+      "id": "0921-yoshis-throwback",
+      "date": "2026-09-21",
+      "start": "20:00",
+      "title": "Music Monday: The Throwback Series",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk",
+        "world and traditional"
+      ],
+      "cost": "ticketed",
+      "price": "$45–50",
+      "confidence": "medium",
+      "url": "https://yoshis.com/",
+      "note": "Yoshi's Monday residency, this edition built around throwback gospel. Lineup is not announced in advance, which is the format — expect Bay Area church-trained singers working a songbook."
+    },
+    {
+      "id": "0921-dnalounge-deathguild",
+      "date": "2026-09-21",
+      "title": "Death Guild",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "The longest-running goth-industrial club night in the country — every Monday since 1993, and still the reason a queue forms on Eleventh Street on a work night. 18+."
+    },
+    {
+      "id": "0921-dnalounge-mondayhubba",
+      "date": "2026-09-21",
+      "title": "Monday Night Hubba",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Hubba Hubba Revue's weekly burlesque, in the smaller room, the night after their 20th-anniversary blowout. 18+."
+    },
+    {
+      "id": "0921-greatmall-circuscaballero",
+      "date": "2026-09-21",
+      "title": "Circus Caballero",
+      "venue": "Great Mall",
+      "city": "Milpitas",
+      "geo": "south-bay",
+      "type": [
+        "festival"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "from $78",
+      "confidence": "medium",
+      "note": "Touring big top in the Great Mall lot, running nightly at 7:30 through Saturday with weekend matinees. Mexican circus tradition, horses and acrobats; expensive for what it is. Milpitas isn't in the region lists — filed South Bay by proximity."
+    },
+    {
+      "id": "0922-independent-danaalden",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "Dana and Alden",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.theindependentsf.com/",
+      "note": "Brothers who came up posting bedroom jazz-fusion to the internet and turned out to have real chops. Ania Hoo opens. More fun live than the recordings suggest."
+    },
+    {
+      "id": "0922-chapel-temples1",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "Temples",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$35–40",
+      "url": "https://thechapelsf.com/calendar/",
+      "note": "Kettering psych-pop that has aged into something sturdier than the 2013 revival it arrived with. Two nights here; Poppy Jean Crawford opens both."
+    },
+    {
+      "id": "0922-rickshaw-bilal",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "Bilal",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "$40–45",
+      "confidence": "medium",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "Neo-soul's best technician, with Yaya Bey opening — a strong double bill for a 400-cap room. August Hall's calendar also shows a Bilal date tonight; Rickshaw's listing is the more detailed one, but confirm your venue before you travel."
+    },
+    {
+      "id": "0922-cafedunord-vaultboy",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "vaultboy",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.cafedunord.com/",
+      "note": "Bedroom pop that broke on short-form video and has been slowly acquiring a band. Alexa Cappelli opens."
+    },
+    {
+      "id": "0922-brickmortar-florenceroad",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "Florence Road",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.brickandmortarmusic.com/",
+      "note": "Sold out. Irish indie four-piece with People I've Met, both trading on the same jangling, homesick guitar sound that is having a moment."
+    },
+    {
+      "id": "0922-billgraham-jaypark",
+      "date": "2026-09-22",
+      "title": "Jay Park",
+      "venue": "Bill Graham Civic Auditorium",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "civic",
+      "genre": [
+        "hip-hop",
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/bill-graham-civic-auditorium",
+      "note": "Korean-American rapper who built two labels after walking away from the idol system. LNGSHOT opens. Big room, big production."
+    },
+    {
+      "id": "0922-fillmore-dogstar",
+      "date": "2026-09-22",
+      "title": "Dogstar",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-fillmore",
+      "note": "Yes, that Dogstar — Keanu Reeves's band, reconstituted and touring on actual new material. The Backfires open. Curiosity is most of the ticket, but the band is competent."
+    },
+    {
+      "id": "0922-warfield-frontbottoms",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "The Front Bottoms",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "punk and hardcore",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.thewarfieldtheatre.com/",
+      "note": "New Jersey's shouted-confessional folk-punk, still drawing rooms this size a decade past their peak. Foxy Shazam and GDP open, which makes this a long, loud night."
+    },
+    {
+      "id": "0922-sfjazz-wyntonmarsalis",
+      "date": "2026-09-22",
+      "title": "Wynton Marsalis",
+      "venue": "Miner Auditorium, SFJAZZ",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/miner-auditorium-sfjazz-center",
+      "note": "SFJAZZ's fall season opens with its most institutional possible booking. Whatever you think of Marsalis as a curator, the trumpet playing at close range in Miner is the point."
+    },
+    {
+      "id": "0922-castro-melaniec",
+      "date": "2026-09-22",
+      "start": "20:00",
+      "title": "Melanie C",
+      "venue": "Castro Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "url": "https://thecastro.com/",
+      "note": "Sporty Spice on a solo world tour, in a restored movie palace, during Leather Week. Sur Back opens. Doors 7."
+    },
+    {
+      "id": "0922-warmemorial-boccanegra1",
+      "date": "2026-09-22",
+      "start": "19:30",
+      "title": "Simon Boccanegra",
+      "venue": "War Memorial Opera House",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "url": "https://www.sfopera.com/",
+      "note": "The season opener, three weeks late. The orchestra's first strike in its 45-year history cancelled five performances including this one; a tentative four-year contract was reached last Thursday and the house reopens tonight with Verdi's darkest political opera. Also Friday and Sunday. This is the event of the week for anyone who followed the dispute."
+    },
+    {
+      "id": "0922-publicworks-mothslam",
+      "date": "2026-09-22",
+      "title": "The Moth SF StorySLAM: DIVAS",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "url": "https://publicsf.com/",
+      "note": "Ten names out of a hat, five minutes each, no notes. The theme is DIVAS and it is Leather Week, so expect the room to take that instruction seriously."
+    },
+    {
+      "id": "0922-roxie-oldestperson",
+      "date": "2026-09-22",
+      "start": "18:00",
+      "title": "The Oldest Person In The World",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://roxie.com/",
+      "note": "Filmmaker-in-person screening. Billed with a Q&A; the Roxie's listing does not name the guest."
+    },
+    {
+      "id": "0922-roxie-filipinana2",
+      "date": "2026-09-22",
+      "start": "20:35",
+      "title": "Filipiñana",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Second FiliKula screening of the week for Rafael Manuel's caddie drama."
+    },
+    {
+      "id": "0922-fultonplaza-civiccenter",
+      "date": "2026-09-22",
+      "start": "12:00",
+      "end": "15:00",
+      "title": "Civic Center Soundtrack",
+      "venue": "Fulton Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free lunchtime music and food trucks on the plaza between the library and City Hall. Runs again Thursday. Lineups are announced late and are usually local."
+    },
+    {
+      "id": "0922-mechanics-breakdancing",
+      "date": "2026-09-22",
+      "start": "12:00",
+      "end": "14:00",
+      "title": "Pop-Up Breakdancing",
+      "venue": "Mechanics Monument Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Downtown SF's lunchtime programming at its most watchable — a cypher on the plaza at Market and Bush. Free, no seating, gone by 2."
+    },
+    {
+      "id": "0922-jayhotel-pepe",
+      "date": "2026-09-22",
+      "start": "18:00",
+      "end": "21:00",
+      "title": "Live Latin Jazz: Pepe and Friends",
+      "venue": "The Jay Hotel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "latin and cumbia",
+        "jazz"
+      ],
+      "cost": "free",
+      "confidence": "medium",
+      "note": "Free lobby-bar Latin jazz in the old Jackson Court block. No cover listed; drinks are hotel-priced."
+    },
+    {
+      "id": "0922-spur-politics101",
+      "date": "2026-09-22",
+      "start": "18:00",
+      "title": "SF Politics 101",
+      "venue": "SPUR Urban Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "SPUR's primer on how the city is actually governed — charter, commissions, who can stop what. Free, and more useful than an evening of arguing online."
+    },
+    {
+      "id": "0922-kalw-followthemoney",
+      "date": "2026-09-22",
+      "start": "19:00",
+      "title": "Bay Area Politics: Follow the Money",
+      "venue": "KALW",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Public-radio panel on campaign finance in the region. Free, donations welcome."
+    },
+    {
+      "id": "0922-kqed-bobross",
+      "date": "2026-09-22",
+      "start": "19:00",
+      "title": "Bob Ross Night: Bingo and Lookalike Contest",
+      "venue": "The Commons at KQED",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$30.10",
+      "note": "Exactly what it says. A perm, a palette knife and a bingo card — the week's purest entry in the oddities column."
+    },
+    {
+      "id": "0922-lovepotion-screening",
+      "date": "2026-09-22",
+      "start": "18:00",
+      "end": "21:00",
+      "title": "CandyJar Movie Screening",
+      "venue": "Love Potion Library",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "confidence": "medium",
+      "note": "Free screening in a small Tenderloin bar-library, snacks included, drinks for sale. Title was not posted when this was compiled."
+    },
+    {
+      "id": "0922-oceanbeach-bonfire",
+      "date": "2026-09-22",
+      "end": "21:30",
+      "title": "Last Night of Summer: Ocean Beach Bonfire",
+      "venue": "Ocean Beach Fire Pits",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Astronomical summer ends tonight. The twenty-odd fire rings south of Stairwell 15 are first-come and go fast after 6; bring your own wood and expect fog to win."
+    },
+    {
+      "id": "0922-paramount-lilyallen",
+      "date": "2026-09-22",
+      "title": "Lily Allen Performs West End Girl",
+      "venue": "Paramount Theatre",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.paramountoakland.org/",
+      "note": "Allen playing her divorce record front to back in an art-deco palace. The album is a caustic, specific piece of writing and the room suits it. Garages near 21st shut gates at 7 — take BART."
+    },
+    {
+      "id": "0922-freight-meditations",
+      "date": "2026-09-22",
+      "title": "The Meditations",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "reggae"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/freight-salvage",
+      "note": "Jamaican harmony trio whose roots-era sides for Coxsone and Niney still get sampled. Seated listening room, which is an unusual and not unwelcome way to hear this."
+    },
+    {
+      "id": "0922-liveoak-birdensemble",
+      "date": "2026-09-22",
+      "start": "18:15",
+      "end": "19:30",
+      "title": "Free Outdoor Bird Ensemble + Sunset Bell Ringing",
+      "venue": "Live Oak Park",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "experimental and improv"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Musicians answering the park's actual birds, then bells at sundown. Free, forty-five minutes, and precisely the kind of thing nothing else in the region lists."
+    },
+    {
+      "id": "0922-mrsdalloways-ramee",
+      "date": "2026-09-22",
+      "start": "18:30",
+      "title": "Lisa Moore Ramée: More Trouble Than It's Worth",
+      "venue": "Mrs. Dalloway's Bookstore",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free-ticketed",
+      "note": "Book launch for the Bay Area middle-grade novelist. Free but registration required; the shop is small enough that this matters."
+    },
+    {
+      "id": "0922-yoshis-karaoke",
+      "date": "2026-09-22",
+      "start": "18:30",
+      "title": "Karaoke Night at Yoshi's",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "$30",
+      "url": "https://yoshis.com/",
+      "note": "Karaoke on a stage where Pharoah Sanders played. Thirty dollars is steep for the format; listed because the room is the draw."
+    },
+    {
+      "id": "0922-solano-driveinmovie",
+      "date": "2026-09-22",
+      "start": "20:30",
+      "title": "Final $6 Drive-In Movie Night of Summer",
+      "venue": "Solano 2 Drive In",
+      "city": "Concord",
+      "geo": "east-bay",
+      "type": [
+        "film",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$6 adults, $2 kids",
+      "outdoor": true,
+      "note": "One of the last operating drive-ins in the region, at $6 a head. Double features; arrive early for a centre slot."
+    },
+    {
+      "id": "0922-sapcenter-sharksknights",
+      "date": "2026-09-22",
+      "start": "19:00",
+      "title": "Sharks vs Golden Knights (NHL preseason)",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "sports"
+      ],
+      "venue_type": "arena",
+      "cost": "ticketed",
+      "price": "from $17",
+      "url": "https://www.sapcenter.com/",
+      "note": "Preseason hockey, which means $17 seats and a roster you have never heard of playing hard for a job. The cheapest way into this building all year."
+    },
+    {
+      "id": "0922-mountainwinery-peterhook",
+      "date": "2026-09-22",
+      "start": "19:30",
+      "title": "Peter Hook & The Light",
+      "venue": "Mountain Winery",
+      "city": "Saratoga",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "winery",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "from $39",
+      "outdoor": true,
+      "url": "https://www.jambase.com/venue/mountain-winery",
+      "note": "The same Joy Division and New Order material he played at the Warfield last night, but on a hillside above Saratoga with the valley lit up below. If you skipped the city date, this is the better room. Bring a layer; it drops fast after dark up there."
+    },
+    {
+      "id": "0922-santanarow-sipssounds",
+      "date": "2026-09-22",
+      "start": "18:00",
+      "end": "20:00",
+      "title": "Sips & Sounds of Summer",
+      "venue": "Santana Row Park",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "confidence": "low",
+      "note": "Free Tuesday-evening music on the park lawn near Left Bank, scheduled to run through September. The series calendar was not reachable this week, so treat tonight's date as unconfirmed — descriptor is lower-confidence, verify before driving."
+    },
+    {
+      "id": "0923-fillmore-jackwhite",
+      "date": "2026-09-23",
+      "title": "Jack White",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "featured": true,
+      "url": "https://www.jambase.com/venue/the-fillmore",
+      "note": "An arena act in a 1,315-capacity room. White has spent this touring cycle booking clubs on short notice and playing louder and sloppier than the records — this is the single hardest ticket of the week that is not a festival."
+    },
+    {
+      "id": "0923-independent-ghostlykisses",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Ghostly Kisses",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.theindependentsf.com/",
+      "note": "Québécois dream-pop, whispered over programmed strings. Rosie Carney opens and is arguably the better songwriter of the two."
+    },
+    {
+      "id": "0923-gamh-thefrights",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "The Frights",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$33.50–38",
+      "url": "https://gamh.com/calendar/",
+      "note": "San Diego surf-punk that grew teeth. Archer Oh opens. GAMH's balcony is the move for this one."
+    },
+    {
+      "id": "0923-chapel-temples2",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Temples",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$35–40",
+      "url": "https://thechapelsf.com/calendar/",
+      "note": "Night two, same bill as Tuesday. If you missed the first, the second night in this room is usually the looser one."
+    },
+    {
+      "id": "0923-bottomofthehill-cola",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Cola",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$22 adv / $25 door",
+      "url": "https://www.bottomofthehill.com/calendar.html",
+      "note": "Montreal post-punk built from the wreckage of Ought — dry, precise, deadpan. Artificial Go and Beafsteek open, and the bill is the best-curated thing on Potrero Hill this week."
+    },
+    {
+      "id": "0923-rickshaw-nerdnite",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Nerd Nite SF #164",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "$10–15",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "Three researchers, twenty minutes each, drinks throughout. Fourteen years of this and the format still works because the speakers are genuinely expert and the audience heckles."
+    },
+    {
+      "id": "0923-bimbos-naipalm",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Nai Palm (of Hiatus Kaiyote)",
+      "venue": "Bimbo's 365 Club",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "url": "https://bimbos365club.com/",
+      "note": "Hiatus Kaiyote's voice and guitar, solo, in a room with red drapes and a history of this kind of singing. Cazeaux O.S.L.O. opens. 21+, doors 7."
+    },
+    {
+      "id": "0923-cafedunord-nervy",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "NERVY",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://www.cafedunord.com/",
+      "note": "A basement-room booking with no support announced. Du Nord's midweek slots tend toward guitar-forward new signings; treat the descriptor as lower-confidence."
+    },
+    {
+      "id": "0923-billgraham-kencarson",
+      "date": "2026-09-23",
+      "title": "Ken Carson",
+      "venue": "Bill Graham Civic Auditorium",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "civic",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Opium-roster rage rap, all distorted 808s and no chorus, to a very young room. Xaviersobased and DJ Moon listed as support on a ticketing feed rather than the venue's own page."
+    },
+    {
+      "id": "0923-publicworks-pitchroast",
+      "date": "2026-09-23",
+      "title": "Pitch Roast Live — The S.F. Debut",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "url": "https://publicsf.com/",
+      "note": "Founders pitch, comedians destroy the pitch. In this city that is either catharsis or documentary, depending on your job."
+    },
+    {
+      "id": "0923-roxie-ghostinshell",
+      "date": "2026-09-23",
+      "start": "18:00",
+      "title": "Ghost in the Shell: 30th Anniversary Remaster",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Animation Obsession series. Oshii's 1995 film in a new remaster — the Shinjuku rain sequence is the argument for seeing it projected rather than streamed."
+    },
+    {
+      "id": "0923-roxie-maryoliver",
+      "date": "2026-09-23",
+      "start": "18:00",
+      "title": "Mary Oliver: Saved by the Beauty of the World",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Documentary on the poet, who spent her life avoiding exactly this kind of attention."
+    },
+    {
+      "id": "0923-roxie-mysteriousskin",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Mysterious Skin (4K Restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Co-presented by Frameline. Araki's 2004 film is still the hardest thing he has made; the restoration does the Elgin cinematography a real favour. Content warning applies and is not a formality."
+    },
+    {
+      "id": "0923-ybca-freewednesday",
+      "date": "2026-09-23",
+      "start": "11:00",
+      "title": "Free Admission Wednesday",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "gallery",
+      "cost": "free",
+      "url": "https://ybca.org/whats-on/",
+      "note": "YBCA's galleries are free every Wednesday — GaHee Park's 'Behind the Curtain' is upstairs, a set of domestic interiors that curdle the longer you look. State the free day, it is the whole point."
+    },
+    {
+      "id": "0923-ybca-watercolor",
+      "date": "2026-09-23",
+      "start": "14:00",
+      "end": "16:00",
+      "title": "Free Art Workshop: Still Life Watercolor Painting",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "gallery",
+      "cost": "free-ticketed",
+      "url": "https://ybca.org/whats-on/",
+      "note": "Two hours in the Grand Lobby, materials provided, free with registration. Adults included, not a children's table."
+    },
+    {
+      "id": "0923-ybca-pressingmatters",
+      "date": "2026-09-23",
+      "start": "17:00",
+      "end": "20:00",
+      "title": "Pressing Matters: Hands-on Printmaking with Creativity Explored",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "gallery",
+      "cost": "free",
+      "url": "https://ybca.org/whats-on/",
+      "note": "Creativity Explored's artists demonstrating and handing over the brayer. Free, family-friendly, and one of the better uses of that lobby all year."
+    },
+    {
+      "id": "0923-grayarea-mirandasrescue",
+      "date": "2026-09-23",
+      "title": "Behind the Story of Miranda's Rescue",
+      "venue": "Gray Area, Grand Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "gallery",
+      "cost": "ticketed",
+      "url": "https://grayarea.org/events/",
+      "note": "SF Chronicle reporters on how the Miranda's Rescue investigation was built. Process stories about local reporting are rarer than they should be."
+    },
+    {
+      "id": "0923-mechanics-jazzplaza",
+      "date": "2026-09-23",
+      "start": "12:00",
+      "end": "14:00",
+      "title": "Jazz on the Plaza with B3Bone Trio",
+      "venue": "Mechanics Monument Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Hammond organ, trombone and drums outdoors at Market and Bush. Free, two hours, and the organ trio format carries in open air better than most."
+    },
+    {
+      "id": "0923-elrio-bivisibility",
+      "date": "2026-09-23",
+      "start": "18:00",
+      "end": "20:00",
+      "title": "Bisexual Visibility Day with The Buds",
+      "venue": "El Rio",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "Free in El Rio's back patio, which is the correct venue for this. Early enough to be a weeknight."
+    },
+    {
+      "id": "0923-westportal-merchantwalk",
+      "date": "2026-09-23",
+      "start": "15:00",
+      "end": "18:00",
+      "title": "West Portal Merchant Walk",
+      "venue": "West Portal Avenue",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free-ticketed",
+      "outdoor": true,
+      "note": "Guided crawl of the avenue's independent shops, free with registration, meeting at Tri Counties Bank. The K/L/M all stop at the door."
+    },
+    {
+      "id": "0923-oasis-leatherreading",
+      "date": "2026-09-23",
+      "start": "19:00",
+      "end": "21:00",
+      "title": "Leather Week Reading and Book Signing",
+      "venue": "Oasis",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "One of several readings scattered through Leather Week ahead of Sunday's fair. Authors were not listed on the schedule this far out."
+    },
+    {
+      "id": "0923-storkclub-girlchow",
+      "date": "2026-09-23",
+      "title": "girl chow!",
+      "venue": "Thee Stork Club",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/thee-stork-club",
+      "note": "With Wiseacre and Holybasil909. The Stork is 150 capacity and books the kind of bill that never reaches a ticketing platform — this is why it is worth checking every week."
+    },
+    {
+      "id": "0923-ivyroom-chelsamina",
+      "date": "2026-09-23",
+      "title": "Chelsamina",
+      "venue": "Ivy Room",
+      "city": "Albany",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-ivy-room",
+      "note": "ARISHA opens. The Ivy Room is a 150-cap corner bar on San Pablo that consistently books above its weight midweek."
+    },
+    {
+      "id": "0923-bampfa-georgian1",
+      "date": "2026-09-23",
+      "start": "19:00",
+      "title": "It Will Be Better / Temo Re",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Opening night of Georgian Cinema Now, a five-day survey that is the most substantial film programming in the East Bay this week. Rarely-screened work from a cinema most US audiences know only through Iosseliani."
+    },
+    {
+      "id": "0923-yoshis-coldblood",
+      "date": "2026-09-23",
+      "start": "19:30",
+      "title": "Lydia Pense & Cold Blood",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$28–49",
+      "url": "https://yoshis.com/",
+      "note": "Cold Blood cut their first record for Bill Graham's label in 1969 and Pense still sings it live. This is the actual Bay Area horn-band lineage, not a tribute to it."
+    },
+    {
+      "id": "0923-ritz-wednesday13",
+      "date": "2026-09-23",
+      "start": "18:30",
+      "title": "Wednesday 13",
+      "venue": "The Ritz",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "from $46",
+      "url": "https://www.livenation.com/venue/KovZ917AOqb/the-ritz-events",
+      "note": "Horror-punk theatre from the Murderdolls singer, with Dead on a Sunday and Above Snakes. Early doors for a school night."
+    },
+    {
+      "id": "0923-sjcpa-myheroacademia",
+      "date": "2026-09-23",
+      "start": "19:00",
+      "title": "My Hero Academia in Concert",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert",
+        "film"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $41",
+      "note": "Live orchestra against projected footage. The format is a marketing machine, but the Yuki Hayashi score is genuinely written for an orchestra rather than retrofitted to one."
+    },
+    {
+      "id": "0923-mountainwinery-josegonzalez",
+      "date": "2026-09-23",
+      "start": "19:30",
+      "title": "José González",
+      "venue": "Mountain Winery",
+      "city": "Saratoga",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "winery",
+      "genre": [
+        "folk and americana",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "from $39",
+      "outdoor": true,
+      "url": "https://www.jambase.com/venue/mountain-winery",
+      "note": "Nylon-string fingerpicking and a voice that barely rises above speaking — an outdoor hillside is a risky room for it, and when it works it is the best show of the week down here."
+    },
+    {
+      "id": "0923-sapcenter-lesserafim",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "LE SSERAFIM — PUREFLOW",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "arena",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "price": "from $146",
+      "url": "https://www.sapcenter.com/",
+      "note": "Arena K-pop, findable without our help, listed for completeness. Expect the parking lots to be full by 6."
+    },
+    {
+      "id": "0923-rooster-connolly",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "James P. Connolly",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "from $39",
+      "note": "Veteran road comic in a small Sunnyvale room. Standing club programming — listed, not featured."
+    },
+    {
+      "id": "0923-guild-tommyemmanuel",
+      "date": "2026-09-23",
+      "start": "20:00",
+      "title": "Tommy Emmanuel, CGP",
+      "venue": "The Guild Theatre",
+      "city": "Menlo Park",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "folk and americana",
+        "country"
+      ],
+      "cost": "ticketed",
+      "url": "https://guildtheatre.com/",
+      "note": "Certified Guitar Player, one of five Chet Atkins ever named. Jack Tuttle and Scott Gates open, which puts three generations of flatpicking on one stage. Caltrain Menlo Park is four minutes away — take it."
+    },
+    {
+      "id": "0924-davies-openinggala",
+      "date": "2026-09-24",
+      "start": "19:00",
+      "title": "SF Symphony Opening Gala with Hilary Hahn",
+      "venue": "Davies Symphony Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $3,000",
+      "note": "Giancarlo Guerrero's first season opener, with Hahn playing the Mendelssohn. Tickets start at three thousand dollars because it is a fundraiser — the same orchestra plays for free-to-nonprofits on Friday and with Fantastic Negrito on Saturday at ordinary prices."
+    },
+    {
+      "id": "0924-regency-soulwax",
+      "date": "2026-09-24",
+      "title": "Soulwax",
+      "venue": "The Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-regency-ballroom",
+      "note": "The Dewaele brothers' live band, two days before they also play Portola. A 1,400-cap ballroom is a far better room for this than a pier, and this is the version with drums."
+    },
+    {
+      "id": "0924-independent-wesghost",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "WesGhost & Red Leather",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.theindependentsf.com/",
+      "note": "Co-headline on the RedGhost tour, with Eurotripp. Hyperpop-adjacent rap for a room that will be almost entirely under 25."
+    },
+    {
+      "id": "0924-chapel-folsomkickoff",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "Femmes, Thems, And Friends: A Folsom Kickoff Party",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$23–26",
+      "url": "https://thechapelsf.com/calendar/",
+      "note": "A benefit, and the best of the Leather Week warm-ups that is actually a rock show: The Furious Tits, 37 Houses and Black Gold Sun. Cheaper and more fun than the circuit parties it precedes."
+    },
+    {
+      "id": "0924-bottomofthehill-samchase",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "The Sam Chase & the Untraditional",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$20 adv / $25 door",
+      "url": "https://www.bottomofthehill.com/calendar.html",
+      "note": "Local gravel-voiced folk-punk with a horn section, plus Ginger Molasses. Bottom of the Hill closes at the end of the year, so the running total of remaining nights here is now worth paying attention to."
+    },
+    {
+      "id": "0924-rickshaw-meiehara",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "MEI EHARA",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "$22–25",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "Tokyo songwriter working in the lineage of Japanese city pop without the pastiche — loose rhythm section, odd harmonic turns. Badvril opens. A genuinely rare US date."
+    },
+    {
+      "id": "0924-bimbos-elderisland",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "Elder Island",
+      "venue": "Bimbo's 365 Club",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://bimbos365club.com/",
+      "note": "Bristol trio built on cello, bass and processed vocals — dance music that keeps an acoustic instrument at the centre. Glassio opens. 21+."
+    },
+    {
+      "id": "0924-warfield-parispaloma",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "Paris Paloma",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.thewarfieldtheatre.com/",
+      "note": "English songwriter whose dark, folkloric writing found an enormous audience through one song about domestic labour. Susannah Joffe opens."
+    },
+    {
+      "id": "0924-foundry-benthouse",
+      "date": "2026-09-24",
+      "start": "21:00",
+      "title": "Benthouse Records",
+      "venue": "The Foundry",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://www.thefoundry.club/",
+      "note": "Label showcase, 21+, doors 9. Rosters at this venue are posted late; treat the lineup as unannounced."
+    },
+    {
+      "id": "0924-roxie-revisionfest",
+      "date": "2026-09-24",
+      "title": "Re:Vision — Festival of Restoration and Rediscovery",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Opening day of the San Francisco Film Preserve's first festival: fourteen programmes over four days, 18 countries, 11 decades, nearly all of it unavailable in the US in any decent form. The single best-argued piece of film programming in the region this week."
+    },
+    {
+      "id": "0924-roxie-americandoctor",
+      "date": "2026-09-24",
+      "start": "18:00",
+      "title": "American Doctor",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Co-presented by the Arab Film & Media Institute and the Jewish Film Institute — a pairing that is itself the story."
+    },
+    {
+      "id": "0924-roxie-suzie",
+      "date": "2026-09-24",
+      "start": "19:00",
+      "title": "Re:Vision: My Name Ain't Suzie",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Co-presented by Frameline. A 1985 Hong Kong melodrama about Wan Chai bar hostesses, restored and almost never screened outside Asia."
+    },
+    {
+      "id": "0924-roxie-gandahar",
+      "date": "2026-09-24",
+      "start": "20:05",
+      "title": "Gandahar (4K Restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Animation Obsession. Laloux's 1987 science-fiction feature, the last of his trilogy and the one nobody has seen — hand-painted, hallucinatory, and better than its reputation."
+    },
+    {
+      "id": "0924-grayarea-zuckerberg",
+      "date": "2026-09-24",
+      "title": "The Trial of Mark Zuckerberg",
+      "venue": "Gray Area, Grand Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "gallery",
+      "cost": "ticketed",
+      "url": "https://grayarea.org/events/",
+      "note": "Staged mock trial in the Mission's old Grand Theater. Whether it is satire or civic theatre depends on the night; Gray Area has form for making this kind of thing land."
+    },
+    {
+      "id": "0924-thrivecity-luchalibre",
+      "date": "2026-09-24",
+      "start": "16:00",
+      "end": "20:00",
+      "title": "Free Lucha Libre Wrestling Night",
+      "venue": "Thrive City",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "sports",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Masked wrestling, free, outdoors on the plaza beside Chase Center. Comfortably the most entertaining free thing happening in the city on a Thursday."
+    },
+    {
+      "id": "0924-somanights-blockparty",
+      "date": "2026-09-24",
+      "start": "17:00",
+      "end": "21:00",
+      "title": "SOMA Nights Block Party + Night Market",
+      "venue": "Folsom Street, 6th to 12th",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Six blocks of Folsom closed for food stalls and music, three days before the same street closes for something considerably less family-oriented. Free."
+    },
+    {
+      "id": "0924-fultonplaza-civiccenter2",
+      "date": "2026-09-24",
+      "start": "12:00",
+      "end": "15:00",
+      "title": "Civic Center Soundtrack",
+      "venue": "Fulton Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Second free lunchtime session of the week on the plaza. Food trucks, local bookings, no cover."
+    },
+    {
+      "id": "0924-vogue-brazilianfilm",
+      "date": "2026-09-24",
+      "start": "19:00",
+      "end": "23:00",
+      "title": "SF Brazilian Film Festival",
+      "venue": "Vogue Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$20 per film",
+      "note": "First edition, in a single-screen Presidio Heights house. A new festival's opening year is usually its most idiosyncratic programming — worth a look before it professionalises."
+    },
+    {
+      "id": "0924-transamerica-walkingtour",
+      "date": "2026-09-24",
+      "start": "11:00",
+      "end": "13:00",
+      "title": "Walking Tour: 1850s San Francisco",
+      "venue": "Transamerica Pyramid Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free-ticketed",
+      "outdoor": true,
+      "note": "Two hours of Gold Rush-era downtown, starting from the Redwood Park side. Free with registration."
+    },
+    {
+      "id": "0924-mechanics-chess",
+      "date": "2026-09-24",
+      "start": "12:00",
+      "end": "13:00",
+      "title": "Chess on the Plaza",
+      "venue": "Mechanics Monument Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Boards out on the plaza at lunchtime, run by the Mechanics' Institute, whose chess club is the oldest in the country. Beginners genuinely welcome."
+    },
+    {
+      "id": "0924-freight-michaelcleveland",
+      "date": "2026-09-24",
+      "title": "Michael Cleveland",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "country"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/freight-salvage",
+      "note": "The most decorated bluegrass fiddler alive, playing a seated room built for hearing the instrument rather than the PA."
+    },
+    {
+      "id": "0924-bampfa-blackbird",
+      "date": "2026-09-24",
+      "start": "19:00",
+      "title": "Blackbird Blackbird Blackberry",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Georgian Cinema Now. Elene Naveriani's film about a 48-year-old shopkeeper falling in love for the first time — funny, unhurried, and the best entry point to this series."
+    },
+    {
+      "id": "0924-yoshis-vanmorrison",
+      "date": "2026-09-24",
+      "start": "19:30",
+      "title": "Wild Night: A Van Morrison Tribute",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "tribute and legacy acts",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$30–69",
+      "url": "https://yoshis.com/",
+      "note": "A tribute act, which this digest lists without featuring. Competent Bay Area players working the Astral Weeks-to-Moondance stretch."
+    },
+    {
+      "id": "0924-gilman-newbandnight",
+      "date": "2026-09-24",
+      "start": "18:30",
+      "title": "New Band Night for Gilman 40th Anniversary Benefit",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Bands nobody has heard, five dollars, in the room that produced most of what you think of as East Bay punk. The 40th-anniversary benefit run starts here and continues all weekend."
+    },
+    {
+      "id": "0924-usshornet-hauntedhornet",
+      "date": "2026-09-24",
+      "start": "17:30",
+      "end": "22:00",
+      "title": "Haunted Hornet: Devil's Sea",
+      "venue": "USS Hornet",
+      "city": "Alameda",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "price": "$33.52",
+      "note": "After-dark on a decommissioned aircraft carrier that recovered the Apollo 11 crew and is now, per the museum's own marketing, extremely haunted. The ship is the draw either way."
+    },
+    {
+      "id": "0924-pegasus-leatherreading",
+      "date": "2026-09-24",
+      "start": "13:00",
+      "end": "19:00",
+      "title": "Leather History Reading and Signing",
+      "venue": "Pegasus Books",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "confidence": "medium",
+      "note": "The Berkeley stop on Leather Week's reading circuit, and the only East Bay date in it. Authors not listed in advance."
+    },
+    {
+      "id": "0924-shoreline-motleycrue",
+      "date": "2026-09-24",
+      "start": "18:30",
+      "title": "Mötley Crüe, Tesla and Extreme",
+      "venue": "Shoreline Amphitheatre",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "amphitheater",
+      "genre": [
+        "metal",
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "price": "from $26",
+      "outdoor": true,
+      "url": "https://www.jambase.com/venue/shoreline-amphitheatre",
+      "note": "Three legacy hard-rock bills for the price of a lawn ticket. $40 to park is more than the cheap seats — the bike path from Mountain View is genuinely the better approach."
+    },
+    {
+      "id": "0924-sapcenter-sharksducks",
+      "date": "2026-09-24",
+      "start": "19:00",
+      "title": "Sharks vs Ducks (NHL preseason)",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "sports"
+      ],
+      "venue_type": "arena",
+      "cost": "ticketed",
+      "price": "from $14",
+      "url": "https://www.sapcenter.com/",
+      "note": "Second preseason home game of the week and the cheaper of the two. Fourteen dollars to sit indoors and watch professionals."
+    },
+    {
+      "id": "0924-mvcpa-swanlake",
+      "date": "2026-09-24",
+      "start": "19:00",
+      "title": "Swan Lake: Symphony of Lights",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "from $61",
+      "confidence": "medium",
+      "note": "A touring projection-heavy staging rather than a company production. Descriptor is lower-confidence — the presenter's own material is thin on who is actually dancing."
+    },
+    {
+      "id": "0924-rooster-alexmoffat",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "Alex Moffat",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "from $39",
+      "note": "Six seasons on Saturday Night Live, now working 200-seat rooms in Sunnyvale, which is where his stand-up actually lives. Also Friday."
+    },
+    {
+      "id": "0924-sjimprov-abbygovindan",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "Abby Govindan",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "from $41",
+      "note": "Houston comic with a following built on being very funny about being unwell. Chain club, standing programming — listed, not featured."
+    },
+    {
+      "id": "0924-guild-kominek",
+      "date": "2026-09-24",
+      "start": "20:00",
+      "title": "Alexandre Kominek",
+      "venue": "The Guild Theatre",
+      "city": "Menlo Park",
+      "geo": "peninsula",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://guildtheatre.com/",
+      "note": "French stand-up on a US run. Check the language of the set before buying — the Guild's listing does not say whether this show is in English."
+    },
+    {
+      "id": "0925-ybca-bodypolitic",
+      "date": "2026-09-25",
+      "start": "18:00",
+      "end": "21:00",
+      "title": "Opening: Dread Scott — The Body Politic, and Prototypes and Provocations",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "gallery",
+      "cost": "free-ticketed",
+      "featured": true,
+      "url": "https://ybca.org/whats-on/",
+      "note": "Free with RSVP, artists in the room, cash bar. Dread Scott has spent thirty-five years making work that the US Senate has literally legislated against; a free opening for a show called The Body Politic, in this city, in this year, is the art event of the week."
+    },
+    {
+      "id": "0925-freight-billfrisell",
+      "date": "2026-09-25",
+      "title": "Bill Frisell & Harmony Five",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz",
+        "folk and americana",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "featured": true,
+      "url": "https://www.jambase.com/venue/freight-salvage",
+      "note": "Frisell with Petra Haden, Hank Roberts and Luke Bergman — voice, cello, bass and that guitar, playing standards and hymns until the seams disappear. Two nights, 600 seats, no amplification to speak of. The best-sounding room in the region for exactly this."
+    },
+    {
+      "id": "0925-zellerbach-australianballet",
+      "date": "2026-09-25",
+      "title": "The Australian Ballet: Oscar",
+      "venue": "Zellerbach Hall",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "featured": true,
+      "confidence": "medium",
+      "note": "North American premiere of Christopher Wheeldon's Oscar Wilde ballet, with Joby Talbot's score played live by Berkeley Symphony. Three performances only. Note: Cal has a home football game tonight — campus parking will be impossible, so take BART to Downtown Berkeley and walk."
+    },
+    {
+      "id": "0925-gamh-sixsex",
+      "date": "2026-09-25",
+      "start": "21:00",
+      "title": "Six Sex",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "latin and cumbia",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "price": "$35–40",
+      "url": "https://gamh.com/calendar/",
+      "note": "Argentine reggaetón and club-pop, filthy and precise, with B0yg1rl, Femme Jatale and Erika b2b. 21+, and the balcony will be sweating by midnight."
+    },
+    {
+      "id": "0925-chapel-rosecityband1",
+      "date": "2026-09-25",
+      "start": "21:00",
+      "title": "Rose City Band",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$25–28",
+      "url": "https://thechapelsf.com/calendar/",
+      "note": "Ripley Johnson's country-rock project, all pedal steel and long instrumental exhale. Rain Parade open — the actual Paisley Underground band, which makes this the better of the two nights."
+    },
+    {
+      "id": "0925-bottomofthehill-fatwreck1",
+      "date": "2026-09-25",
+      "start": "21:00",
+      "title": "Fat Wreck Chords 35th Anniversary (night 1)",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$39",
+      "url": "https://www.bottomofthehill.com/calendar.html",
+      "note": "Sold out, both nights. Fat Mike's label turns 35 in the 350-capacity club that helped build it, in the year that club announced it is closing. If you have a ticket, you already know."
+    },
+    {
+      "id": "0925-rickshaw-cainculto",
+      "date": "2026-09-25",
+      "start": "21:00",
+      "title": "CAIN CULTO",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "latin and cumbia",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "price": "$25–30",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "With TwoLips and DJ Aaron Axelsen, who has been running this city's indie dance floors since Popscene. Late doors, dancing expected."
+    },
+    {
+      "id": "0925-brickmortar-cheo",
+      "date": "2026-09-25",
+      "start": "21:00",
+      "title": "Cheo",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "latin and cumbia"
+      ],
+      "cost": "ticketed",
+      "price": "$33.24",
+      "confidence": "medium",
+      "url": "https://www.brickandmortarmusic.com/",
+      "note": "All ages. Latin pop-rock booking with no support listed at time of compiling."
+    },
+    {
+      "id": "0925-regency-channeltres",
+      "date": "2026-09-25",
+      "title": "Channel Tres",
+      "venue": "The Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop",
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-regency-ballroom",
+      "note": "Compton house music delivered in a baritone that never raises itself. Jyoty and Gelli Haha support. One of the few acts who can make a ballroom feel like a warehouse."
+    },
+    {
+      "id": "0925-fillmore-sleep1",
+      "date": "2026-09-25",
+      "title": "Sleep",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-fillmore",
+      "note": "Two nights of the loudest band this region has produced, in a room with chandeliers. They also play Santa Cruz on Sunday — there is no reason to make that drive when this is here."
+    },
+    {
+      "id": "0925-augusthall-everythingeverything",
+      "date": "2026-09-25",
+      "title": "Everything Everything: Get To Heaven 10th Anniversary",
+      "venue": "August Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.augusthallsf.com/",
+      "note": "Manchester art-rock playing the 2015 record that turned out to be about the next decade. Angular, wordy, and better live than on record."
+    },
+    {
+      "id": "0925-publicworks-bearracuda",
+      "date": "2026-09-25",
+      "title": "Bearracuda Folsom Street: Horse Meat Disco",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "url": "https://publicsf.com/",
+      "note": "London's Horse Meat Disco doing what they do, on the Friday of Leather Week. Genuine disco records rather than filtered house — the best-programmed of the weekend's circuit parties."
+    },
+    {
+      "id": "0925-davies-allsanfrancisco",
+      "date": "2026-09-25",
+      "start": "19:30",
+      "title": "All San Francisco Concert",
+      "venue": "Davies Symphony Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Guerrero conducts the Symphony's annual concert for Bay Area nonprofits and community organisations — the anti-gala, twenty-four hours after the $3,000 one. Distribution is mostly through partner organisations; the programme was not published when this was compiled."
+    },
+    {
+      "id": "0925-warmemorial-boccanegra2",
+      "date": "2026-09-25",
+      "start": "19:30",
+      "title": "Simon Boccanegra",
+      "venue": "War Memorial Opera House",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "url": "https://www.sfopera.com/",
+      "note": "Second of three Boccanegras this week. The Council Chamber scene is the reason this opera survives its own plot."
+    },
+    {
+      "id": "0925-dancemission-encounter1",
+      "date": "2026-09-25",
+      "title": "Sindhoor Natya: ENCOUNTER",
+      "venue": "Dance Mission Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://dancemissiontheater.org/shows-and-events/",
+      "note": "Aparna Sindhoor, Anil Natyaveda and S M Raju's dance-theatre piece, three nights in the Mission. Bharatanatyam vocabulary pushed into contemporary staging. Curtain times were not posted — call ahead."
+    },
+    {
+      "id": "0925-roxie-valleyofbees",
+      "date": "2026-09-25",
+      "start": "15:00",
+      "title": "Re:Vision: Valley of the Bees",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Vláčil's 1968 medieval film, austere and strange, restored. A three o'clock start on a Friday is a commitment; it is also the only way you will see this."
+    },
+    {
+      "id": "0925-roxie-dakan",
+      "date": "2026-09-25",
+      "start": "17:45",
+      "title": "Re:Vision: Dakan",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Co-presented by Frameline. Mohamed Camara's 1997 Guinean film, the first sub-Saharan African feature about a gay relationship, and effectively unseeable for decades."
+    },
+    {
+      "id": "0925-roxie-deadsouls1",
+      "date": "2026-09-25",
+      "start": "18:00",
+      "title": "Dead Souls",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Animation Obsession. Also screens Saturday evening if tonight collides with everything else at this address."
+    },
+    {
+      "id": "0925-roxie-bullitt",
+      "date": "2026-09-25",
+      "start": "19:00",
+      "title": "Floating Features: Bullitt",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "The chase goes down Taylor, over Filbert, and past the same green Beetle four times. Watching it eight blocks from where it was shot is the entire argument for repertory cinema."
+    },
+    {
+      "id": "0925-roxie-filipinana3",
+      "date": "2026-09-25",
+      "start": "20:00",
+      "title": "Filipiñana",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Third FiliKula screening this week."
+    },
+    {
+      "id": "0925-roxie-outcasts",
+      "date": "2026-09-25",
+      "start": "20:30",
+      "title": "Re:Vision: The Outcasts",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Presented with the National Film Preservation Foundation. Yu Kan-ping's 1986 Taiwanese film about gay teenagers in a Taipei park — landmark, and until recently lost to bad prints."
+    },
+    {
+      "id": "0925-unionsquare-dollyday",
+      "date": "2026-09-25",
+      "start": "12:00",
+      "end": "15:00",
+      "title": "Dolly Parton Day",
+      "venue": "Union Square Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "country"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free, outdoors, three hours of Dolly in the middle of a working Friday. Exactly the kind of civic silliness that is worth taking a long lunch for."
+    },
+    {
+      "id": "0925-sunsetnightmarket-moon",
+      "date": "2026-09-25",
+      "start": "17:00",
+      "end": "22:00",
+      "title": "Sunset Night Market: Mid-Autumn Moon Festival",
+      "venue": "Irving Street, 20th to 25th",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Five blocks of Irving closed for food stalls, makers and music, timed to the Moon Festival. Free, enormous, and the N Judah drops you in the middle of it. Go hungry and go early."
+    },
+    {
+      "id": "0925-visvalley-nightmarket",
+      "date": "2026-09-25",
+      "start": "16:00",
+      "end": "20:30",
+      "title": "Visitacion Valley Night Market + Block Party",
+      "venue": "Leland Avenue",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Leland closes between Bayshore and Peabody for one of the city's newest and least-publicised night markets. Muni reroutes apply; the 8 and 9 are affected."
+    },
+    {
+      "id": "0925-unionsquare-dances",
+      "date": "2026-09-25",
+      "start": "17:00",
+      "end": "20:00",
+      "title": "Union Square Dances",
+      "venue": "Union Square Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free outdoor social dancing on the square, lesson first, no partner needed. Runs every Friday evening this season."
+    },
+    {
+      "id": "0925-omca-fridaynights",
+      "date": "2026-09-25",
+      "start": "17:00",
+      "end": "21:00",
+      "title": "Friday Nights at OMCA with Los Tranquilos",
+      "venue": "Oakland Museum of California",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert",
+        "museum",
+        "outdoor"
+      ],
+      "venue_type": "museum",
+      "genre": [
+        "latin and cumbia",
+        "soul and funk"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "url": "https://museumca.org/events/",
+      "note": "Free admission, Off the Grid trucks in the garden, and Los Tranquilos playing 60s and 70s Latin American soul and psychedelia. The best free evening in the East Bay, weekly, and it ends in October. BART Lake Merritt is two minutes away — the garages here close their gates at 7."
+    },
+    {
+      "id": "0925-criticalmass-embarcadero",
+      "date": "2026-09-25",
+      "start": "18:00",
+      "end": "21:00",
+      "title": "San Francisco Critical Mass",
+      "venue": "Embarcadero Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Last-Friday ride, thirty-plus years running, no route and no organisers. If you are driving downtown between 6 and 8, this is why you are not moving."
+    },
+    {
+      "id": "0925-ferrybuilding-sundowncinema",
+      "date": "2026-09-25",
+      "start": "18:00",
+      "title": "Sundown Cinema",
+      "venue": "San Francisco Ferry Building",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "confidence": "medium",
+      "note": "Free outdoor film on the Embarcadero. Title was not posted at time of compiling — the series programmes populist repertory. Bring a blanket; the wind comes straight off the bay."
+    },
+    {
+      "id": "0925-humboldt-yerbabuenailluminated",
+      "date": "2026-09-25",
+      "start": "19:00",
+      "end": "22:00",
+      "title": "Yerba Buena Illuminated",
+      "venue": "Humboldt Bank Building",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "A ninety-five-foot art projection onto a 1908 Market Street facade. Free, outdoors, and ten minutes on foot from four of tonight's other listings."
+    },
+    {
+      "id": "0925-proxy-hailmary",
+      "date": "2026-09-25",
+      "start": "19:15",
+      "end": "22:00",
+      "title": "Free Outdoor Movie Night: Project Hail Mary",
+      "venue": "Proxy SF",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free, in the Hayes Valley lot, with food on site. Dress for Hayes Valley in September, which is to say dress for February."
+    },
+    {
+      "id": "0925-ferrygate-transittrivia",
+      "date": "2026-09-25",
+      "start": "18:15",
+      "end": "19:30",
+      "title": "SF Bay Ferry Transit Trivia Night",
+      "venue": "SF Ferry Terminal Gate G",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "note": "Free ferry rides and a trivia night about the ferry system, on the ferry. The oddities column writes itself."
+    },
+    {
+      "id": "0925-447minna-infinitewrench",
+      "date": "2026-09-25",
+      "start": "21:00",
+      "title": "SF Neo-Futurists: The Infinite Wrench",
+      "venue": "447 Minna Street",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$18.60",
+      "note": "Thirty short plays in sixty minutes, order chosen by the audience shouting numbers, running order different every week. Cheap, fast, and never the same show twice."
+    },
+    {
+      "id": "0925-trinity-bookfair1",
+      "date": "2026-09-25",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Trinity Alley $5 Book Fair",
+      "venue": "Trinity Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Every book five dollars, in the alley off Eighth. Free to enter, running again Saturday."
+    },
+    {
+      "id": "0925-sfeagle-leatherreading",
+      "date": "2026-09-25",
+      "start": "18:00",
+      "end": "19:30",
+      "title": "Leather Week Reading",
+      "venue": "SF Eagle",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "confidence": "medium",
+      "note": "The Eagle's slot on the Leather Week reading circuit, on the patio. Authors not listed in advance."
+    },
+    {
+      "id": "0925-foxoakland-kruderdorfmeister",
+      "date": "2026-09-25",
+      "start": "20:00",
+      "title": "Kruder & Dorfmeister",
+      "venue": "Fox Theater",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "electronic and club",
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "url": "https://thefoxoakland.com/",
+      "note": "The Vienna duo's 30th-anniversary run — downtempo dub built for exactly this kind of ornate, slightly absurd room. Doors 7. Take BART; the 19th Street station is two minutes away and the garages shut at 7."
+    },
+    {
+      "id": "0925-gilman-benefit1",
+      "date": "2026-09-25",
+      "start": "19:00",
+      "title": "Gilman Benefit Weekend: One Last Prayer, Opposing Force",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Night one of the 40th-anniversary benefit weekend. Five dollars, all ages, no security guards — the model that outlasted every venue that laughed at it."
+    },
+    {
+      "id": "0925-bampfa-atunnel",
+      "date": "2026-09-25",
+      "start": "15:00",
+      "title": "A Tunnel",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Georgian Cinema Now. A matinée, which is the easiest way into this series if you work nearby."
+    },
+    {
+      "id": "0925-bampfa-tamingthegarden",
+      "date": "2026-09-25",
+      "start": "19:00",
+      "title": "Taming the Garden",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Salomé Jashi's documentary about a billionaire uprooting century-old trees and barging them across the Black Sea to his private garden. One of the great recent documentaries about power, and almost wordless."
+    },
+    {
+      "id": "0925-yoshis-syleenajohnson",
+      "date": "2026-09-25",
+      "start": "19:30",
+      "title": "Syleena Johnson",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$45–85",
+      "url": "https://yoshis.com/",
+      "note": "Chicago R&B with a gospel spine — the voice on the hook of Kanye's 'All Falls Down', and a far better singer than that credit suggests."
+    },
+    {
+      "id": "0925-yoshis-maryjanegirls",
+      "date": "2026-09-25",
+      "start": "21:30",
+      "title": "Mary Jane Girls",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$40",
+      "url": "https://yoshis.com/",
+      "note": "Late set, same night, same room as Syleena Johnson. Rick James's funk girl group, still working 'In My House' for everything it is worth."
+    },
+    {
+      "id": "0925-walnutcreek-oktoberfest",
+      "date": "2026-09-25",
+      "start": "17:00",
+      "end": "22:00",
+      "title": "Walnut Creek Oktoberfest",
+      "venue": "Civic Park East",
+      "city": "Walnut Creek",
+      "geo": "east-bay",
+      "type": [
+        "festival",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free admission, beer and food for sale, running into the weekend. BART Walnut Creek is a ten-minute walk and the sensible way to attend an Oktoberfest."
+    },
+    {
+      "id": "0925-ritz-revocation",
+      "date": "2026-09-25",
+      "start": "18:00",
+      "title": "Revocation",
+      "venue": "The Ritz",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "price": "from $40",
+      "url": "https://www.livenation.com/venue/KovZ917AOqb/the-ritz-events",
+      "note": "Technical death metal with Defeated Sanity, Fuming Mouth and Weeping — four bands, six o'clock doors, and the most punishing bill in the South Bay this week."
+    },
+    {
+      "id": "0925-sjcivic-killtony",
+      "date": "2026-09-25",
+      "start": "19:00",
+      "title": "Killers of Kill Tony",
+      "venue": "San Jose Civic",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "from $20",
+      "url": "https://www.jambase.com/venue/san-jose-civic",
+      "note": "The podcast's touring roadshow in a 3,000-seat house. Listed for completeness; the format is what it is."
+    },
+    {
+      "id": "0925-californiatheatre-dongiovanni1",
+      "date": "2026-09-25",
+      "start": "19:30",
+      "title": "Opera San José: Don Giovanni",
+      "venue": "California Theatre",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $65",
+      "note": "A new production, the company's first Don Giovanni in twelve years, in the most beautiful room in San Jose. Two performances left — tonight and Sunday afternoon."
+    },
+    {
+      "id": "0925-mountainwinery-cannons",
+      "date": "2026-09-25",
+      "start": "19:30",
+      "title": "Cannons",
+      "venue": "Mountain Winery",
+      "city": "Saratoga",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "winery",
+      "genre": [
+        "electronic and club",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "from $58",
+      "outdoor": true,
+      "url": "https://www.jambase.com/venue/mountain-winery",
+      "note": "Los Angeles synth-pop, glossy and nocturnal, with Jesse Jo Stark opening. The hillside suits it better than a club would."
+    },
+    {
+      "id": "0925-sjimprov-frankiequinones",
+      "date": "2026-09-25",
+      "start": "19:30",
+      "title": "Frankie Quiñones",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "from $51",
+      "note": "Two shows tonight, 7:30 and 9:45. The 'This Fool' and 'Creeper' character work translates to stand-up better than most TV-to-club crossovers."
+    },
+    {
+      "id": "0925-rooster-alexmoffat2",
+      "date": "2026-09-25",
+      "start": "20:00",
+      "title": "Alex Moffat",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "from $38",
+      "note": "Second Sunnyvale night. Cheaper than Thursday, same set."
+    },
+    {
+      "id": "0925-sjcpa-brincosdieras",
+      "date": "2026-09-25",
+      "start": "20:00",
+      "title": "Brincos Dieras",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "from $154",
+      "note": "The masked Mexican comedian, who fills theatres across the Southwest and is almost invisible to English-language listings. In Spanish, and expensive."
+    },
+    {
+      "id": "0925-pure-yetep",
+      "date": "2026-09-25",
+      "start": "22:00",
+      "title": "Yetep",
+      "venue": "PURE Nightclub",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "price": "from $32",
+      "note": "Melodic bass in a Sunnyvale club six minutes' walk from Caltrain, with free street parking after 6. The South Bay does not get many of these."
+    },
+    {
+      "id": "0925-dnalounge-brut",
+      "date": "2026-09-25",
+      "title": "Brüt SF: Folsom Friday",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "DNA's Folsom Friday, 21+. One of three nights the club gives over to Leather Week, and the least circuit-party of them."
+    },
+    {
+      "id": "0925-dnalounge-momentum",
+      "date": "2026-09-25",
+      "title": "Momentum",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Second room, same night, 21+. Lineup not posted."
+    },
+    {
+      "id": "0925-makerfaire-day1",
+      "date": "2026-09-25",
+      "start": "10:00",
+      "end": "15:00",
+      "title": "Maker Faire Bay Area",
+      "venue": "Historic Mare Island Naval Shipyard",
+      "city": "Vallejo",
+      "geo": "outer",
+      "type": [
+        "festival"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$45",
+      "outdoor": true,
+      "note": "The only outer-region entry that clears the bar this week: three days of robots, fire art and kinetic sculpture in a decommissioned naval shipyard, and there is nothing comparable closer. Vallejo is not in the region lists — filed under Worth the Drive. Friday is the shorter, quieter, better day."
+    },
+    {
+      "id": "0926-pier80-portola1",
+      "date": "2026-09-26",
+      "title": "Portola Festival (day 1)",
+      "venue": "Pier 80",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "price": "$250 day / $380 weekend",
+      "outdoor": true,
+      "featured": true,
+      "url": "https://portolamusicfestival.com/",
+      "note": "Robyn and Dog Blood headline, with Soulwax, Fatboy Slim, DJ Shadow, Skepta, Groove Armada and Tricky underneath — a deeper and stranger day than Sunday's. 21+, on a working industrial pier with no shade and a long walk from any transit. The T and a shuttle beat driving."
+    },
+    {
+      "id": "0926-independent-west22nd",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "West 22nd",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.theindependentsf.com/",
+      "note": "Sold out. With Where's West? on the Places To Be tour."
+    },
+    {
+      "id": "0926-gamh-rustychains",
+      "date": "2026-09-26",
+      "start": "20:30",
+      "title": "Rusty Chains: A Tribute to Chris Cornell",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "tribute and legacy acts",
+        "metal"
+      ],
+      "cost": "ticketed",
+      "price": "$25–30",
+      "url": "https://gamh.com/calendar/",
+      "note": "A tribute night, listed without being featured, with Stardog Champions and Mind's Eye. The Cornell catalogue is unusually hard to sing, which makes this either a good night or a very long one."
+    },
+    {
+      "id": "0926-chapel-rosecityband2",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "Rose City Band",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$25–28",
+      "url": "https://thechapelsf.com/calendar/",
+      "note": "Night two, with Møtrik and Jas Stade replacing Rain Parade. A more krautrock-leaning support bill than Friday's."
+    },
+    {
+      "id": "0926-bottomofthehill-fatwreck2",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "Fat Wreck Chords 35th Anniversary (night 2)",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$39",
+      "url": "https://www.bottomofthehill.com/calendar.html",
+      "note": "Also sold out. Both nights went before the lineups were fully announced, which tells you what the room means to people."
+    },
+    {
+      "id": "0926-rickshaw-emonite",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "Emo Nite",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$22",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "DJs, no band, everyone screaming the words to records from 2004. 21+, and it reliably sells out the small room."
+    },
+    {
+      "id": "0926-brickmortar-maxfry",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "Max Fry, aWannabe",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$35.72",
+      "confidence": "medium",
+      "url": "https://www.brickandmortarmusic.com/",
+      "note": "Co-headline, all ages. Lower-confidence descriptor — neither act has much of a recorded footprint yet."
+    },
+    {
+      "id": "0926-cafedunord-romestreetz",
+      "date": "2026-09-26",
+      "start": "20:00",
+      "title": "Rome Streetz",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.cafedunord.com/",
+      "note": "Griselda-adjacent New York rap, dense and unhurried, over dusty loops. Fergie Baby and $ha Hef open. A basement is the correct room for this."
+    },
+    {
+      "id": "0926-regency-parcels",
+      "date": "2026-09-26",
+      "title": "Parcels",
+      "venue": "The Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-regency-ballroom",
+      "note": "Australian five-piece doing live disco with real harmonies and no laptop. Velvet Trip open. The ballroom floor is the right size for it."
+    },
+    {
+      "id": "0926-fillmore-sleep2",
+      "date": "2026-09-26",
+      "title": "Sleep",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-fillmore",
+      "note": "Night two. Earplugs are not optional and the Fillmore hands them out for a reason."
+    },
+    {
+      "id": "0926-publicworks-fcukers",
+      "date": "2026-09-26",
+      "title": "Fcukers (DJ Set) + Chloé Caillet",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://publicsf.com/",
+      "note": "A Goldenvoice-promoted Portola afterparty in everything but name. Caillet is the reason to stay late."
+    },
+    {
+      "id": "0926-midway-matineepervert",
+      "date": "2026-09-26",
+      "start": "22:00",
+      "title": "Matinée Pervert XXL",
+      "venue": "The Midway",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Folsom weekend's main Saturday circuit party, two rooms, running to dawn. The Midway's $20 lot is the one genuinely easy parking situation in this weekend's listings. DJ lineup was not published at time of compiling."
+    },
+    {
+      "id": "0926-grayarea-cocoon",
+      "date": "2026-09-26",
+      "title": "Magik*Magik Orchestra: COCOON, An Orchestra Sleepover Concert",
+      "venue": "Gray Area, Grand Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "gallery",
+      "genre": [
+        "classical and opera",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "url": "https://grayarea.org/events/",
+      "note": "You bring a sleeping bag; the orchestra plays while you lie on the floor of the Grand Theater and, ideally, fall asleep. Minna Choi's ensemble has been doing the ambitious-and-slightly-absurd thing in this city for fifteen years."
+    },
+    {
+      "id": "0926-davies-fantasticnegrito",
+      "date": "2026-09-26",
+      "start": "19:30",
+      "title": "Fantastic Negrito with the SF Symphony",
+      "venue": "Davies Symphony Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "soul and funk",
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "note": "Oakland's three-time Grammy winner with a full orchestra behind him. The arrangements are the question — his records are deliberately raw, and Davies is the opposite of that."
+    },
+    {
+      "id": "0926-sfplayhouse-peterpan1",
+      "date": "2026-09-26",
+      "start": "20:00",
+      "title": "Peter Pan Goes Wrong (preview)",
+      "venue": "San Francisco Playhouse",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "from $55",
+      "url": "https://www.sfplayhouse.org/",
+      "note": "First preview of the season opener, from the company behind The Play That Goes Wrong. Previews are cheaper and the disasters are less rehearsed, which for this show is arguably the point."
+    },
+    {
+      "id": "0926-dancemission-encounter2",
+      "date": "2026-09-26",
+      "title": "Sindhoor Natya: ENCOUNTER",
+      "venue": "Dance Mission Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://dancemissiontheater.org/shows-and-events/",
+      "note": "Second of three nights. Curtain time unposted."
+    },
+    {
+      "id": "0926-roxie-monk",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "title": "Re:Vision: I Am With A Monk",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Re:Vision's Saturday runs nine programmes from eleven in the morning to eleven at night. This is the opener."
+    },
+    {
+      "id": "0926-roxie-dreamers",
+      "date": "2026-09-26",
+      "start": "13:00",
+      "title": "The Dreamers And I",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Documentary, one screening only."
+    },
+    {
+      "id": "0926-roxie-araya",
+      "date": "2026-09-26",
+      "start": "14:00",
+      "title": "Re:Vision: Araya",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "With SF IndieFest and BAMPFA. Margot Benacerraf's 1959 Venezuelan salt-flats film shared the Cannes critics' prize with Hiroshima mon amour and then effectively vanished. The most beautiful thing screening this week."
+    },
+    {
+      "id": "0926-roxie-samurai",
+      "date": "2026-09-26",
+      "start": "15:15",
+      "title": "The Samurai and the Prisoner",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Presented by the Japan Society of Northern California."
+    },
+    {
+      "id": "0926-roxie-amber",
+      "date": "2026-09-26",
+      "start": "16:20",
+      "title": "Re:Vision: The Dislocation of Amber",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "With SF IndieFest."
+    },
+    {
+      "id": "0926-roxie-gehenulamai",
+      "date": "2026-09-26",
+      "start": "18:00",
+      "title": "Re:Vision: Gehenu Lamai (The Girls)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Sumitra Peries's 1978 Sri Lankan film, by the first woman to direct a feature there. Restored."
+    },
+    {
+      "id": "0926-roxie-deadsouls2",
+      "date": "2026-09-26",
+      "start": "18:15",
+      "title": "Dead Souls",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Animation Obsession, second screening."
+    },
+    {
+      "id": "0926-roxie-campmiasma",
+      "date": "2026-09-26",
+      "start": "20:20",
+      "title": "Teenage Sex and Death at Camp Miasma",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "Late-slot horror. The title is doing the marketing."
+    },
+    {
+      "id": "0926-roxie-santo",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "Re:Vision: Lepers & Sex AKA Santo vs The Riders of Terror",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "url": "https://roxie.com/",
+      "note": "RoxCine closes the Saturday with a masked-wrestler picture at nine. A festival of restoration that ends its biggest day with Santo has its priorities right."
+    },
+    {
+      "id": "0926-ybca-yourselfandyours",
+      "date": "2026-09-26",
+      "start": "14:00",
+      "title": "Yourself and Yours",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "gallery",
+      "cost": "ticketed",
+      "price": "$15",
+      "url": "https://ybca.org/whats-on/",
+      "note": "Hong Sang-soo, in YBCA's Through an Open Window series. Fifteen dollars includes gallery admission and themed snacks, which for a Hong film means, one assumes, soju."
+    },
+    {
+      "id": "0926-deyoung-freeday",
+      "date": "2026-09-26",
+      "start": "09:30",
+      "end": "17:15",
+      "title": "Free Saturday at the de Young",
+      "venue": "de Young Museum",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "Free for Bay Area residents with ID — the Treasures of the Pharaohs show is on, and this is the only way to see it without paying special-exhibition prices. Expect a queue by 10."
+    },
+    {
+      "id": "0926-legion-freeday",
+      "date": "2026-09-26",
+      "start": "09:30",
+      "end": "17:15",
+      "title": "Free Saturday at the Legion of Honor",
+      "venue": "Legion of Honor",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "Same free-for-residents day, far fewer people, and the better building. The Etruscans show closed last Sunday, so this is the permanent collection."
+    },
+    {
+      "id": "0926-rinconpark-nakedbikeride",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "15:00",
+      "title": "SF World Naked Bike Ride",
+      "venue": "Rincon Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "A protest about oil dependency that has become a Folsom-weekend fixture. Free, as advertised."
+    },
+    {
+      "id": "0926-presidio-chuseok",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "16:00",
+      "title": "Bay Area Chuseok Korean Harvest Festival",
+      "venue": "Presidio Main Post Lawn",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Eighth year. Food, folk performance and games on the Main Post lawn, free with donations welcome. The Presidio shuttle is free and the parking is not."
+    },
+    {
+      "id": "0926-treasureisland-offthegrid",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "16:00",
+      "title": "Off the Grid Treasure Island",
+      "venue": "Treasure Island",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "food",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free entry, food trucks, and the skyline view that is the actual reason to cross the bridge. Windy — the island always is."
+    },
+    {
+      "id": "0926-uppernoe-neighborfest",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "14:00",
+      "title": "Upper Noe NeighborFest",
+      "venue": "Upper Noe Rec Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "outdoor": true,
+      "note": "A block party run by the people who live on the block. Free, small, and the kind of thing that never reaches a listings site."
+    },
+    {
+      "id": "0926-locali-artvending1",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "19:00",
+      "title": "Art Vending Machine Weekend",
+      "venue": "Locali Visitor Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market"
+      ],
+      "venue_type": "gallery",
+      "cost": "free",
+      "note": "Ten-plus vending machines stocked by seven Bay Area artists, a dollar an item. Free to walk in; runs Sunday too."
+    },
+    {
+      "id": "0926-midnightsun-roper",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "17:00",
+      "title": "The Mrs. Roper Castro Bar Crawl",
+      "venue": "The Midnight Sun",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "Several hundred people in orange caftans and red wigs moving slowly down 18th Street. Free to join, absurd on purpose, and it starts six hours before you think it should."
+    },
+    {
+      "id": "0926-447minna-infinitewrench2",
+      "date": "2026-09-26",
+      "start": "21:00",
+      "title": "SF Neo-Futurists: The Infinite Wrench",
+      "venue": "447 Minna Street",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$18.60",
+      "note": "Second night, different running order, different plays. That is the format."
+    },
+    {
+      "id": "0926-fortmason-bats",
+      "date": "2026-09-26",
+      "title": "BATS Improv",
+      "venue": "Fort Mason Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://fortmason.org/events/",
+      "note": "Long-form improv in the Bayfront Theater, forty years on. Curtain time not posted on the Fort Mason calendar."
+    },
+    {
+      "id": "0926-fortmason-walkingtour",
+      "date": "2026-09-26",
+      "title": "Fort Mason Historic District Walking Tour",
+      "venue": "Fort Mason Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "confidence": "medium",
+      "url": "https://fortmason.org/events/",
+      "note": "Free tour of the piers and the Civil War-era batteries above them. Start time was not listed."
+    },
+    {
+      "id": "0926-trinity-bookfair2",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Trinity Alley $5 Book Fair",
+      "venue": "Trinity Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Second day. Everything five dollars."
+    },
+    {
+      "id": "0926-zellerbach-australianballet2",
+      "date": "2026-09-26",
+      "title": "The Australian Ballet: Oscar",
+      "venue": "Zellerbach Hall",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Second of three. No football game today, so campus parking is merely bad rather than impossible."
+    },
+    {
+      "id": "0926-freight-billfrisell2",
+      "date": "2026-09-26",
+      "title": "Bill Frisell & Harmony Five",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz",
+        "folk and americana",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/freight-salvage",
+      "note": "Second night. These sets rarely repeat much — the band treats the repertoire as raw material."
+    },
+    {
+      "id": "0926-gilman-benefit2",
+      "date": "2026-09-26",
+      "start": "19:30",
+      "title": "Gilman Benefit Weekend: The Enemies, Street Eaters",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Night two of the 40th-anniversary benefit. Street Eaters are one of the best things the East Bay has produced this decade and they are on a five-dollar bill."
+    },
+    {
+      "id": "0926-bampfa-symposium",
+      "date": "2026-09-26",
+      "start": "11:30",
+      "end": "17:00",
+      "title": "Georgian Cinema Now Symposium: Activism in Authoritarian Times",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Five and a half hours of scholars and filmmakers on making work under an authoritarian government. The most substantial talk programme in the region this week, by some distance."
+    },
+    {
+      "id": "0926-bampfa-crossing",
+      "date": "2026-09-26",
+      "start": "19:30",
+      "title": "Crossing",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Levan Akin's Istanbul-set film about a retired teacher looking for her trans niece. Warm, unsentimental, and the strongest single film in the Georgian series."
+    },
+    {
+      "id": "0926-mtviewcemetery-tour",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "12:00",
+      "title": "Oral Traditions Cemetery Walking Tour",
+      "venue": "Mountain View Cemetery",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Olmsted laid this cemetery out, and the docent tours are free and genuinely good. Two hours, uphill, wear shoes."
+    },
+    {
+      "id": "0926-fairgrounds-corgicon",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Corgi Con",
+      "venue": "Alameda County Fairgrounds",
+      "city": "Pleasanton",
+      "geo": "east-bay",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$13.44+",
+      "outdoor": true,
+      "note": "Several thousand corgis in one field. It moved inland from Ocean Beach and now charges admission and $15 for parking, which is a lot for what used to be free — but it remains the purest entry in the oddities column. Pleasanton is not in the region lists; filed East Bay by proximity."
+    },
+    {
+      "id": "0926-sjcivic-cristiancastro",
+      "date": "2026-09-26",
+      "title": "Cristian Castro",
+      "venue": "San Jose Civic",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "latin and cumbia",
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/san-jose-civic",
+      "note": "Mexican balladeer, thirty-five years in, the kind of booking that fills a 3,000-seat house here without appearing in a single English-language listing."
+    },
+    {
+      "id": "0926-sapcenter-marcoantoniosolis",
+      "date": "2026-09-26",
+      "start": "20:00",
+      "title": "Marco Antonio Solís — Tour Gratitud",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "arena",
+      "genre": [
+        "latin and cumbia"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.sapcenter.com/",
+      "note": "Arena show, listed for completeness. El Buki has been selling out this building for three decades."
+    },
+    {
+      "id": "0926-mountainwinery-abba",
+      "date": "2026-09-26",
+      "start": "19:30",
+      "title": "The Concert: A Tribute to ABBA",
+      "venue": "Mountain Winery",
+      "city": "Saratoga",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "winery",
+      "genre": [
+        "tribute and legacy acts",
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "outdoor": true,
+      "url": "https://www.jambase.com/venue/mountain-winery",
+      "note": "A tribute act on a hillside. Never featured over an original booking, but the setting does most of the work here."
+    },
+    {
+      "id": "0926-montgomery-candlelightmana",
+      "date": "2026-09-26",
+      "start": "17:30",
+      "title": "Candlelight: Tribute to Maná",
+      "venue": "Montgomery Theater",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "tribute and legacy acts",
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $32",
+      "note": "String quartet, a great many candles, the Maná songbook. The Candlelight franchise is a machine, but a 500-seat civic theatre is a better room for it than most of the churches they rent."
+    },
+    {
+      "id": "0926-hammer-missionchamber",
+      "date": "2026-09-26",
+      "start": "19:30",
+      "title": "Mission Chamber Orchestra: Northern Light",
+      "venue": "Hammer Theatre Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $56",
+      "url": "https://sanjose.events/venue/hammer-theatre-center/",
+      "note": "San Jose's own chamber orchestra opening its season with Nordic repertoire. Small ensemble, good room, and the only orchestral concert in the South Bay this week."
+    },
+    {
+      "id": "0926-techcu-barracuda",
+      "date": "2026-09-26",
+      "start": "17:00",
+      "title": "San Jose Barracuda vs Bakersfield Condors",
+      "venue": "Tech CU Arena",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "sports"
+      ],
+      "venue_type": "arena",
+      "cost": "ticketed",
+      "price": "from $23",
+      "note": "AHL preseason in a 4,200-seat barn next to SAP Center. Minor-league hockey at close range is a better night out than the NHL version and costs less than a concert ticket."
+    },
+    {
+      "id": "0926-mvcpa-flamenco",
+      "date": "2026-09-26",
+      "start": "19:00",
+      "title": "The Flamenco Society",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Local flamenco company on the MainStage. Programme and cast were not published; descriptor is lower-confidence."
+    },
+    {
+      "id": "0926-mvcpa-teatronahual1",
+      "date": "2026-09-26",
+      "start": "19:30",
+      "title": "Teatro Nahual",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Spanish-language theatre company, two performances this weekend. Title not listed on the venue calendar."
+    },
+    {
+      "id": "0926-downtownsj-slamjose",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "title": "Slam Jose! Community Hoop Festival",
+      "venue": "Downtown San Jose",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "sports",
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "confidence": "medium",
+      "note": "Free street basketball festival downtown. Found on a regional roundup rather than an official calendar — confirm the footprint before you go."
+    },
+    {
+      "id": "0926-losgatos-artwine1",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "18:30",
+      "title": "Los Gatos Art & Wine Festival",
+      "venue": "Civic Center Lawn",
+      "city": "Los Gatos",
+      "geo": "south-bay",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free admission, 200-plus makers, live music all weekend, run by the Kiwanis with proceeds going back into the town. The largest free thing happening in the South Bay this side of Sunday."
+    },
+    {
+      "id": "0926-sanmateo-artsculturefest",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "18:00",
+      "title": "September Arts & Culture Fest",
+      "venue": "B Street, San Mateo",
+      "city": "San Mateo",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Live mural competitions, makers and a poetry open mic on a closed B Street. Free, and the strongest Peninsula listing of a quiet Peninsula week. Caltrain Hayward Park is twelve minutes on foot."
+    },
+    {
+      "id": "0926-csm-sciencedday",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "title": "Hands-On Family Science Day",
+      "venue": "College of San Mateo",
+      "city": "San Mateo",
+      "geo": "peninsula",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Free, and it runs late — the planetarium shows and the telescopes on the hill are the reason to stay past dark. The view from that campus is worth the drive on its own."
+    },
+    {
+      "id": "0926-serramonte-artlitfest",
+      "date": "2026-09-26",
+      "start": "11:00",
+      "end": "15:00",
+      "title": "5th Annual Art & Lit Fest",
+      "venue": "Serramonte Center",
+      "city": "Daly City",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "market"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Small-press and local-artist fair in a shopping centre, which is an unglamorous venue for a genuinely good little fair. Free. Daly City is not in the region lists — filed Peninsula, next door to Colma."
+    },
+    {
+      "id": "0926-pacifica-fogfest1",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "18:00",
+      "title": "Pacifica Fog Fest",
+      "venue": "Palmetto Avenue",
+      "city": "Pacifica",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Two hundred craft vendors, a parade, and live music along Palmetto, free, in a town that named its festival after the weather it cannot escape. Bring the layers the name implies. Pacifica is not in the region lists — filed Peninsula by proximity."
+    },
+    {
+      "id": "0926-menlocollege-sala1",
+      "date": "2026-09-26",
+      "start": "11:30",
+      "end": "19:00",
+      "title": "SALA: South Asian Literature and Art Festival",
+      "venue": "Menlo College",
+      "city": "Atherton",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$75 day / $140 weekend",
+      "note": "Twenty-two panels over two days on South Asian writing and art from the subcontinent and its diaspora. Not cheap, and the only literary festival on the Peninsula this year. Atherton is not in the region lists — filed Peninsula."
+    },
+    {
+      "id": "0926-guild-homeby10",
+      "date": "2026-09-26",
+      "start": "18:00",
+      "title": "Home By 10 Dance Party",
+      "venue": "The Guild Theatre",
+      "city": "Menlo Park",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "soul and funk",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://guildtheatre.com/",
+      "note": "A dance night that starts at six and ends at ten, aimed squarely at people who want to dance and also want to sleep. More honest than most club programming."
+    },
+    {
+      "id": "0926-dnalounge-barechest",
+      "date": "2026-09-26",
+      "title": "Bare Chest Calendar Charity Event",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Thirty-plus years of a leather-community fundraiser that has put real money into Bay Area HIV services. 21+, and the least ironic thing on DNA's calendar this weekend."
+    },
+    {
+      "id": "0926-dnalounge-sanfrandisco",
+      "date": "2026-09-26",
+      "title": "San Frandisco",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Disco night in the main room, 18+, which on this particular Saturday makes it the all-ages-ish alternative to everything else happening south of Market."
+    },
+    {
+      "id": "0926-dnalounge-sxtps",
+      "date": "2026-09-26",
+      "title": "SXTPS: Folsom",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Third DNA room, 21+, Folsom edition. Lineup not posted."
+    },
+    {
+      "id": "0926-makerfaire-day2",
+      "date": "2026-09-26",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Maker Faire Bay Area",
+      "venue": "Historic Mare Island Naval Shipyard",
+      "city": "Vallejo",
+      "geo": "outer",
+      "type": [
+        "festival"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$45",
+      "outdoor": true,
+      "note": "The big day — full programme, all the fire art, and the crowds to match. Filed under Worth the Drive; nothing closer to home does this."
+    },
+    {
+      "id": "0927-folsomstreet-fair",
+      "date": "2026-09-27",
+      "start": "11:00",
+      "end": "18:00",
+      "title": "Folsom Street Fair",
+      "venue": "Folsom Street, 8th to 13th",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "featured": true,
+      "note": "Thirteen blocks, seven stages, and something in the region of 400,000 people — the largest leather and fetish event in the world and the close of Leather Week. Free, with a $10–20 donation at the gates that funds the year's grantmaking. SoMa will be impassable by car from mid-morning; BART to Civic Center or Powell and walk in."
+    },
+    {
+      "id": "0927-pier80-portola2",
+      "date": "2026-09-27",
+      "title": "Portola Festival (day 2)",
+      "venue": "Pier 80",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "price": "$250 day / $380 weekend",
+      "outdoor": true,
+      "url": "https://portolamusicfestival.com/",
+      "note": "Swedish House Mafia, Tiësto, Zara Larsson and Four Tet — a bigger, straighter day than Saturday's, and it collides head-on with Folsom. Doing both means leaving one of them early; the pier is a long, exposed walk from anywhere, so pick one."
+    },
+    {
+      "id": "0927-greek-erykahbadu2",
+      "date": "2026-09-27",
+      "start": "19:00",
+      "title": "Erykah Badu with The Alchemist and Smino",
+      "venue": "Greek Theatre, UC Berkeley",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "amphitheater",
+      "genre": [
+        "soul and funk",
+        "hip-hop",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "outdoor": true,
+      "featured": true,
+      "url": "https://thegreekberkeley.com/",
+      "note": "Sold out, doors 5:30. Badu has spent the last few years touring a show that is closer to a séance than a concert, and the Alchemist and Smino are a real bill rather than warm-up. An outdoor Greek amphitheatre at the end of September is the best room in the region, and it will be cold by 9 — bring a layer."
+    },
+    {
+      "id": "0927-sofa-streetfair",
+      "date": "2026-09-27",
+      "start": "14:00",
+      "end": "20:00",
+      "title": "SoFA Street Fair",
+      "venue": "South First Street",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "festival",
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "featured": true,
+      "confidence": "medium",
+      "note": "Eighty to a hundred bands on more than ten stages across two blocks of South First, free and all ages. The single best free music event in the home region this year, and the sources disagree on whether it also runs Saturday — treat Sunday afternoon as the confirmed day."
+    },
+    {
+      "id": "0927-independent-hotchip",
+      "date": "2026-09-27",
+      "start": "21:00",
+      "title": "Hot Chip (DJ Set)",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.theindependentsf.com/",
+      "note": "MPHD opens. A DJ set rather than the band, on the night half the city is already out — this is the Folsom afterparty for people who do not want a circuit party."
+    },
+    {
+      "id": "0927-gamh-meltbanana",
+      "date": "2026-09-27",
+      "start": "20:00",
+      "title": "Melt-Banana",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "experimental and improv",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$28–33",
+      "url": "https://gamh.com/calendar/",
+      "note": "Thirty-plus years of Tokyo noise-punk compressed into songs that rarely reach ninety seconds. Moon Destroys and RX.PINKNOISE open. The most physically demanding show of the week and easily the funniest."
+    },
+    {
+      "id": "0927-chapel-dollygrass",
+      "date": "2026-09-27",
+      "start": "19:00",
+      "title": "Dollygrass: A Tribute",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "price": "$24–28",
+      "url": "https://thechapelsf.com/calendar/",
+      "note": "Dolly Parton's catalogue played bluegrass, by Godman, Tucker, Lewis and Gates, with Crying Uncle and the Jimmy Touzel Bluegrass Explosion. A tribute, but the players are the real thing and the material was bluegrass to begin with."
+    },
+    {
+      "id": "0927-bottomofthehill-remedy7",
+      "date": "2026-09-27",
+      "start": "14:00",
+      "end": "17:00",
+      "title": "Remedy 7",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$20",
+      "url": "https://www.bottomofthehill.com/calendar.html",
+      "note": "A two o'clock matinée, done by five, which makes it the only rock show this weekend that does not conflict with anything."
+    },
+    {
+      "id": "0927-rickshaw-jt",
+      "date": "2026-09-27",
+      "start": "22:00",
+      "title": "JT",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "price": "$30–40",
+      "url": "https://rickshawstop.com/calendar/",
+      "note": "Ten o'clock doors, 21+, with Naisha. City Girls' sharper half in a 400-cap room, on a night when the rest of the city is winding down."
+    },
+    {
+      "id": "0927-brickmortar-guardin",
+      "date": "2026-09-27",
+      "start": "20:30",
+      "title": "guardin",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$12.63–26.74",
+      "url": "https://www.brickandmortarmusic.com/",
+      "note": "Emo-rap from the SoundCloud generation, with kennedyxoxo and Fijimar. Cheap, all ages."
+    },
+    {
+      "id": "0927-cafedunord-joon",
+      "date": "2026-09-27",
+      "start": "20:00",
+      "title": "Joon",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.cafedunord.com/",
+      "note": "Sold out. Lauryn Kovacs opens."
+    },
+    {
+      "id": "0927-regency-bravothebagchaser",
+      "date": "2026-09-27",
+      "title": "Bravo The Bagchaser",
+      "venue": "The Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-regency-ballroom",
+      "note": "Bay Area rap with Peysoh — local bills at this scale are rarer than they should be and this one is worth the ballroom."
+    },
+    {
+      "id": "0927-fillmore-eslabonarmado",
+      "date": "2026-09-27",
+      "title": "Eslabón Armado",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "latin and cumbia"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/the-fillmore",
+      "note": "Patterson's own, and one of the acts that turned corridos tumbados into the most-streamed music in the country. A 1,315-cap room is now far too small for them."
+    },
+    {
+      "id": "0927-warfield-lucki",
+      "date": "2026-09-27",
+      "start": "20:00",
+      "title": "LUCKI",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.thewarfieldtheatre.com/",
+      "note": "Chicago rap at its most narcotised and interior, with Sk8star. He has been making the same record better for a decade."
+    },
+    {
+      "id": "0927-publicworks-overmono",
+      "date": "2026-09-27",
+      "title": "Overmono (DJ Set) + Ben UFO",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://publicsf.com/",
+      "note": "Ben UFO is one of the best selectors alive and Overmono do not do a bad night. The strongest club booking of Folsom weekend that is not on a pier."
+    },
+    {
+      "id": "0927-foundry-herrensauna",
+      "date": "2026-09-27",
+      "start": "11:00",
+      "title": "Boof presents MCMLXXXV (Herrensauna)",
+      "venue": "The Foundry",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.thefoundry.club/",
+      "note": "Doors at eleven in the morning. Berlin's Herrensauna crew doing a daytime Folsom party — hard, fast techno while the fair is still setting up eight blocks away."
+    },
+    {
+      "id": "0927-warmemorial-boccanegra3",
+      "date": "2026-09-27",
+      "start": "19:30",
+      "title": "Simon Boccanegra",
+      "venue": "War Memorial Opera House",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "url": "https://www.sfopera.com/",
+      "note": "Last of the three. Civic Center will be full of people coming back from Folsom; the opera house is a strange and rather wonderful place to end that day."
+    },
+    {
+      "id": "0927-sfplayhouse-peterpan2",
+      "date": "2026-09-27",
+      "start": "14:00",
+      "title": "Peter Pan Goes Wrong (preview)",
+      "venue": "San Francisco Playhouse",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "from $55",
+      "url": "https://www.sfplayhouse.org/",
+      "note": "Sunday matinée preview. Union Square is walkable from BART Powell and the show runs into late November, so there is no urgency beyond preview pricing."
+    },
+    {
+      "id": "0927-dancemission-encounter3",
+      "date": "2026-09-27",
+      "title": "Sindhoor Natya: ENCOUNTER",
+      "venue": "Dance Mission Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "url": "https://dancemissiontheater.org/shows-and-events/",
+      "note": "Final performance. Dance Mission is six minutes from BART 24th St, which on Folsom Sunday is the only sane approach to the Mission."
+    },
+    {
+      "id": "0927-jfkdrive-lindyinthepark",
+      "date": "2026-09-27",
+      "start": "11:00",
+      "end": "14:00",
+      "title": "Lindy in the Park",
+      "venue": "JFK Drive, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "jazz",
+        "soul and funk"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free swing dancing on the closed stretch of JFK, every Sunday for close to thirty years. Beginner lesson at the start, no partner required, no charge."
+    },
+    {
+      "id": "0927-spreckels-ggpband",
+      "date": "2026-09-27",
+      "start": "13:00",
+      "end": "14:45",
+      "title": "Golden Gate Park Band: Symphony in the Park",
+      "venue": "Spreckels Temple of Music, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free municipal band concerts since 1882, and this is the 144th season. The bandshell acoustics are better than they have any right to be, and the audience brings folding chairs and sandwiches."
+    },
+    {
+      "id": "0927-ggpbandshell-germanday",
+      "date": "2026-09-27",
+      "start": "11:00",
+      "end": "16:00",
+      "title": "German Day Festival",
+      "venue": "Golden Gate Park Bandshell",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free, at the bandshell in the Music Concourse, and it overlaps the Park Band concert in the same spot — one follows the other, so you get both by not moving."
+    },
+    {
+      "id": "0927-countyfair-bodhimidautumn",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Bodhi Mid-Autumn Festival with Lanterns",
+      "venue": "San Francisco County Fair Building",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Lanterns, mooncakes and performance in the old County Fair Building at Ninth and Lincoln. Free, and the quietest of the weekend's several Moon Festival events."
+    },
+    {
+      "id": "0927-musicconcourse-naturefest",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "14:00",
+      "title": "Golden Gate Park Nature Festival",
+      "venue": "Music Concourse, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free, on the concourse between the de Young and the Academy — naturalists, live animals, and the park's own restoration crews explaining what they do."
+    },
+    {
+      "id": "0927-colevalley-fair",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Cole Valley Fair",
+      "venue": "Cole Street",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "A small neighbourhood street fair a long way, in every sense, from what is happening on Folsom the same afternoon. Free. The N drops you at Carl and Cole."
+    },
+    {
+      "id": "0927-randall-75th",
+      "date": "2026-09-27",
+      "start": "13:00",
+      "end": "17:00",
+      "title": "Randall Museum 75th Anniversary Festival",
+      "venue": "Randall Museum",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum",
+        "festival"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "Seventy-five years of the city's free children's science and art museum, up on Corona Heights. Free, and the view from the hill is the best in central San Francisco."
+    },
+    {
+      "id": "0927-locali-artvending2",
+      "date": "2026-09-27",
+      "start": "11:00",
+      "end": "19:00",
+      "title": "Art Vending Machine Weekend",
+      "venue": "Locali Visitor Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market"
+      ],
+      "venue_type": "gallery",
+      "cost": "free",
+      "note": "Second day. A dollar an item, seven artists, no gallery markup."
+    },
+    {
+      "id": "0927-sfpl-urbanwildlife",
+      "date": "2026-09-27",
+      "start": "13:00",
+      "end": "14:00",
+      "title": "Urban Wildlife 101",
+      "venue": "San Francisco Main Public Library",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "One hour on the coyotes, raccoons and raptors that actually live here. Free, in the Koret Auditorium, and the timing means you can walk to Folsom afterwards."
+    },
+    {
+      "id": "0927-fortmason-farmersmarket",
+      "date": "2026-09-27",
+      "start": "09:30",
+      "end": "13:30",
+      "title": "Fort Mason Center Farmers Market",
+      "venue": "Fort Mason Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Sunday morning on the Fort Mason apron with the bay behind it. Free to browse."
+    },
+    {
+      "id": "0927-zellerbach-australianballet3",
+      "date": "2026-09-27",
+      "title": "The Australian Ballet: Oscar",
+      "venue": "Zellerbach Hall",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Closing performance of the North American premiere run. Berkeley Symphony in the pit."
+    },
+    {
+      "id": "0927-freight-nayanghosh",
+      "date": "2026-09-27",
+      "title": "Maestro Nayan Ghosh and Ishaan Ghosh: Synergy",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "world and traditional",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.jambase.com/venue/freight-salvage",
+      "note": "Father and son, sitar and tabla, from one of the great Indian classical lineages — Nayan Ghosh is the only musician to perform publicly on both instruments at this level. A seated listening room is the right setting."
+    },
+    {
+      "id": "0927-yoshis-isaiahcollier",
+      "date": "2026-09-27",
+      "start": "19:00",
+      "title": "Isaiah Collier: Collier Plays Coltrane",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "$39–79",
+      "url": "https://yoshis.com/",
+      "note": "Chicago saxophonist in his twenties taking on the most over-attempted repertoire in jazz, and mostly getting away with it because he plays like he means it rather than like he studied it."
+    },
+    {
+      "id": "0927-gilman-benefit3",
+      "date": "2026-09-27",
+      "start": "18:30",
+      "title": "Gilman Benefit Weekend: The Enemies, Street Eaters",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Closing night of the 40th-anniversary benefit run. Five dollars, again, because that is the entire argument."
+    },
+    {
+      "id": "0927-bampfa-englishteacher",
+      "date": "2026-09-27",
+      "start": "13:30",
+      "title": "English Teacher / Bakhmaro 2050",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Georgian Cinema Now, afternoon double."
+    },
+    {
+      "id": "0927-bampfa-incompleteday",
+      "date": "2026-09-27",
+      "start": "16:30",
+      "title": "An Incomplete Day in the History of Georgia 10.06.93.",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "url": "https://bampfa.org/",
+      "note": "Closes the Georgian series. A single day in 1993 reconstructed from archive footage — the most formally adventurous thing in the programme."
+    },
+    {
+      "id": "0927-oacc-queerzinefest",
+      "date": "2026-09-27",
+      "start": "11:00",
+      "end": "17:00",
+      "title": "Bay Area Queer Zine Fest",
+      "venue": "Oakland Asian Cultural Center",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "market",
+        "festival"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Ninth year, free, dozens of tables of self-published work. The counterweight to Folsom across the bay — same weekend, same communities, entirely different register. BART Lake Merritt is two minutes away."
+    },
+    {
+      "id": "0927-fortheculture-africanrestaurantweek",
+      "date": "2026-09-27",
+      "start": "12:00",
+      "end": "19:00",
+      "title": "Bay Area African Restaurant Week Festival",
+      "venue": "For The Culture",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "food",
+        "festival"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free to enter, food for sale, closing out a week of African restaurant programming across the region. A genuine food festival rather than a restaurant-week promotion."
+    },
+    {
+      "id": "0927-freeoaklandup-market",
+      "date": "2026-09-27",
+      "start": "12:00",
+      "end": "16:00",
+      "title": "Free Oakland Up Market",
+      "venue": "Free Oakland Up",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "market"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "confidence": "medium",
+      "note": "Free community market. The organisers' listing does not give a street address — check before setting out."
+    },
+    {
+      "id": "0927-brower-climatesummit",
+      "date": "2026-09-27",
+      "start": "08:00",
+      "end": "14:00",
+      "title": "Bay Area Youth Climate Summit",
+      "venue": "Brower Center",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Free, youth-organised, all day. An eight o'clock Sunday start is a real ask and the programme is more substantial than the hour suggests."
+    },
+    {
+      "id": "0927-sapcenter-yandel",
+      "date": "2026-09-27",
+      "start": "20:00",
+      "title": "Yandel — Sinfónico USA Tour",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "arena",
+      "genre": [
+        "latin and cumbia",
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.sapcenter.com/",
+      "note": "Reggaetón with an orchestra behind it. Arena show, listed for completeness, but the sinfónico arrangements are a more interesting idea than the format usually allows."
+    },
+    {
+      "id": "0927-californiatheatre-dongiovanni2",
+      "date": "2026-09-27",
+      "start": "14:00",
+      "title": "Opera San José: Don Giovanni",
+      "venue": "California Theatre",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $65",
+      "note": "Closing matinée. If you can only do one of this week's two Don Giovanni-scale things in San Jose, this is the one that will not be back for another twelve years."
+    },
+    {
+      "id": "0927-mountainwinery-ajcroce",
+      "date": "2026-09-27",
+      "start": "19:30",
+      "title": "A.J. Croce with Leo Kottke",
+      "venue": "Mountain Winery",
+      "city": "Saratoga",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "winery",
+      "genre": [
+        "folk and americana",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "outdoor": true,
+      "url": "https://www.jambase.com/venue/mountain-winery",
+      "note": "Kottke is the draw — sixty years of twelve-string fingerpicking and deadpan monologue, and he does not tour like he used to. The hillside closes its season in the right register."
+    },
+    {
+      "id": "0927-mvcpa-teatronahual2",
+      "date": "2026-09-27",
+      "start": "14:00",
+      "title": "Teatro Nahual",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "medium",
+      "note": "Sunday matinée. Title not listed on the venue calendar."
+    },
+    {
+      "id": "0927-guildhouse-gamemarket",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "15:00",
+      "title": "Game Market West",
+      "venue": "Guildhouse",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "market"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "note": "Free entry to a market for independent and imported tabletop games — the Japanese doujin-game scene's US foothold. Small, specific, and nothing else like it in the region."
+    },
+    {
+      "id": "0927-losgatos-artwine2",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "18:30",
+      "title": "Los Gatos Art & Wine Festival",
+      "venue": "Civic Center Lawn",
+      "city": "Los Gatos",
+      "geo": "south-bay",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Second day. Free, and CA-17 through Los Gatos will be slow from late morning — come over the hill early or come from the north."
+    },
+    {
+      "id": "0927-guild-samanthafish",
+      "date": "2026-09-27",
+      "start": "20:00",
+      "title": "Samantha Fish",
+      "venue": "The Guild Theatre",
+      "city": "Menlo Park",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "folk and americana",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "url": "https://guildtheatre.com/",
+      "note": "Cigar-box slide guitar and a voice with real grit, with the Zac Schulze Gang. The Guild is the best-sounding room on the Peninsula and this is the week's strongest booking in it."
+    },
+    {
+      "id": "0927-pacifica-fogfest2",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "18:00",
+      "title": "Pacifica Fog Fest",
+      "venue": "Palmetto Avenue",
+      "city": "Pacifica",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Second day, with the parade. Free. Filed Peninsula by proximity — Pacifica is not in the region lists."
+    },
+    {
+      "id": "0927-menlocollege-sala2",
+      "date": "2026-09-27",
+      "start": "11:30",
+      "end": "19:00",
+      "title": "SALA: South Asian Literature and Art Festival",
+      "venue": "Menlo College",
+      "city": "Atherton",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$75 day / $140 weekend",
+      "note": "Second day of panels. Filed Peninsula; Atherton is not in the region lists."
+    },
+    {
+      "id": "0927-dnalounge-studio456",
+      "date": "2026-09-27",
+      "title": "Studio 456: Daytime Disco",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "free",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Free, in daylight, three blocks from the fair. The cheapest way to be part of Folsom Sunday without paying anyone a cover. 18+."
+    },
+    {
+      "id": "0927-dnalounge-brookecandy",
+      "date": "2026-09-27",
+      "title": "Brooke Candy + Violet Chachki",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "pop and k-pop",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "url": "https://www.dnalounge.com/calendar/2026/09.html",
+      "note": "Candy and Chachki closing Folsom Sunday — rap-pop provocateur and the most technically serious burlesque performer working. 18+. The best-matched double bill of the weekend."
+    },
+    {
+      "id": "0927-makerfaire-day3",
+      "date": "2026-09-27",
+      "start": "10:00",
+      "end": "17:00",
+      "title": "Maker Faire Bay Area",
+      "venue": "Historic Mare Island Naval Shipyard",
+      "city": "Vallejo",
+      "geo": "outer",
+      "type": [
+        "festival"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$45",
+      "outdoor": true,
+      "note": "Final day, and the calmest. Filed under Worth the Drive — the only outer-region listing to clear the bar this week."
+    }
+  ]
+}
