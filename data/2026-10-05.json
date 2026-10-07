@@ -3587,25 +3587,6 @@
       "note": "A.C.T. Curtain time unpublished per date; confirm when booking."
     },
     {
-      "id": "1009-davies-reneefleming",
-      "date": "2026-10-09",
-      "title": "Renee Fleming sings Strauss",
-      "venue": "Davies Symphony Hall",
-      "city": "San Francisco",
-      "geo": "sf",
-      "type": [
-        "concert"
-      ],
-      "venue_type": "concert-hall",
-      "cost": "ticketed",
-      "start": "19:30",
-      "genre": [
-        "classical and opera"
-      ],
-      "confidence": "low",
-      "note": "Two independent ticketing listings put this at Davies tonight; the JamBase mirror shows the hall dark all week and sfsymphony.org cannot be read behind its queueing redirect. Confirm directly with the box office before you buy, and see the note at the foot of this digest."
-    },
-    {
       "id": "1009-roxie-hachan",
       "date": "2026-10-09",
       "title": "Ha-Chan, Shake Your Booty!",
@@ -4826,25 +4807,6 @@
       "cost": "ticketed",
       "confidence": "medium",
       "note": "A.C.T. Two performances are likely today, a matinee and an evening, but the theatre publishes neither time on its listings page. Confirm before booking."
-    },
-    {
-      "id": "1010-davies-rachmaninoff",
-      "date": "2026-10-10",
-      "title": "Rachmaninoff Symphonic Dances",
-      "venue": "Davies Symphony Hall",
-      "city": "San Francisco",
-      "geo": "sf",
-      "type": [
-        "concert"
-      ],
-      "venue_type": "concert-hall",
-      "cost": "ticketed",
-      "start": "19:30",
-      "genre": [
-        "classical and opera"
-      ],
-      "confidence": "low",
-      "note": "As with Friday: carried by the ticketing aggregators, contradicted by the JamBase mirror, and sfsymphony.org cannot be read directly. Confirm with the box office."
     },
     {
       "id": "1010-mlkpark-powwow",
