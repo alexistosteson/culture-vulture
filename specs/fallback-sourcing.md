@@ -485,3 +485,81 @@ mostly URL corrections rather than new machinery.
 | Item | Context | Do it when |
 |---|---|---|
 | Deliberate fallback sourcing for the venues that never fetch [bug/s3/v2] → spec at [specs/fallback-sourcing.md](specs/fallback-sourcing.md) | **The current practice already publishes false listings and already hides large holes.** `data/2026-10-05.json` carries two Davies Symphony Hall listings (9 and 10 Oct, `confidence: low`, invented `start: 19:30`) for a *Renée Fleming Sings Strauss* run that actually played **1, 3 and 4 October** — the generic ticketing sweep date-shifted a closed run into the live window, the JamBase mirror correctly showed the hall dark, and the digest called the mirror the doubtful one. Meanwhile the fetch test of 2026-10-07 found working routes for holes the run has reported for weeks: **`odc.dance/calendar`** (`/performances` 404s — 7 weeks, 0 listings), **`smuinballet.org`** bare domain (reported "unreadable"; *French Kiss* was at Cowell Theater 9–18 Oct and went unlisted), **`roxie.com/calendar/`** (180 dated screenings; the file points at the bare domain and the week's fetch stopped at Friday), **MVFF's schedule PDF** (a complete dated grid, needs `pdftotext` — WebFetch returns raw bytes), and a **DICE partner endpoint** showing **8 Kilowatt events in the window against 1 published**. `sources.yml` is also actively misleading in two places: its SFJAZZ `note:` still says an empty week there is "real, not a fetch failure" (written for the August off-season, read in October), and the JamBase mirror it names covers **Miner Auditorium only** — the Joe Henderson Lab has no route at all, which is why that venue reports 1–3 listings a week. Also stale: Fort Mason points at `/calendar/` while the runs have silently used `/events/` for six weeks, Thee Stork Club's `url:` points at the path its own `note:` calls empty, `Music on the Square` is listed twice with a 403 URL and a closed season, and three `recurring` series are past their season with no `season_ends:`. **The proposal is small:** per-venue `fallback:` chains (literal URLs — every slug family tested is unconstructible, and a guessed Songkick ID returned a hotel in Northern Ireland) plus a one-number `expect:` floor; a `confidence` split (`low` = existence in doubt, `medium` = event certain / field missing) that needs no schema change since `additionalProperties: false` makes a new field a real cost; restoring `url` (0/329 in the newest week, down from 132/132); and **one** new `verify.sh` check — an `expect:` shortfall must be named in "What could not be reached", which is the check that would have caught SFJAZZ. It also recommends **not** fallback-sourcing six venues (Joe Henderson Lab, Davies beyond the mirror, The New Parkway, 1015 Folsom, Visit Oakland/Chase Center/ArtSpan, and 924 Gilman — where Songkick confidently returns "0 Upcoming" while a show is on sale). | **The two false Davies listings were removed in `53ceb79` (7 Oct), after this spec was drafted** — so the standing argument is the one that remains: the `sources.yml` URL corrections and the SFJAZZ `note:` rewrite are worth doing before the next weekly run — `prompts/weekly-run.md` step 8 already permits fixing a provably dead source URL. The `expect:` floors and the `verify.sh` check want the owner's judgement on the numbers first (see the spec's behavioural check), as does the one open call: whether the DICE endpoint — best data found, most fragile, reached with a key from a venue's page source — is a route this project should depend on at all. |
+
+---
+
+## Addendum, 7 October — the floors, derived; and a claim this falsifies
+
+The owner approved drafting `expect:` floors with real numbers. Deriving them from the nine
+weeks already in `data/` rather than authoring them by hand **partly falsifies the proposal
+above**, so the numbers and the correction are recorded together.
+
+Method: per declared `tier_1_venues` entry, reconcile canonicalized venue strings against
+every `data/*.json`, take the median of the venue's non-zero weeks, and propose
+`floor = max(1, 0.4 × median)`.
+
+### What the derivation shows
+
+**1. A floor is only meaningful for about seven venues.** For 31 of 53 tier-1 venues the
+formula collapses to `floor: 1`, which detects total disappearance and nothing else — not the
+Kilowatt-style partial the check exists for. Venues with a median of 3 or fewer cannot be
+discriminated by a ratio.
+
+| Venue | 9-week series | median (non-zero) | proposed floor |
+|---|---|---|---|
+| Roxie Theater | 0, 9, 5, 10, 10, 6, 27, 10, 34 | 10 | 4 |
+| Yoshi's | 3, 7, 5, 7, 7, 4, 7, 7, 6 | 7 | 2 |
+| BAMPFA | 0, 4, 5, 6, 7, 2, 8, 7, 10 | 6 | 2 |
+| Bottom of the Hill | 3, 6, 6, 7, 6, 7, 5, 7, 7 | 6 | 2 |
+| Berkeley Rep | 0, 0, 0, 3, 0, 0, 0, 7, 6 | 6 | 2 |
+| Rickshaw Stop | 1, 6, 4, 2, 5, 5, 7, 6, 4 | 5 | 2 |
+| Castro Theatre | 1, 1, 5, 6, 5, 4, 1, 6, 6 | 5 | 2 |
+
+Everything below a median of 5 should get **no floor at all**. Use the relative
+collapse-vs-trailing-median check on those instead, which needs no per-venue number and
+therefore cannot rot.
+
+**2. The floor would NOT have caught SFJAZZ.** This contradicts the claim made in §Q4 above
+and in PR #3, and the claim is withdrawn. SFJAZZ's series is `2, 0, 0, 0, 3, 1, 1, 2, 1` — a
+non-zero median of 2, so a derived floor of 1, which this week's single concert **passes**.
+
+The reason is the important part: **deriving a threshold from history ratifies whatever
+blindness the history contains.** SFJAZZ has been read through a mirror covering one of its
+two halls for nine weeks, so its baseline is already suppressed to the level of the fault.
+No statistic computed from that series can detect it. The same applies to any venue whose
+route has always been partial.
+
+**3. So known-partial routes need a declaration, not a number.** Replace the floor for these
+with a `coverage: partial` field naming what the route omits, plus one mechanical rule:
+
+> A source declared `coverage: partial` **must** appear in the digest's "What could not be
+> reached" section every week, unconditionally, whatever its listing count.
+
+That is what would actually have caught SFJAZZ — not a threshold, but a standing obligation
+to keep saying the route is partial for as long as it is. It is text-and-JSON checkable and
+needs no history.
+
+**4. Two tier-1 venues have never produced a reconcilable listing in nine weeks:** The New
+Parkway and Music on the Square. The declared-but-never-produced check is cheap and nearly
+exhausted on tier 1, which is the argument for running it standing rather than once.
+
+**5. Seven venues carry interior zeros** (Café du Nord, August Hall, The Warfield, SFJAZZ,
+Fox Theater, The Greek Theatre, Shoreline) and almost all are real dark weeks. A naive
+zero-after-non-zero check fires ~14 times a week across the corpus, mostly on seasonal
+venues, and would be ignored inside a fortnight. It is only usable when suppressed by
+`season_ends:`.
+
+### Revised recommendation
+
+Three checks that need no authored numbers, one declaration that does:
+
+1. **Venue-string canonicalization** — prerequisite; 5 fragmentations found, 4 introduced by
+   the 2026-10-05 run and repaired in `8599b96`.
+2. **Collapse vs trailing median** — relative, self-updating, no per-venue config.
+3. **Declared but never produced**, scoped to `tier_1_venues` only; aggregators legitimately
+   never appear as a venue and a naive scope gives 18 false positives.
+4. **`coverage: partial`** on routes known to omit part of a venue, with the standing
+   obligation above. This is the only one of the four that carries hand-written state, and it
+   is a sentence rather than a number, so it rots visibly rather than silently.
+
+`expect:` floors survive only for the seven venues in the table, and are optional even there.
