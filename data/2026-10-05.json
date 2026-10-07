@@ -5871,6 +5871,22 @@
       "note": "An early evening curtain, 6:30, which gets you home at a reasonable hour."
     },
     {
+      "id": "1011-curran-rockyhorror",
+      "date": "2026-10-11",
+      "title": "The Rocky Horror Picture Show Spooktacular, with Barry Bostwick",
+      "venue": "Curran Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film",
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "start": "19:30",
+      "note": "The 4K restoration with a live shadow cast from Barely Legal RHPS, a costume contest, and Barry Bostwick — the original Brad Majors — in person. Doors at six and no admittance after seven, which for this film is the difference between going and not. Resale is asking a great deal; buy from the house. The Curran is in no source list this project keeps, which is why it was missing."
+    },
+    {
       "id": "1011-chapel-deryayildirim",
       "date": "2026-10-11",
       "title": "Derya Yildirim & Grup Simsek with Thee Marloes",
