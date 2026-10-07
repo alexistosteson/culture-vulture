@@ -563,3 +563,97 @@ Three checks that need no authored numbers, one declaration that does:
    is a sentence rather than a number, so it rots visibly rather than silently.
 
 `expect:` floors survive only for the seven venues in the table, and are optional even there.
+
+---
+
+## Addendum 2, 7 October — editorial verification, silent dependencies, and a correction
+
+Three additions, all from tests run after the main body was written.
+
+### 1. A tier of editorial sources, for independence rather than coverage
+
+The audit above tested venue calendars and ticketing mirrors. It did not test **editorial**
+sources, and they fail differently in a way that matters: mirrors of a common upstream are
+not independent of each other. Three DNA Lounge mirrors agreed and all missed half the
+venue. Editorial coverage has a separate reporting chain, so it is the only thing available
+that can adjudicate a Davies-class error — one where volume looks normal and the data is
+false.
+
+Tested 2026-10-07:
+
+| Source | Result | Verdict |
+|---|---|---|
+| **BroadwayWorld San Francisco** | `broadwayworld.com/san-francisco/` — readable, no paywall, **dated listings with venue and run dates** | **Adopt.** Best editorial route found, and the only one that names venues this project does not declare |
+| SF Standard | `sfstandard.com/arts-culture/` readable, but **teasers only** — no dates, no venues | Keep as described; not a verification route |
+| SF Chronicle Datebook | `datebook.sfchronicle.com` **301s** to `sfchronicle.com/entertainment/`, which fails to render; the `/music` path is **410 Gone** | **The declared URL is a dead redirect.** Not the paywall — a dead path plus a JS wall |
+| SF Classical Voice | **403** on `/calendar`, `/events-calendar` and the bare domain | Unavailable, and it is the natural check on the Davies error |
+| 48 Hills · KQED Arts | **404** on the listing paths; both are declared as bare domains with no working path | Paths need finding or the entries are decorative |
+| Bachtrack | Results render client-side; the listing page is a template | Reachable via search only |
+
+**Role in the precedence rule.** As drafted, the rule says an irreconcilable conflict means
+publishing *neither*, which loses true listings. An independent editorial source turns a
+standoff into a decision, so the rule becomes: venue-scoped source outranks a generic sweep;
+where they conflict, an independent editorial source breaks the tie; where none is available,
+publish neither and say so.
+
+### 2. Observed but never declared — 27 silent dependencies
+
+The main body proposes a *declared but never produced* check. The mirror image yields far
+more. Venues appearing in **3 or more of the 9 weeks**, with a room-like `venue_type`, that
+match **no** entry in `config/sources.yml`:
+
+| Weeks | Listings | Venue |
+|---|---|---|
+| 3 | 17 | San Jose Center for the Performing Arts |
+| 6 | 12 | The Midway |
+| 3 | 11 | Rooster T. Feathers |
+| 5 | 10 | Bill Graham Civic Auditorium |
+| 3 | 9 | Mountain View Center for the Performing Arts |
+| 3 | 8 | **Davies Symphony Hall** — declared only as a code comment, which is why nothing matched it |
+| 7 | 8 | de Young Museum |
+| 7 | 8 | Madrone Art Bar |
+| 3 | 7 | War Memorial Opera House |
+| 3 | 7 | The Masonic |
+| 5 | 6 | Legion of Honor |
+| 3 | 6 | San Jose Improv |
+| 5 | 5 | Solano 2 Drive In |
+| 4 | 5 | Swedish American Hall |
+| 4 | 5 | Oakland Arena |
+| 3 | 5 | Tech CU Arena · Alameda County Fairgrounds · 447 Minna Street |
+| 4 | 4 | Toyota Pavilion at Concord · PURE Nightclub · Noe Valley Town Square · Mechanics' Institute |
+| 3 | 4 | The Knockout · Levi's Stadium |
+| 3 | 3 | California Academy of Sciences · Habbas Law Epicenter at PayPal Park · Colma Community Center |
+
+**27 venues, 172 listings across the corpus, no declared route.** Add the Curran Theatre,
+found 2026-10-07 and below the 3-week threshold only because it has appeared once.
+
+**Why this is the strongest single finding in this spec.** An undeclared venue is a *silent
+dependency*: the weekly run reaches it through a sweep, it works until it doesn't, and when
+it stops there is no declared route to check, no `note:` recording how it was reached, and no
+baseline that makes its disappearance visible. The ODC class (declared, never produced) is
+2 venues. This class is 27. **Any venue the digest has listed three times is a dependency and
+should be written down**, even if the entry only records which sweep found it.
+
+Proposed as a check in its own right: *observed in ≥3 weeks with a room-like `venue_type` and
+no declared source* → must be added to `config/sources.yml` or explicitly waived. Pure
+text-and-JSON, no network, and it closes the loop in the direction the existing proposal
+does not cover.
+
+### 3. Correction: the Joe Henderson Lab route exists
+
+§Q1 and §5 record that SFJAZZ's second hall has no route and recommend declaring SFJAZZ
+permanently partial. **The first half is wrong.**
+`jambase.com/venue/joe-henderson-lab-at-sfjazz-center` loads and carries a calendar; the
+earlier test recorded it as 404.
+
+It shows **no October dates at all**, while independent listings put the Lab's October shows
+on the 17th, 24th and 25th — so the page is itself incomplete and should be treated as
+partial. But for the 5–11 October window, **no source indicates any Joe Henderson Lab
+concert**, which means SFJAZZ's single concert that week was probably complete.
+
+The digest's own note had told readers to assume more was on than was listed. That hedge was
+withdrawn in `66046e4`. It is worth recording as its own failure mode, because this spec
+committed it while documenting it: **a route being known-partial does not license guessing in
+which direction the error runs.** An unverified hedge is an unverified claim with better
+manners. The `coverage: partial` declaration proposed in Addendum 1 must therefore say what
+the route omits, not how much.
