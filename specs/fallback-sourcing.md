@@ -1,5 +1,11 @@
 # Spec — Deliberate fallback sourcing
 
+> **Read [Addendum 3](#addendum-3-8-october--decisions-and-the-measurements-behind-them)
+> first.** It records the owner's decisions of 8 October and supersedes the main body and
+> Addenda 1–2 wherever they conflict — the `expect:` floors in §Q4 are dropped, and several
+> claims below are withdrawn by the addenda. The fetch-test table remains the durable
+> evidence.
+
 **Tier: probe.** Short-form spec, a behavioural check the owner can run, and the
 fetch evidence below. No plan, no audit, no tier registry, no merge ritual owed.
 The deliverable of this branch is the decision and the table, not a pipeline.
@@ -657,3 +663,114 @@ committed it while documenting it: **a route being known-partial does not licens
 which direction the error runs.** An unverified hedge is an unverified claim with better
 manners. The `coverage: partial` declaration proposed in Addendum 1 must therefore say what
 the route omits, not how much.
+
+---
+
+## Addendum 3, 8 October — decisions, and the measurements behind them
+
+The owner worked through the four rot-detection checks one at a time, then the open calls
+from the 7 October handoff. **This section is the decision record. Where it conflicts with
+the main body or with Addenda 1–2, this section wins.** Nothing below is built yet; it is the
+input to a separate `build` spec, not a change to `config/`, `prompts/` or `scripts/`.
+
+### The decisions
+
+| # | Item | Decision |
+|---|---|---|
+| 1 | **Check 1 — venue-string canonicalization** | Key on `(canon(venue), city)`, not `canon(venue)` alone. Flag **only spellings new in the newest week** that collide with a spelling from an earlier week. Comma-suffixed variants (*Spreckels Temple of Music, Golden Gate Park*) are resolved by the `venues:` field (row 3), not by widening `canon()`. Posture was not re-opened: blocking, as proposed |
+| 2 | **Check 2 — collapse vs trailing median** | Thresholds kept: newest week < 40% of the median of the prior 4, median ≥ 3. **Blocking until satisfied**: a flagged venue must be named in a new digest section, **"Thin this week"**, each line saying reached or unreached and what was checked — not in "What could not be reached", which must stay true. Venues past `season_ends` are exempt, so **tier-1 entries may now carry `season_ends`** |
+| 3 | **Check 3 — declared but not producing** | Scope `tier_1_venues`. Fires on **zero listings in the last 4 weeks**, not "never". `season_ends` exempts. Matches via a new **`venues:` list** on the entry, for entries whose name is not the venue string (SFJAZZ → both halls; The Greek Theatre; Music on the Square → Courthouse Square). **Warning-only** — printed by `verify.sh`, repeated in the weekly report, never fails the gate |
+| 4 | **Check 4 — observed but never declared** | ≥ 3 weeks, majority `venue_type` not `street`/`park`, no entry covering it by `name` or `venues:`. **Warning-only.** The 29-venue backlog is sorted as in the table below and the sorting is accepted. Group D gets a **`found_via:`** field naming the sweep that reaches it, rather than a waiver list |
+| 5 | **The New Parkway** | **Removed from tier 1.** It is open and programming (see measurements), but it is mostly first-run film, which `brief.yml` excludes; a perfect route would yield ~0–2 listings a week and a standing check-3 warning |
+| 6 | **`coverage: partial`** | **Missing events only**, not missing fields (curtain times, prices). Applies to **SFJAZZ** (Miner mirror omits the Joe Henderson Lab) and **DNA Lounge** (a mirror declared as a fallback route; omits the club nights). No other route. Each marking is **dated** with when it was last checked. Addendum 1's rule stands: a partial route is named in "What could not be reached" every week, saying *what* it omits, not guessing how much |
+| 7 | **`expect:` floors** | **Dropped, all seven.** Each of the seven has a non-zero median ≥ 5, so check 2 already watches it; on the nine-week corpus the floors catch nothing check 2 does not |
+| 8 | **DICE partner endpoint** | **Accepted as a declared fallback**, used only where the venue's own page fails (Kilowatt, The Knockout). **The key is read fresh from the venue's page source each run and never committed** — `sources.yml` is public. When the route fails, the venue reverts to "What could not be reached" |
+| 9 | **PR #3** | Merged with this addendum |
+| — | PayPal Park listings (MLS, NWSL) | The owner considers `brief.yml`'s "minor-league and local only" narrower than intended. Noted; no change made now |
+
+Because checks 3 and 4 are warning-only and check 1 flags only new spellings, the
+"baseline, then enforce" problem the handoff raised mostly disappears: the only blocking
+checks are 1 (no backlog by construction) and 2 (its backlog is one week).
+
+### Shared definitions
+
+```python
+def canon(s):
+    s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()
+    s = s.replace('&', ' and ').replace('theatre', 'theater')
+    s = re.sub(r"[^a-z0-9 ]", ' ', s)
+    s = re.sub(r'^the\s+', '', s.strip())
+    return re.sub(r'\s+', ' ', s).strip()
+```
+
+A venue's key is `(canon(venue), city)`. "Room-like" is the majority `venue_type` across a
+venue's listings not being `street` or `park`. All numbers below were measured with these
+definitions over the nine files `data/2026-08-13.json` … `data/2026-10-05.json`.
+
+### Measurements
+
+**Check 1, false-positive profile (a).** Over the corpus, `canon(venue)` alone yields four
+multi-spelling keys: *Fox Theater* / *Fox Theatre* (Oakland vs Redwood City — **two venues,
+the one false positive**), and three real splits in weeks the `8599b96` repair did not touch:
+*Regency Ballroom* / *The Regency Ballroom*, *4 Star* / *4-Star Theater*, *Montgomery Theatre*
+/ *Theater*. Keying on city removes the Fox false positive and nothing real. It costs one
+detection: *Jingletown* appears under Oakland twice and Alameda once (13 Aug), a city error
+under a single spelling, which a city-keyed check no longer sees. Not caught by any
+canonicalization: comma-suffixed variants (*Spreckels Temple of Music* ×5 vs *…, Golden Gate
+Park* ×5; *Greek Theatre, UC Berkeley*; *Miner Auditorium, SFJAZZ*; *Gray Area, Grand
+Theater*) — hence `venues:`.
+
+**Check 2, backtest** — each of the last five weeks treated as newest, then checked against
+that week's own digest:
+
+| Week | Flagged (prior 4 → this week) | Explained in the digest? |
+|---|---|---|
+| 09-07 | — | — |
+| 09-14 | BAMPFA 4,5,6,7 → 2 · Mountain Winery 4,3,3,2 → 1 · YBCA 1,3,4,3 → 1 | BAMPFA yes; the others no |
+| 09-21 | Castro Theatre 5,6,5,4 → 1 · Thee Stork Club 5,2,2,4 → 1 | No — both were fetched |
+| 09-28 | — | — |
+| 10-05 | DNA Lounge 1,4,9,2 → 1 · Regency Ballroom 2,2,4,5 → 1 | DNA yes; Regency no — fetched via JamBase |
+
+Seven flags in five weeks; two were already explained. Whether the other five were real
+gaps cannot be established after the fact, which is the argument for the check.
+
+**Check 3, re-run.** Exact name matching over `tier_1_venues` gives four never-produced
+entries. Only **The New Parkway** is real. SFJAZZ and The Greek Theatre are comma-suffix
+misses; **Music on the Square is a false positive** in Addendum 1's count — it produced four
+listings (13–31 Aug) under the venue string *Courthouse Square*. The rolling form ("zero in
+the last 4 weeks"; 6 gives the same list) adds the low-volume venues that fall between
+checks 2 and 3: Felton Music Hall, Sweetwater Music Hall and Filoli (unknown), plus Stern
+Grove and Music on the Square (season over; the latter has no `season_ends` yet).
+
+**The New Parkway, corrected.** The fetch-test table calls it a dead end. That holds for a
+non-rendering fetch only: rendered in headless Chromium on 7 October,
+`thenewparkway.com/upcoming-events` lists dated screenings and events. The window's programme
+was six first-run films, one one-off (*Buddy — Sing-Along Version*, 8 Oct), a Saturday
+cartoon morning (*Cereal Cinema*) and nightly free mezzanine socials. The removal in row 5
+is editorial, not a reachability verdict.
+
+**Check 4, re-measured: 29 venues, not 27.** Merging the 4 Star and Montgomery spellings
+lifts both over the 3-week line. Sorted:
+
+| Group | Venues | Declared as |
+|---|---|---|
+| **A. Own calendar** (12) | The Midway, Rooster T. Feathers, Madrone Art Bar, San Jose Improv, Swedish American Hall, The Knockout, PURE Nightclub, 4 Star Theater, Solano 2 Drive In, Bill Graham Civic Auditorium, The Masonic, Tech CU Arena (San Jose Barracuda, minor-league, seasonal) | Tier-1 entry |
+| **B. Resident presenter** (6) | Davies Symphony Hall (SF Symphony), War Memorial Opera House (SF Opera), San Jose Center for the Performing Arts (all 17 listings one Broadway run), Mountain View CPA, Montgomery Theater (rental house), 447 Minna Street (SF Neo-Futurists' weekly *Infinite Wrench*) | Entry for the presenter, building in `venues:` |
+| **C. Recurring** (6) | de Young + Legion of Honor (free days), California Academy of Sciences (NightLife), Mechanics' Institute (film night), Noe Valley Town Square (night market), Colma Community Center (**already declared** as *Colma Summer Concert Series*, venue only in its `note:`) | `recurring:` entry with `venues:` |
+| **D. Arena or one-off** (5) | Oakland Arena, Levi's Stadium, Toyota Pavilion at Concord, Alameda County Fairgrounds, Habbas Law Epicenter at PayPal Park | `found_via:` |
+
+Of the handoff's four suspected one-off hires, two were: the Fairgrounds and PayPal Park.
+
+New undeclared venues crossing the 3-week line, per week: 0, 0, 0, 1, 3, 2, 6, 5, **10**
+(08-13 → 10-05). The corpus is young and the rate should fall once the backlog is declared,
+but it had not fallen yet — the reason check 4 is warning-only.
+
+### Still open
+
+- The per-source **run log** (`runs/<window_start>.json`) from the handoff remains unspecced.
+  Check 2's "Thin this week" lines and the New Parkway case — where "route returned nothing"
+  and "route returned only out-of-brief film" leave the same zero — are both arguments for it.
+- Felton Music Hall, Sweetwater Music Hall and Filoli need looking at before they can be given
+  a route fix, a `season_ends`, or removal.
+- The `sources.yml` staleness list in the handoff (SFJAZZ `note:`, ODC / Smuin / A.C.T., Fort
+  Mason, Chronicle Datebook, Thee Stork Club / Z Space / 924 Gilman) is unchanged.
