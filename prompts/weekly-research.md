@@ -22,6 +22,17 @@ detail. Prefer the highest tier that has the event. Tier 3 snippets frequently
 omit the artist name — verify against tier 1 before publishing anything sourced
 there.
 
+Three keys on a `sources.yml` entry change what you do with it:
+
+- **`fallback:`** — when the entry's `url` fails or returns nothing readable, try
+  each address listed, in order, before calling the venue unreached. Each says
+  what it gives. A fallback that carries only part of the programme is a floor.
+- **`coverage: partial`** — the routes that work do not carry everything the
+  venue puts on, and `omits:` says what is missing. List what the routes give,
+  and report the omission every week (see "What could not be reached").
+- **`season_ends:`** — nothing is expected from the entry after that date. Do not
+  spend fetches looking, and do not report its silence as a failure.
+
 ## Window
 
 Compute from `schedule` in the brief. Confirm today's date before you start; if
@@ -71,7 +82,19 @@ nights. Close with three sections, in this order:
   If nothing is thin, keep the heading and write "Nothing this week."
   `digests/2026-10-05.md` is a worked example.
 - **`## What could not be reached`** — every source that failed, and what the
-  failure cost. A venue can appear in both sections.
+  failure cost. A venue can appear in both sections. **Every `sources.yml` entry
+  marked `coverage: partial` gets a standing line here every week**, whether or
+  not its count looks low, unless this week you read the venue's full calendar
+  (say so instead). Name the venue, say what the route leaves out — its `omits:`
+  — and stop there. Do not estimate how many listings that is; nobody knows:
+
+  ```
+  - **SFJAZZ** — partial, as every week: the mirror lists Miner Auditorium
+    only. Joe Henderson Lab shows are missing unless listed above.
+  - **DNA Lounge** — partial: its own calendar would not load for this run, so
+    only the touring concerts on its mirrors are listed. The club nights, film
+    nights and variety shows are missing.
+  ```
 - **`## Sources`**
 
 **3. `docs/events.json`** — copy of the JSON the site reads. Run
