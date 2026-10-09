@@ -229,6 +229,13 @@ THIN_PRIOR_WEEKS = 4     # the newest week is compared with this many before it
 THIN_RATIO = 0.40        # flagged below this share of their median
 THIN_MIN_MEDIAN = 3      # a venue that usually has one or two listings is noise
 
+# Check 2 blocks until the digest answers it, and the digest convention it
+# reads — "Thin this week" — is not yet in prompts/weekly-research.md. Until
+# it is (specs/rot-checks-build.md, step 4) the check is off, and says so on
+# every run under WARN rather than going missing. The self-test replays it
+# regardless, so it cannot rot while it waits.
+THIN_ENFORCED = False
+
 
 def thin_venues(weeks, entries=()):
     """
@@ -577,7 +584,11 @@ def report(weeks, entries, digest_dir):
               f"spelling of “{f['established']}”. Use the established spelling.")
 
     thin, s = thin_venues(weeks, entries)
-    if thin is None:
+    if not THIN_ENFORCED:
+        print("check 2 · thin venue: NOT RUN — switched off until the digest's "
+              "“Thin this week” convention lands")
+        print("  WARN  check 2 (thin venue) is switched off and did not look at this week")
+    elif thin is None:
         print(f"check 2 · thin venue: NOT EVALUATED — {s['weeks']} week(s), needs {s['needs']}")
         print(f"  WARN  check 2 was not evaluated: {s['weeks']} week(s) of data, needs {s['needs']}")
     else:

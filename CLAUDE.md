@@ -106,6 +106,13 @@ file was deliberately corrected, update the recorded answers in the same commit
 and say why; never delete them to get a pass. Build record:
 [specs/rot-checks-build.md](specs/rot-checks-build.md).
 
+Some rot checks only report. Their findings print as `WARN` lines, which
+`verify.sh` counts in its summary (`passed … failed … skipped … warnings …`) and
+lists again beneath it. **A warning never changes the exit code and never holds a
+week back**, and the weekly report repeats every one — the rule SKIPPED follows.
+Do not edit `config/sources.yml` to silence one; the entry is either right or it
+is a finding.
+
 CI runs everything unattended on every push: `validate.py`, `drift.py`, a
 `brief.yml`/`sources.yml` parse check, a check that `docs/events.json` is
 current, and — since 2026-08-17 — both halves of the tooling floor, a
