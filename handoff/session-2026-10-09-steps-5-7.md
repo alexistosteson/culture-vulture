@@ -60,8 +60,7 @@ Settled this session and written nowhere else:
 - `python3 scripts/drift.py` → self-test 43/43, exit 0. Check 2: 1 thin (Regency
   Ballroom), 1 accounted for. Check 3 warns on Stern Grove Festival, Music on the Square,
   Filoli, Felton Music Hall, Sweetwater Music Hall. Check 4: 0.
-- CI on the step-3 merge passed. **The step-4 merge's CI run was not read** — check it
-  first (`gh run list --branch main --limit 2`).
+- CI passed on the step-3 and step-4 merges.
 
 ## Next action
 
@@ -80,11 +79,13 @@ as its fallback route, and the standing line for each in "What could not be reac
 
 ## Unresolved questions
 
-- **Owner's — how a listing shows that it is uncertain.** Unchanged from 9 October
-  morning: he ruled sourcing detail out of listing text; three options were put;
-  recommended a short mark with the reason one tap away, as its own small spec after this
-  build. **Not decided.** The eight listings added this session carry no sourcing
-  sentences; the rewritten Parrotfish note still has one clause of it.
+- ~~Owner's — how a listing shows that it is uncertain.~~ **Decided 9 October: a short
+  mark on the uncertain listings only, with the reason one tap away and one legend at the
+  foot.** It is its own small spec after this build (spec §9 keeps this build off the
+  page) and gets a `BACKLOG.md` row when the build closes, beside the run-log row. Until
+  then, write no sourcing sentences into listing text. Today 46 listings carry a
+  confidence mark the page never shows, and the rewritten Parrotfish note still has one
+  sourcing clause.
 - **Owner's:** removing a tier-1 venue is editorial (step 7: Felton, Sweetwater, Filoli).
 - **Owner's, later:** check 4 counts "3 or more weeks" over the whole history.
 - **Owner action, now due:** paste the updated `prompts/weekly-run.md` into the routine.
