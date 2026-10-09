@@ -237,3 +237,55 @@ week exists.
 
 `prompts/weekly-research.md` gained the check in its verification pass in the same step,
 so the unattended run is told how to respond before it meets a check that can stop it.
+
+### Step 2 — the venue declarations · 9 October 2026
+
+`python3 scripts/drift.py` on the working branch, before and after `config/sources.yml`
+was edited (checks 2–4 are not on `main` yet, so this is where the count can be read):
+
+```
+before  check 4 · observed, not declared: 88 of 484 venues appear in 3+ weeks, 70 of them rooms, 40 declared — 30 undeclared
+after   check 4 · observed, not declared: 88 of 484 venues appear in 3+ weeks, 70 of them rooms, 70 declared — 0 undeclared
+
+before  check 3 · declared, not producing: 53 tier-1 entries, 49 ever matched a listing, 0 out of season — 8 with nothing in the last 4 weeks
+after   check 3 · declared, not producing: 60 tier-1 entries, 60 ever matched a listing, 0 out of season — 5 with nothing in the last 4 weeks
+```
+
+Self-test 38/38 both times. The five still quiet are the ones steps 5 and 7 own: Stern
+Grove and Music on the Square (season over, no `season_ends` yet), Felton, Sweetwater,
+Filoli. The 30 were the 27 rooms plus three comma-suffixed spellings, as §5 predicts.
+
+What was written, sorted as §7 decision 4 directs:
+
+| Declared as | Venues |
+|---|---|
+| Tier 1 (8) | The Midway, Madrone Art Bar, Bill Graham Civic Auditorium, The Masonic, San Francisco Neo-Futurists (`venues:` 447 Minna Street), Rooster T. Feathers, San Jose Improv, PURE Nightclub |
+| `recurring:` (2 new, 2 amended) | NightLife (California Academy of Sciences), Noe Valley Town Square; Colma Summer Concert Series and Golden Gate Park Band gain `venues:` |
+| `observed_venues:` with `found_via:` (18) | Unreadable: The Knockout, Solano 2 Drive In, de Young Museum, Legion of Honor, Mechanics' Institute. Partly readable: Swedish American Hall, 4 Star Theater, Tech CU Arena, Davies Symphony Hall, War Memorial Opera House, San Jose CPA, Mountain View CPA, Montgomery Theater. Group D: Oakland Arena, Levi's Stadium, Toyota Pavilion at Concord, Alameda County Fairgrounds, PayPal Park |
+| `venues:` on existing tier 1 | SFJAZZ, The Greek Theatre, Music on the Square, Gray Area |
+| Removed | The New Parkway |
+
+**Every URL written was fetched on 9 October and the venue name and a dated listing read
+in the response** — 21 URLs, each inside the first 100 KB of the page. Songkick, Funcheap
+and JamBase were also read through the fetch tool the unattended run uses, not only from
+this machine.
+
+Re-fetching changed four things the 8 October research reported:
+
+- **Funcheap's venue pages do read.** The research got 403 and did not retry. They refuse a
+  request that announces itself as a browser and answer a plain one. So The Knockout and
+  Solano 2 Drive In each have a written, fetched route rather than none.
+- **Downtown SF's page for Movies at Mechanics' reads** (dates and times for 9 and 16
+  October). The research called it an unfilled template.
+- **JamBase reads through the run's own fetch tool** (SFJAZZ's Miner Auditorium page:
+  five dated shows). The research could not say which way that would go.
+- **sfsymphony.org's front page answered**, but its calendar still redirects to the waiting
+  room. Davies Symphony Hall stays partly readable.
+
+Two entries say plainly what is not known: PayPal Park's `found_via` is "not recorded" —
+none of its three listings carries a source link and it was not on Songkick's sweep that
+day — and the de Young and Legion free Saturdays are confirmed only on Funcheap's page for
+the day, past the 100 KB line.
+
+Venue capacities for the eight new tier-1 entries are `null`: none was read on a fetched
+page, and none was guessed.
