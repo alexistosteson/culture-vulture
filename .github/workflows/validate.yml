@@ -47,6 +47,10 @@ jobs:
         run: ruff check .
       - name: Validate event data
         run: python3 scripts/validate.py
+      # Exit 2 from drift.py means it could not check. Any non-zero fails here,
+      # which is the right reading of both 1 and 2.
+      - name: Rot checks
+        run: python3 scripts/drift.py
       - name: Check brief.yml parses
         run: python3 -c "import yaml,sys; yaml.safe_load(open('config/brief.yml')); yaml.safe_load(open('config/sources.yml')); print('config ok')"
       - name: Check docs/events.json is current

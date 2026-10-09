@@ -64,6 +64,7 @@ prompts/             the research prompt an LLM runs against brief.yml
 data/YYYY-MM-DD.json one file per week — the events and their window
 scripts/validate.py  schema + vocabulary + window checks (runs in CI)
 scripts/build.py     projects brief.yml over the data file -> docs/events.json
+scripts/drift.py     rot checks — the newest week against the weeks before it
 scripts/verify.sh    the merge gate — everything above plus lint, the tool
                      floor, digest/data agreement, and a headless render
 docs/                THE PUBLISHED SITE — index.html + events.json only
@@ -74,6 +75,7 @@ Weekly run — research on a branch, then:
 
 ```bash
 python3 scripts/validate.py     # expect: 0 errors, 0 warnings (exit 0)
+python3 scripts/drift.py        # exit 0; 1 = fix the week, 2 = the checks are broken
 python3 scripts/build.py        # publishes newest data/ file to docs/
 bash    scripts/verify.sh       # the gate; exit 0 means merge, exit 1 means stop
 ```
@@ -96,7 +98,15 @@ prints grow each week and are not an expectation to match — `0 errors, 0
 warnings` is. Don't pin a count here; the previous version of this line said 67
 and was two weeks stale.
 
-CI runs everything unattended on every push: `validate.py`, a
+`drift.py` has three exits and **exit 2 is a failure, not a skip**: it means the
+rot checks could not run, or failed their own self-test — a replay of cases whose
+answers are recorded in the script. A detector that has gone blind prints nothing,
+and nothing looks like a healthy week. If the self-test fails because an old data
+file was deliberately corrected, update the recorded answers in the same commit
+and say why; never delete them to get a pass. Build record:
+[specs/rot-checks-build.md](specs/rot-checks-build.md).
+
+CI runs everything unattended on every push: `validate.py`, `drift.py`, a
 `brief.yml`/`sources.yml` parse check, a check that `docs/events.json` is
 current, and — since 2026-08-17 — both halves of the tooling floor, a
 `select`-coverage assertion over `ruff.toml` followed by `ruff check .`. The
