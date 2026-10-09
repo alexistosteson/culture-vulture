@@ -28,6 +28,13 @@
 # when `url` fails or returns nothing readable. Literal addresses, each fetched
 # and read on the `checked:` date; `gives:` says what that one carries.
 #
+# `how:` — the address is not read by fetching it. Run the command, from the
+# repository root, with the entry's `url` in place of <url>. Used where a
+# venue's page draws its calendar with a ticketing widget and its HTML carries
+# no dates. THE COMMAND READS THE VENUE'S OWN KEY OFF ITS PAGE EACH TIME. That
+# key is never written here, in a digest, or anywhere else in this repository,
+# which is public.
+#
 # `found_via:` — on `observed_venues` at the foot of this file: how a venue the
 # digest keeps listing is actually reached, when it has no page of its own that
 # a plain fetch reads in full.
@@ -91,7 +98,10 @@ tier_1_venues:
     - { name: 1015 Folsom,           url: "https://1015.com/", cap: 1000 }
     - { name: The Foundry SF, url: "https://www.thefoundry.club/", cap: 500,
         note: "URL corrected 2026-09-21 — thefoundrysf.com 308-redirects here and the fetch path does not follow cross-host redirects, so the old URL returned nothing." }
-    - { name: Kilowatt,              url: "https://www.kilowattbar.com/", cap: 150 }
+    - { name: Kilowatt, url: "https://www.kilowattbar.com/events", cap: 150,
+        how: "python3 scripts/dice.py <url> --from <window_start> --to <window_end>",
+        checked: 2026-10-09,
+        note: "The calendar is drawn by a DICE ticketing widget; a plain fetch of this page, or of the homepage, shows no dates at all — which is why five of nine weeks listed nothing here and the other four listed one show from a ticketing sweep. The command gave 16 events for 9–18 Oct with start times and ticket links. It lists from today forward only, so run it on the first day of the window. If it says COULD NOT READ, the venue is unreached: say so, and fall back to the ticketing sweep as before." }
     - { name: Chase Center,          url: "https://www.chasecenter.com/events", cap: 18000,
         note: "Arena. `deprioritize` in brief.yml — list for completeness, never feature." }
     # Added 2026-10-09. Each of these had been listed in three or more weeks with
@@ -287,9 +297,13 @@ observed_venues:
 
   # No readable page of their own.
   - { name: The Knockout, region: sf,
-      found_via: "SF Funcheap's page for the venue, and the ticketing sweep",
-      url: "https://sf.funcheap.com/venue/the-knockout/",
-      note: "theknockoutsf.com shows only sample events from 2023; its live calendar is a ticketing widget drawn by script. Funcheap carries the free and standing nights, not the full band calendar." }
+      found_via: "its DICE ticketing calendar, read with scripts/dice.py, plus SF Funcheap's page for the free nights",
+      url: "https://theknockoutsf.com/",
+      how: "python3 scripts/dice.py <url> --from <window_start> --to <window_end>",
+      checked: 2026-10-09,
+      fallback: [
+        { url: "https://sf.funcheap.com/venue/the-knockout/", gives: "the free, unticketed nights — Cyberpunk Cinema Night, Drink & Draw — which DICE does not carry" } ],
+      note: "READ BOTH, EVERY WEEK — neither is the whole calendar. The venue's own HTML shows only sample events from 2023; the live calendar is a DICE widget, and the command gave 18 events for 9–18 Oct. DICE sometimes carries one night twice, under two ticket links or two names at the same hour: list it once. Funcheap alone, which is all this entry had before 2026-10-09, gave one event for the same ten days. If the command says COULD NOT READ, the venue is unreached for everything but the free nights: say so." }
   - { name: Solano 2 Drive In, region: east-bay,
       found_via: "SF Funcheap's page for the venue",
       url: "https://sf.funcheap.com/venue/solano-2-drive-in/",

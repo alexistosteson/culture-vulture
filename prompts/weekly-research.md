@@ -22,11 +22,19 @@ detail. Prefer the highest tier that has the event. Tier 3 snippets frequently
 omit the artist name — verify against tier 1 before publishing anything sourced
 there.
 
-Three keys on a `sources.yml` entry change what you do with it:
+Four keys on a `sources.yml` entry change what you do with it:
 
 - **`fallback:`** — when the entry's `url` fails or returns nothing readable, try
   each address listed, in order, before calling the venue unreached. Each says
   what it gives. A fallback that carries only part of the programme is a floor.
+- **`how:`** — the address is not read by fetching it; a plain fetch sees an
+  empty page. Run the command the entry gives, from the repository root, with
+  the entry's `url` and this week's window. It prints the venue's listings with
+  local start times. `COULD NOT READ` means the venue is unreached — never that
+  nothing is on — and belongs under "What could not be reached". The command
+  handles a key that belongs to the venue: never print it, copy it, or write it
+  into any file, and do not try to make the request yourself by another route.
+  Check the city on each line before listing it.
 - **`coverage: partial`** — the routes that work do not carry everything the
   venue puts on, and `omits:` says what is missing. List what the routes give,
   and report the omission every week (see "What could not be reached").

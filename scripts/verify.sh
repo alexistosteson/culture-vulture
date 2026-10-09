@@ -214,6 +214,18 @@ else
   meh "no Chromium — cannot confirm the page actually renders"
 fi
 
+# 11. The DICE calendar reader's own cases, offline: the venue's key travels in
+#     the request and appears in nothing that is printed, and a UTC time lands
+#     on the right local evening. Exit 3 means this machine has no timezone
+#     data — a missing tool, so a skip. The reader itself needs the network and
+#     is never run here; a venue it cannot reach is the week's to report.
+python3 scripts/dice.py --self-test >/dev/null 2>&1; rc=$?
+case $rc in
+  0) ok "dice.py self-test" ;;
+  3) meh "dice.py self-test — no timezone data here (pip install tzdata)" ;;
+  *) no "dice.py self-test"; python3 scripts/dice.py --self-test 2>&1 | sed 's/^/        /' ;;
+esac
+
 echo
 echo "================================================================"
 printf 'passed %d   failed %d   skipped %d   warnings %d\n' "$pass" "$fail" "$skip" "$warn"

@@ -1,10 +1,10 @@
-# Handoff — rot-check build: steps 1–5 live, steps 6–7 to do, 9 October 2026 (late)
+# Handoff — rot-check build: steps 1–6 live, step 7 to do, 9 October 2026 (late)
 
 Session name: Draft the build spec for the rot-detection checks
 
 Read `CLAUDE.md` first; it is binding. **`docs/` is the published web root.** The build
 record is [`specs/rot-checks-build.md`](../specs/rot-checks-build.md) — tier, the seven
-steps, every owner decision (§7) and the evidence for steps 1–5 (§10) are there and are
+steps, every owner decision (§7) and the evidence for steps 1–6 (§10) are there and are
 not repeated here.
 
 ## Changed since last session
@@ -15,7 +15,19 @@ two-address `fallback:`; `prompts/weekly-research.md` tells the run what those k
 and to write a standing line for each partial venue under "What could not be reached".
 `prompts/weekly-run.md` did not change, so no paste is owed.
 
+**Step 6 is on `main`.** New `scripts/dice.py` reads Kilowatt's and The Knockout's
+calendars (16 and 18 events for 9–18 October, against 1–2 a week published). Both entries
+carry a new `how:` key giving the command; The Knockout's Funcheap page is now its
+`fallback:` and the entry says to read both. The gate has an eleventh check, the script's
+offline self-test.
+
 Settled this session and written nowhere else:
+
+- **Whether the unattended run's machine can reach DICE is unknown.** Nothing here can
+  test it. If it cannot, the run reports both venues unreached; Monday's digest says which.
+- This Mac's `python3` (3.14, python.org) has no certificate bundle of its own; `dice.py`
+  uses `certifi` when it is installed. A `CERTIFICATE_VERIFY_FAILED` here is the machine.
+- DICE lists from today forward only, and can carry one night twice.
 
 - **The spec's season end for Music on the Square was wrong** — 4 September, not
   31 August. §2 and §10 carry the correction.
@@ -38,12 +50,12 @@ Settled this session and written nowhere else:
 ## Read only these
 
 - [`specs/rot-checks-build.md`](../specs/rot-checks-build.md) — §2 for the step being
-  built; §10 "Step 5" for the shape `coverage` and `fallback` took.
+  built; §10 "Step 5" and "Step 6" for the shape `coverage`, `fallback` and `how` took.
 - `config/sources.yml` — its header, and the entries the step touches.
 
 ## Current state
 
-- `bash scripts/verify.sh` on `main` → exit 0, **10 passed, 0 failed, 0 skipped,
+- `bash scripts/verify.sh` on `main` → exit 0, **11 passed, 0 failed, 0 skipped,
   3 warnings**, `rendered 359/359 listings`.
 - `python3 scripts/drift.py` → self-test 43/43, exit 0. Check 2: 1 thin (Regency
   Ballroom), accounted for. Check 3 warns on Filoli, Felton Music Hall, Sweetwater Music
@@ -55,11 +67,13 @@ Settled this session and written nowhere else:
 else.** It is the first run to meet a blocking check it has to answer in writing, and the
 first to be asked for standing lines. Expected: it publishes the 12 October week with an
 *unreached* line for DNA Lounge under `## Thin this week`, a standing line each for SFJAZZ
-and DNA Lounge under `## What could not be reached`, and three warnings repeated in its
-report. If it did not publish, read why before building further.
+and DNA Lounge under `## What could not be reached`, three warnings repeated in its
+report, and **either several Kilowatt and Knockout listings or both named as unreached**.
+If it did not publish, read why before building further.
 
-Then **step 6**, inline, in the worktree: the DICE route for Kilowatt and The Knockout,
-described in `sources.yml` with the `fallback:` shape step 5 introduced. Then **step 7**.
+Then **step 7**, inline, in the worktree: the stale entries §2 lists (SFJAZZ's note is
+already done), and Felton, Sweetwater and Filoli — a route fix, a `season_ends`, or a
+removal that goes to the owner with the evidence.
 
 ## Unresolved questions
 
@@ -71,9 +85,10 @@ described in `sources.yml` with the `fallback:` shape step 5 introduced. Then **
 
 ## Constraints
 
-- Steps 6–7 change `config/sources.yml`, which the Monday run reads. A wrong route costs
+- Step 7 changes `config/sources.yml`, which the Monday run reads. A wrong route costs
   listings every week it stays wrong; fetch, read, then write.
-- Step 6: the DICE key is never written to any file here. The repository is public.
+- The DICE key is never written to any file here. The repository is public. `dice.py`
+  has no option that prints or accepts one; do not add one.
 - Still owed at the end: the owner's behavioural check as a click-by-click page (spec
   §8), a `BACKLOG.md` row for the per-source run log, and §10 evidence for each step.
 - PayPal Park's `found_via` is "not recorded". Fill it in when a run next lists it.
