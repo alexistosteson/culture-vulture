@@ -50,7 +50,29 @@ Notes on specific fields:
 **2. `digests/{window_start}.md`** — the human digest. Group by
 `output.group_by`, order within groups by `output.sort_within`. Open with a
 "Week at a Glance" naming the dominant event, the busiest day, and the dead
-nights. Close with a sources list.
+nights. Close with three sections, in this order:
+
+- **`## Thin this week`** — one line for each venue that has far fewer listings
+  this week than in its own recent weeks. `scripts/drift.py` tells you which
+  (see the verification pass); you do not have to work it out. Each line is a
+  list item that **names the venue as the data file spells it, says `reached` or
+  `unreached`, and says what you checked**:
+
+  ```
+  - **The Regency Ballroom** — reached; its JamBase page shows one show this
+    week and nothing again until the 13th.
+  - **DNA Lounge** — unreached; the October calendar page returned nothing
+    readable on three attempts, and the JamBase mirror lists one concert.
+  ```
+
+  *Reached* means you read the venue's calendar, or a mirror of it, and the low
+  count is what is really on. *Unreached* means you could not, and the count is
+  a floor. Never write *reached* for a venue you only saw in a ticketing sweep.
+  If nothing is thin, keep the heading and write "Nothing this week."
+  `digests/2026-10-05.md` is a worked example.
+- **`## What could not be reached`** — every source that failed, and what the
+  failure cost. A venue can appear in both sections.
+- **`## Sources`**
 
 **3. `docs/events.json`** — copy of the JSON the site reads. Run
 `python3 scripts/build.py` to produce it.
@@ -87,7 +109,17 @@ Before finalising, check every part of the brief against what you retrieved:
   - **A new spelling of an established venue** ("Fillmore" where every earlier week
     says "The Fillmore") — change the data file *and* the digest to the established
     spelling it names. Two spellings are two venues to everything that counts.
-  - **`COULD NOT CHECK`** (exit 2) — not something to fix in the week. Stop and
+  - **A thin venue** ("Regency Ballroom: 1 listing(s) after 2, 2, 4, 5") — the venue
+    has less than 40% of what it usually has. **Look again before you write
+    anything**: re-read its calendar, try the route `sources.yml` gives, try its
+    mirror. Add whatever you find to the data file and the digest. Then run
+    `drift.py` again. If the venue is still flagged, write its line under
+    `## Thin this week` as described above, and the check is satisfied. The line is
+    not a formality — it is the difference between a quiet week and a missed one,
+    and it is the only place a reader is told which.
+  - **`COULD NOT CHECK`** (exit 2) — not something to fix in the week, with one
+    exception: `no readable digest` means you ran it before writing
+    `digests/{window_start}.md`. Write the digest first. Anything else, stop and
     report it verbatim; the checks themselves are broken.
   - **A `WARN` line** — does not stop the week and is not yours to fix in it. Two
     kinds name a venue: one that `sources.yml` says is watched and that has produced

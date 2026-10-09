@@ -106,6 +106,12 @@ file was deliberately corrected, update the recorded answers in the same commit
 and say why; never delete them to get a pass. Build record:
 [specs/rot-checks-build.md](specs/rot-checks-build.md).
 
+One rot check blocks until the digest answers it: a venue far below its own
+recent count stops the week until `digests/<window_start>.md` names it under
+`## Thin this week`, with the word *reached* or *unreached* and what was checked.
+The weekly run is told to look again first and write the line second
+(`prompts/weekly-research.md`).
+
 Some rot checks only report. Their findings print as `WARN` lines, which
 `verify.sh` counts in its summary (`passed … failed … skipped … warnings …`) and
 lists again beneath it. **A warning never changes the exit code and never holds a

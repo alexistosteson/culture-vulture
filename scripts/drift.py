@@ -19,8 +19,8 @@ Exit codes — and callers must read all three:
 
     0  checked, and nothing blocking was found (WARN lines may have printed)
     1  checked, and a blocking check fired
-    2  COULD NOT CHECK — no data, unreadable data or config, or the self-test
-       failed. This is a failure, not a skip. A detector's failure mode is
+    2  COULD NOT CHECK — no data, unreadable data or config, no digest for the
+       newest week, or the self-test failed. This is a failure, not a skip. A detector's failure mode is
        silence: a check that has gone blind prints nothing, and nothing looks
        exactly like a healthy week. So the script proves it can still see
        before it reports that it saw nothing.
@@ -229,13 +229,6 @@ THIN_PRIOR_WEEKS = 4     # the newest week is compared with this many before it
 THIN_RATIO = 0.40        # flagged below this share of their median
 THIN_MIN_MEDIAN = 3      # a venue that usually has one or two listings is noise
 
-# Check 2 blocks until the digest answers it, and the digest convention it
-# reads — "Thin this week" — is not yet in prompts/weekly-research.md. Until
-# it is (specs/rot-checks-build.md, step 4) the check is off, and says so on
-# every run under WARN rather than going missing. The self-test replays it
-# regardless, so it cannot rot while it waits.
-THIN_ENFORCED = False
-
 
 def thin_venues(weeks, entries=()):
     """
@@ -278,15 +271,11 @@ def thin_venues(weeks, entries=()):
     return findings, stats
 
 
-def thin_lines(digest_path):
+def thin_lines(text):
     """
-    The items of the digest's "Thin this week" section, each as one string.
+    The items of a digest's "Thin this week" section, each as one string.
     None if the digest has no such section; the caller decides what that means.
     """
-    try:
-        text = Path(digest_path).read_text()
-    except OSError:
-        return None
     m = re.search(r"^##\s+Thin this week\s*$(.*?)(?=^##\s|\Z)", text, re.S | re.M | re.I)
     if not m:
         return None
@@ -406,7 +395,11 @@ KNOWN_THIN = {
                    ("yerba buena center for the arts", "San Francisco")],
     "2026-09-21": [("castro theater", "San Francisco"), ("thee stork club", "Oakland")],
     "2026-09-28": [],
-    "2026-10-05": [("dna lounge", "San Francisco"), ("regency ballroom", "San Francisco")],
+    # DNA Lounge was flagged here too, on 1 listing, until 9 October, when its
+    # own calendar was read by hand and eight missed listings were added to the
+    # week (digests/2026-10-05.md, "Thin this week"). The flag was right; the
+    # data was corrected, so the recorded answer changed with it.
+    "2026-10-05": [("regency ballroom", "San Francisco")],
 }
 KNOWN_THROUGH = "2026-10-05"
 
@@ -507,6 +500,26 @@ def selftest(weeks):
     ]:
         expect(label, accounted_for(foo, [line]), want)
 
+    # The same three outcomes through a whole digest, since the section is
+    # found by its heading and a heading is easy to write another way.
+    def digest(section):
+        return f"# Week\n\n## Monday\n\n- The Foo Hall — reached; not in the section.\n\n{section}"
+    thin_section = ("## Thin this week\n\nOne line each.\n\n"
+                    "- **The Foo Hall** — reached; the calendar shows two dark\n"
+                    "  weeks for a refit.\n- **Bar Room** — unreached.\n\n"
+                    "## What could not be reached\n\n- The Foo Hall — reached, checked the calendar twice.\n")
+    expect("a digest with no “Thin this week” section accounts for nothing",
+           thin_lines(digest("## What could not be reached\n\n- nothing\n")), None)
+    expect("the section is read to its end and no further, wrapped lines joined",
+           len(thin_lines(digest(thin_section))), 2)
+    expect("a flagged venue with a line in the section passes",
+           accounted_for(foo, thin_lines(digest(thin_section))), True)
+    expect("a venue named in the section without what was checked still blocks",
+           accounted_for({"names": {"Bar Room"}}, thin_lines(digest(thin_section))), False)
+    expect("a line elsewhere in the digest is not in the section",
+           accounted_for(foo, thin_lines(digest(thin_section.split("- **The Foo Hall**")[0]
+                                                + "- **Bar Room** — unreached.\n"))), False)
+
     # Check 3, planted.
     quiet = _run("Foo Hall", [3, 0, 0, 0, 0])
     expect("a tier-1 venue with nothing in four weeks is quiet",
@@ -584,16 +597,18 @@ def report(weeks, entries, digest_dir):
               f"spelling of “{f['established']}”. Use the established spelling.")
 
     thin, s = thin_venues(weeks, entries)
-    if not THIN_ENFORCED:
-        print("check 2 · thin venue: NOT RUN — switched off until the digest's "
-              "“Thin this week” convention lands")
-        print("  WARN  check 2 (thin venue) is switched off and did not look at this week")
-    elif thin is None:
+    if thin is None:
         print(f"check 2 · thin venue: NOT EVALUATED — {s['weeks']} week(s), needs {s['needs']}")
         print(f"  WARN  check 2 was not evaluated: {s['weeks']} week(s) of data, needs {s['needs']}")
     else:
+        # No digest is "could not check", not "nothing accounted for": the
+        # week's answer to this check lives there, and it cannot be read.
         digest = Path(digest_dir) / f"{newest}.md"
-        lines = thin_lines(digest)
+        try:
+            lines = thin_lines(digest.read_text())
+        except OSError as e:
+            raise CannotCheck(f"no readable digest for the week of {newest} — "
+                              f"check 2 reads digests/{digest.name}") from e
         open_ = [f for f in thin if not accounted_for(f, lines)]
         print(f"check 2 · thin venue: {s['watched']} of {s['venues']} venues usually have "
               f"{THIN_MIN_MEDIAN}+ listings ({s['exempt']} more out of season) — "
