@@ -42,7 +42,7 @@ Each step lands on its own and is verified on its own. A step merges when
 from Addendum 3 — not reconstructed. Reads `data/*.json`, `config/sources.yml` and the
 newest digest; no network. Wired into `verify.sh` as a REQUIRED check and into CI.
 
-**Step 2 — declare the venues.** A `venues:` list on any `sources.yml` entry whose name is
+**Step 2 — declare the venues** (amended by §7 decision 4). A `venues:` list on any `sources.yml` entry whose name is
 not the venue string. The 29 venues from Addendum 3's table are declared as sorted there:
 A as tier-1 entries, B as an entry for the presenter with the building in `venues:`, C as
 `recurring:` entries with `venues:`, D with `found_via:`. SFJAZZ, The Greek Theatre and
@@ -162,6 +162,18 @@ effect is on the self-test, which expects 27 before step 2's declarations and 0 
    check 2 is enforced. Any show the re-check finds is added to the week as a dated
    backfill, as on 7 October. This is part of step 4, and it leaves Monday's unattended
    run a worked example.
+
+4. **Decided 9 October: venues with no readable address are declared by how they are
+   actually reached.** The route research (`handoff/route-research-2026-10-08/`) found
+   that several venues Addendum 3 sorted into group A or C have no address a plain fetch
+   can read — The Knockout's own site, Solano 2 Drive In, the de Young and Legion of Honor
+   free Saturdays, Mechanics' Institute's film night — and about eight more are only
+   partly readable. These get `found_via:` naming the route that really reaches them, as
+   group D does, and are not listed as tier 1. This overrides Addendum 3's sorting for
+   those venues only. **Reading applied to the partly readable ones:** they are treated
+   the same way, with `found_via:` saying what the route omits, because the owner limited
+   `coverage: partial` to SFJAZZ and DNA Lounge. If he meant only the unreadable ones, the
+   partly readable ones go back to tier 1 with a note.
 
 ## 8. Behavioural check (owner)
 

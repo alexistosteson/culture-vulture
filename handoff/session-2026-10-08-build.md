@@ -21,6 +21,8 @@ On `claude/priceless-euclid-56c3ca` only (pushed, **not merged, not mergeable ye
 
 Settled this session and written nowhere else:
 
+- **Venues with no fully readable address are declared by how they are actually reached**
+  (owner, 9 October) — spec §7 decision 4. Do not reopen it.
 - Group D venues (`found_via:`) go in a new top-level `sources.yml` list named
   **`observed_venues:`**. `scripts/drift.py` on the branch already reads that name.
 - `drift.py` prints warnings as lines beginning `  WARN  `. `verify.sh` does not count
@@ -69,16 +71,6 @@ check 4's undeclared count falls from 30 to 0.
 
 ## Unresolved questions
 
-- **Owner's, and the first thing step 2 needs:** the research found that several of the
-  venues Addendum 3 sorted as "has its own calendar" or "recurring" have **no address a
-  plain fetch can read** — The Knockout's own site, Solano 2 Drive In, de Young and Legion
-  of Honor free Saturdays, Mechanics' Institute's film night — and several more are only
-  partly readable (Davies, War Memorial Opera House, Swedish American Hall, 4 Star,
-  Mountain View CPA, San Jose CPA, Montgomery, Tech CU Arena). Declaring them as tier 1
-  would claim a route that does not exist. The options to put to him: declare them with
-  `found_via:` naming how they are actually reached, as group D already is (lean — it is
-  the honest description and costs nothing); or declare them tier 1 with a note and accept
-  a standing check-3 warning when the sweep misses them. Not decided.
 - **Owner's:** removing any tier-1 venue is editorial and goes back to him — applies if
   the research shows Felton Music Hall, Sweetwater Music Hall or Filoli should go (step 7).
 - **Owner's, later:** check 4 counts "3 or more weeks" over the whole history, as
