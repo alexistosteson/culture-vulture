@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Rot checks — your check</title>
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#ffffff;
+    --panel:#f7f8fa;
+    --border:#e0e3e8;
+    --text:#1a1d23;
+    --muted:#5b6270;
+    --accent:#2563eb;
+    --accent-dark:#1d4ed8;
+    --ok-bg:#eefaf0;
+    --ok-border:#bfe8c8;
+    --warn-bg:#fff8e6;
+    --warn-border:#f2d98a;
+    --code-bg:#f1f3f6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin:0;
+    padding:0 16px 80px 16px;
+    line-height:1.5;
+    font-size:16px;
+  }
+  .wrap{max-width:740px;margin:0 auto;}
+  h1{font-size:1.5rem;margin:28px 0 6px 0;}
+  h2{font-size:1.15rem;margin:0 0 8px 0;}
+  .intro{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:20px;
+  }
+  .intro p{margin:0 0 8px 0;}
+  .intro p:last-child{margin-bottom:0;}
+  .step{
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:16px;
+    background:var(--bg);
+  }
+  .step-num{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-weight:600;
+    font-size:0.8rem;
+    border-radius:999px;
+    padding:2px 10px;
+    margin-bottom:8px;
+  }
+  .label{font-weight:600;margin:12px 0 4px 0;display:block;}
+  .copybox{
+    background:var(--code-bg);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:8px 0;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:0.92rem;
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+  .copybox .txt{flex:1;-webkit-user-select:all;user-select:all;cursor:text;}
+  #limited-view{display:none;}
+  .copy-btn{
+    flex-shrink:0;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:6px 10px;
+    font-size:0.8rem;
+    cursor:pointer;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .copy-btn:hover{background:var(--accent-dark);}
+  .screen{
+    background:#fbfbfc;
+    border:1px solid var(--border);
+    border-left:4px solid #9aa3b2;
+    border-radius:6px;
+    padding:10px 12px;
+    margin:8px 0;
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:0.82rem;
+    line-height:1.45;
+    white-space:pre-wrap;
+    word-break:break-word;
+    color:#1a1d23;
+  }
+  .screen b{background:#fff3c4;font-weight:600;}
+  .note{margin-top:10px;}
+  .note textarea{
+    width:100%;
+    min-height:60px;
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:8px;
+    font-family:inherit;
+    font-size:0.95rem;
+    resize:vertical;
+    background:#fff;
+    color:var(--text);
+  }
+  .checkline{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin-top:10px;
+    font-weight:500;
+  }
+  .checkline input{margin-top:3px;width:18px;height:18px;flex-shrink:0;}
+  .callout-warn{
+    background:var(--warn-bg);
+    border:1px solid var(--warn-border);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:8px 0;
+  }
+  .callout-ok{
+    background:var(--ok-bg);
+    border:1px solid var(--ok-border);
+    border-radius:6px;
+    padding:10px 12px;
+    margin:8px 0;
+  }
+  kbd{
+    background:#fff;
+    border:1px solid #c9ced6;
+    border-bottom-width:2px;
+    border-radius:5px;
+    padding:1px 6px;
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:0.88em;
+    white-space:nowrap;
+  }
+  .final{text-align:center;margin:32px 0;}
+  .final button{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:14px 22px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .final button:hover{background:var(--accent-dark);}
+  #copy-status{margin-top:10px;font-size:0.9rem;color:var(--muted);min-height:1.2em;}
+  .footer-note{font-size:0.85rem;color:var(--muted);margin-top:24px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Culture Vulture — checking the new safeguards yourself</h1>
+
+<div class="callout-warn" id="limited-view"><strong>This preview cannot copy for you or save your notes.</strong> Open this page in your web browser instead: in Finder, go to Documents &rarr; Projects &rarr; Claude projects &rarr; bay-week &rarr; handoff and double-click <strong>rot-checks-walk.html</strong>. If you stay here, click a grey box to select its text and press <kbd>Cmd</kbd>+<kbd>C</kbd>, and keep this page open until you have copied your notes out.</div>
+
+<div class="intro">
+  <p><strong>What this is:</strong> four short commands that let you watch the new safeguards work. Each week now passes through an automatic check before it is published — called <strong>the gate</strong> below. The gate can do two things: <strong>refuse</strong> a week, which stops it being published, or <strong>warn</strong>, which lets the week through and puts the warning in the weekly report. About <strong>10 minutes</strong>.</p>
+  <p><strong>Nothing you do here can harm the site.</strong> The first three commands make a throwaway copy of the site, damage the copy on purpose, and run the gate on the copy. The fourth changes nothing at all. Nothing is published by any of them.</p>
+  <p><strong>How sure is this page:</strong> I ran all four commands on this Mac on 9 October and each gave the result shown here. Each command also ends with a line saying whether it matched, so you do not have to compare text by eye.</p>
+  <p><strong>Where to look hard:</strong> not at whether it works — the last line of each step tells you that. Look at whether <em>the messages make sense to you</em> and whether these are the right things to stop a week for. Those are the two things only you can judge, and what the note boxes are for.</p>
+</div>
+
+<!-- STEP 0 -->
+<div class="step">
+  <span class="step-num">Before you start</span>
+  <h2>Open Terminal in the project folder</h2>
+  <p>Press <kbd>Cmd</kbd>+<kbd>Space</kbd>, type <strong>Terminal</strong>, press <kbd>Return</kbd>. A window with a line to type on appears.</p>
+  <span class="label">Paste this and press Return (it moves you into the project folder):</span>
+  <div class="copybox"><span class="txt" data-copy-text="cd ~/Documents/Projects/Claude\ projects/bay-week">cd ~/Documents/Projects/Claude\ projects/bay-week</span><button class="copy-btn" onclick="copyBox(this)">Copy</button></div>
+  <p><strong>What you should see:</strong> nothing much — a new line to type on, now ending in <strong>bay-week</strong>.</p>
+  <div class="checkline"><input type="checkbox" data-key="s0-done"><label>Terminal is open in the project folder</label></div>
+</div>
+
+<!-- STEP 1 -->
+<div class="step">
+  <span class="step-num">Step 1</span>
+  <h2>A venue spelled a new way is refused</h2>
+  <p><strong>The problem this catches:</strong> the same room written two ways — “The Fillmore” one week, “Fillmore” the next — splits into two venues, and each half looks quieter than the room really is.</p>
+  <p><strong>What the command does:</strong> in the throwaway copy, it renames this week's five Fillmore listings to “Fillmore”, then runs the gate.</p>
+  <span class="label">Paste this and press Return. It takes about 20 seconds.</span>
+  <div class="copybox"><span class="txt" data-copy-text="bash handoff/rot-checks-walk.sh 1">bash handoff/rot-checks-walk.sh 1</span><button class="copy-btn" onclick="copyBox(this)">Copy</button></div>
+  <span class="label">What you should see, among other lines:</span>
+  <div class="screen">  FAIL  drift.py — a rot check is blocking this week
+          <b>BLOCK  “Fillmore” (San Francisco, 5 listing(s)) is a new spelling of “The Fillmore”. Use the established spelling.</b>
+passed 10   failed 1   skipped 0   warnings 4
+VERIFICATION FAILED — do not merge. Escalate with the failures above.
+
+RESULT: the week was REFUSED.
+<b>MATCHES WHAT THIS STEP SHOULD SHOW: YES</b> — refused, and the message names both spellings.</div>
+  <p>The highlighted BLOCK line is the one that matters: it names the new spelling, the old one, and what to do. The four WARN lines about ODC Theater, Filoli, Felton Music Hall and Sweetwater Music Hall are real and are explained in Step 3; ignore them here.</p>
+  <div class="note">
+    <span class="label">Note: is the BLOCK message clear? Would you know what had gone wrong from it alone?</span>
+    <textarea data-key="s1-note" placeholder="Anything unclear, or anything that did not match"></textarea>
+  </div>
+  <div class="checkline"><input type="checkbox" data-key="s1-done"><label>The last line said YES, and the message named both spellings</label></div>
+</div>
+
+<!-- STEP 2 -->
+<div class="step">
+  <span class="step-num">Step 2</span>
+  <h2>A venue far below its usual count is refused — until the write-up explains it</h2>
+  <p><strong>The problem this catches:</strong> a venue that normally has several listings suddenly has one, and nobody says whether the venue was quiet or the research missed it. The gate now refuses the week until the weekly write-up has a line, under the heading <strong>Thin this week</strong>, saying whether the venue's calendar was <em>reached</em> or <em>unreached</em> and what was checked.</p>
+  <p><strong>What the command does:</strong> this week has a real example — the Regency Ballroom, 1 listing after 2, 2, 4 and 5 — and the write-up already has its line. In the throwaway copy the command deletes that line and runs the gate, then puts the line back and runs the gate again.</p>
+  <span class="label">Paste this and press Return. It runs the gate twice, so about 40 seconds.</span>
+  <div class="copybox"><span class="txt" data-copy-text="bash handoff/rot-checks-walk.sh 2">bash handoff/rot-checks-walk.sh 2</span><button class="copy-btn" onclick="copyBox(this)">Copy</button></div>
+  <span class="label">What you should see — first half, the line deleted:</span>
+  <div class="screen">  FAIL  drift.py — a rot check is blocking this week
+          <b>BLOCK  Regency Ballroom: 1 listing(s) after 2, 2, 4, 5. 2026-10-05.md does not account for it under “Thin this week” — add a line naming the venue, saying reached or unreached, and what was checked.</b>
+VERIFICATION FAILED — do not merge. Escalate with the failures above.
+
+RESULT: the week was REFUSED.</div>
+  <span class="label">Second half, the line put back (the command prints the line itself, then):</span>
+  <div class="screen">          <b>ok     Regency Ballroom: 1 listing(s) after 2, 2, 4, 5 — accounted for</b>
+passed 11   failed 0   skipped 0   warnings 4
+VERIFICATION PASSED — safe to merge.
+
+RESULT: the week was LET THROUGH.
+<b>MATCHES WHAT THIS STEP SHOULD SHOW: YES</b> — refused without the line, let through with it.</div>
+  <div class="callout-ok"><strong>What this does not do:</strong> the gate checks that the line exists and says <em>reached</em> or <em>unreached</em>. It cannot check that the line is true. Read the Regency line the command prints and judge whether that is the kind of answer you want a thin week to carry.</div>
+  <div class="note">
+    <span class="label">Note: is the Regency's line a good enough answer? Is “2026-10-05.md” in the BLOCK message clear enough, or should it say “this week's write-up”?</span>
+    <textarea data-key="s2-note" placeholder="What you thought of the line and the message"></textarea>
+  </div>
+  <div class="checkline"><input type="checkbox" data-key="s2-done"><label>The last line said YES: refused without the line, let through with it</label></div>
+</div>
+
+<!-- STEP 3 -->
+<div class="step">
+  <span class="step-num">Step 3</span>
+  <h2>The two warnings appear, and nothing stops</h2>
+  <p><strong>The problems these catch:</strong> two slower kinds of rot that are worth saying out loud but not worth holding a week for.</p>
+  <ul>
+    <li><strong>A watched venue gone quiet</strong> — a venue the project promises to check every week that has had no listing for four weeks.</li>
+    <li><strong>A relied-on venue nobody wrote down</strong> — an indoor venue that has appeared in three or more weeks but is missing from the list of venues the weekly research is told to check.</li>
+  </ul>
+  <p><strong>What the command does:</strong> the first kind is already there for real, four times over. For the second, the command removes Oakland Arena from the venue list in the throwaway copy, then runs the gate.</p>
+  <span class="label">Paste this and press Return. About 20 seconds.</span>
+  <div class="copybox"><span class="txt" data-copy-text="bash handoff/rot-checks-walk.sh 3">bash handoff/rot-checks-walk.sh 3</span><button class="copy-btn" onclick="copyBox(this)">Copy</button></div>
+  <span class="label">What you should see, among other lines:</span>
+  <div class="screen">passed 11   failed 0   skipped 0   warnings 5
+  WARN  ODC Theater is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Filoli is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Felton Music Hall is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Sweetwater Music Hall is declared tier 1 and has produced no listing in 4 weeks
+  <b>WARN  Oakland Arena (Oakland) has been listed in 4 weeks and is not in sources.yml</b>
+VERIFICATION PASSED — safe to merge.
+
+RESULT: the week was LET THROUGH, with warnings.
+<b>MATCHES WHAT THIS STEP SHOULD SHOW: YES</b> — both kinds of warning printed and the week still passed.</div>
+  <p>“Tier 1” means a venue the research checks every week. “sources.yml” is the file that holds the list of venues to check.</p>
+  <div class="callout-ok"><strong>Why the first four are there.</strong> They are real, and expected this week. Filoli, Felton Music Hall and Sweetwater Music Hall were each being read from a web page that did not show the venue's full calendar; all three were corrected on 9 October and no week has been researched since. ODC Theater was added to the list the same day and has never been listed. Monday's run should clear some of them. Felton and Sweetwater may keep theirs, because they are far enough out that only a top-three event of the week is listed from them — a question I will bring you once two or three weeks have run.</div>
+  <div class="note">
+    <span class="label">Note: are the two warnings understandable? Is a warning, rather than a refusal, the right strength for each?</span>
+    <textarea data-key="s3-note" placeholder="Anything you would want worded differently, or treated more or less strictly"></textarea>
+  </div>
+  <div class="checkline"><input type="checkbox" data-key="s3-done"><label>The last line said YES: five warnings, and the week still passed</label></div>
+</div>
+
+<!-- STEP 4 -->
+<div class="step">
+  <span class="step-num">Step 4</span>
+  <h2>The live week, untouched, passes</h2>
+  <p><strong>What the command does:</strong> nothing is copied and nothing is changed. It runs the gate on the site exactly as it is published today.</p>
+  <span class="label">Paste this and press Return. About 20 seconds.</span>
+  <div class="copybox"><span class="txt" data-copy-text="bash handoff/rot-checks-walk.sh 4">bash handoff/rot-checks-walk.sh 4</span><button class="copy-btn" onclick="copyBox(this)">Copy</button></div>
+  <span class="label">What you should see, among other lines:</span>
+  <div class="screen">passed 11   failed 0   skipped 0   warnings 4
+VERIFICATION PASSED — safe to merge.
+
+RESULT: the live week PASSED.
+<b>MATCHES WHAT THIS STEP SHOULD SHOW: YES</b> — passed. Warnings may be listed; they do not stop a week.</div>
+  <div class="callout-warn"><strong>If you run this after Monday 12 October:</strong> Steps 1 to 3 always show the week of 5 October, because the throwaway copy is taken from the day the safeguards were finished. This step shows whatever week is live, so the venues named and the number of warnings may differ from the box above. The last line should still say YES.</div>
+  <div class="note">
+    <span class="label">Overall: do these four safeguards do what you wanted? Anything missing?</span>
+    <textarea data-key="s4-note" placeholder="Your verdict in your own words"></textarea>
+  </div>
+  <div class="checkline"><input type="checkbox" data-key="s4-done"><label>The last line said YES: the live week passed</label></div>
+</div>
+
+<div class="intro">
+  <h2>If a last line says NO</h2>
+  <p>Nothing is broken on the site — the commands never touch it. Select everything the command printed, copy it, and paste it into that step's note box. That is all I need to find out why.</p>
+</div>
+
+<div class="final">
+  <button onclick="copyAllNotes()">Copy all my notes</button>
+  <div id="copy-status"></div>
+</div>
+
+<p class="footer-note">Your checkboxes and notes are stored only on this page on this Mac. Use "Copy all my notes" and paste into the chat when you're done.</p>
+
+</div>
+
+<script>
+(function(){
+  var PREFIX = 'rotwalk_';
+  function safeGet(key){
+    try { return localStorage.getItem(key); } catch(e){ return null; }
+  }
+  function safeSet(key, val){
+    try { localStorage.setItem(key, val); } catch(e){ /* ignore */ }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('input[type=checkbox][data-key]').forEach(function(box){
+      var v = safeGet(PREFIX + box.getAttribute('data-key'));
+      if (v === '1') box.checked = true;
+      box.addEventListener('change', function(){
+        safeSet(PREFIX + box.getAttribute('data-key'), box.checked ? '1' : '0');
+      });
+    });
+    document.querySelectorAll('textarea[data-key]').forEach(function(ta){
+      var v = safeGet(PREFIX + ta.getAttribute('data-key'));
+      if (v !== null) ta.value = v;
+      ta.addEventListener('input', function(){
+        safeSet(PREFIX + ta.getAttribute('data-key'), ta.value);
+      });
+    });
+  });
+
+  function storageWorks(){
+    try {
+      localStorage.setItem(PREFIX + 'probe', '1');
+      localStorage.removeItem(PREFIX + 'probe');
+      return true;
+    } catch(e){ return false; }
+  }
+  function clipboardApiPresent(){
+    return !!(navigator.clipboard && navigator.clipboard.writeText);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    if (!storageWorks() || !clipboardApiPresent()) {
+      var banner = document.getElementById('limited-view');
+      if (banner) banner.style.display = 'block';
+    }
+  });
+
+  function selectNode(node){
+    try {
+      var range = document.createRange();
+      range.selectNodeContents(node);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    } catch(e){ /* ignore */ }
+  }
+
+  function legacyCopy(text){
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      var ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok === true;
+    } catch(e){ return false; }
+  }
+
+  // Calls done(true) only when the text really reached the clipboard.
+  function doCopy(text, done){
+    if (clipboardApiPresent()) {
+      navigator.clipboard.writeText(text).then(
+        function(){ done(true); },
+        function(){ done(legacyCopy(text)); }
+      );
+      return;
+    }
+    done(legacyCopy(text));
+  }
+
+  window.copyBox = function(btn){
+    var span = btn.parentElement.querySelector('.txt');
+    var text = span.getAttribute('data-copy-text') || span.textContent;
+    doCopy(text, function(ok){
+      if (ok) {
+        btn.textContent = 'Copied!';
+      } else {
+        selectNode(span);
+        btn.textContent = 'Selected: press Cmd+C';
+      }
+      setTimeout(function(){ btn.textContent = 'Copy'; }, ok ? 1500 : 4000);
+    });
+  };
+
+  window.copyAllNotes = function(){
+    var lines = [];
+    lines.push('Rot checks — owner check results');
+    lines.push('');
+    document.querySelectorAll('.step').forEach(function(step){
+      var numEl = step.querySelector('.step-num');
+      var titleEl = step.querySelector('h2');
+      var checkbox = step.querySelector('input[type=checkbox][data-key]');
+      var label = step.querySelector('.checkline label');
+      var textarea = step.querySelector('textarea[data-key]');
+      var noteLabel = step.querySelector('.note .label');
+      if (!checkbox && !textarea) return;
+      lines.push('## ' + (numEl ? numEl.textContent.trim() + ': ' : '') + (titleEl ? titleEl.textContent.trim() : ''));
+      if (checkbox) {
+        lines.push('Checked: ' + (checkbox.checked ? 'YES' : 'no') + (label ? ' (' + label.textContent.trim() + ')' : ''));
+      }
+      if (textarea) {
+        lines.push((noteLabel ? noteLabel.textContent.trim() : 'Note'));
+        lines.push(textarea.value && textarea.value.trim() ? textarea.value.trim() : '(no note entered)');
+      }
+      lines.push('');
+    });
+    var text = lines.join('\n');
+    var status = document.getElementById('copy-status');
+    doCopy(text, function(ok){
+      if (ok) {
+        status.textContent = 'Copied. Paste it back into the Claude chat.';
+        return;
+      }
+      status.textContent = 'Could not copy automatically. The text below is selected: press Cmd+C, then paste it into the Claude chat.';
+      var box = document.getElementById('copy-fallback');
+      if (!box) {
+        box = document.createElement('textarea');
+        box.id = 'copy-fallback';
+        box.style.width = '100%';
+        box.style.minHeight = '200px';
+        box.style.marginTop = '10px';
+        status.parentElement.appendChild(box);
+      }
+      box.value = text;
+      box.focus();
+      box.select();
+    });
+  };
+})();
+</script>
+</body>
+</html>
