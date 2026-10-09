@@ -8,6 +8,15 @@
 #
 # Adding a venue is a one-line PR. If you fork this for another city, replace
 # tier_1 wholesale and keep the tier_2/tier_3 shapes.
+#
+# `venues:` — the venue strings an entry answers to when its `name` is not the
+# string the listings use (SFJAZZ plays in "Miner Auditorium, SFJAZZ"; Music on
+# the Square happens in "Courthouse Square"). scripts/drift.py matches on it. A
+# comma-suffixed spelling goes here as an alias; never cut a name at the comma.
+#
+# `found_via:` — on `observed_venues` at the foot of this file: how a venue the
+# digest keeps listing is actually reached, when it has no page of its own that
+# a plain fetch reads in full.
 # =============================================================================
 
 version: 1
@@ -36,6 +45,7 @@ tier_1_venues:
     - { name: August Hall,            url: "https://www.augusthallsf.com/",            cap: 750 }
     - { name: The Warfield,           url: "https://www.thewarfieldtheatre.com/",      cap: 2300 }
     - { name: SFJAZZ, url: "https://www.jambase.com/venue/miner-auditorium-sfjazz-center", cap: 700,
+        venues: ["Miner Auditorium, SFJAZZ"],
         note: "sfjazz.org 403s on every path — this JamBase mirror is the only fetchable source. Summer Sessions end mid-August and the fall season starts in September, so an empty late-August week here is real, not a fetch failure." }
     - { name: Castro Theatre, url: "https://thecastro.com/", cap: 1400,
         note: "castrotheatre.com 301-redirects here; fetch the new domain directly." }
@@ -46,6 +56,7 @@ tier_1_venues:
     - { name: The Fillmore,          url: "https://www.jambase.com/venue/the-fillmore", cap: 1315,
         note: "Added 2026-08-18. A 1,315-cap landmark that was somehow absent from this file, and cost the 17 Aug week three shows." }
     - { name: Gray Area,             url: "https://grayarea.org/events/", cap: 700,
+        venues: ["Gray Area, Grand Theater"],
         note: "Grand Theater, Mission. Experimental electronic, audiovisual and installation work — the `experimental and improv` emphasis in brief.yml has nowhere else to look." }
     - { name: Yerba Buena Center for the Arts, url: "https://ybca.org/whats-on/", cap: null,
         note: "Galleries free every Wednesday. State the free day, it is the point." }
@@ -61,6 +72,21 @@ tier_1_venues:
     - { name: Kilowatt,              url: "https://www.kilowattbar.com/", cap: 150 }
     - { name: Chase Center,          url: "https://www.chasecenter.com/events", cap: 18000,
         note: "Arena. `deprioritize` in brief.yml — list for completeness, never feature." }
+    # Added 2026-10-09. Each of these had been listed in three or more weeks with
+    # no entry here. Every URL was fetched and read that day. Songkick (406) and
+    # Funcheap (403) both refuse a fetch that announces itself as a web browser
+    # and answer a plain one — a refusal there is the fetcher, not the page.
+    - { name: The Midway, url: "https://www.songkick.com/venues/3013529-midway/calendar", cap: null,
+        note: "Songkick's venue calendar, not the venue's own site. Use the /calendar page — the bare venue page shows about five dates. A floor: Songkick can miss a show it does not ticket." }
+    - { name: Madrone Art Bar, url: "https://madroneartbar.com/calendar/", cap: null,
+        note: "One month per page, and the page pads in the weeks either side. Carries the standing nights (karaoke, Motown on Mondays) beside the one-offs — list the one-offs." }
+    - { name: Bill Graham Civic Auditorium, url: "https://www.songkick.com/venues/65-bill-graham-civic-auditorium/calendar", cap: null,
+        note: "Songkick's venue calendar, main hall only. billgrahamcivic.com 403s." }
+    - { name: The Masonic, url: "https://www.songkick.com/venues/5614-masonic/calendar", cap: null,
+        note: "Songkick's venue calendar. Cancelled shows stay on the page with 'Canceled' in the row — do not list them. A floor for music; comedy bookings may be missing." }
+    - { name: San Francisco Neo-Futurists, url: "https://sf.funcheap.com/event-series/sf-neofuturists-presents-infinite-wrench-30-plays-60-minutes/", cap: null,
+        venues: ["447 Minna Street", "447 Minna"],
+        note: "The Infinite Wrench, Fridays and Saturdays at 9pm at 447 Minna St. This is Funcheap's page for the series — the company's own site timed out. The venue string in the data is the address, hence `venues:`." }
     # Davies Symphony Hall / SF Symphony: sfsymphony.org sits behind a queueing
     # redirect and cannot be fetched directly. The orchestra's season is roughly
     # September to June, so an empty August is expected rather than a miss.
@@ -69,8 +95,13 @@ tier_1_venues:
     - { name: Fox Theater,            url: "https://thefoxoakland.com/",               cap: 2800 }
     - { name: Paramount Theatre,      url: "https://www.paramountoakland.org/",        cap: 3000 }
     - { name: Yoshi's,                url: "https://yoshis.com/",                      cap: 400 }
-    - { name: The Greek Theatre,      url: "https://thegreekberkeley.com/",            cap: 8500 }
-    - { name: The New Parkway,        url: "https://thenewparkway.com/",               cap: 200 }
+    - { name: The Greek Theatre,      url: "https://thegreekberkeley.com/",            cap: 8500,
+        venues: ["Greek Theatre, UC Berkeley"] }
+    # The New Parkway — REMOVED 2026-10-09 (owner, 8 October). It is open, but it
+    # is mostly first-run film, which brief.yml excludes; a perfect route would
+    # yield 0–2 listings a week. An editorial call, not a reachability verdict.
+    # Left commented so it is not re-added by mistake.
+    # - { name: The New Parkway, url: "https://thenewparkway.com/", cap: 200 }
     - { name: Thee Stork Club, url: "https://theestorkclub.com/calendar/", cap: 150,
         note: "URL corrected 2026-08-24 — theestorkclubopakland.com does not resolve (DNS NXDOMAIN), so this venue had been silently dark. The real domain has no 'oakland' in it. /calendar/ renders client-side and fetches empty; https://www.jambase.com/venue/thee-stork-club is the reliable read." }
     - { name: Ivy Room, url: "https://www.jambase.com/venue/the-ivy-room", cap: 150,
@@ -95,7 +126,8 @@ tier_1_venues:
     - { name: The Guild Theatre,      url: "https://guildtheatre.com/",                cap: 500 }
     - { name: Filoli, url: "https://feverup.com/en/san-francisco/venue/filoli-historic-house-garden", cap: null,
         note: "filoli.org 403s. Fever carries only the ticketed programming, not the full calendar." }
-    - { name: Music on the Square,    url: "https://www.redwoodcity.org/",             cap: null, free: true }
+    - { name: Music on the Square,    url: "https://www.redwoodcity.org/",             cap: null, free: true,
+        venues: ["Courthouse Square"] }
 
   south_bay:
     - { name: Shoreline Amphitheatre, url: "https://www.jambase.com/venue/shoreline-amphitheatre", cap: 22000,
@@ -109,6 +141,13 @@ tier_1_venues:
         note: "Venue is OPEN. The old ritzsanjose.com domain is dead; theritzsanjose.com renders via JS and fetches empty." }
     - { name: Hammer Theatre Center, url: "https://sanjose.events/venue/hammer-theatre-center/", cap: 500,
         note: "hammertheatre.com/events/ reports 0 events while the venue is actively programming — do not read that as dark." }
+    # Added 2026-10-09, as for San Francisco above: fetched and read that day.
+    - { name: Rooster T. Feathers, url: "https://rooster-t-feathers.seatengine-sites.com/events", cap: null,
+        note: "Comedy club, Sunnyvale. Take dates from the visible 'Fri, Oct 9, 2026 8:00 PM' text: the machine-readable dates on the page are UTC and put every show a day late. Skip the 'Guest List for:' rows, which duplicate shows." }
+    - { name: San Jose Improv, url: "https://improv.com/sanjose/calendar/", cap: null,
+        note: "Use /calendar/ — the venue's front page shows only the next dozen shows. Rows give no year, and a multi-night run is one row ('Oct 23-25 Fri-Sun … 5 shows')." }
+    - { name: PURE Nightclub, url: "https://www.purenightclub408.com/calendar", cap: null,
+        note: "Sunnyvale, 21+. Rows give weekday and date with no year, title first." }
 
   # The `outer` region — Santa Cruz, Marin, North Bay. Thin by design: only
   # things worth the drive clear the brief, so this list stays short.
@@ -183,6 +222,7 @@ recurring:
   - { name: Inner Sunset Flea,      region: sf,        cadence: "2nd Sunday, Apr–Nov",      cost: free }
   - { name: Lindy in the Park,      region: sf,        cadence: "Sundays, 11am–2pm",        cost: free }
   - { name: Golden Gate Park Band, region: sf,        cadence: "Sundays 1–2:30pm, Apr–Sep", cost: free,
+      venues: ["Spreckels Temple of Music", "Spreckels Temple of Music, Golden Gate Park"],
       note: "Spreckels Temple of Music, Music Concourse. Free municipal band since 1882, 144th season in 2026 — a standing Sunday fixture that was missing from this list until 2026-08-18." }
   - { name: Chinatown Night Market, region: sf,        cadence: "2nd Friday, May–Oct, 5–9pm", cost: free,
       note: "Grant Ave; 'monthly Fridays' was too loose to place on a calendar." }
@@ -195,11 +235,100 @@ recurring:
   - { name: Palo Alto Twilight Concert Series, region: peninsula, cadence: "SATURDAYS, 6:30pm, summer", cost: free,
       note: "Was recorded here as Sundays, which is wrong and cost a week's listing. Alternates between Rinconada Park and Mitchell Park." }
   - { name: Colma Summer Concert Series, region: peninsula, cadence: "Thursdays 6–8pm, August", cost: free,
-      note: "On the grass at the Colma Community Center. BART Colma genuinely beats driving." }
+      venues: ["Colma Community Center"], season_ends: 2026-08-27,
+      note: "On the grass at the Colma Community Center. BART Colma genuinely beats driving. 2026 ran Aug 13, 20 and 27 — read on colma.ca.gov, 2026-10-09." }
   - { name: "Beats, Brews & Vines", region: peninsula, cadence: "3rd Thursday 6–8pm, Aug–Oct", cost: free,
       note: "Downtown Millbrae, Broadway at Hillcrest." }
   - { name: San Jose Bike Party,    region: south-bay, cadence: "3rd Friday, meet 7:30pm",  cost: free,
       note: "Start point announced the week of the ride." }
+  - { name: NightLife, region: sf, cadence: "Most Thursdays, 6–10pm, 21+", cost: "$26",
+      url: "https://www.calacademy.org/nightlife", venues: ["California Academy of Sciences"],
+      note: "Added 2026-10-09, read that day. Usually one Thursday a month has no NightLife, and it stops from mid-December to early January. The page names each night's theme but not always its date — confirm the Thursday before listing." }
+  - { name: Noe Valley Town Square, region: sf, cadence: "Dated events, announced month by month", cost: free,
+      url: "https://noevalleytownsquare.com/events", venues: ["Noe Valley Town Square"],
+      note: "Added 2026-10-09, read that day. The night market, Friday-at-5 music and Sunday yoga are each posted with their next date only — the page states no standing rule, so do not project one. Dates carry no year." }
+
+# -----------------------------------------------------------------------------
+# Observed venues. Places the digest has listed in three or more weeks that have
+# no page of their own a plain fetch reads in full — so they are declared by how
+# they are actually reached (owner, 9 October 2026), not as tier 1. Nothing here
+# is polled as a calendar and scripts/drift.py's "declared, not producing" check
+# does not watch these; an entry only records that the venue is known, and what
+# the route that finds it leaves out.
+#
+# Every URL below was fetched and read on 2026-10-09. Where `found_via` names a
+# sweep and gives no URL, that is the sweep the data records for the venue.
+# -----------------------------------------------------------------------------
+observed_venues:
+
+  # No readable page of their own.
+  - { name: The Knockout, region: sf,
+      found_via: "SF Funcheap's page for the venue, and the ticketing sweep",
+      url: "https://sf.funcheap.com/venue/the-knockout/",
+      note: "theknockoutsf.com shows only sample events from 2023; its live calendar is a ticketing widget drawn by script. Funcheap carries the free and standing nights, not the full band calendar." }
+  - { name: Solano 2 Drive In, region: east-bay,
+      found_via: "SF Funcheap's page for the venue",
+      url: "https://sf.funcheap.com/venue/solano-2-drive-in/",
+      note: "The operator's own page (westwinddi.com) draws its showtimes by script. Funcheap carries the standing $6 Tuesday night; one-off free nights reach the digest only if Funcheap posts them." }
+  - { name: de Young Museum, region: sf, venues: ["de Young Museum, Golden Gate Park"],
+      found_via: "SF Funcheap daily pages (tier 2)",
+      note: "famsf.org answers every plain fetch with a bot challenge (403). The free Saturday for Bay Area residents is read from Funcheap's page for the day, where it sits well down the page — a fetch that stops at 100 KB does not reach it. Not confirmable on the museum's own site." }
+  - { name: Legion of Honor, region: sf,
+      found_via: "SF Funcheap daily pages (tier 2)",
+      note: "Same museum group, same block and same free Saturday as the de Young." }
+  - { name: "Mechanics' Institute", region: sf,
+      found_via: "Downtown SF's page for the film series",
+      url: "https://downtownsf.org/do/movies-at-mechanics-presents",
+      note: "Movies at Mechanics', Friday evenings at 57 Post St. The institute's own page (milibrary.org) carries its dates after about 150 KB of header, past where a plain fetch stops. Downtown SF gives dates and times, not titles or prices." }
+
+  # A page that reads, but leaves listings out.
+  - { name: Swedish American Hall, region: sf,
+      found_via: "Songkick's venue page; Café du Nord's calendar covers both rooms of the building",
+      url: "https://www.songkick.com/venues/4543956-swedish-american-hall",
+      note: "Songkick is a floor: on 2026-10-09 it lacked Allan Rayman, 16 October, which the building's own calendar (cafedunord.com/calendar) lists. That calendar is complete but long — its rows start near 80 KB, so a plain fetch reads only the first few days." }
+  - { name: 4 Star Theater, region: sf,
+      found_via: "Songkick's venue calendar",
+      url: "https://www.songkick.com/venues/4549153-4-star-theater/calendar",
+      note: "Live music only. The room is mostly repertory film, which is on the theatre's own site (4-star-movies.com) beginning near 80 KB — a plain fetch reads about three days of it." }
+  - { name: Tech CU Arena, region: south-bay,
+      found_via: "The arena's own events page",
+      url: "https://www.techcuarena.com/events",
+      note: "San Jose Barracuda home games (minor-league hockey; regular season ends 10 April 2027). The page shows the next dozen games and loads the rest by script, which is enough for a week." }
+  - { name: Davies Symphony Hall, region: sf,
+      found_via: "Songkick's venue calendar",
+      url: "https://www.songkick.com/venues/505-davies-symphony-hall/calendar",
+      note: "Touring and guest acts. Leaves out most of the San Francisco Symphony's own subscription season: on 2026-10-09 sfsymphony.org's front page answered, but its calendar still redirects to a waiting room that needs a browser." }
+  - { name: War Memorial Opera House, region: sf,
+      found_via: "San Francisco Opera's production index, then one page per production",
+      url: "https://www.sfopera.com/operas/",
+      note: "The index gives opening dates only; each production's own page, linked from it, lists every performance with its curtain time. Leaves out San Francisco Ballet, which shares the house and runs a separate site." }
+  - { name: San Jose Center for the Performing Arts, region: south-bay,
+      found_via: "sanjose.events' page for the venue (tier 2)",
+      url: "https://sanjose.events/venue/san-jose-center-for-the-performing-arts",
+      note: "A resale-ticket feed, not the presenter. The page carries the first 20 performances of 97 upcoming; the rest load by script. Broadway San Jose's own site gives run dates per show but no performance times." }
+  - { name: Mountain View Center for the Performing Arts, region: south-bay,
+      found_via: "sanjose.events' page for the venue (tier 2)",
+      url: "https://sanjose.events/venue/mountain-view-center-for-the-performing-arts",
+      note: "A resale-ticket feed. The page carries the first 20 performances of 34 upcoming, and on 2026-10-09 all 20 were one production. The smaller companies that use the building do not appear. Check a title against the presenter before listing — the feed's wording differs." }
+  - { name: Montgomery Theater, region: south-bay,
+      found_via: "sanjose.events' page for the venue (tier 2)",
+      url: "https://sanjose.events/venue/montgomery-theatre-san-jose/",
+      note: "A rental house. The resale feed carries only what is sold through it — four performances on 2026-10-09 — and misses the local presenters." }
+
+  # Arenas and one-off hires. No calendar is worth polling; a sweep finds them.
+  - { name: Oakland Arena, region: east-bay,
+      found_via: "Songkick's Bay Area sweep (tier 3)" }
+  - { name: "Levi's Stadium", region: south-bay,
+      found_via: "Songkick's Bay Area sweep (tier 3)" }
+  - { name: Toyota Pavilion at Concord, region: east-bay,
+      found_via: "Songkick's Bay Area sweep (tier 3)",
+      note: "An outdoor shed with a summer-to-autumn season." }
+  - { name: Alameda County Fairgrounds, region: east-bay,
+      found_via: "SF Funcheap daily pages (tier 2)",
+      note: "Hired by the event — Highland Games, Corgi Con, 626 Night Market. There is no house programme." }
+  - { name: Habbas Law Epicenter at PayPal Park, region: south-bay,
+      found_via: "not recorded",
+      note: "Football ground with the odd concert. None of its three listings carries a source link, and it was not on Songkick's sweep on 2026-10-09 — record the route the next time a run lists it." }
 
 # -----------------------------------------------------------------------------
 # Practical notes the compiler should surface when relevant.
