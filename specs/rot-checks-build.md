@@ -1,7 +1,7 @@
 # Spec — Rot checks: the build
 
 **Status: 9 October 2026.** Tier and the open decisions taken by the owner (§7). Steps
-1–3 are live on `main`; their evidence is in §10. Steps 4–7 are to do.
+1–4 are live on `main`; their evidence is in §10. Steps 5–7 are to do.
 
 ## Tier
 
@@ -335,3 +335,72 @@ cannot be reached through the gate until steps 4, 5 and 7 clear the six above.
 `prompts/weekly-run.md` and `CLAUDE.md` say the same. The routine reads
 `weekly-research.md` from the repository on each run, so Monday's run is told without the
 owner pasting anything (§3).
+
+### Step 4 — check 2 and "Thin this week" · 9 October 2026
+
+The gate on the live week (`bash scripts/verify.sh`, exit 0), with the page-render check
+running for the first time on this machine:
+
+```
+        check 2 · thin venue: 18 of 404 venues usually have 3+ listings (0 more out of season) — 1 thin, 1 accounted for in the digest
+          ok     Regency Ballroom: 1 listing(s) after 2, 2, 4, 5 — accounted for
+        rendered 359/359 listings
+passed 10   failed 0   skipped 0   warnings 5
+```
+
+Self-test 43/43, and 45/45 once a later week exists and 5 October joins the replay.
+
+**The two flagged venues, re-checked on 9 October (§7 decision 3):**
+
+- **DNA Lounge — the flag was right and the week was wrong.** Its own calendar,
+  `dnalounge.com/calendar/2026/10.html`, lists ten events between 5 and 11 October; one was
+  published. Eight were added to `data/2026-10-05.json` and the digest, each written from
+  the club's own page for that event (nine pages fetched and read). The tenth, a Tuesday
+  session on running a Discord server, was left out as not arts programming. The week went
+  from 351 listings to 359 and the digest's day counts were corrected to match.
+- **The Regency Ballroom — the flag was a quiet week.** Its JamBase page, read through the
+  fetch tool the unattended run uses, shows Dead Kennedys on the 9th and nothing until the
+  13th. The page drops a show once it has played, so 5–8 October cannot be confirmed from
+  it, and the digest's line says so.
+
+**Why DNA Lounge has read as down for three weeks.** The calendar is not down. It answers a
+request that announces itself as a browser (200, 18 KB) and refuses a plain one (403); the
+run's own fetch tool gets a page that says only "PRIVATE". This is the reverse of Songkick
+and Funcheap. So the unattended run cannot read it, and on Monday DNA Lounge will be flagged
+again; the run is expected to write an *unreached* line and publish. Step 5 is where the
+mirror gets declared. Not fixed here.
+
+**The recorded answer for 5 October was changed, deliberately.** The self-test held that
+week as flagging DNA Lounge and the Regency. With eight listings added, DNA Lounge is no
+longer thin in it, so the record now holds the Regency alone, with a comment saying why.
+Left as it was, Monday's run would have failed its self-test the moment a newer week
+existed and published nothing. That was rehearsed rather than assumed — the checks were run
+against a copy of the data with a 12 October week added:
+
+| Rehearsed for 12 October | Result | Exit |
+|---|---|---|
+| No digest written yet | `COULD NOT CHECK: no readable digest for the week of 2026-10-12` | 2 |
+| Digest with no "Thin this week" section | `BLOCK  Regency Ballroom … has no “Thin this week” section` | 1 |
+| A line naming the venue, without *reached* or *unreached* | `BLOCK … does not account for it` | 1 |
+| A full line | `ok     Regency Ballroom … accounted for` | 0 |
+| DNA Lounge back to one listing, the Regency answered | `BLOCK  DNA Lounge: 1 listing(s) after 4, 9, 2, 9` | 1 |
+
+Planted through the gate, in the real digest, each plant confirmed (`plant matched: 1`),
+restored, and the gate run again to exit 0:
+
+| Planted | Gate said | Exit |
+|---|---|---|
+| The Regency's line deleted | `FAIL drift.py — a rot check is blocking this week` · `BLOCK  Regency Ballroom … does not account for it` | 1 |
+| The word *reached* taken out of its line | the same | 1 |
+| The heading written as "Thin venues" | `BLOCK … has no “Thin this week” section` | 1 |
+| The digest moved away | `FAIL drift.py COULD NOT CHECK` · `no readable digest` | 1 (script: 2) |
+
+`prompts/weekly-research.md` now defines the section, gives two example lines, says what
+*reached* and *unreached* mean, and tells the run to look at a flagged venue again before
+writing its line. `prompts/weekly-run.md` runs `drift.py` before the gate. `CLAUDE.md`
+describes the check. The switch that held check 2 off in step 3 is gone, and its warning
+with it.
+
+One thing outside the step: `verify.sh` now finds Chrome where macOS keeps it, so the
+page-render check runs locally instead of being skipped. It mattered here because this
+step changes what the page shows.

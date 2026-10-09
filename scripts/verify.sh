@@ -178,6 +178,10 @@ fi
 #     fail to display. Nothing else in this repo catches that.
 CHROME=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux/chrome 2>/dev/null | head -1)
 [ -z "$CHROME" ] && CHROME=$(command -v chromium chromium-browser google-chrome 2>/dev/null | head -1)
+# macOS keeps Chrome in an app bundle, not on PATH. Without this the check was
+# skipped on every local run and only ever happened in the cloud.
+MAC_CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+[ -z "$CHROME" ] && [ -x "$MAC_CHROME" ] && CHROME=$MAC_CHROME
 if [ -n "$CHROME" ]; then
   port=$((8000 + RANDOM % 1000))
   (cd docs && python3 -m http.server "$port" >/dev/null 2>&1) &
