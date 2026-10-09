@@ -226,6 +226,42 @@
       "note": "Sold out. Zooey Deschanel and M. Ward doing Brill Building pastiche with real affection, which the picture palace suits better than a club would."
     },
     {
+      "id": "1005-dnalounge-mondayhubba",
+      "date": "2026-10-05",
+      "title": "Monday Night Hubba: Sea Cruise",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "21:00",
+      "end": "22:30",
+      "price": "$10-20",
+      "note": "Hubba Hubba Revue's weekly burlesque and variety show in the room above the club, this week a nautical birthday bill for one of its own. Smaller and looser than the troupe's monthly spectaculars. Doors at eight, 18+."
+    },
+    {
+      "id": "1005-dnalounge-deathguild",
+      "date": "2026-10-05",
+      "title": "Death Guild",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "21:30",
+      "price": "$5-8",
+      "genre": [
+        "electronic and club"
+      ],
+      "note": "The oldest weekly goth-industrial dance night anywhere, every Monday since 1993: six DJs across two rooms playing gothic, industrial and synthpop. 18+, and five dollars before 10:30, which is hard to beat on any night of the week."
+    },
+    {
       "id": "1005-guild-toadies",
       "date": "2026-10-05",
       "title": "Toadies with Local H",
@@ -2613,7 +2649,7 @@
         "indie and art rock"
       ],
       "confidence": "medium",
-      "note": "DNA's own monthly calendar returned server errors on every attempt this week, so this came from the ticketing sweep and there are almost certainly other DNA shows missing from this digest."
+      "note": "An all-ages rock bill at a club better known for its dance nights. The date is on DNA's own calendar; nothing more about either band could be confirmed."
     },
     {
       "id": "1008-faight-rachelbochner",
@@ -3320,6 +3356,23 @@
       "note": "The 3rd i South Asian film festival's Roxie slot, with the director present. 3rd i has run here for over twenty years and programmes more adventurously than its budget implies."
     },
     {
+      "id": "1009-dnalounge-mortified",
+      "date": "2026-10-09",
+      "title": "Mortified",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "19:30",
+      "end": "21:30",
+      "price": "$20-35",
+      "note": "Adults reading their own teenage diaries, poems and letters aloud to strangers — every second Friday, and funnier than the premise because nobody wrote the material to be funny. All ages, doors 6:30; general admission does not guarantee a seat."
+    },
+    {
       "id": "1009-rooster-cambertrand",
       "date": "2026-10-09",
       "title": "Cam Bertrand",
@@ -3667,6 +3720,46 @@
       ],
       "price": "$20-25",
       "note": "Smooth, jazz-inflected bedroom R&B from a Bay Area native, with Mejiwahn's woozy folk underneath. Three acts for twenty dollars."
+    },
+    {
+      "id": "1009-dnalounge-clubantonio",
+      "date": "2026-10-09",
+      "title": "Club Antonio",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "21:30",
+      "price": "$20-25",
+      "genre": [
+        "electronic and club",
+        "latin and cumbia"
+      ],
+      "note": "Two floors of house, techno and Latin club music, 21+. The reason to go is Sinkitty — Bogotá-born, New York-based, rebuilding early-2000s reggaeton into something darker and queerer — in what is billed as a San Francisco debut."
+    },
+    {
+      "id": "1009-dnalounge-lastfridaynight",
+      "date": "2026-10-09",
+      "title": "Last Friday Night: Y2K-2010s Throwbacks",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "22:00",
+      "price": "$12-25",
+      "genre": [
+        "pop and k-pop",
+        "electronic and club"
+      ],
+      "note": "A pop-nostalgia dance night working the decade from Britney to Avicii, one DJ, 18+. Exactly what it says and nothing more; it takes over the main room once Mortified has cleared it."
     },
     {
       "id": "1009-act-northbynorthwest-fri",
@@ -4952,6 +5045,44 @@
       "note": "A twenty-year-old Balkan brass dance party with a live band, Jill Parker's dancers and DJ Zeljko between sets. Nobody stands still and nobody cares how you dance, which is rarer than it should be."
     },
     {
+      "id": "1010-dnalounge-ravefurrest",
+      "date": "2026-10-10",
+      "title": "Ravefurrest",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "21:00",
+      "price": "$20-36",
+      "genre": [
+        "electronic and club"
+      ],
+      "note": "Hyperpop, breakcore and gabber from a furry-run rave night in the main room: live sets from Los Angeles duo Passengerprincess and the Bay Area's Sophiaaaahjkl;8901 between hardcore DJ sets. 18+, and high tempos from the first hour."
+    },
+    {
+      "id": "1010-dnalounge-secretpsychedelica",
+      "date": "2026-10-10",
+      "title": "Secret Psychedelica: Libra",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "21:00",
+      "price": "$11-25",
+      "genre": [
+        "electronic and club"
+      ],
+      "note": "A psytrance collective's eighth annual Libra party: ten DJs across DNA's two smaller rooms while Ravefurrest has the main floor, running from psytrance and progressive through to psychill and breaks. Seattle's Peacedragon leads the bill. 18+."
+    },
+    {
       "id": "1010-fairgrounds-626nightmarket-sat",
       "date": "2026-10-10",
       "title": "626 Night Market",
@@ -6012,6 +6143,26 @@
       "cost": "ticketed",
       "start": "20:45",
       "note": "Oshii's 1995 cyberpunk landmark in a 30th-anniversary remaster, closing the week at 8:45. The restoration is the reason to see it in a room rather than at home."
+    },
+    {
+      "id": "1011-dnalounge-egyptianlover",
+      "date": "2026-10-11",
+      "title": "The Egyptian Lover with Love Supreme",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "start": "21:00",
+      "price": "$22-36",
+      "genre": [
+        "hip-hop",
+        "electronic and club"
+      ],
+      "note": "Greg Broussard has been making Los Angeles electro on a drum machine for forty years and calls it, simply, dance music. A Sunday that works because Monday is Indigenous Peoples' Day; San Francisco's Love Supreme sound system opens. 18+."
     },
     {
       "id": "1011-fairgrounds-626nightmarket-sun",

@@ -71,9 +71,20 @@ Steps:
 5. Install dependencies if missing, then validate and build:
      pip install pyyaml jsonschema ruff
      python3 scripts/validate.py
+     python3 scripts/drift.py
      python3 scripts/build.py
    If validate.py reports errors, fix the data file against them and run it
    once more. That is ONE correction attempt, not a loop.
+
+   drift.py compares this week with the weeks before it, and the gate in
+   step 6 runs it again — so answer it here. prompts/weekly-research.md says
+   how, in its Verification pass. In short: a BLOCK line for a new spelling
+   means use the established spelling it names; a BLOCK line for a thin venue
+   means look at that venue again, add what you find, and if it is still
+   flagged write its line under "## Thin this week" in the digest, naming the
+   venue and saying reached or unreached and what you checked. Both are things
+   you fix and move on from. They are not a reason to stop. COULD NOT CHECK is
+   a reason to stop.
 
 6. THE GATE:
      bash scripts/verify.sh
