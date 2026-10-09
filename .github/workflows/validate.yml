@@ -51,6 +51,9 @@ jobs:
       # which is the right reading of both 1 and 2.
       - name: Rot checks
         run: python3 scripts/drift.py
+      # Offline. Proves the venue's key is sent and never printed.
+      - name: DICE reader self-test
+        run: python3 scripts/dice.py --self-test
       - name: Check brief.yml parses
         run: python3 -c "import yaml,sys; yaml.safe_load(open('config/brief.yml')); yaml.safe_load(open('config/sources.yml')); print('config ok')"
       - name: Check docs/events.json is current

@@ -473,3 +473,48 @@ copied to a scratch directory with a 12 October week added — self-test 45/45, 
 
 **Not proven, and not provable here:** that the unattended run writes the standing lines.
 `coverage` is read by no check (§9), so the first evidence is Monday's digest.
+
+### Step 6 — the DICE route for Kilowatt and The Knockout · 9 October 2026
+
+Neither venue's page carries a date a fetch can read; each draws its calendar with a DICE
+ticketing widget. New `scripts/dice.py` does what a visitor's browser does — reads the
+widget's settings off the venue's page, asks DICE for that venue's events, and prints
+them with times on the venue's clock. Read on 9 October, for 9–18 October:
+
+| Venue | Page | The command gave | Published before, per week |
+|---|---|---|---|
+| Kilowatt | `kilowattbar.com/events` | 16 events, all "Kilowatt, San Francisco" | 0 in five of nine weeks, 1 in four |
+| The Knockout | `theknockoutsf.com/` | 18 events, all "The Knockout, San Francisco" | 0 in six of nine weeks, 1–2 in three |
+
+`sf.funcheap.com/venue/the-knockout/`, read the same day, listed one event in that span —
+a free film night on 12 October that DICE does not carry. So neither is the whole
+calendar, and The Knockout's entry says to read both.
+
+**The key.** It is read from the venue's page on each run, sent in the one request, and
+written nowhere. The script has no option that prints or accepts one. Proof:
+
+- Live, both venues: the key (40 and 48 characters) was compared in memory with
+  everything the script printed — `key in output: False`, over 72 and 69 lines.
+- Offline self-test, 9/9, run by the gate and by CI. Planted (`plant matched: 1`): the key
+  moved from the request's header into its address → `7/9`, exit 2, naming both cases;
+  restored → 9/9.
+- An error names only the address and the status, never the request.
+
+**Could-not-read is its own outcome.** A page with no widget (`dnalounge.com`) and a host
+that does not exist both exit 2 with `COULD NOT READ`; the run prompt says that means
+unreached, never "nothing on". A machine with no timezone data exits 3 rather than print
+a time it cannot vouch for; the gate reads that as SKIPPED.
+
+**Differs from §2 in one way.** §2 calls this a fallback. For both venues it is the
+primary route — there is nothing else to fall back *from* — so the entries carry a new
+key, `how:`, giving the command, and The Knockout's Funcheap page becomes its `fallback:`.
+
+**Not proven, and not provable from here:** that the unattended run's machine can reach
+`partners-endpoint.dice.fm`. If it cannot, the run is told to report both venues as
+unreached and carry on as before, and check 2 will name them once they have a history.
+Monday's digest is the evidence. Also unproven beyond today: DICE lists from the current
+day forward, so a run late in a window would miss the days already gone.
+
+The gate (`bash scripts/verify.sh`, exit 0): `passed 11   failed 0   skipped 0
+warnings 3` — the eleventh check is the self-test.
+

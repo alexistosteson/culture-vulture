@@ -65,6 +65,7 @@ data/YYYY-MM-DD.json one file per week — the events and their window
 scripts/validate.py  schema + vocabulary + window checks (runs in CI)
 scripts/build.py     projects brief.yml over the data file -> docs/events.json
 scripts/drift.py     rot checks — the newest week against the weeks before it
+scripts/dice.py      reads a venue calendar drawn by a DICE ticketing widget
 scripts/verify.sh    the merge gate — everything above plus lint, the tool
                      floor, digest/data agreement, and a headless render
 docs/                THE PUBLISHED SITE — index.html + events.json only
@@ -118,6 +119,15 @@ lists again beneath it. **A warning never changes the exit code and never holds 
 week back**, and the weekly report repeats every one — the rule SKIPPED follows.
 Do not edit `config/sources.yml` to silence one; the entry is either right or it
 is a finding.
+
+`dice.py` is the one script that uses the network, and the only route to two
+venues whose pages carry no dates (Kilowatt, The Knockout). It reads a key that
+belongs to the venue off the venue's own page on each run. **That key is never
+written to any file here — the repository is public** — and the script has no
+option that prints or accepts one; do not add one. The gate and CI run only its
+offline self-test, which fails if the key reaches the address or the output.
+The gate never runs the reader itself: a venue it cannot reach is for the week
+to report, not a reason to hold the week.
 
 CI runs everything unattended on every push: `validate.py`, `drift.py`, a
 `brief.yml`/`sources.yml` parse check, a check that `docs/events.json` is
