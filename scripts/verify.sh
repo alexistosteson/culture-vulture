@@ -23,11 +23,17 @@
 #
 # A SKIPPED check is not a passed check. The summary prints them separately and
 # the weekly report is expected to repeat them.
+#
+# A fourth word, WARN, is for a check that ran and found something worth saying
+# that is not worth stopping a week for — a watched venue gone quiet, a
+# relied-on venue never written down. Warnings never change the exit code. They
+# are counted in the summary and listed again beneath it, and the weekly report
+# is expected to repeat every one, by the same rule as SKIPPED.
 
 set -uo pipefail
 cd "$(dirname "$0")/.."
 
-pass=0; fail=0; skip=0
+pass=0; fail=0; skip=0; warn=0; warnings=""
 ok()   { echo "  PASS  $1"; pass=$((pass+1)); }
 no()   { echo "  FAIL  $1"; fail=$((fail+1)); }
 meh()  { echo "  SKIP  $1"; skip=$((skip+1)); }
@@ -143,6 +149,8 @@ else no "tool floor is NOT enforceable — never fix this by narrowing ruff.toml
 #    failure, never a skip: a detector that has gone blind prints nothing, and
 #    nothing looks like a healthy week. Its output is printed on a pass too,
 #    because the counts it was made over are the proof that it looked.
+#    Its "  WARN  " lines are counted whatever the exit: a week that is blocked
+#    still owes its warnings to the report.
 out=$(python3 scripts/drift.py 2>&1); rc=$?
 case $rc in
   0) ok "drift.py — rot checks ran, nothing blocking" ;;
@@ -151,6 +159,8 @@ case $rc in
   *) no "drift.py exited $rc, which it never should — treated as could-not-check" ;;
 esac
 echo "$out" | sed 's/^/        /'
+warnings=$(echo "$out" | grep '^  WARN  ' || true)
+[ -n "$warnings" ] && warn=$(echo "$warnings" | wc -l | tr -d ' ')
 
 echo
 echo "=== OPTIONAL (binding when the tool is present) ==="
@@ -202,7 +212,11 @@ fi
 
 echo
 echo "================================================================"
-printf 'passed %d   failed %d   skipped %d\n' "$pass" "$fail" "$skip"
+printf 'passed %d   failed %d   skipped %d   warnings %d\n' "$pass" "$fail" "$skip" "$warn"
+if [ "$warn" -ne 0 ]; then
+  echo "note: $warn warning(s) — repeat each one in the report; a warning does not block."
+  echo "$warnings"
+fi
 if [ "$fail" -ne 0 ]; then
   echo "VERIFICATION FAILED — do not merge. Escalate with the failures above."
   exit 1

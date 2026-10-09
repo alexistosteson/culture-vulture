@@ -1,7 +1,7 @@
 # Spec — Rot checks: the build
 
-**Status: 8 October 2026.** Tier and all three open decisions taken by the owner (§7).
-Nothing here is built yet.
+**Status: 9 October 2026.** Tier and the open decisions taken by the owner (§7). Steps
+1–3 are live on `main`; their evidence is in §10. Steps 4–7 are to do.
 
 ## Tier
 
@@ -289,3 +289,49 @@ the day, past the 100 KB line.
 
 Venue capacities for the eight new tier-1 entries are `null`: none was read on a fetched
 page, and none was guessed.
+
+### Step 3 — checks 3 and 4 as warnings · 9 October 2026
+
+The gate's last lines on the live week (`bash scripts/verify.sh`, exit 0):
+
+```
+passed 9   failed 0   skipped 1   warnings 6
+note: 6 warning(s) — repeat each one in the report; a warning does not block.
+  WARN  check 2 (thin venue) is switched off and did not look at this week
+  WARN  Stern Grove Festival is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Filoli is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Music on the Square is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Felton Music Hall is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Sweetwater Music Hall is declared tier 1 and has produced no listing in 4 weeks
+note: 1 check(s) skipped — say so in the report; a skip is not a pass.
+VERIFICATION PASSED — safe to merge.
+```
+
+Self-test 38/38. The five venue warnings are the ones steps 5 and 7 own.
+
+**Check 2 is in the script and switched off** (`THIN_ENFORCED = False`), because the
+digest convention it reads does not exist until step 4. It is not silent about that: it
+prints `NOT RUN` and a warning on every run, so the gate's count shows it. Its self-test
+cases still replay. Step 4 flips the switch and that warning goes.
+
+Planted through the gate, in the real files, each plant confirmed, the files restored and
+the gate run again to the output above:
+
+| Planted | Gate said | Exit |
+|---|---|---|
+| Oakland Arena's entry renamed in `sources.yml`, so no entry covers it | `WARN  Oakland Arena (Oakland) has been listed in 4 weeks and is not in sources.yml` · `warnings 7` | 0 |
+| "The Fillmore" → "Fillmore" in the newest week (5 listings) | `failed 2` — the split, and `docs/events.json` gone stale from the plant — with all six warnings still counted and listed | 1 |
+
+The first shows a warning arriving without stopping the week; the second shows a blocked
+week still being told its warnings. A first attempt at the Oakland Arena plant changed
+nothing — the search string did not match the entry — and the gate's unchanged count of 6
+is what gave it away; the plant was redone and confirmed (`entries renamed: 1`).
+
+The no-warnings case was checked on the counting lines alone (`warnings 0`, no note). It
+cannot be reached through the gate until steps 4, 5 and 7 clear the six above.
+
+`prompts/weekly-research.md` tells the run what a `WARN` line is, not to edit
+`sources.yml` to silence one, and to repeat every one in its report word for word.
+`prompts/weekly-run.md` and `CLAUDE.md` say the same. The routine reads
+`weekly-research.md` from the repository on each run, so Monday's run is told without the
+owner pasting anything (§3).

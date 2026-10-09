@@ -89,6 +89,13 @@ Before finalising, check every part of the brief against what you retrieved:
     spelling it names. Two spellings are two venues to everything that counts.
   - **`COULD NOT CHECK`** (exit 2) — not something to fix in the week. Stop and
     report it verbatim; the checks themselves are broken.
+  - **A `WARN` line** — does not stop the week and is not yours to fix in it. Two
+    kinds name a venue: one that `sources.yml` says is watched and that has produced
+    nothing in four weeks, and one that has been listed three weeks or more and is
+    not in `sources.yml` at all. If you can see why — the venue's calendar would not
+    load, its season has ended, it has closed — say so beside the warning. Do not
+    edit `sources.yml` to make a warning go away. `scripts/verify.sh` counts the
+    warnings in its summary line and lists them again beneath it.
 
 ## Report back
 
@@ -96,5 +103,8 @@ After the files, summarise in chat:
 
 - The two or three things most worth doing, and why
 - Anything you couldn't verify
+- **Every `WARN` line the rot checks printed, word for word**, each with whatever you
+  know about its cause. A warning nobody repeats is a warning nobody reads — the same
+  rule the gate's SKIPPED checks follow. If there were none, say "no warnings"
 - Any vocabulary or region additions you'd propose to the brief
 - Whether the week is unusually busy or quiet, and what that's driven by

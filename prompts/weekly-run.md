@@ -88,6 +88,10 @@ Steps:
    verify.sh prints SKIPPED checks separately. A skip is not a pass: repeat
    every skipped check in your report and say why it was skipped.
 
+   verify.sh also counts WARNINGS and lists them under its summary line. A
+   warning never changes the exit code and is not a reason to hold the week:
+   publish, and repeat every warning in your report word for word.
+
 7. Only on exit 0 — commit, merge and publish:
      git add data/<window_start>.json digests/<window_start>.md docs/events.json
      git commit -m "Week of <window_start>: <n> events" -m "<one line on what dominates the week>"
@@ -110,6 +114,7 @@ Report back, in this order:
     quote the failing checks verbatim.
   - The two or three things most worth doing this week, and why.
   - Every source you could not reach, and every event marked low confidence.
+  - Every warning verify.sh listed, word for word, or "no warnings".
   - Any vocabulary, region or sources.yml changes you would propose.
   - Whether the week is unusually busy or quiet, and what is driving that.
 
