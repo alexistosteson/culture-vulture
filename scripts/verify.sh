@@ -137,10 +137,25 @@ PY
 then ok "tool floor is enforceable (ruff.toml selects F, ARG, B, RUF)"
 else no "tool floor is NOT enforceable — never fix this by narrowing ruff.toml"; fi
 
+# 8. Rot checks: the newest week against the weeks before it. drift.py has
+#    THREE exits and all three are read here. Exit 2 means it could not check —
+#    no data, unreadable data, or its own self-test failed — and that is a
+#    failure, never a skip: a detector that has gone blind prints nothing, and
+#    nothing looks like a healthy week. Its output is printed on a pass too,
+#    because the counts it was made over are the proof that it looked.
+out=$(python3 scripts/drift.py 2>&1); rc=$?
+case $rc in
+  0) ok "drift.py — rot checks ran, nothing blocking" ;;
+  1) no "drift.py — a rot check is blocking this week" ;;
+  2) no "drift.py COULD NOT CHECK — a failure, not a skip" ;;
+  *) no "drift.py exited $rc, which it never should — treated as could-not-check" ;;
+esac
+echo "$out" | sed 's/^/        /'
+
 echo
 echo "=== OPTIONAL (binding when the tool is present) ==="
 
-# 8. Lint.
+# 9. Lint.
 if command -v ruff >/dev/null 2>&1; then
   if ruff check . >/dev/null 2>&1; then ok "ruff check ."
   else no "ruff check ."; ruff check . 2>&1 | sed 's/^/        /' | head -20; fi
@@ -148,9 +163,9 @@ else
   meh "ruff not installed — CI still runs it on push"
 fi
 
-# 9. The behavioural check: does the page actually render the week? index.html
-#    fetches events.json at runtime, so a payload that validates can still fail
-#    to display. Nothing else in this repo catches that.
+# 10. The behavioural check: does the page actually render the week? index.html
+#     fetches events.json at runtime, so a payload that validates can still
+#     fail to display. Nothing else in this repo catches that.
 CHROME=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux/chrome 2>/dev/null | head -1)
 [ -z "$CHROME" ] && CHROME=$(command -v chromium chromium-browser google-chrome 2>/dev/null | head -1)
 if [ -n "$CHROME" ]; then

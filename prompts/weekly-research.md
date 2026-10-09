@@ -81,6 +81,14 @@ Before finalising, check every part of the brief against what you retrieved:
 - [ ] `outer` region entries clear `coverage.outer_threshold` — and if none do, say so
 - [ ] Featured count within cap
 - [ ] `python3 scripts/validate.py` passes with zero errors
+- [ ] `python3 scripts/drift.py` exits 0. It compares this week with the weeks before
+      it, and `scripts/verify.sh` runs it again as part of the merge gate — so run it
+      here first and act on what it prints, rather than meeting it at the gate:
+  - **A new spelling of an established venue** ("Fillmore" where every earlier week
+    says "The Fillmore") — change the data file *and* the digest to the established
+    spelling it names. Two spellings are two venues to everything that counts.
+  - **`COULD NOT CHECK`** (exit 2) — not something to fix in the week. Stop and
+    report it verbatim; the checks themselves are broken.
 
 ## Report back
 
