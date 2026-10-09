@@ -14,6 +14,20 @@
 # the Square happens in "Courthouse Square"). scripts/drift.py matches on it. A
 # comma-suffixed spelling goes here as an alias; never cut a name at the comma.
 #
+# `season_ends:` — the last date of this year's season, on any entry that has
+# one. After it, scripts/drift.py stops expecting listings from the entry, and
+# so should the run. It is a date that was read, not a guess at "late summer".
+#
+# `coverage: partial` — the routes that fetch do not carry the venue's whole
+# programme, and will not next week either. `omits:` says what is missing and
+# `checked:` is the day that was last read. A partial venue is named every week
+# under "What could not be reached", whatever its count (see
+# prompts/weekly-research.md). Nothing mechanical reads these three keys.
+#
+# `fallback:` — other addresses for the same venue, in the order to try them
+# when `url` fails or returns nothing readable. Literal addresses, each fetched
+# and read on the `checked:` date; `gives:` says what that one carries.
+#
 # `found_via:` — on `observed_venues` at the foot of this file: how a venue the
 # digest keeps listing is actually reached, when it has no page of its own that
 # a plain fetch reads in full.
@@ -38,7 +52,12 @@ tier_1_venues:
     - { name: Brick & Mortar Music Hall, url: "https://www.brickandmortarmusic.com/",  cap: 300 }
     - { name: Café du Nord,           url: "https://www.cafedunord.com/",              cap: 300 }
     - { name: DNA Lounge, url: "https://www.dnalounge.com/calendar/{YYYY}/{MM}.html", cap: 500,
-        note: "Build the URL for the target month, zero-padded. /calendar/ alone is only a year index." }
+        coverage: partial, checked: 2026-10-09,
+        omits: "the club nights, film nights and variety shows — most of what DNA puts on. The fallbacks carry touring concerts only.",
+        fallback: [
+          { url: "https://app.songkick.com/venues/7516-dna-lounge", gives: "concerts only — 3 in the next week when read" },
+          { url: "https://www.jambase.com/venue/dna-lounge",        gives: "concerts only — 2 in the next week when read" } ],
+        note: "Build the URL for the target month, zero-padded. /calendar/ alone is only a year index. THE CALENDAR SORTS BY WHO IS ASKING: a request that announces itself as a browser gets the full month; the unattended run's fetch tool gets a page that says only PRIVATE, and plain curl gets 403 (all three seen 2026-10-09). It is not down. If the calendar reads, use it and it is complete. If it does not, read BOTH fallbacks — they disagree, so take the union — and say under 'What could not be reached' that the club nights are missing. In the 5 Oct week the calendar had 10 events and JamBase showed 3 of them." }
     - { name: Public Works,           url: "https://publicsf.com/",                    cap: 800 }
     - { name: Regency Ballroom,      url: "https://www.jambase.com/venue/the-regency-ballroom", cap: 1400,
         note: "Added 2026-08-18. Was missing entirely, and cost the 17 Aug week Los Mirlos and a Sword/Red Fang bill." }
@@ -46,10 +65,13 @@ tier_1_venues:
     - { name: The Warfield,           url: "https://www.thewarfieldtheatre.com/",      cap: 2300 }
     - { name: SFJAZZ, url: "https://www.jambase.com/venue/miner-auditorium-sfjazz-center", cap: 700,
         venues: ["Miner Auditorium, SFJAZZ"],
-        note: "sfjazz.org 403s on every path — this JamBase mirror is the only fetchable source. Summer Sessions end mid-August and the fall season starts in September, so an empty late-August week here is real, not a fetch failure." }
+        coverage: partial, checked: 2026-10-09,
+        omits: "the Joe Henderson Lab, SFJAZZ's second hall. This mirror lists Miner Auditorium only.",
+        note: "sfjazz.org 403s on every path, to a browser and to the fetch tool alike (2026-10-09) — this JamBase mirror is the only route, and it is the main hall only. A week with one or two listings here is the main hall's real count, not SFJAZZ's. The Lab has two mirror pages, jambase.com/venue/joe-henderson-lab-at-sfjazz-center and songkick.com/venues/2588888-joe-henderson-lab-sfjazz-center; both read on 2026-10-09 and they did not share a single show, so list a Lab show either one names, and never read their silence as a dark hall. Summer Sessions end mid-August and the season starts in September, so an empty late-August week is real; an empty week at any other time is not." }
     - { name: Castro Theatre, url: "https://thecastro.com/", cap: 1400,
         note: "castrotheatre.com 301-redirects here; fetch the new domain directly." }
     - { name: Stern Grove Festival,   url: "https://www.sterngrove.org/lineup2026",    cap: 10000,
+        season_ends: 2026-08-16,
         note: "Free but lottery-ticketed — always state the access mechanism (GA lottery opens six weeks out; a 1,500-ticket Community Box Office goes first-come on the day). SEASON IS MID-JUNE TO MID-AUGUST: 2026 ran Jun 14–Aug 16 and closed with Al Green. Nothing here after that, whatever the homepage still says." }
     - { name: Roxie Theater,          url: "https://roxie.com/",                       cap: null,
         note: "Repertory and one-off screenings. Ignore the first-run showtimes." }
@@ -127,7 +149,8 @@ tier_1_venues:
     - { name: Filoli, url: "https://feverup.com/en/san-francisco/venue/filoli-historic-house-garden", cap: null,
         note: "filoli.org 403s. Fever carries only the ticketed programming, not the full calendar." }
     - { name: Music on the Square,    url: "https://www.redwoodcity.org/",             cap: null, free: true,
-        venues: ["Courthouse Square"] }
+        venues: ["Courthouse Square"], season_ends: 2026-09-04,
+        note: "2026 ran Fridays May 29–Sep 4 (no show Jul 3) and closed with Pride & Joy. redwoodcity.org 403s to a browser and to the fetch tool alike; the full dated lineup was read on sf.funcheap.com/20th-annual-music-on-the-square-free-concerts-every-friday-redwood-city-10/ on 2026-10-09. Next year, find the lineup on Funcheap first." }
 
   south_bay:
     - { name: Shoreline Amphitheatre, url: "https://www.jambase.com/venue/shoreline-amphitheatre", cap: 22000,
@@ -229,7 +252,8 @@ recurring:
   - { name: Head West Marketplace,  region: varies,    cadence: "Most weekends, rotating",  cost: free }
   - { name: Sips & Sounds of Summer, region: south-bay, cadence: "Tuesdays 6–8pm, Aug–Sep", cost: free,
       note: "Santana Row Park, near Left Bank. Previously filed here as 'Santana Row Summer Music'." }
-  - { name: Music on the Square,    region: peninsula, cadence: "Fridays, 6–8pm, summer",   cost: free }
+  - { name: Music on the Square,    region: peninsula, cadence: "Fridays, 6–8pm, late May–early Sep", cost: free,
+      season_ends: 2026-09-04 }
   - { name: Movies on the Square,   region: peninsula, cadence: "Thursdays, 6–10pm, summer", cost: free,
       note: "Courthouse Square, Redwood City — same square as the Friday concerts. Family film at 6, main feature 8:30." }
   - { name: Palo Alto Twilight Concert Series, region: peninsula, cadence: "SATURDAYS, 6:30pm, summer", cost: free,

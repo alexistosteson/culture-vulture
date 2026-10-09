@@ -65,7 +65,8 @@ rather than the first time the run hears about it. `prompts/weekly-run.md` is up
 match.
 
 **Step 5 — seasons and partial coverage.** `season_ends` on tier-1 entries that have one
-(Music on the Square: 31 August; Stern Grove: 16 August). `coverage: partial` with a
+(Music on the Square: ~~31 August~~ **4 September** — corrected when the step was built,
+see §10; Stern Grove: 16 August). `coverage: partial` with a
 checked date on SFJAZZ (its mirror omits the Joe Henderson Lab) and DNA Lounge (via a
 mirror declared as a fallback, which omits the club nights), and the standing line for
 each in "What could not be reached", saying what is omitted and not guessing how much.
@@ -404,3 +405,71 @@ with it.
 One thing outside the step: `verify.sh` now finds Chrome where macOS keeps it, so the
 page-render check runs locally instead of being skipped. It mattered here because this
 step changes what the page shows.
+
+### Step 5 — seasons and partial coverage · 9 October 2026
+
+Every address below was fetched and read on 9 October. What each said:
+
+| Read | Result |
+|---|---|
+| `sterngrove.org/lineup2026` | 2026 season 14 June – **16 August**, closing with Al Green |
+| `redwoodcity.org` (three paths) | 403 to a browser-style request and to the fetch tool alike |
+| `sf.funcheap.com/20th-annual-music-on-the-square-…-redwood-city-10/` | "May 29 through September 4"; fifteen dated Fridays, no show 3 July, last **4 September, Pride & Joy** |
+| `jambase.com/venue/miner-auditorium-sfjazz-center` | 30 dated shows, Miner Auditorium only; no Joe Henderson Lab listing |
+| `jambase.com/venue/joe-henderson-lab-at-sfjazz-center` | Holly Bowling, 13–15 November, and nothing else |
+| `songkick.com/venues/2588888-joe-henderson-lab-sfjazz-center` | Ben Wolfe 6 Nov; Hendelman and Sutton 7–8 Nov — no show in common with JamBase's Lab page |
+| `sfjazz.org/` and `/calendar/` | 403 to a browser-style request, plain `curl` and the fetch tool |
+| `dnalounge.com/calendar/2026/10.html` | browser-style request 200; plain `curl` 403; the fetch tool, a page reading only "PRIVATE" |
+| `app.songkick.com/venues/7516-dna-lounge` | 3 concerts (11, 13, 16 October) |
+| `jambase.com/venue/dna-lounge` | 2 concerts (11, 13 October) |
+
+**One correction to §2.** The spec gave Music on the Square's season end as 31 August. It
+was 4 September: the lineup above says so, `data/2026-08-31.json` lists the 4 September
+concert, and the 7 September digest recorded the season as finishing that day. The entry
+carries 4 September. (The 28 August listing's note called that night the season's close;
+it was the second-to-last. That week is published and was left alone.)
+
+What changed in `config/sources.yml`:
+
+- `season_ends` on Stern Grove Festival (16 August) and on both Music on the Square
+  entries (4 September), the latter with a note naming the page that actually reads.
+- SFJAZZ: `coverage: partial`, `checked`, and `omits` naming the Joe Henderson Lab. Its
+  `note:` is rewritten here rather than in step 7, because the old one — "an empty
+  late-August week here is real, not a fetch failure" — contradicted the new keys on the
+  same entry. The two Lab pages are named in the note as things to read, not as coverage:
+  they disagree with each other entirely, so neither's silence means a dark hall.
+- DNA Lounge: `coverage: partial`, `checked`, `omits` naming the club, film and variety
+  nights, and a two-address `fallback:` (Songkick, then JamBase — both, because they
+  differ). The note records that the club's own calendar answers a browser and refuses the
+  unattended run, so it is partial *for that run*; a session that can read the calendar
+  has all of it.
+- The file's header defines `season_ends`, `coverage`, `omits`, `checked` and `fallback`.
+
+`prompts/weekly-research.md` tells the run what the three keys mean and that every
+`coverage: partial` entry gets a standing line under "What could not be reached" each
+week, naming what is omitted and not estimating how much, with an example line for each
+venue. `prompts/weekly-run.md` is unchanged, so no paste is owed (§3).
+
+`python3 scripts/drift.py`, before (on `main`) and after:
+
+```
+check 3 · declared, not producing: 60 tier-1 entries, 60 ever matched a listing, 0 out of season — 5 with nothing in the last 4 weeks
+check 3 · declared, not producing: 60 tier-1 entries, 60 ever matched a listing, 2 out of season — 3 with nothing in the last 4 weeks
+```
+
+Self-test 43/43, exit 0. The gate's last lines (`bash scripts/verify.sh`, exit 0):
+
+```
+passed 10   failed 0   skipped 0   warnings 3
+note: 3 warning(s) — repeat each one in the report; a warning does not block.
+  WARN  Filoli is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Felton Music Hall is declared tier 1 and has produced no listing in 4 weeks
+  WARN  Sweetwater Music Hall is declared tier 1 and has produced no listing in 4 weeks
+VERIFICATION PASSED — safe to merge.
+```
+
+The three left are step 7's. Rehearsed against next week as well — `data/` and `digests/`
+copied to a scratch directory with a 12 October week added — self-test 45/45, exit 0.
+
+**Not proven, and not provable here:** that the unattended run writes the standing lines.
+`coverage` is read by no check (§9), so the first evidence is Monday's digest.
