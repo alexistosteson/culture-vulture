@@ -88,9 +88,10 @@ as its fallback route, and the standing line for each in "What could not be reac
   sourcing clause.
 - **Owner's:** removing a tier-1 venue is editorial (step 7: Felton, Sweetwater, Filoli).
 - **Owner's, later:** check 4 counts "3 or more weeks" over the whole history.
-- **Owner action, now due:** paste the updated `prompts/weekly-run.md` into the routine.
-  Nothing breaks without it — the run reads `prompts/weekly-research.md` from the
-  repository, and everything it must do differently is there.
+- ~~Owner action: paste the updated `prompts/weekly-run.md` into the routine.~~ **Done
+  9 October, and read back:** the routine's stored prompt matches the file, angle
+  brackets and line breaks intact; it is enabled and next fires 12 October 03:04 UTC.
+  It is owed again only if `prompts/weekly-run.md` changes.
 
 ## Constraints
 
