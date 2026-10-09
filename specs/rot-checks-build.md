@@ -518,3 +518,42 @@ day forward, so a run late in a window would miss the days already gone.
 The gate (`bash scripts/verify.sh`, exit 0): `passed 11   failed 0   skipped 0
 warnings 3` — the eleventh check is the self-test.
 
+### Step 7 — known-wrong entries and three quiet venues · 9 October 2026
+
+Every address below was read on 9 October **with the fetch tool the unattended run uses**.
+The 8 October route research measured pages with `curl` and judged several unreadable
+past 100 KB; the fetch tool read all of them to the end, so those judgements did not hold.
+
+| Entry | Was | Now | What the page gave |
+|---|---|---|---|
+| ODC Theater | absent | added, `odc.dance/calendar` | 4 dated performances 16–29 Oct, with times |
+| Smuin Contemporary Ballet | absent | added, homepage; answers for "Cowell Theater" | 5 productions with ranges and links; `/events/french-kiss/` gave six dated Cowell performances |
+| American Conservatory Theater | absent | added, season page; answers for "Toni Rembe Theater" | six runs with dates; no curtain times; *Oh, Mary!* is at the Curran |
+| Fort Mason Center | `/calendar/` — navigation only | `/events/` | 12 exhibitions and series, none at the Cowell |
+| Chronicle Datebook | a redirect the fetch tool will not follow | `fetchable: false` | the redirect's target and `/datebook-picks/` both return an error page |
+| Thee Stork Club | right URL, note saying it fetched empty | note rewritten | 17 dated events 9–31 Oct, with times |
+| Z Space | homepage, note naming old shows | note rewritten, "Z Below" declared | eight show links without dates; `/lear` gave dates, times and room |
+| 924 Gilman | landing page with no shows | the ticketing page its TICKETS button opens | 13 dated shows to 6 Dec, with prices |
+| SFJAZZ | stale August note | done in step 5 | — |
+| Felton Music Hall | homepage, empty to a fetch | `/events` | 15 shows, 10 Oct – 17 Dec |
+| Sweetwater Music Hall | homepage, next four dates only | `/events/?view=list` | 16 shows, 9–25 Oct |
+| Filoli | a Fever page with one price card | `filoli.org/events/`; "Filoli Summer Stage" declared | Nightfall and Autumn Days, 26 Sep – 1 Nov, among tours and tastings |
+
+**The three quiet venues each get a route fix. None is removed and none has a season
+that has ended, so nothing here went to the owner.** Felton and Sweetwater are `outer`
+venues, where the brief admits only what would be a top-three event of the week — so some
+quiet weeks there are a decision. Their notes say so. Whether check 3 should go on warning
+about an outer venue that is quiet by decision is not settled here; it needs a few weeks
+of the fixed routes first.
+
+Seat counts on the three new entries are `null`: none was read that day.
+
+`python3 scripts/drift.py`: self-test 43/43, exit 0, `63 tier-1 entries, 62 ever matched a
+listing, 2 out of season — 4 with nothing in the last 4 weeks`. The four: Filoli, Felton
+and Sweetwater, which stay until a run lists them through the new routes, and **ODC
+Theater, new** — declared today, never listed, with performances on 16–18 October for
+Monday's run to find. Gate: `passed 11   failed 0   skipped 0   warnings 4`, exit 0.
+
+**Not proven:** that the run follows the links the notes tell it to (Z Space, Smuin). No
+check reads that; the digests will show it.
+

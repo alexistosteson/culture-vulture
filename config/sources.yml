@@ -91,10 +91,19 @@ tier_1_venues:
         note: "Galleries free every Wednesday. State the free day, it is the point." }
     - { name: San Francisco Playhouse, url: "https://www.sfplayhouse.org/calendar/", cap: 199,
         note: "Two stages running concurrently. SF theatre coverage in this file was nil before 2026-08-18, which is why the digest kept reporting thin theatre weeks." }
-    - { name: Z Space,               url: "https://www.zspace.org/", cap: 300,
-        note: "Experimental theatre and dance in the Mission. URL corrected 2026-08-24 — /calendar returns 404 and the site has no central calendar path; shows are linked individually off the homepage (/sfmt, /lear, ...), so this one needs a click-through rather than a single fetch." }
-    - { name: Fort Mason Center,     url: "https://fortmason.org/calendar/", cap: null,
-        note: "Arts campus — festivals, fairs and one-offs across several halls." }
+    - { name: Z Space, url: "https://www.zspace.org/", cap: 300,
+        venues: ["Z Below"],
+        note: "Experimental theatre and dance in the Mission. The homepage lists what is on under 'Coming Up at Z Space' as links with no dates (eight on 2026-10-09: /lear, /iphigenia, /wfw-assimilation ...). FOLLOW EACH LINK: the show's own page has the run dates, the times and the room — /lear gave 26 Sep–11 Oct, Thu–Sat 7pm, Sun 2pm, Steindler Stage. The slugs change with every show, so start from the homepage each week; there is no calendar page." }
+    - { name: Fort Mason Center, url: "https://fortmason.org/events/", cap: null,
+        note: "Arts campus — galleries, fairs, tours and one-offs. URL corrected 2026-10-09: /calendar/ returns navigation and no events. /events/ lists exhibitions and series with date ranges and no times, and NOTHING AT THE COWELL THEATER — that hall's programme is its renters', and is reached through them (see Smuin Contemporary Ballet below). BATS Improv and Magic Theatre are on the campus and keep their own calendars." }
+    - { name: ODC Theater, url: "https://odc.dance/calendar", cap: null,
+        note: "Added 2026-10-09 — the Mission's dance house, absent from this file for seven weeks of zero listings. One page, dated rows with times; the list shows no year. It mixes in ODC School workshops and rentals: list the performances. /performances is a 404." }
+    - { name: Smuin Contemporary Ballet, url: "https://www.smuinballet.org/", cap: null,
+        venues: ["Cowell Theater"],
+        note: "Added 2026-10-09. The homepage names each production with its date range and links its page (/events/french-kiss/, /events/christmas-ballet-2026/ ...); THE PRODUCTION PAGE has the per-date rows with times and the hall. Smuin tours three cities — list only the San Francisco dates, which are at the Cowell Theater, Fort Mason; the Mountain View and Walnut Creek stops fall to their own regions' rules. This entry answers for the Cowell Theater because it is the only route found that reads that hall; other companies rent it too, and nothing lists them." }
+    - { name: American Conservatory Theater, url: "https://www.act-sf.org/whats-on/2026-27-season", cap: null,
+        venues: ["Toni Rembe Theater", "The Strand Theater"],
+        note: "Added 2026-10-09. The season page gives each production's run dates and nothing else — NO CURTAIN TIMES ANYWHERE ON THE SITE, which is A.C.T.'s choice and not a fetch failure; list a run with its dates and leave the time out rather than invent one. The theatre is on the production's own page and is not always A.C.T.'s: Oh, Mary! (13 Oct–1 Nov 2026) plays the Curran. Refresh each September." }
     - { name: 1015 Folsom,           url: "https://1015.com/", cap: 1000 }
     - { name: The Foundry SF, url: "https://www.thefoundry.club/", cap: 500,
         note: "URL corrected 2026-09-21 — thefoundrysf.com 308-redirects here and the fetch path does not follow cross-host redirects, so the old URL returned nothing." }
@@ -135,7 +144,7 @@ tier_1_venues:
     # Left commented so it is not re-added by mistake.
     # - { name: The New Parkway, url: "https://thenewparkway.com/", cap: 200 }
     - { name: Thee Stork Club, url: "https://theestorkclub.com/calendar/", cap: 150,
-        note: "URL corrected 2026-08-24 — theestorkclubopakland.com does not resolve (DNS NXDOMAIN), so this venue had been silently dark. The real domain has no 'oakland' in it. /calendar/ renders client-side and fetches empty; https://www.jambase.com/venue/thee-stork-club is the reliable read." }
+        note: "The venue's own calendar reads in full — 17 dated events for 9–31 Oct on 2026-10-09, with times. An earlier note here said it fetched empty and sent the run to JamBase; that is no longer true, and JamBase mangles some of the band names. The domain has no 'oakland' in it. Skip the 'Closed for Private Event' rows." }
     - { name: Ivy Room, url: "https://www.jambase.com/venue/the-ivy-room", cap: 150,
         note: "ivyroom.com/shows renders client-side and fetches empty." }
     - { name: Oakland Museum of California, url: "https://museumca.org/on-view/", cap: null }
@@ -144,8 +153,8 @@ tier_1_venues:
     - { name: The UC Theatre,         url: "https://theuctheatre.org/",                cap: null }
     - { name: Cornerstone,           url: "https://cornerstoneberkeley.com/events", cap: 300,
         note: "Beer hall on Shattuck with a real stage at the back." }
-    - { name: 924 Gilman,            url: "https://924gilman.org/", cap: 300,
-        note: "Volunteer-run all-ages punk institution. The site is a landing page — shows are behind its ticketing link, so this one needs a click-through rather than a single fetch." }
+    - { name: 924 Gilman, url: "https://app.showslinger.com/e1/460/924-gilman/8c96699fd6", cap: 300,
+        note: "Volunteer-run all-ages punk institution in Berkeley. URL corrected 2026-10-09 to the ticketing page the venue's TICKETS button opens — 924gilman.org itself is a landing page with no shows on it. Dated rows with times and prices, 13 shows through 6 Dec when read. The rows carry no year and no city, and one stale row from a past March sits at the foot under another promoter's name: ignore it. If this address dies, take the new one from the TICKETS button." }
     # Starline Social Club — CLOSED. Both spaces are marked closed and the last
     # listed show was 11 June 2026. Left commented so it is not re-added by mistake.
     # - { name: Starline Social Club, url: "https://starlinesocialclub.com/", cap: null }
@@ -156,8 +165,9 @@ tier_1_venues:
 
   peninsula:
     - { name: The Guild Theatre,      url: "https://guildtheatre.com/",                cap: 500 }
-    - { name: Filoli, url: "https://feverup.com/en/san-francisco/venue/filoli-historic-house-garden", cap: null,
-        note: "filoli.org 403s. Fever carries only the ticketed programming, not the full calendar." }
+    - { name: Filoli, url: "https://www.filoli.org/events/", cap: null,
+        venues: ["Filoli Summer Stage"],
+        note: "URL corrected 2026-10-09: filoli.org reads now, and the Fever page this pointed at shows one price card and no events. Most of the calendar is tours, tastings and workshops, which are not listings. What is: the seasonal runs — Nightfall and Autumn Days, both 26 Sep–1 Nov 2026 — the summer concerts, and Holidays at Filoli. A week with nothing from here is usually an editorial zero, not a miss; say which." }
     - { name: Music on the Square,    url: "https://www.redwoodcity.org/",             cap: null, free: true,
         venues: ["Courthouse Square"], season_ends: 2026-09-04,
         note: "2026 ran Fridays May 29–Sep 4 (no show Jul 3) and closed with Pride & Joy. redwoodcity.org 403s to a browser and to the fetch tool alike; the full dated lineup was read on sf.funcheap.com/20th-annual-music-on-the-square-free-concerts-every-friday-redwood-city-10/ on 2026-10-09. Next year, find the lineup on Funcheap first." }
@@ -186,8 +196,10 @@ tier_1_venues:
   # things worth the drive clear the brief, so this list stays short.
   outer:
     - { name: The Catalyst,           url: "https://catalystclub.com/",                cap: null }
-    - { name: Felton Music Hall,      url: "https://feltonmusichall.com/",             cap: null }
-    - { name: Sweetwater Music Hall,  url: "https://sweetwatermusichall.org/",         cap: null }
+    - { name: Felton Music Hall, url: "https://feltonmusichall.com/events", cap: null,
+        note: "URL corrected 2026-10-09 — the homepage's 'upcoming shows' block is empty to a fetch, which is why this venue went eight weeks unlisted while booking a full autumn. /events lists OLDEST FIRST, starting months back: read to the end (15 shows from 10 Oct to 17 Dec when read). Then apply the outer threshold; most nights will not clear it and that is a decision, not a miss." }
+    - { name: Sweetwater Music Hall, url: "https://sweetwatermusichall.org/events/?view=list", cap: null,
+        note: "URL corrected 2026-10-09 to the list view: every show with doors and show times, 16 between 9 and 25 Oct when read. The homepage shows only the next four. Skip 'Closed for Private Event'. Then apply the outer threshold; most nights will not clear it and that is a decision, not a miss." }
 
 # -----------------------------------------------------------------------------
 # TIER 2 — regional aggregators. Best for free and community events that never
@@ -212,8 +224,9 @@ tier_2_aggregators:
   - { name: The SF Standard, url: "https://sfstandard.com/arts-culture/", covers: [sf],                             strength: "critics' picks and openings" }
   - { name: 48 Hills,        url: "https://48hills.org/",           covers: [sf, east-bay],                        strength: "underground and DIY, the venues nobody aggregates" }
   - { name: KQED Arts,       url: "https://www.kqed.org/arts",      covers: [sf, east-bay, peninsula, south-bay],  strength: "week-ahead roundups across the whole region" }
-  - { name: Chronicle Datebook, url: "https://datebook.sfchronicle.com/", covers: [sf, east-bay, peninsula, south-bay], strength: "breadth and reviews",
-      note: "Paywalled. Use for what exists and what is worth seeing; get the details elsewhere." }
+  - { name: Chronicle Datebook, url: "https://www.sfchronicle.com/entertainment/", fetchable: false,
+      covers: [sf, east-bay, peninsula, south-bay], strength: "breadth and reviews",
+      note: "Not readable by the run. datebook.sfchronicle.com is a permanent redirect to this address, and this address and /datebook-picks/ both answer the fetch tool with an error page (2026-10-09). Do not spend a fetch on it. If a Chronicle review turns up in a search, use it for judgement and get the details elsewhere." }
   - { name: East Bay Express, url: "https://eastbayexpress.com/",   covers: [east-bay],                            strength: "Oakland and Berkeley listings" }
   - { name: The Other SF,    url: "https://theothersf.com/",        covers: [sf],                                  strength: "small and offbeat programming" }
 
