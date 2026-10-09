@@ -1,7 +1,9 @@
 # Spec — Rot checks: the build
 
-**Status: 9 October 2026.** Tier and the open decisions taken by the owner (§7). Steps
-1–4 are live on `main`; their evidence is in §10. Steps 5–7 are to do.
+**Status: 9 October 2026 — built.** All seven steps are live on `main`; the evidence for
+each is in §10. Two things are still owed and both are `BACKLOG.md` rows: the owner's
+behavioural check (§8 — the page is delivered, the walk is his), and a record of what the
+first unattended run did (Monday 12 October).
 
 ## Tier
 
@@ -144,9 +146,10 @@ effect is on the self-test, which expects 27 before step 2's declarations and 0 
 
 ## 6. Owed by the owner
 
-- The behavioural check in §8.
-- Pasting the updated `prompts/weekly-run.md` into the routine, once step 4 lands. Not
-  urgent and nothing breaks without it (§3).
+- The behavioural check in §8 — delivered 9 October as
+  [`handoff/rot-checks-walk.html`](../handoff/rot-checks-walk.html); not yet walked.
+- ~~Pasting the updated `prompts/weekly-run.md` into the routine.~~ Done 9 October and
+  read back: the routine's stored prompt matches the file.
 
 ## 7. Decisions taken while drafting
 
@@ -186,6 +189,9 @@ outline, the owner sees four things happen:
 2. A week with a thin venue is refused; adding the "Thin this week" line lets it through.
 3. The two warnings appear in the gate's output without stopping it.
 4. The live week passes.
+
+Delivered 9 October: [`handoff/rot-checks-walk.html`](../handoff/rot-checks-walk.html),
+one command per item, each run by `handoff/rot-checks-walk.sh`. Evidence in §10, "Closing".
 
 ## 9. Not in this spec
 
@@ -557,3 +563,38 @@ Monday's run to find. Gate: `passed 11   failed 0   skipped 0   warnings 4`, exi
 **Not proven:** that the run follows the links the notes tell it to (Z Space, Smuin). No
 check reads that; the digests will show it.
 
+### Closing — the owner's check, and what was left for the backlog · 9 October 2026
+
+**The behavioural check (§8) is a page and a script.**
+[`handoff/rot-checks-walk.html`](../handoff/rot-checks-walk.html) gives the owner four
+commands; each runs `handoff/rot-checks-walk.sh <1–4>`. Steps 1–3 clone the repository to
+a temporary directory, check out `ac372e5` (`main` when step 7 went live), damage the
+clone, and run the real `scripts/verify.sh` inside it; step 4 runs the gate on the
+checkout as it stands. The script prints the gate's own FAIL, BLOCK, WARN and summary
+lines unaltered, then a verdict worked out from the gate's exit code and its text.
+
+All four, run on 9 October:
+
+| Step | Changed in the clone | Gate said | Exit | Verdict |
+|---|---|---|---|---|
+| 1 | "The Fillmore" → "Fillmore", 5 listings | `BLOCK  “Fillmore” (San Francisco, 5 listing(s)) is a new spelling of “The Fillmore”` · `passed 10   failed 1` | 1 | YES |
+| 2, first half | The Regency's "Thin this week" line deleted (1 match) | `BLOCK  Regency Ballroom: 1 listing(s) after 2, 2, 4, 5. 2026-10-05.md does not account for it` | 1 | — |
+| 2, second half | The line restored | `ok     Regency Ballroom … accounted for` · `passed 11   failed 0` | 0 | YES |
+| 3 | Oakland Arena's entry renamed in `sources.yml` (1 match) | the four standing warnings and `WARN  Oakland Arena (Oakland) has been listed in 4 weeks and is not in sources.yml` · `warnings 5` | 0 | YES |
+| 4 | nothing | `passed 11   failed 0   skipped 0   warnings 4` · `VERIFICATION PASSED` | 0 | YES |
+
+**The walk is proven able to say NO.** Pinned instead to the commit before `drift.py`
+existed, step 1's planted spelling passes the gate and the walk prints `MATCHES WHAT THIS
+STEP SHOULD SHOW: NO`. With the planted spelling pointed at a room that is not in the
+week, it stops with `THE CHANGE MATCHED NOTHING … nothing was tested`, exit 2, before the
+gate runs.
+
+**Not done here: the walk itself.** It is the owner's, and the page says where to look —
+at whether the messages make sense and whether these are the right things to stop a week
+for, since the script already reports whether each step matched.
+
+**What went to `BACKLOG.md`,** as §7 decision 2 and the handoffs promised: the owner's
+check; a record of the first unattended run (12 October) and the three things only it can
+prove; the two questions waiting on evidence (outer venues quiet by decision, and check
+4's whole-history count); the mark on uncertain listings, decided 9 October; and the
+per-source run log.

@@ -2,6 +2,12 @@
 
 Session name: Draft the build spec for the rot-detection checks
 
+> **Closed out later on 9 October 2026.** "Next action" items 1 and 2 are done: the owner's
+> check is [`rot-checks-walk.html`](rot-checks-walk.html), and everything still open —
+> his walk, the record of Monday's run, the outer-venue question, the mark on uncertain
+> listings, the run log — is a row in [`BACKLOG.md`](../BACKLOG.md). Start from the
+> backlog, not from this file.
+
 Read `CLAUDE.md` first; it is binding. **`docs/` is the published web root.** The build
 record is [`specs/rot-checks-build.md`](../specs/rot-checks-build.md) — tier, the seven
 steps, every owner decision (§7) and the evidence for every step (§10) are there and are
