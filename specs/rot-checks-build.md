@@ -1,8 +1,8 @@
 # Spec — Rot checks: the build
 
-**Status: 9 October 2026 — built.** All seven steps are live on `main`; the evidence for
-each is in §10. Two things are still owed and both are `BACKLOG.md` rows: the owner's
-behavioural check (§8 — the page is delivered, the walk is his), and a record of what the
+**Status: 10 October 2026 — built, and checked by the owner.** All seven steps are live
+on `main`; the evidence for each is in §10, and the owner's behavioural check (§8) passed
+on all four items. One thing is still owed and is a `BACKLOG.md` row: a record of what the
 first unattended run did (Monday 12 October).
 
 ## Tier
@@ -147,7 +147,8 @@ effect is on the self-test, which expects 27 before step 2's declarations and 0 
 ## 6. Owed by the owner
 
 - The behavioural check in §8 — delivered 9 October as
-  [`handoff/rot-checks-walk.html`](../handoff/rot-checks-walk.html); not yet walked.
+  [`handoff/rot-checks-walk.html`](../handoff/rot-checks-walk.html); walked by him, all
+  four items passed (§10, "Closing").
 - ~~Pasting the updated `prompts/weekly-run.md` into the routine.~~ Done 9 October and
   read back: the routine's stored prompt matches the file.
 
@@ -589,9 +590,14 @@ STEP SHOULD SHOW: NO`. With the planted spelling pointed at a room that is not i
 week, it stops with `THE CHANGE MATCHED NOTHING … nothing was tested`, exit 2, before the
 gate runs.
 
-**Not done here: the walk itself.** It is the owner's, and the page says where to look —
-at whether the messages make sense and whether these are the right things to stop a week
-for, since the script already reports whether each step matched.
+**The owner walked it; his notes came back on 10 October.** All four steps ticked, each
+with the script's last line reading YES: the misspelled venue refused with both spellings
+named; the thin venue refused without its line and let through with it; five warnings
+shown and the week still passing; the live week passing. The page asked him to judge the
+wording and the strength of each safeguard, since the script already reports whether a
+step matched. He left one note, on step 2 — whether the Regency's line is a good enough
+answer and whether naming the digest as `2026-10-05.md` is clear: "seems fine". No change
+was asked for on any step. He ran it in Ghostty rather than Terminal.
 
 **What went to `BACKLOG.md`,** as §7 decision 2 and the handoffs promised: the owner's
 check; a record of the first unattended run (12 October) and the three things only it can

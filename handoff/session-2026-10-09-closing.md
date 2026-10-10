@@ -3,8 +3,8 @@
 Session name: Draft the build spec for the rot-detection checks
 
 > **Closed out later on 9 October 2026.** "Next action" items 1 and 2 are done: the owner's
-> check is [`rot-checks-walk.html`](rot-checks-walk.html), and everything still open —
-> his walk, the record of Monday's run, the outer-venue question, the mark on uncertain
+> check is [`rot-checks-walk.html`](rot-checks-walk.html), which he walked on 10 October (all four passed). Everything still open —
+> the record of Monday's run, the outer-venue question, the mark on uncertain
 > listings, the run log — is a row in [`BACKLOG.md`](../BACKLOG.md). Start from the
 > backlog, not from this file.
 
