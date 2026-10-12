@@ -60,8 +60,15 @@ anything is built.
   missing or uncertain), then a shorter "behind this week" part (what could not be
   reached and why, the changes proposed, linking to the pull requests).
 
-**His answer to that question is the next thing needed.** If the new session opens
-without it, ask it again, alone.
+**Answered by the owner, 12 October:** the note is for **both** audiences, in one note
+with the reader's part first; and "the posting" **is the site**. He did not object to the
+grouping rule or to the three groups.
+
+**The next question, asked 12 October and not yet answered:** does the note go out with
+the week automatically, exactly as the run wrote it, or does he read it first?
+Recommended: automatically, with the week — the listings and the digest already publish
+unreviewed, a note held for review would lag the week it describes, and he can correct a
+note after the fact. If the new session opens without his answer, ask it again, alone.
 
 ## Facts already established — do not re-derive
 
@@ -111,10 +118,9 @@ without it, ask it again, alone.
 
 ## Next action
 
-1. Get the owner's answer on who the note is for. One question at a time after that;
-   likely next: whether the reader's part may quote the run's picks as written or is
-   edited by him first, and whether a pull request the run opens may ever be merged
-   without him.
+1. Get the owner's answer on whether the note publishes automatically. One question at a
+   time after that; next: whether a pull request the run opens may ever be merged
+   without him (recommend never — even group A waits for his click).
 2. Present each design to him, get his yes, then write the two short-form specs in
    `specs/` with a `## Tier` each.
 3. Build on a branch per spec. For the pull-request build, **this week's groups A, B and
