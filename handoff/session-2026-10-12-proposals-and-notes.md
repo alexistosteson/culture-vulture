@@ -64,11 +64,14 @@ anything is built.
 with the reader's part first; and "the posting" **is the site**. He did not object to the
 grouping rule or to the three groups.
 
-**The next question, asked 12 October and not yet answered:** does the note go out with
-the week automatically, exactly as the run wrote it, or does he read it first?
-Recommended: automatically, with the week — the listings and the digest already publish
-unreviewed, a note held for review would lag the week it describes, and he can correct a
-note after the fact. If the new session opens without his answer, ask it again, alone.
+**Answered by the owner, 12 October:** the note goes out **automatically, with the week**,
+exactly as the run wrote it. He does not read it first; a note is corrected after the fact.
+
+**The next question, asked 12 October and not yet answered:** may a pull request the run
+opens ever be merged without him? Recommended: never — every one waits for his click,
+including venue-list upkeep, because the venue list decides what the run reads every week
+and a wrong entry costs listings until someone notices. If the new session opens without
+his answer, ask it again, alone.
 
 ## Facts already established — do not re-derive
 
@@ -118,9 +121,9 @@ note after the fact. If the new session opens without his answer, ask it again, 
 
 ## Next action
 
-1. Get the owner's answer on whether the note publishes automatically. One question at a
-   time after that; next: whether a pull request the run opens may ever be merged
-   without him (recommend never — even group A waits for his click).
+1. Get the owner's answer on whether a pull request may ever merge without him. After
+   that the product questions are probably done: where the note's link sits on the page
+   and what a week with no note shows are yours to decide and show him in the design.
 2. Present each design to him, get his yes, then write the two short-form specs in
    `specs/` with a `## Tier` each.
 3. Build on a branch per spec. For the pull-request build, **this week's groups A, B and
