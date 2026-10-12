@@ -2,8 +2,8 @@
 
 **Status: 10 October 2026 — built, and checked by the owner.** All seven steps are live
 on `main`; the evidence for each is in §10, and the owner's behavioural check (§8) passed
-on all four items. One thing is still owed and is a `BACKLOG.md` row: a record of what the
-first unattended run did (Monday 12 October).
+on all four items. The first unattended run under the checks (Monday 12 October) published and is
+recorded at the foot of §10. Nothing is owed.
 
 ## Tier
 
@@ -604,3 +604,39 @@ check; a record of the first unattended run (12 October) and the three things on
 prove; the two questions waiting on evidence (outer venues quiet by decision, and check
 4's whole-history count); the mark on uncertain listings, decided 9 October; and the
 per-source run log.
+
+### The first unattended run · 12 October 2026
+
+It published. `main` is `18051f6`, window 12–18 October, 415 listings. Re-run here on that
+commit: `bash scripts/verify.sh` → exit 0, `passed 11   failed 0   skipped 0   warnings 8`.
+
+| Expected (9 October) | What the run did |
+|---|---|
+| An *unreached* line for DNA Lounge under "Thin this week" | Written: the calendar returned 503 to the run, both mirrors read, two concerts, "a floor, not a count" |
+| A standing line each for SFJAZZ and DNA Lounge | Both under "What could not be reached", each opening "partial, as every week" |
+| Kilowatt and Knockout listings, or both named unreached | **Kilowatt 8, The Knockout 10** — against 0–2 a week before. The run's machine reaches DICE |
+| ODC's 16–18 October performances | 2 listed (16th and 18th) |
+| Every warning repeated in the report | All eight, word for word, with a cause for each |
+
+The three things only this run could prove (steps 5–7) all held: the machine reaches DICE;
+the standing lines were written; and the links in the Z Space and Smuin notes were
+followed (five *Assimilation* dates at Z Below, six Smuin performances at the Cowell).
+
+What the checks did, live and unprompted for the first time:
+
+- **Check 2 fired on San Francisco Playhouse** (1 listing after 0, 2, 6, 8). The run
+  looked again before writing a line, found the full schedule on the production's own
+  page, and listed eight performances. Look first, write second — as the prompt asks.
+- **Check 4 fired on six rooms** crossing three weeks: California Theatre (San Jose),
+  Curran Theatre, Eclectic Box, Ferry Building, Frost Amphitheater, Neck of the Woods.
+  The run proposed an entry for each and edited nothing in `config/`.
+- **Check 3:** Filoli (3 listings) and ODC cleared. Felton and Sweetwater still warn, and
+  the run read both calendars in full (6 and 7 shows) and admitted none — quiet by the
+  brief's decision, not by a broken route. Week one of evidence for that backlog question.
+
+One thing the run found about its own machine: the schema check was first reported
+SKIPPED, because the installer there serves a different Python from the one the gate
+runs. Installed properly, the check failed on two listing ids with capital letters, which
+the run fixed. A skip was hiding a real error. A `BACKLOG.md` row.
+
+Not listed this week: PayPal Park, so its `found_via` is still "not recorded".
