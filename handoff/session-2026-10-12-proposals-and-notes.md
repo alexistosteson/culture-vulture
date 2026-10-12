@@ -67,11 +67,18 @@ grouping rule or to the three groups.
 **Answered by the owner, 12 October:** the note goes out **automatically, with the week**,
 exactly as the run wrote it. He does not read it first; a note is corrected after the fact.
 
-**The next question, asked 12 October and not yet answered:** may a pull request the run
-opens ever be merged without him? Recommended: never — every one waits for his click,
-including venue-list upkeep, because the venue list decides what the run reads every week
-and a wrong entry costs listings until someone notices. If the new session opens without
-his answer, ask it again, alone.
+**Answered by the owner, 12 October, in his words:** "for 4 weeks waiting on my; if all
+goes well, we would set it to auto merge". So: **a four-week trial in which every pull
+request waits for his click**, then a review, and if it went well, merging without him.
+**Assumed and told to him, not confirmed:** after the trial, merging without him covers
+venue-list upkeep only; a new venue to watch and anything that changes what the site
+shows keep waiting for him. Confirm that at the review, not before. The spec must name
+the review date (four weekly runs after the first run that opens pull requests) and say
+what "went well" is measured by — at the least: how many he accepted unchanged, how many
+he declined or edited, and whether any accepted change cost listings.
+
+**No product question is open.** The remaining choices are the session's to make and
+show him in the two written designs.
 
 ## Facts already established — do not re-derive
 
@@ -121,9 +128,9 @@ his answer, ask it again, alone.
 
 ## Next action
 
-1. Get the owner's answer on whether a pull request may ever merge without him. After
-   that the product questions are probably done: where the note's link sits on the page
-   and what a week with no note shows are yours to decide and show him in the design.
+1. Decide the remaining design yourself — where the note's link sits on the page, what a
+   week with no note shows, how the run names and groups its pull requests, what the
+   four-week review counts.
 2. Present each design to him, get his yes, then write the two short-form specs in
    `specs/` with a `## Tier` each.
 3. Build on a branch per spec. For the pull-request build, **this week's groups A, B and
