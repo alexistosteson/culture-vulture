@@ -50,7 +50,7 @@ repository is public.** The owner gives it in chat. Sign-ups use
 | 4 | Z Space | zspace | https://mailchi.mp/zspace/z-space-mailing-list | Done — "Success! You've been added" |
 | 5 | Fort Mason Center | fortmason | https://fortmason.org/sign-up-for-our-e-news/ | Done — confirmed on page |
 | 6 | ODC Theater | odc | https://odcdance.us9.list-manage.com/subscribe?u=6a1e1838ba5169edd3ea4131e&id=78593abf6e | Done — confirmed on page (name required; Performances + Events ticked) |
-| 7 | SF Playhouse | sfplayhouse | https://www.sfplayhouse.org/join-our-email-list/ | Submitted; was at a "Confirm Humanity" CAPTCHA for the owner when this was written — check status in the browser / Gmail |
+| 7 | SF Playhouse | sfplayhouse | https://www.sfplayhouse.org/join-our-email-list/ | **Not done.** Its robot check failed twice ("Captcha failed", even when the owner pressed Subscribe himself) — the check page seems to lose the form after a first timeout. Redo from the signup page: fill in (name + News and Promotions ticked), submit, and have the owner tick the box **and press Subscribe straight away** |
 | 8 | Smuin Ballet | smuin | https://signup-usa.keela.co/email-sign-up-form | To do |
 | 9 | BAMPFA | bampfa | https://bampfa.org/email-signup | To do |
 | 10 | SF Opera | sfopera | https://www.sfopera.com/link/293c0c32fa884caf83011c1512595ae2.aspx | To do |
@@ -92,8 +92,8 @@ check the pane is displayed; if hidden, show it (`show_pane` preview).
 
 ## Next step
 
-1. Check SF Playhouse finished (owner may have solved its CAPTCHA). Then sign up
-   #8–#12, pausing before each submit.
+1. Redo SF Playhouse (#7) from its signup page, then sign up #8–#12, pausing
+   before each submit.
 2. Step 3 (confirmations), then step 4 (spec + backlog + verify + merge). Spec
    goes in `specs/`, never `docs/`. Work on a branch, e.g. `act-now-alerts-spec`.
 
