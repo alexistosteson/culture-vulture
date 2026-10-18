@@ -90,11 +90,9 @@ check the pane is displayed; if hidden, show it (`show_pane` preview).
 - Paid memberships give presales at Lick (Friends of Lick: one week early),
   SFJAZZ, SF Opera, BAMPFA, SF Playhouse — owner's call, outside this job.
 
-## Next step
+## Outcome (end of session, 2026-10-18)
 
-1. Sign up #8–#12, pausing before each submit.
-2. Step 3 (confirmations), then step 4 (spec + backlog + verify + merge). Spec
-   goes in `specs/`, never `docs/`. Work on a branch, e.g. `act-now-alerts-spec`.
-
-Execution mode: supervised, in this checkout; the owner approves each submit in
-the next-step box.
+All 12 sign-ups submitted; SFJAZZ and BAMPFA confirmation links opened with the
+owner's approval. Stern Grove's confirmation email had not arrived. The record is
+`specs/act-now-alerts.md`; the backlog row is updated. The table above is the
+session's working log and is superseded by the spec.
