@@ -43,7 +43,10 @@ tools were visible); the guard covers them.
 1. After 19 Oct 14:00 UTC, read the first daily run (`RemoteTrigger list_runs`
    on the daily routine, then `get_run_log`): it should send nothing unless a
    venue announced a dated on-sale moment, and report no guard refusals.
-2. With the owner: a Gmail rule starring mail whose subject contains
-   "act-now". (Monthly check-in: owner kept it, 18 Oct.)
-3. Stern Grove and Hammer confirmation emails — not arrived as of 16:00 UTC.
-   Open a link only from that venue's own sender, after showing the owner.
+2. Done 18 Oct: Gmail rule stars mail whose subject contains "act-now"
+   (made in the owner's Chrome; the built-in browser can't use his passkey).
+   Monthly check-in: owner kept it.
+3. Subscription confirmations: BAMPFA and SFJAZZ arrived 18 Oct from the
+   venues' own senders, unconfirmed — shown to the owner. Stern Grove and
+   Hammer not arrived. Open a link only from that venue's own sender, on the
+   owner's yes.
