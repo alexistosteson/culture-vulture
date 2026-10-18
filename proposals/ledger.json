@@ -1,6 +1,6 @@
 [
  {"id": "2026-10-12/upkeep", "week": "2026-10-12", "kind": "upkeep", "summary": "Better routes for the Roxie, Litquake, A.C.T. and three San Francisco rooms", "status": "waiting", "decided_week": null},
- {"id": "2026-10-12/new-venue-montalvo", "week": "2026-10-12", "kind": "new-venue", "summary": "Start watching Montalvo Arts Center in Saratoga", "status": "waiting", "decided_week": null},
+ {"id": "2026-10-12/new-venue-montalvo", "week": "2026-10-12", "kind": "new-venue", "summary": "Start watching Montalvo Arts Center in Saratoga", "status": "accepted", "decided_week": "2026-10-12"},
  {"id": "2026-10-12/new-venue-neck-of-the-woods", "week": "2026-10-12", "kind": "new-venue", "summary": "Start reading Neck of the Woods' own calendar every week", "status": "waiting", "decided_week": null},
  {"id": "2026-10-12/site-change-more-towns", "week": "2026-10-12", "kind": "site-change", "summary": "Count six more towns as part of their nearest region", "status": "waiting", "decided_week": null}
 ]

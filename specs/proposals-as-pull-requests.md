@@ -243,8 +243,9 @@ and merged first (`dac52af`), then PRs #5 upkeep, #6 Neck of the Woods, #7 Monta
 #8 six more towns opened with correct labels; every one shows `open` pass and `validate`
 pass. `--status` reads all four as `waiting`.
 
-**Done when 5 (18 Oct, in part).** The owner read PR #7 (Montalvo) and answered, in
-chat: "Yes, I could decide from the description alone." His accept or close had not
-reached GitHub when checked (PR still open, no outcome tag); recorded when it does.
+**Done when 5 (18 Oct).** The owner read PR #7 (Montalvo) and answered, in
+chat: "Yes, I could decide from the description alone." He accepted it: merged
+22:44 UTC; the close run wrote tag `proposal-outcome/2026-10-12/new-venue-montalvo/accepted`
+and deleted the branch; `--status --write` recorded `accepted` in the ledger.
 
 **Done when 7 (18 Oct).** On Agent's Cal for 17 November; the owner acknowledged it.
