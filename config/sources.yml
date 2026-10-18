@@ -128,6 +128,8 @@ tier_1_venues:
     - { name: San Francisco Neo-Futurists, url: "https://sf.funcheap.com/event-series/sf-neofuturists-presents-infinite-wrench-30-plays-60-minutes/", cap: null,
         venues: ["447 Minna Street", "447 Minna"],
         note: "The Infinite Wrench, Fridays and Saturdays at 9pm at 447 Minna St. This is Funcheap's page for the series — the company's own site timed out. The venue string in the data is the address, hence `venues:`." }
+    - { name: Neck of the Woods, url: "https://www.neckofthewoodssf.com/", cap: null,
+        note: "Added 2026-10-18. Two-room bar and venue on Clement St, Inner Richmond. Its own page gave 18 shows for 19 Oct–1 Nov with show time, doors and price, on the first of ten calendar pages, which covers a week. Standing nights: salsa Mondays, karaoke Tuesdays, open mic Wednesdays, comedy Thursdays. JamBase and Songkick carry only a few of its shows." }
     # Davies Symphony Hall / SF Symphony: sfsymphony.org sits behind a queueing
     # redirect and cannot be fetched directly. The orchestra's season is roughly
     # September to June, so an empty August is expected rather than a miss.
