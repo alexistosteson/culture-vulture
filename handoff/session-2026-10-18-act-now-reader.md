@@ -46,7 +46,7 @@ tools were visible); the guard covers them.
 2. Done 18 Oct: Gmail rule stars mail whose subject contains "act-now"
    (made in the owner's Chrome; the built-in browser can't use his passkey).
    Monthly check-in: owner kept it.
-3. Subscription confirmations: BAMPFA and SFJAZZ arrived 18 Oct from the
-   venues' own senders, unconfirmed — shown to the owner. Stern Grove and
+3. Subscription confirmations: BAMPFA and SFJAZZ confirmed 18 Oct on the
+   owner's yes (both pages said the address was added). Stern Grove and
    Hammer not arrived. Open a link only from that venue's own sender, on the
    owner's yes.
