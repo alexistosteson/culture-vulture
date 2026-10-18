@@ -81,7 +81,9 @@ the opera costume sale stays (written into `brief.yml` as an exception), and Sta
 stays off (its own site: bar open, calendar empty, private hire; noted in `sources.yml`).
 The owner's review page `handoff/proposals-first-review-walk.html` was sent.
 
-1. **Owner's check (Done when 5):** wait for his yes/no on "could you decide from the
+1. **Owner's check (Done when 5):** his answer is in: **yes**, he could decide from the
+   description alone (recorded in the spec). His accept/close of PR #7 had not landed
+   on GitHub at 22:50 UTC; wait for it. Originally: wait for his yes/no on "could you decide from the
    description alone" for PR #7, and his accept/close. Record both in the spec's
    `## Evidence`, then run `python3 scripts/proposals.py --status --write --week 2026-10-12`
    on a branch so the ledger shows the outcome, `verify.sh`, merge.
