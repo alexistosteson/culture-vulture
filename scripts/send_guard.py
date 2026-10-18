@@ -18,7 +18,12 @@ routine's private settings on claude.ai. When it is unset, or does not look like
 one address, every send is refused: the guard fails closed, so a session
 without the setting (any local session, any other routine) can send nothing.
 
-Exit 0 — allowed (or not a mail-sending tool).
+The agent never needs to know the address. It addresses the alert to the
+placeholder `owner`, and the guard fills in the real address on the way out.
+A send addressed to the real address directly is also allowed.
+
+Exit 0 — allowed (or not a mail-sending tool). For the placeholder, stdout
+         carries the call with the real address filled in.
 Exit 2 — refused; the reason is on stderr and goes back to the agent. The
          reason never names the owner's address.
 """
@@ -30,6 +35,7 @@ import subprocess
 import sys
 
 OWNER_ENV = "ACT_NOW_OWNER_ADDRESS"
+PLACEHOLDER = "owner"
 
 # Tools that can deliver mail, or stage mail for delivery. Matched on the last
 # segment of the tool name, so the server's name (a UUID locally, "Gmail" in
@@ -73,7 +79,7 @@ def decide(tool_name, tool_input, owner):
     to = tool_input.get("to")
     if not (isinstance(to, list) and len(to) == 1 and isinstance(to[0], str)):
         return "a send must have exactly one recipient"
-    if to[0].strip().lower() != owner.strip().lower():
+    if to[0].strip().lower() not in (PLACEHOLDER, owner.strip().lower()):
         return "the recipient is not the owner's address"
     if not (tool_input.get("body") or tool_input.get("htmlBody")):
         return "a send must have a body"
@@ -88,8 +94,15 @@ def hook():
     except Exception:  # unreadable input is refused, whatever it was
         print("send_guard: could not read the tool call; refused", file=sys.stderr)
         return 2
-    reason = decide(name, tool_input, os.environ.get(OWNER_ENV, ""))
+    owner = os.environ.get(OWNER_ENV, "")
+    reason = decide(name, tool_input, owner)
     if reason is None:
+        if is_mail_tool(name) and tool_input["to"][0].strip().lower() == PLACEHOLDER:
+            filled = {**tool_input, "to": [owner.strip()]}
+            print(json.dumps({"hookSpecificOutput": {
+                "hookEventName": "PreToolUse", "permissionDecision": "allow",
+                "permissionDecisionReason": "act-now alert to the owner",
+                "updatedInput": filled}}))
         return 0
     print(f"send_guard refused {name}: {reason}. Act-now alerts may only be "
           "sent to the owner's one address.", file=sys.stderr)
@@ -101,6 +114,10 @@ def hook():
 FAKE = "owner@example.invalid"
 CASES = [
     # (name, tool, input, owner, allowed?)
+    ("the placeholder", "mcp__Gmail__send_message",
+     {"to": ["owner"], "subject": "s", "body": "b"}, FAKE, True),
+    ("the placeholder with no setting", "mcp__Gmail__send_message",
+     {"to": ["owner"], "body": "b"}, "", False),
     ("owner only", "mcp__Gmail__send_message",
      {"to": [FAKE], "subject": "s", "body": "b"}, FAKE, True),
     ("owner, case and space differ", "mcp__Gmail__send_message",
@@ -157,14 +174,31 @@ def self_test():
     # environment: a refusal must exit 2 and must not echo the address.
     me = os.path.abspath(__file__)
     env = {**os.environ, OWNER_ENV: FAKE}
-    for tool_input, want_rc in (({"to": [FAKE], "body": "b"}, 0),
-                                ({"to": ["attacker@example.com"], "body": "b"}, 2)):
-        r = subprocess.run([sys.executable, me], env=env, capture_output=True, text=True,
-                           input=json.dumps({"tool_name": "mcp__Gmail__send_message",
-                                             "tool_input": tool_input}), check=False)
-        if r.returncode != want_rc or FAKE in r.stdout + r.stderr:
-            bad += 1
-            print(f"FAIL  hook mode: exit {r.returncode}, expected {want_rc}, or address echoed")
+
+    def run_hook(tool_input):
+        return subprocess.run([sys.executable, me], env=env, capture_output=True, text=True,
+                              input=json.dumps({"tool_name": "mcp__Gmail__send_message",
+                                                "tool_input": tool_input}), check=False)
+
+    r = run_hook({"to": [FAKE], "body": "b"})
+    if r.returncode != 0 or r.stdout.strip():
+        bad += 1
+        print(f"FAIL  hook mode: a send to the owner exited {r.returncode} or was rewritten")
+    r = run_hook({"to": ["attacker@example.com"], "body": "b"})
+    if r.returncode != 2 or FAKE in r.stdout + r.stderr:
+        bad += 1
+        print(f"FAIL  hook mode: a send to someone else exited {r.returncode} or echoed the address")
+    r = run_hook({"to": ["owner"], "subject": "s", "body": "b"})
+    try:
+        out = json.loads(r.stdout)["hookSpecificOutput"]
+        ok = (r.returncode == 0 and out["permissionDecision"] == "allow"
+              and out["updatedInput"] == {"to": [FAKE], "subject": "s", "body": "b"}
+              and FAKE not in r.stderr)
+    except (ValueError, KeyError, TypeError):
+        ok = False
+    if not ok:
+        bad += 1
+        print("FAIL  hook mode: the placeholder was not filled in with the owner's address")
     r = subprocess.run([sys.executable, me], env=env, input="not json",
                        capture_output=True, text=True, check=False)
     if r.returncode != 2:
@@ -183,7 +217,7 @@ def self_test():
     except Exception as e:  # any failure to find the wiring is the finding
         bad += 1
         print(f"FAIL  .claude/settings.json does not wire the guard: {e}")
-    n = len(CASES) + 4
+    n = len(CASES) + 5
     print(f"send_guard self-test: {n - bad}/{n} cases as recorded")
     return 1 if bad else 0
 

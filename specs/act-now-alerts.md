@@ -121,10 +121,14 @@ cannot rest on the prompt. Three layers, each of which holds by itself:
    drafts are refused outright, as is any connector tool whose name mentions
    sending that the guard does not know. It refuses everything when it cannot
    read the call.
-2. **The owner's address lives only in the routine's private settings** on
-   claude.ai, as a setting the guard reads. Where the setting is absent — any
-   local session, any other routine — the guard refuses every send. Nothing in
-   this repository names the address.
+2. **The address lives only in a private setting on claude.ai** — the `act-now`
+   cloud environment the routine runs in, which the owner created and named the
+   address in. The agent addresses every alert to the placeholder `owner` and
+   the guard fills in the address on the way out, so the agent is never told
+   it. Where the setting is absent — any local session, any other routine — the
+   guard refuses every send. Nothing in this repository names the address.
+   **The alerts go to the subscription mailbox's own plain address** (owner,
+   18 October), so they arrive beside the mail they report on.
 3. **The routine has no shell, no file-writing and no web tools** — only the
    Gmail reading tools, sending, and reading this repository. So nothing it
    reads can make it edit or switch off the guard, click a link, or carry mail
