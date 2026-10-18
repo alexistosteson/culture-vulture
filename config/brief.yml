@@ -83,7 +83,7 @@ regions:
     rank: 2
     blurb: Los Altos to Colma
     color: "#E29C46"
-    includes: [Los Altos, Palo Alto, Menlo Park, Woodside, Redwood City, San Carlos, Belmont, San Mateo, Burlingame, Millbrae, Colma]
+    includes: [Los Altos, Palo Alto, Stanford, Menlo Park, Woodside, Redwood City, San Carlos, Belmont, San Mateo, Foster City, Burlingame, Millbrae, Colma, Half Moon Bay]
 
   - id: sf
     label: San Francisco
