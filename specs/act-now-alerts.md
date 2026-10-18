@@ -49,8 +49,9 @@ unreached venues (14 September – 12 October), and not fixed since.
 | San Francisco Opera | sfopera | 2026-10-18 | The costume sale; its calendar was also down once | On page |
 | Lick Observatory | lick | 2026-10-18 | Summer concerts sell out in minutes; this list announces the on-sale date | On page (Music of the Spheres chosen) |
 | Stern Grove Festival | sterngrove | 2026-10-18 | Free summer tickets go by email lottery | **Pending** — confirmation email not yet received |
+| Hammer Theatre Center | hammer | 2026-10-18 | Its own events page is stale and its current list is a ticketing widget the weekly reader sees as empty (added after the South Bay review, owner's approval) | Submitted by the owner in their own browser (the page's human check would not clear in the built-in browser); no confirmation email yet |
 
-Every form accepted the `+tag`. Where a form required a name, the owner's was
+Every form accepted the `+tag`. Thirteen sources in all, counting Hammer. Where a form required a name, the owner's was
 used (owner, 18 October). No phone number was given anywhere.
 
 ### Left off, and why
