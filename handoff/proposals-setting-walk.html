@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>One setting to tick</title>
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#ffffff; --panel:#f7f8fa; --border:#e0e3e8; --text:#1a1d23;
+    --muted:#5b6270; --accent:#2563eb; --ok-bg:#eefaf0; --ok-border:#bfe8c8;
+    --warn-bg:#fff8e6; --warn-border:#f2d98a;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);margin:0;padding:0 16px 80px;
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+       line-height:1.5;font-size:16px;}
+  .wrap{max-width:680px;margin:0 auto;}
+  h1{font-size:1.5rem;margin:28px 0 6px;}
+  .intro,.step,.done,.dont{border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:14px 0;}
+  .intro{background:var(--panel);}
+  .step b.n{display:inline-block;width:1.6em;height:1.6em;border-radius:50%;background:var(--accent);
+            color:#fff;text-align:center;line-height:1.6em;margin-right:8px;font-size:.9rem;}
+  .done{background:var(--ok-bg);border-color:var(--ok-border);}
+  .dont{background:var(--warn-bg);border-color:var(--warn-border);}
+  a{color:var(--accent);}
+  .label{font-weight:600;background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:0 5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>One setting to tick</h1>
+<p style="color:var(--muted);margin-top:0">About two minutes. Once, ever.</p>
+
+<div class="intro">
+  The weekly run will send you its suggested changes as pull requests, each one a change
+  you accept with one click or turn down. GitHub only lets the site's own automation open
+  them once you allow it. This page walks you through that one tick. It does not let
+  anything merge on its own: every proposal still waits for you.
+</div>
+
+<div class="step"><b class="n">1</b>
+  Open the repository's Actions settings:
+  <a href="https://github.com/alexistosteson/culture-vulture/settings/actions" target="_blank">github.com/alexistosteson/culture-vulture/settings/actions</a>.
+  Sign in if GitHub asks.
+</div>
+
+<div class="step"><b class="n">2</b>
+  Scroll down to the section headed <span class="label">Workflow permissions</span>.
+  It is near the bottom of the page.
+</div>
+
+<div class="step"><b class="n">3</b>
+  Leave the choice above it exactly as it is (it reads <span class="label">Read repository contents and packages permissions</span>).
+  Tick the box below it:
+  <span class="label">Allow GitHub Actions to create and approve pull requests</span>.
+</div>
+
+<div class="step"><b class="n">4</b>
+  Click <span class="label">Save</span> at the bottom of that section.
+</div>
+
+<div class="dont">
+  <b>Leave everything else on the page alone.</b> In particular, don't switch the choice above
+  the box to "Read and write". The automation asks for exactly what it needs.
+</div>
+
+<div class="done">
+  <b>That's it.</b> Tell the session "ticked". It will check the setting from its side and
+  then send a test proposal through.
+</div>
+</div>
+</body>
+</html>

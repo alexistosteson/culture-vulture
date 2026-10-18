@@ -1,0 +1,119 @@
+name: proposals
+
+# The weekly run has no GitHub tools, so it cannot open a pull request. It
+# pushes each proposal as a `proposal/<window_start>/<slug>` branch instead, and
+# this workflow turns the branch into a pull request for the owner to accept or
+# turn down. Spec: specs/proposals-as-pull-requests.md.
+#
+# Nothing here merges, approves or closes a pull request. That is the owner's.
+#
+# Never check out or run code from a proposal branch here: every step works
+# through the API on names and messages, and those are passed through env,
+# never interpolated into the script.
+
+on:
+  push:
+    branches: ['proposal/**']
+  # _target: runs main's copy of this file with a write token, which is what
+  # recording an outcome needs. Safe only because nothing checks out the branch.
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: write        # outcome tags, deleting the closed branch
+  pull-requests: write   # opening pull requests, labelling, commenting
+
+concurrency:
+  group: proposals-${{ github.event.pull_request.head.ref || github.ref_name }}
+
+jobs:
+  open:
+    # A branch deletion is also a push; it has nothing to open.
+    if: github.event_name == 'push' && !github.event.deleted
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      BRANCH: ${{ github.ref_name }}
+      SHA: ${{ github.sha }}
+    steps:
+      - name: Open or update the pull request
+        run: |
+          set -euo pipefail
+          if ! [[ "$BRANCH" =~ ^proposal/([0-9]{4}-[0-9]{2}-[0-9]{2})/([a-z0-9][a-z0-9-]*)$ ]]; then
+            echo "::error::branch '$BRANCH' is not proposal/<YYYY-MM-DD>/<slug>"; exit 1
+          fi
+          week=${BASH_REMATCH[1]}
+
+          msg=$(gh api "repos/$REPO/commits/$SHA" --jq .commit.message)
+          subject=$(printf '%s\n' "$msg" | head -n1)
+          if ! [[ "$subject" =~ ^Proposal\ \((upkeep|new-venue|site-change)\):\ .+ ]]; then
+            echo "::error::newest commit subject must be 'Proposal (<upkeep|new-venue|site-change>): <line>', got: $subject"; exit 1
+          fi
+          kind=${BASH_REMATCH[1]}
+          # The body is the description. The run's trailer is for the outcome
+          # check, not for the reader.
+          body=$(printf '%s\n' "$msg" | tail -n +2 | { grep -v '^Proposal-by: ' || true; } | sed '/./,$!d')
+          if [ -z "$body" ]; then
+            echo "::error::the commit has no body; the body is the pull request's description"; exit 1
+          fi
+
+          existing=$(gh pr list -R "$REPO" --head "$BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            refreshed=$(printf '%s\n' "$msg" | grep '^Refreshed' || true)
+            note="This proposal was updated (now at ${SHA:0:7})."
+            [ -n "$refreshed" ] && note="$note"$'\n\n'"$refreshed"
+            gh pr comment "$existing" -R "$REPO" --body "$note"
+            echo "updated #$existing"; exit 0
+          fi
+
+          gh label create proposal         -R "$REPO" --color 5319e7 --description "A change the weekly run proposes" --force
+          gh label create "kind:$kind"     -R "$REPO" --color c5def5 --force
+          gh label create "week:$week"     -R "$REPO" --color ededed --force
+          gh pr create -R "$REPO" --base main --head "$BRANCH" \
+            --title "$subject" --body "$body" \
+            --label proposal --label "kind:$kind" --label "week:$week"
+
+  record:
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      startsWith(github.event.pull_request.head.ref, 'proposal/') &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      BRANCH: ${{ github.event.pull_request.head.ref }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      MERGED: ${{ github.event.pull_request.merged }}
+      NUMBER: ${{ github.event.pull_request.number }}
+    steps:
+      - name: Record the outcome as a tag, then delete the branch
+        run: |
+          set -euo pipefail
+          if ! [[ "$BRANCH" =~ ^proposal/([0-9]{4}-[0-9]{2}-[0-9]{2})/([a-z0-9][a-z0-9-]*)$ ]]; then
+            echo "::error::branch '$BRANCH' is not proposal/<YYYY-MM-DD>/<slug>"; exit 1
+          fi
+          week=${BASH_REMATCH[1]}; slug=${BASH_REMATCH[2]}
+
+          if [ "$MERGED" != "true" ]; then
+            outcome=declined
+          else
+            # Accepted as proposed only if every commit on it is the run's own.
+            # Read from the pull request, so it works for any merge button.
+            others=$(gh api "repos/$REPO/pulls/$NUMBER/commits" --paginate \
+              --jq '[.[] | select(.commit.message | test("(^|\n)Proposal-by: weekly-run(\n|$)") | not)] | length')
+            [ "$others" = "0" ] && outcome=accepted || outcome=accepted-changed
+          fi
+
+          tag="proposal-outcome/$week/$slug/$outcome"
+          gh api "repos/$REPO/git/refs" -f ref="refs/tags/$tag" -f sha="$HEAD_SHA" >/dev/null
+          echo "recorded $tag at ${HEAD_SHA:0:7}"
+
+          # Only after the outcome is safely recorded: a proposal/ branch that
+          # still exists is how the run knows a proposal is waiting.
+          if gh api -X DELETE "repos/$REPO/git/refs/heads/$BRANCH" >/dev/null 2>&1; then
+            echo "deleted $BRANCH"
+          else
+            echo "$BRANCH was already gone"
+          fi

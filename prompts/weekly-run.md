@@ -14,7 +14,9 @@ one of those three, change it in all three.**
 > it; after changing the text below, paste it into the routine by hand or it
 > will keep running the old version. The routine's tool set is Bash, Read,
 > Write, Edit, Glob, Grep, WebSearch, WebFetch — **no GitHub tools**, which is
-> why publishing below is a `git merge`, not a pull request.
+> why publishing below is a `git merge`, not a pull request, and why the run's
+> proposals are pushed as `proposal/…` branches that
+> `.github/workflows/proposals.yml` turns into pull requests for the owner.
 
 ---
 
@@ -69,7 +71,7 @@ Steps:
    Then write data/<window_start>.json and digests/<window_start>.md.
 
 5. Install dependencies if missing, then validate and build:
-     pip install pyyaml jsonschema ruff
+     python3 -m pip install pyyaml jsonschema ruff
      python3 scripts/validate.py
      python3 scripts/drift.py
      python3 scripts/build.py
@@ -85,6 +87,84 @@ Steps:
    venue and saying reached or unreached and what you checked. Both are things
    you fix and move on from. They are not a reason to stop. COULD NOT CHECK is
    a reason to stop.
+
+5a. Commit the week on the week branch (it is not pushed or merged yet):
+     git add data/<window_start>.json digests/<window_start>.md docs/events.json
+     git commit -m "Week of <window_start>: <n> events" -m "<one line on what dominates the week>"
+   Call this commit WEEK (git rev-parse HEAD).
+
+5b. PROPOSALS. A proposal is a change to config/sources.yml or config/brief.yml
+   that you would make but must not (step 8). Each becomes a pull request the
+   owner accepts or turns down; nothing here ever merges one. Anything that is
+   not a change to those two files — "did this venue reopen?", an idea for the
+   prompts, scripts or page — is a QUESTION for the report, never a proposal.
+   A proposal can never hold the week back: if anything in this step goes
+   wrong, drop that proposal, turn it into a question, and carry on.
+
+   Kinds, and one branch per decision the owner makes:
+     upkeep      one per week: proposal/<window_start>/upkeep — routes,
+                 fallback, coverage/omits, reading notes and observed_venues
+                 for venues sources.yml already lists or watches
+     new-venue   one per venue: proposal/<window_start>/new-venue-<venue> —
+                 one new watched entry in sources.yml
+     site-change one per change: proposal/<window_start>/site-change-<what> —
+                 brief.yml, plus the docs/events.json build.py makes from it
+   Slugs are short, lowercase, letters, digits and hyphens.
+
+   (i) Bring earlier proposals up to date first. See where they stand:
+     python3 scripts/proposals.py --status
+   It reads GitHub's branches and outcome tags with git ls-remote and shows
+   any decided since the ledger was written (it records them in (iii)). A line
+   it prints after the table is an error: quote it in the report and leave
+   that record alone. Never edit a status by hand.
+   For each record still "waiting", fetch its branch and test it against WEEK:
+     git fetch origin proposal/<id>
+     git checkout -B check WEEK && git merge --no-ff --no-edit FETCH_HEAD
+     bash scripts/verify.sh
+   If it merges cleanly and passes, leave it. If not (site-change proposals
+   will hit this, because docs/events.json is rebuilt every week), rebuild its
+   one commit onto WEEK on a local branch of the same name — cherry-pick,
+   resolving docs/events.json by re-running python3 scripts/build.py — re-run
+   verify.sh, and add a line to the commit body:
+     Refreshed <today>: rebuilt onto the week of <window_start>.
+   It is pushed in step 7a. If a re-fetch shows its reason no longer holds,
+   leave the branch alone and say so in the report — closing it is the owner's.
+   Return to the week branch when done: git checkout week/<window_start>
+
+   (ii) Draft this week's proposals. Read proposals/ledger.json first. Do not
+   propose again anything a waiting proposal already covers, or anything
+   declined, unless something new justifies it — and then the new proposal
+   says what changed. Every address you write into sources.yml is one you
+   fetched and read in this run. For each proposal:
+     git checkout -b proposal/<window_start>/<slug> WEEK
+   make the change — for a site-change, also run python3 scripts/build.py so
+   docs/events.json goes with it — then commit it, ONE commit per branch, with
+   this message:
+     Proposal (<kind>): <one line a reader of the site would understand>
+
+     What changes: <in plain words>
+     Why: <in plain words>
+     What a reader of the site would notice: <usually "nothing" for upkeep>
+     Evidence:
+     - <every address you fetched to justify it> — <what it returned>
+
+     Proposal-by: weekly-run
+   The first line becomes the pull request's title and the rest its
+   description, which is all the owner reads to decide — so plain words, in
+   that order, and no file paths in the first line. The last line must be
+   exactly "Proposal-by: weekly-run": it is how the outcome tells the run's
+   own proposal from one a session changed.
+   Then run bash scripts/verify.sh on the branch. Exit 1 — delete the branch
+   (git branch -D) and make the idea a question in the report.
+
+   (iii) Record them. Back on the week branch, record the outcomes from (i),
+   then add each surviving new proposal:
+     python3 scripts/proposals.py --status --write --week <window_start>
+     python3 scripts/proposals.py --add <window_start>/<slug> <kind> "<the one line>"
+   then commit proposals/ledger.json as a second
+   commit on the week branch:
+     git commit -m "Proposals for the week of <window_start>" proposals/ledger.json
+   If nothing changed in the ledger, skip the commit.
 
 6. THE GATE:
      bash scripts/verify.sh
@@ -103,9 +183,7 @@ Steps:
    warning never changes the exit code and is not a reason to hold the week:
    publish, and repeat every warning in your report word for word.
 
-7. Only on exit 0 — commit, merge and publish:
-     git add data/<window_start>.json digests/<window_start>.md docs/events.json
-     git commit -m "Week of <window_start>: <n> events" -m "<one line on what dominates the week>"
+7. Only on exit 0 — merge and publish (the week was committed in 5a):
      git push -u origin week/<window_start>
      git checkout main && git merge --no-ff week/<window_start>
      git push origin main
@@ -113,9 +191,19 @@ Steps:
    Confirm afterwards that origin/main really moved and that docs/events.json
    on main has your window and event count — report the numbers you saw.
 
+7a. Only once origin/main has the week — push the proposals:
+     git push origin proposal/<window_start>/<slug>                  (new ones)
+     git push --force-with-lease origin proposal/<id>                (refreshed ones)
+   Same retries as step 7. Each becomes a pull request within a minute or two;
+   you need not check. Force-pushing is allowed for proposal/ branches and for
+   nothing else. If the week did not merge, push no proposal branch at all and
+   delete them locally: a proposal never arrives for a week that did not
+   publish.
+
 8. Do not modify config/brief.yml, config/sources.yml, prompts/, scripts/,
    docs/index.html, or any workflow file as part of a routine week. If the run
-   seems to require it, finish without it and put the proposal in your report.
+   seems to require it, finish without it: a change to sources.yml or
+   brief.yml becomes a proposal (step 5b); anything else goes in your report.
    The one exception: if a source URL in sources.yml is provably dead or
    redirected, fix that URL and say so — a source file that lies costs listings
    every week it stays wrong.
@@ -126,7 +214,9 @@ Report back, in this order:
   - The two or three things most worth doing this week, and why.
   - Every source you could not reach, and every event marked low confidence.
   - Every warning verify.sh listed, word for word, or "no warnings".
-  - Any vocabulary, region or sources.yml changes you would propose.
+  - The proposals: each one opened (its branch and its one line), each one
+    refreshed, each one decided since last week and how, and every error
+    proposals.py printed. Then the questions that are not proposals.
   - Whether the week is unusually busy or quiet, and what is driving that.
 
 Send a PushNotification if you did NOT publish, or if something needs a human.
