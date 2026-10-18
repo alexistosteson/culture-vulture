@@ -172,10 +172,21 @@ else
   no "send_guard.py — the act-now send guard does not hold"; echo "$out" | sed 's/^/        /'
 fi
 
+# 10. The proposals ledger: its recorded cases still catch every planted
+#     defect, and the ledger itself is well formed. Offline — whether GitHub
+#     agrees with it is the run's to ask (--status), not the gate's, so an
+#     unreachable GitHub can never hold a week back.
+if out=$(python3 scripts/proposals.py --self-test 2>&1) \
+   && out2=$(python3 scripts/proposals.py --check 2>&1); then
+  ok "proposals.py — $(echo "$out" | tail -1); $out2"
+else
+  no "proposals.py — the proposals ledger or its self-test"; printf '%s\n%s\n' "$out" "${out2:-}" | sed 's/^/        /'
+fi
+
 echo
 echo "=== OPTIONAL (binding when the tool is present) ==="
 
-# 10. Lint.
+# 11. Lint.
 if command -v ruff >/dev/null 2>&1; then
   if ruff check . >/dev/null 2>&1; then ok "ruff check ."
   else no "ruff check ."; ruff check . 2>&1 | sed 's/^/        /' | head -20; fi
@@ -183,7 +194,7 @@ else
   meh "ruff not installed — CI still runs it on push"
 fi
 
-# 11. The behavioural check: does the page actually render the week? index.html
+# 12. The behavioural check: does the page actually render the week? index.html
 #     fetches events.json at runtime, so a payload that validates can still
 #     fail to display. Nothing else in this repo catches that.
 CHROME=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux/chrome 2>/dev/null | head -1)
@@ -224,7 +235,7 @@ else
   meh "no Chromium — cannot confirm the page actually renders"
 fi
 
-# 12. The DICE calendar reader's own cases, offline: the venue's key travels in
+# 13. The DICE calendar reader's own cases, offline: the venue's key travels in
 #     the request and appears in nothing that is printed, and a UTC time lands
 #     on the right local evening. Exit 3 means this machine has no timezone
 #     data — a missing tool, so a skip. The reader itself needs the network and

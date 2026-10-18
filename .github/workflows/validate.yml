@@ -5,7 +5,7 @@ on:
     # Keep `ruff.toml` and this workflow in the filter: a commit that narrows
     # the tool floor, or edits the gate itself, is exactly the change CI must
     # not skip. `pull_request` is deliberately unfiltered.
-    paths: ['data/**', 'config/**', 'scripts/**', 'schema/**', 'ruff.toml',
+    paths: ['data/**', 'config/**', 'scripts/**', 'schema/**', 'proposals/**', 'ruff.toml',
             '.github/workflows/**', '.claude/settings.json']
   pull_request:
   workflow_dispatch:
@@ -57,6 +57,12 @@ jobs:
       # Offline. Proves act-now mail can go only to the owner's one address.
       - name: Act-now send guard self-test
         run: python3 scripts/send_guard.py --self-test
+      # Offline. Proves the proposals ledger check still catches what it should,
+      # then checks the ledger itself.
+      - name: Proposals ledger
+        run: |
+          python3 scripts/proposals.py --self-test
+          python3 scripts/proposals.py --check
       - name: Check brief.yml parses
         run: python3 -c "import yaml,sys; yaml.safe_load(open('config/brief.yml')); yaml.safe_load(open('config/sources.yml')); print('config ok')"
       - name: Check docs/events.json is current
