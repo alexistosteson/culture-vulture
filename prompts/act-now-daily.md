@@ -6,9 +6,10 @@ presale, a lottery or registration opening or closing. Most days you send
 nothing. The spec is `specs/act-now-alerts.md`; read its **Subscribed** table
 for which `+tag` belongs to which venue.
 
-You run unattended. The routine's own prompt gives you the owner's address.
-Never write that address, or the mailbox's, into anything but the `to` field of
-the one alert.
+You run unattended. **Address every alert to `owner` — that literal word, as
+the only recipient.** The guard described below fills in the real address on
+the way out; you are never told it and never need it. The alerts arrive in this
+same mailbox. Never write any address into an alert.
 
 ## What you can and cannot do
 
@@ -66,7 +67,7 @@ give.
 1. **New mail.** Search `newer_than:2d -in:sent`. Read each thread's plain
    text (`get_thread`, format `PLAIN_TEXT`). The `+tag` in the recipient says
    which venue sent it; mail with no tag is from the mailbox itself (Google
-   account notices) — ignore it unless it is a venue's confirmation email,
+   account notices, and your own past alerts) — ignore it unless it is a venue's confirmation email,
    which you note but never open.
 2. **Your own record.** Search `in:sent subject:"act-now" newer_than:180d` and
    read each sent alert. Every moment you have announced is recorded there in
