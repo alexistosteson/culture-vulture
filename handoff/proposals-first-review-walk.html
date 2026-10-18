@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>Your first proposal</title>
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#ffffff; --panel:#f7f8fa; --border:#e0e3e8; --text:#1a1d23;
+    --muted:#5b6270; --accent:#2563eb; --ok-bg:#eefaf0; --ok-border:#bfe8c8;
+    --warn-bg:#fff8e6; --warn-border:#f2d98a;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);margin:0;padding:0 16px 80px;
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+       line-height:1.5;font-size:16px;}
+  .wrap{max-width:680px;margin:0 auto;}
+  h1{font-size:1.5rem;margin:28px 0 6px;}
+  h2{font-size:1.1rem;margin:26px 0 4px;}
+  .intro,.step,.done,.dont{border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:14px 0;}
+  .intro{background:var(--panel);}
+  .step b.n{display:inline-block;width:1.6em;height:1.6em;border-radius:50%;background:var(--accent);
+            color:#fff;text-align:center;line-height:1.6em;margin-right:8px;font-size:.9rem;}
+  .done{background:var(--ok-bg);border-color:var(--ok-border);}
+  .dont{background:var(--warn-bg);border-color:var(--warn-border);}
+  a{color:var(--accent);overflow-wrap:anywhere;}
+  .label{font-weight:600;background:var(--panel);border:1px solid var(--border);border-radius:4px;padding:0 5px;}
+  ul{padding-left:1.2em;margin:6px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Your first proposal</h1>
+<p style="color:var(--muted);margin-top:0">About five minutes. This is the check that tells us whether the weekly proposals work for you.</p>
+
+<div class="intro">
+  The weekly run now sends its suggested changes as <b>pull requests</b>: a GitHub page that
+  describes one change, which you accept or turn down. Four are waiting from the 12 October
+  week. This page walks you through one of them, Montalvo Arts Center in Saratoga, and asks
+  you one question about it. Whatever you decide is recorded automatically, and nothing
+  reaches the site until a later weekly run uses it.
+</div>
+
+<div class="step"><b class="n">1</b>
+  Open the proposal:
+  <a href="https://github.com/alexistosteson/culture-vulture/pull/7" target="_blank">Start watching Montalvo Arts Center in Saratoga</a>.
+  Sign in if GitHub asks.
+</div>
+
+<div class="step"><b class="n">2</b>
+  Read only the description at the top: <span class="label">What changes</span>,
+  <span class="label">Why</span>, <span class="label">What a reader of the site would notice</span>
+  and <span class="label">Evidence</span>. Don't open the <span class="label">Files changed</span> tab;
+  the point is whether the description is enough on its own.
+</div>
+
+<div class="step"><b class="n">3</b>
+  <b>The question:</b> could you decide from that description alone, without asking anyone
+  or opening anything else? Tell me <b>yes</b> or <b>no</b> in the chat. If no, say what was missing.
+</div>
+
+<div class="step"><b class="n">4</b>
+  Then decide. Both choices are fine, and both are recorded.
+  <ul>
+    <li><b>To accept:</b> scroll to the bottom, click the green <span class="label">Merge pull request</span>,
+      then <span class="label">Confirm merge</span>.</li>
+    <li><b>To turn it down:</b> scroll to the bottom and click <span class="label">Close pull request</span>.
+      You can add a line in the comment box first saying why; the next run reads it.</li>
+  </ul>
+</div>
+
+<div class="dont">
+  <b>Ignore</b> any yellow note saying a workflow is waiting for approval. It is a duplicate
+  of a check that has already passed, and approving it changes nothing.
+</div>
+
+<div class="done">
+  <b>Done.</b> The page will say <span class="label">Merged</span> or <span class="label">Closed</span>.
+  The other three proposals work the same way:
+  <a href="https://github.com/alexistosteson/culture-vulture/pull/5" target="_blank">venue-list upkeep</a>,
+  <a href="https://github.com/alexistosteson/culture-vulture/pull/6" target="_blank">Neck of the Woods</a> and
+  <a href="https://github.com/alexistosteson/culture-vulture/pull/8" target="_blank">six more towns</a>.
+  You can decide those whenever you like; there is no deadline.
+</div>
+</div>
+</body>
+</html>
