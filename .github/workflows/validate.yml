@@ -6,7 +6,7 @@ on:
     # the tool floor, or edits the gate itself, is exactly the change CI must
     # not skip. `pull_request` is deliberately unfiltered.
     paths: ['data/**', 'config/**', 'scripts/**', 'schema/**', 'ruff.toml',
-            '.github/workflows/**']
+            '.github/workflows/**', '.claude/settings.json']
   pull_request:
   workflow_dispatch:
 
@@ -54,6 +54,9 @@ jobs:
       # Offline. Proves the venue's key is sent and never printed.
       - name: DICE reader self-test
         run: python3 scripts/dice.py --self-test
+      # Offline. Proves act-now mail can go only to the owner's one address.
+      - name: Act-now send guard self-test
+        run: python3 scripts/send_guard.py --self-test
       - name: Check brief.yml parses
         run: python3 -c "import yaml,sys; yaml.safe_load(open('config/brief.yml')); yaml.safe_load(open('config/sources.yml')); print('config ok')"
       - name: Check docs/events.json is current

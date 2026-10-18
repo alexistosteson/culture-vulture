@@ -162,10 +162,20 @@ echo "$out" | sed 's/^/        /'
 warnings=$(echo "$out" | grep '^  WARN  ' || true)
 [ -n "$warnings" ] && warn=$(echo "$warnings" | wc -l | tr -d ' ')
 
+# 9. The act-now send guard: the one door out of the subscription mailbox.
+#    Its recorded cases must hold — only the owner's one address, no copies,
+#    no forwards — and .claude/settings.json must still wire it to every MCP
+#    tool. Pure python and offline; the owner's address is never needed here.
+if out=$(python3 scripts/send_guard.py --self-test 2>&1); then
+  ok "send_guard.py — $(echo "$out" | tail -1)"
+else
+  no "send_guard.py — the act-now send guard does not hold"; echo "$out" | sed 's/^/        /'
+fi
+
 echo
 echo "=== OPTIONAL (binding when the tool is present) ==="
 
-# 9. Lint.
+# 10. Lint.
 if command -v ruff >/dev/null 2>&1; then
   if ruff check . >/dev/null 2>&1; then ok "ruff check ."
   else no "ruff check ."; ruff check . 2>&1 | sed 's/^/        /' | head -20; fi
@@ -173,7 +183,7 @@ else
   meh "ruff not installed — CI still runs it on push"
 fi
 
-# 10. The behavioural check: does the page actually render the week? index.html
+# 11. The behavioural check: does the page actually render the week? index.html
 #     fetches events.json at runtime, so a payload that validates can still
 #     fail to display. Nothing else in this repo catches that.
 CHROME=$(ls -d /opt/pw-browsers/chromium-*/chrome-linux/chrome 2>/dev/null | head -1)
@@ -214,7 +224,7 @@ else
   meh "no Chromium — cannot confirm the page actually renders"
 fi
 
-# 11. The DICE calendar reader's own cases, offline: the venue's key travels in
+# 12. The DICE calendar reader's own cases, offline: the venue's key travels in
 #     the request and appears in nothing that is printed, and a UTC time lands
 #     on the right local evening. Exit 3 means this machine has no timezone
 #     data — a missing tool, so a skip. The reader itself needs the network and
