@@ -373,7 +373,10 @@ exclusions:
       why: Can't act on it, so don't list it.
     - id: retail-promotions
       match: [sale, grand opening, happy hour, trunk show]
-      why: Commerce wearing a culture costume.
+      why: >-
+        Commerce wearing a culture costume. Exception: an arts organisation
+        selling its own stock (the SF Opera costume sale) is kept; owner,
+        2026-10-18.
     - id: recurring-nightlife-noise
       match: [bottle service, table reservations, guest list]
       why: Club promo, not programming.

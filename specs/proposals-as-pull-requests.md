@@ -219,3 +219,28 @@ Items 6 (Starline) and 8 (the costume sale) go to the owner as questions.
 ## Evidence
 
 *(filled in as the build runs)*
+
+**Done when 1 (18 Oct).** `verify.sh` exits 0 on `main` after merge `dac52af`. Planted
+`"status": "approved"` in record 1 of the ledger: `--check` printed
+`record 1 (2026-10-12/upkeep): status 'approved' is not one of waiting, accepted,
+accepted-changed, declined` and exited 1; `verify.sh` printed
+`FAIL  proposals.py`, `self-test passed: 15 cases, 19 records checked`, the same record
+line, `passed 12   failed 1`, and exited 1. Reverted; `--check` back to
+`ledger ok: 4 records checked`.
+
+**Done when 2 (18 Oct).** Test branch pushed from this Mac opened PR #4: title from the
+commit subject, body from the commit body without the trailer, labels `proposal`,
+`kind:new-venue`, `week:2026-10-12`. Checks on it: `open` pass, `validate` pass. Closed
+with `gh pr close`; the close run (`pull_request_target`) wrote tag
+`proposal-outcome/2026-10-12/new-venue-pipeline-test/declined` and deleted the branch.
+Test tag then deleted. Side effect: each proposal PR also starts a `pull_request`-event
+`validate` run that GitHub parks as *action required* (PRs opened by the workflow token
+need a maintainer's approval to run workflows). It does not appear among the PR's
+checks; the push-event `validate` run covers the same commit.
+
+**Done when 3 (18 Oct).** Four, not three (see the handoff for why). Ledger records added
+and merged first (`dac52af`), then PRs #5 upkeep, #6 Neck of the Woods, #7 Montalvo,
+#8 six more towns opened with correct labels; every one shows `open` pass and `validate`
+pass. `--status` reads all four as `waiting`.
+
+**Done when 7 (18 Oct).** On Agent's Cal for 17 November; the owner acknowledged it.

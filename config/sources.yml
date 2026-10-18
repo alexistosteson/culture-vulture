@@ -157,6 +157,10 @@ tier_1_venues:
         note: "Volunteer-run all-ages punk institution in Berkeley. URL corrected 2026-10-09 to the ticketing page the venue's TICKETS button opens — 924gilman.org itself is a landing page with no shows on it. Dated rows with times and prices, 13 shows through 6 Dec when read. The rows carry no year and no city, and one stale row from a past March sits at the foot under another promoter's name: ignore it. If this address dies, take the new one from the TICKETS button." }
     # Starline Social Club — CLOSED. Both spaces are marked closed and the last
     # listed show was 11 June 2026. Left commented so it is not re-added by mistake.
+    # 2026-10-18: a sweep showed an 18 Oct "Starline" show. The site itself reads: bar
+    # and restaurant open Tue-Sat, calendar "no upcoming events", private hire pushed.
+    # Treat it as a bar that rents rooms, not a venue. Re-add only if its own calendar
+    # lists public dated shows again.
     # - { name: Starline Social Club, url: "https://starlinesocialclub.com/", cap: null }
     - { name: BAMPFA,                 url: "https://bampfa.org/",                      cap: null,
         note: "Film programme and exhibitions both. Cite the series, not just the title." }
