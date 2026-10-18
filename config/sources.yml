@@ -192,6 +192,50 @@ tier_1_venues:
     - { name: PURE Nightclub, url: "https://www.purenightclub408.com/calendar", cap: null,
         note: "Sunnyvale, 21+. Rows give weekday and date with no year, title first." }
 
+    # Added 2026-10-18 (owner): the resident and local companies whose seasons
+    # the digest had never been pointed at. The theatres they play are reached,
+    # if at all, through resale feeds that carry only touring shows — see
+    # reports/2026-10-18-south-bay-peninsula-coverage.md. Read the company's own
+    # season page; list each performance at the theatre it names.
+    - { name: Broadway San Jose, url: "https://www.broadwaysanjose.com/", cap: null,
+        venues: ["San Jose Center for the Performing Arts"],
+        note: "Touring Broadway at the Center for the Performing Arts. The resale feed already gives these; this is the source of record for dates and the run's full length." }
+    - { name: Opera San José, url: "https://www.operasj.org/", cap: null,
+        venues: ["California Theatre"],
+        note: "Main-stage operas at the California Theatre (Fiddler on the Roof 15–29 Nov 2026). Plain curl gets 403; the fetch tool read it on 2026-10-18." }
+    - { name: Symphony San Jose, url: "https://www.symphonysanjose.org/", cap: null,
+        venues: ["California Theatre", "San Jose Center for the Performing Arts"],
+        note: "Plays two halls and the concert pages do not always say which — check each concert's own page before listing a venue. Plain curl gets 403; the fetch tool read it on 2026-10-18." }
+    - { name: City Lights Theater Company, url: "https://cltc.org/", cap: null,
+        note: "Professional theatre, San Jose. Titles read from the season page; dates sometimes only on each show's own page." }
+    - { name: San Jose Stage Company, url: "https://www.thestage.org/", cap: null,
+        note: "Professional theatre, San Jose. Titles on the season page; take dates from each show's page." }
+    - { name: Heritage Theatre, url: "https://heritagetheatre.org/", cap: null,
+        note: "Campbell. Mixed bill: school-district musicals, tribute nights, touring ballet. The events list has a Load More button — read past the first page." }
+    - { name: Sunnyvale Community Players, url: "https://www.sunnyvaleplayers.org/season-calendar/", cap: null,
+        venues: ["Sunnyvale Theatre"],
+        note: "Community theatre, about four shows a year at the Sunnyvale Theatre. The calendar did not render to the fetch tool on 2026-10-18; if it reads empty, take dates from each show's page." }
+    - { name: TheatreWorks Silicon Valley, url: "https://www.theatreworks.org/mainstage/season-56", cap: null,
+        venues: ["Mountain View Center for the Performing Arts", "Lucie Stern Theatre"],
+        note: "Plays the Mountain View Center and Lucie Stern Theatre, and sometimes the Fox in Redwood City. The season slug changes each year — find the current season from the homepage." }
+    - { name: Palo Alto Players, url: "https://www.paplayers.org/", cap: null,
+        venues: ["Lucie Stern Theatre"],
+        note: "Community theatre at the Lucie Stern Theatre, Palo Alto." }
+    - { name: Stanford Live, url: "https://live.stanford.edu/", cap: 842,
+        venues: ["Bing Concert Hall", "Bing Concert Hall, Stanford University", "Frost Amphitheater"],
+        note: "Bing Concert Hall, the Bing Studio and Frost Amphitheater. The homepage lists the whole season; /calendar returned template placeholders on 2026-10-18. Student ensemble concerts are on events.stanford.edu." }
+    - { name: Hillbarn Theatre, url: "https://www.hillbarntheatre.org/", cap: null,
+        note: "Foster City (in the Peninsula list from 2026-10-18). The homepage gave only the current production's dates; take the rest from each show's page." }
+    - { name: Fox Theatre Redwood City, url: "https://www.foxrwc.com/", cap: null,
+        venues: ["Fox Theatre", "Club Fox"],
+        note: "The homepage lists upcoming shows; /events returned junk on 2026-10-18. Some promoter-sold dates appear only on ticketing sites." }
+    - { name: Los Altos Stage Company, url: "https://losaltosstage.org/", cap: null,
+        venues: ["Bus Barn Theater"],
+        note: "Titles on the site; dates only in an embedded Google Calendar. If a date cannot be confirmed, do not list it." }
+    - { name: Teatro Visión, url: "https://www.teatrovision.org/", cap: null,
+        venues: ["Mexican Heritage Plaza"],
+        note: "Latino theatre at the Mexican Heritage Plaza, San Jose. Not read by the fetch tool yet — first run, say whether it reads." }
+
   # The `outer` region — Santa Cruz, Marin, North Bay. Thin by design: only
   # things worth the drive clear the brief, so this list stays short.
   outer:
