@@ -80,8 +80,8 @@ tier_1_venues:
     - { name: Stern Grove Festival,   url: "https://www.sterngrove.org/lineup2026",    cap: 10000,
         season_ends: 2026-08-16,
         note: "Free but lottery-ticketed — always state the access mechanism (GA lottery opens six weeks out; a 1,500-ticket Community Box Office goes first-come on the day). SEASON IS MID-JUNE TO MID-AUGUST: 2026 ran Jun 14–Aug 16 and closed with Al Green. Nothing here after that, whatever the homepage still says." }
-    - { name: Roxie Theater,          url: "https://roxie.com/",                       cap: null,
-        note: "Repertory and one-off screenings. Ignore the first-run showtimes." }
+    - { name: Roxie Theater,          url: "https://roxie.com/calendar/",              cap: null,
+        note: "Repertory and one-off screenings. Ignore the first-run showtimes. URL changed 2026-10-18: the homepage gives timed screenings for seven days only and then titles without times, while /calendar/ gave both coming weeks with times in one read. A day that comes back empty is a fetch to repeat, not a dark day: on 12 October a read silently dropped Saturday, and reading again from a later offset found nine screenings." }
     - { name: The Fillmore,          url: "https://www.jambase.com/venue/the-fillmore", cap: 1315,
         note: "Added 2026-08-18. A 1,315-cap landmark that was somehow absent from this file, and cost the 17 Aug week three shows." }
     - { name: Gray Area,             url: "https://grayarea.org/events/", cap: 700,
@@ -103,6 +103,8 @@ tier_1_venues:
         note: "Added 2026-10-09. The homepage names each production with its date range and links its page (/events/french-kiss/, /events/christmas-ballet-2026/ ...); THE PRODUCTION PAGE has the per-date rows with times and the hall. Smuin tours three cities — list only the San Francisco dates, which are at the Cowell Theater, Fort Mason; the Mountain View and Walnut Creek stops fall to their own regions' rules. This entry answers for the Cowell Theater because it is the only route found that reads that hall; other companies rent it too, and nothing lists them." }
     - { name: American Conservatory Theater, url: "https://www.act-sf.org/whats-on/2026-27-season", cap: null,
         venues: ["Toni Rembe Theater", "The Strand Theater"],
+        coverage: partial, checked: 2026-10-18,
+        omits: "curtain times, for every production. The season page, each production's page and the What's On page give run dates only; the homepage's calendar strip is unfilled template text.",
         note: "Added 2026-10-09. The season page gives each production's run dates and nothing else — NO CURTAIN TIMES ANYWHERE ON THE SITE, which is A.C.T.'s choice and not a fetch failure; list a run with its dates and leave the time out rather than invent one. The theatre is on the production's own page and is not always A.C.T.'s: Oh, Mary! (13 Oct–1 Nov 2026) plays the Curran. Refresh each September." }
     - { name: 1015 Folsom,           url: "https://1015.com/", cap: 1000 }
     - { name: The Foundry SF, url: "https://www.thefoundry.club/", cap: 500,
@@ -261,6 +263,12 @@ tier_2_aggregators:
   - { name: Downtown SF,      url: "https://downtownsf.org/events",  covers: [sf],                                  strength: "weekday downtown programming" }
   - { name: Visit Oakland,    url: "https://www.visitoakland.com/events/", covers: [east-bay],                      strength: "festivals and street events" }
   - { name: sanjose.events,   url: "https://sanjose.events/",        covers: [south-bay],                           strength: "South Bay breadth" }
+  - { name: Litquake, url: "https://litquake2026.sched.com/", covers: [sf, east-bay], strength: "the literary festival, every October",
+      checked: 2026-10-18,
+      fallback: [
+        { url: "https://www.7x7.com/litquake-2026-shakes-up-october-2677977226.html", gives: "seven picks of more than 80 events, with prices" },
+        { url: "https://sf.funcheap.com/?s=litquake", gives: "the free events, with times" } ],
+      note: "Added 2026-10-18. Litquake runs about three weeks of October (8–24 Oct in 2026) and ends with Lit Crawl. The schedule is on Sched, at an address that changes each year (litquake<year>.sched.com); litquake.org itself carries no listings. Sched gives dates, times and rooms, no prices. It answered every path with 403 on 12 October and read in full on 18 October: when it refuses, the fallbacks are a floor, and say so under What could not be reached." }
 
   # Editorial picks rather than listings. They surface the thing worth going to
   # when the calendars only say what is on — useful for the digest's judgement,
@@ -376,7 +384,24 @@ observed_venues:
       url: "https://downtownsf.org/do/movies-at-mechanics-presents",
       note: "Movies at Mechanics', Friday evenings at 57 Post St. The institute's own page (milibrary.org) carries its dates after about 150 KB of header, past where a plain fetch stops. Downtown SF gives dates and times, not titles or prices." }
 
+  - { name: Eclectic Box, region: sf,
+      found_via: "SF Funcheap's page for each event, where a show there is posted",
+      checked: 2026-10-18,
+      note: "Small theatre at 446 Valencia St, formerly Stage Werx. On 2026-10-18 eclecticbox.com did not answer, Funcheap's venue page showed no events of its own, and every dated show found (Drunk Theatre's improv nights) was already past. No route reads its programme: a week with nothing here is unknown, not dark." }
+
   # A page that reads, but leaves listings out.
+  - { name: Curran Theatre, region: sf,
+      found_via: "ATG Tickets' page for each production, reached from its San Francisco listing",
+      url: "https://us.atgtickets.com/whats-on/san-francisco/",
+      checked: 2026-10-18,
+      note: "BroadwaySF's addresses now redirect to ATG. ATG's own Curran venue page said 0 shows on 2026-10-18 while Oh, Mary! was playing; the San Francisco listing names what is on, and each production's page (us.atgtickets.com/events/oh-mary/curran-theater/) gives only the next three performances with times. sfcurran.com failed its secure connection. A.C.T. presents some shows here, and its entry gives their run dates." }
+  - { name: Ferry Building, region: sf, venues: ["San Francisco Ferry Building"],
+      found_via: "The Ferry Building Marketplace's events page",
+      url: "https://www.ferrybuildingmarketplace.com/events/",
+      checked: 2026-10-18,
+      fallback: [
+        { url: "https://downtownsf.org/events", gives: "the larger Ferry Building events, with times, among all of downtown's" } ],
+      note: "Classes, markets, plaza music and holiday events, with dates and times, rarely prices. The page stops at a Show More button near the end of the month. On 2026-10-18 the two pages gave different hours for the same two events: take the Marketplace's own, and check one that looks like a typo (it gave a dumpling festival as 11pm to 5pm)." }
   - { name: Swedish American Hall, region: sf,
       found_via: "Songkick's venue page; Café du Nord's calendar covers both rooms of the building",
       url: "https://www.songkick.com/venues/4543956-swedish-american-hall",
