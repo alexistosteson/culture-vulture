@@ -110,12 +110,7 @@ subscription mailbox daily and sends that email. Before building it:
 2. Settle the reminder near the on-sale date, not only on the day it is announced.
 3. Check that Stern Grove's confirmation email arrived; open its link only after
    showing the owner.
-4. **Hammer Theatre email sign-up — approved by the owner 18 October, not yet
-   done.** Tag `hammer`; signup page https://hammertheatre.com/e-blast-sign-up/
-   (it forwards to a Constant Contact page). On 18 October that page stopped at
-   a Cloudflare "verify you are human" screen, which is the owner's to pass.
-   Pause before submitting, as with the others; then add Hammer to the
-   subscribed table in `specs/act-now-alerts.md`.
+4. Hammer Theatre: **signed up 18 October** by the owner in their own browser, tag `hammer`. Its confirmation email had not arrived by the end of the session — check for it beside Stern Grove's.
 
 Done later on 18 October, after the sign-ups: the South Bay / Peninsula coverage
 report (`reports/2026-10-18-south-bay-peninsula-coverage.md`), and on the owner's

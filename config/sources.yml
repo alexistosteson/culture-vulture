@@ -183,7 +183,7 @@ tier_1_venues:
     - { name: The Ritz, url: "https://www.livenation.com/venue/KovZ917AOqb/the-ritz-events", cap: 500,
         note: "Venue is OPEN. The old ritzsanjose.com domain is dead; theritzsanjose.com renders via JS and fetches empty." }
     - { name: Hammer Theatre Center, url: "https://sanjose.events/venue/hammer-theatre-center/", cap: 500,
-        note: "hammertheatre.com/events/ reports 0 events while the venue is actively programming — do not read that as dark." }
+        note: "hammertheatre.com/events/ reports 0 events while the venue is actively programming — do not read that as dark. The venue's current list is hammertheatre.com/events-list/ (owner, 2026-10-18), drawn by a VBO Tickets widget: the fetch tool reads it empty, the page and the widget alike (2026-10-18), so it is for a person to check, like the DICE calendars before dice.py. Announcements also arrive by email (act-now subscription, tag hammer)." }
     # Added 2026-10-09, as for San Francisco above: fetched and read that day.
     - { name: Rooster T. Feathers, url: "https://rooster-t-feathers.seatengine-sites.com/events", cap: null,
         note: "Comedy club, Sunnyvale. Take dates from the visible 'Fri, Oct 9, 2026 8:00 PM' text: the machine-readable dates on the page are UTC and put every show a day late. Skip the 'Guest List for:' rows, which duplicate shows." }
