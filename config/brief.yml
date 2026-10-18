@@ -76,14 +76,14 @@ regions:
     rank: 1
     blurb: San Jose, Saratoga, Sunnyvale, Mountain View
     color: "#F7E6B0"
-    includes: [San Jose, Santa Clara, Sunnyvale, Mountain View, Saratoga, Campbell, Los Gatos, Cupertino]
+    includes: [San Jose, Santa Clara, Sunnyvale, Mountain View, Saratoga, Campbell, Los Gatos, Cupertino, Milpitas]
 
   - id: peninsula
     label: Peninsula
     rank: 2
     blurb: Los Altos to Colma
     color: "#E29C46"
-    includes: [Los Altos, Palo Alto, Stanford, Menlo Park, Woodside, Redwood City, San Carlos, Belmont, San Mateo, Foster City, Burlingame, Millbrae, Colma, Half Moon Bay]
+    includes: [Los Altos, Palo Alto, Stanford, Menlo Park, Woodside, Redwood City, San Carlos, Belmont, San Mateo, Foster City, Burlingame, Millbrae, Colma, Half Moon Bay, Daly City, Pacifica]
 
   - id: sf
     label: San Francisco
@@ -97,7 +97,7 @@ regions:
     rank: 4
     blurb: Across the bay
     color: "#42406E"
-    includes: [Oakland, Berkeley, Alameda, Emeryville, Albany, Concord, Walnut Creek]
+    includes: [Oakland, Berkeley, Alameda, Emeryville, Albany, Concord, Walnut Creek, Richmond, Pleasant Hill, Orinda]
 
   # `outer` is a holding pen, not a region. Things here must clear a higher bar
   # (see coverage.outer_threshold) and are grouped under "Worth the Drive".
