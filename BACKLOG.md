@@ -1,8 +1,8 @@
 ---
 state: active
-next: Two builds are in design, not yet specced — the weekly run's proposed changes arriving as pull requests, and a public weekly note linked from the site. State and open questions: [handoff/session-2026-10-12-proposals-and-notes.md](handoff/session-2026-10-12-proposals-and-notes.md). To publish a week by hand: follow the weekly run in [CLAUDE.md](CLAUDE.md). Specs go in a root-level `specs/`, never `docs/` (the Pages web root); each declares its own tier per `delivery-tiers`.
+next: Two specs written 18 October and awaiting the owner's yes: weekly proposals as pull requests (probe, build first) and a public weekly note (production, owes audit and plan). Continue from [handoff/session-2026-10-18-proposals-and-notes-specs.md](handoff/session-2026-10-18-proposals-and-notes-specs.md). To publish a week by hand: follow the weekly run in [CLAUDE.md](CLAUDE.md). Specs go in a root-level `specs/`, never `docs/`.
 tool: claude-code
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # Backlog — culture-vulture
