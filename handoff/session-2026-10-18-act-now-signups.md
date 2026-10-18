@@ -110,6 +110,17 @@ subscription mailbox daily and sends that email. Before building it:
 2. Settle the reminder near the on-sale date, not only on the day it is announced.
 3. Check that Stern Grove's confirmation email arrived; open its link only after
    showing the owner.
-4. Consider an email sign-up for the Mountain View Center for the Performing Arts:
-   listed in 4 of 10 weeks, but only via a resale feed that misses the smaller
-   companies using the building (owner asked about it 18 October).
+4. **Hammer Theatre email sign-up — approved by the owner 18 October, not yet
+   done.** Tag `hammer`; signup page https://hammertheatre.com/e-blast-sign-up/
+   (it forwards to a Constant Contact page). On 18 October that page stopped at
+   a Cloudflare "verify you are human" screen, which is the owner's to pass.
+   Pause before submitting, as with the others; then add Hammer to the
+   subscribed table in `specs/act-now-alerts.md`.
+
+Done later on 18 October, after the sign-ups: the South Bay / Peninsula coverage
+report (`reports/2026-10-18-south-bay-peninsula-coverage.md`), and on the owner's
+decision 14 company season pages added to `config/sources.yml` and Stanford,
+Foster City and Half Moon Bay added to the Peninsula in `config/brief.yml`. The
+new entries show as "declared, no listing" warnings until the next weekly run
+reads them — expected, not a fault. The Mountain View Center needs no email
+sign-up: its main resident, TheatreWorks, is now read directly.
