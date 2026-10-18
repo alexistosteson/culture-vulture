@@ -72,6 +72,9 @@ All addresses were re-fetched on 18 October, and each proposal lists them with r
 
 ## Next action, in order
 
+*Checked 18 Oct 22:28 UTC: the setting still read `false`; walk page re-sent, the
+item-6 questions asked. Resume at step 1.*
+
 1. **Check the setting:** `gh api repos/alexistosteson/culture-vulture/actions/permissions/workflow`.
    It must read `"can_approve_pull_request_reviews":true`. If it doesn't, the owner
    hasn't ticked it yet: re-send `handoff/proposals-setting-walk.html` and stop there.
@@ -105,8 +108,8 @@ All addresses were re-fetched on 18 October, and each proposal lists them with r
    refused, give the owner a paste page. **Done when 3a** (the routine itself pushes and
    force-pushes a test branch) is still open. Don't fire the full routine for it. Find a
    way to run a one-off routine with the same environment, or ask the owner.
-8. Put the **17 November trial review** on Agent's Cal (`agent-cal.py add`) and tell the
-   owner.
+8. ~~Put the 17 November trial review on Agent's Cal~~ Done 18 Oct (entry
+   `B8C52A3F`); the owner was told. Run `agent-cal.py ack` when he acknowledges.
 9. **Note spec** (handoff item 3 from before): run `tier-check.py --tier production` over
    its Files list, then `/nasa-code`, and fill `## Pre-plan audit`. Then write the plan in
    `specs/plans/`. Plan approval is a session boundary.
