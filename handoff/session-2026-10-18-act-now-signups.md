@@ -96,3 +96,20 @@ All 12 sign-ups submitted; SFJAZZ and BAMPFA confirmation links opened with the
 owner's approval. Stern Grove's confirmation email had not arrived. The record is
 `specs/act-now-alerts.md`; the backlog row is updated. The table above is the
 session's working log and is superseded by the spec.
+
+## Next session
+
+Delivery was decided after the sign-ups (owner, 18 October): the Gmail connector
+emails the owner, and the agent decides when — see the Delivery section of
+`specs/act-now-alerts.md`. The next job is building the reader that sorts the
+subscription mailbox daily and sends that email. Before building it:
+
+1. Establish how sending can be **limited to the owner's one address**, enforced
+   rather than instructed — the same agent reads untrusted mail. Neither the
+   owner's address nor the mailbox's goes in any file here.
+2. Settle the reminder near the on-sale date, not only on the day it is announced.
+3. Check that Stern Grove's confirmation email arrived; open its link only after
+   showing the owner.
+4. Consider an email sign-up for the Mountain View Center for the Performing Arts:
+   listed in 4 of 10 weeks, but only via a resale feed that misses the smaller
+   companies using the building (owner asked about it 18 October).
