@@ -29,6 +29,14 @@ challenge exists to stop.
 `dice.py` is not a precedent for either: the DICE venues publish their listings
 to any browser through a widget, and nothing on their pages refuses a script.
 
+**Does SFJAZZ publish a feed? No (checked 18 October, in a person's browser).**
+The calendar and event pages offer no calendar file to subscribe to, no RSS, no
+add-to-calendar link, and no event data embedded for search engines. Tickets are
+sold on sfjazz.org itself, so there is no outside ticket seller to read instead.
+Even its sitemap sits behind the challenge, and the sitemap address its robots
+file names is a dead test server. The only channel SFJAZZ sends outward is its
+email newsletter (signup hosted by WordFly).
+
 ## What the run does now
 
 - **DNA Lounge** — reads both fallbacks (JamBase, Songkick), takes the union, and
