@@ -165,8 +165,8 @@ is no other store, and nothing is written to this repository.
 
 On the first run of each month the reader sends one email even with nothing to
 act on: mail received per venue, the venues that sent nothing, and the alerts
-sent. Without it, a broken job and a quiet month look the same. *This is an
-addition the owner did not ask for; drop it if one a month is unwanted.*
+sent. Without it, a broken job and a quiet month look the same. *Proposed
+unasked; the owner chose to keep it (18 Oct).*
 
 ## Rules the reader must keep
 
