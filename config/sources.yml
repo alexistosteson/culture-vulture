@@ -235,6 +235,9 @@ tier_1_venues:
     - { name: Teatro Visión, url: "https://www.teatrovision.org/", cap: null,
         venues: ["Mexican Heritage Plaza"],
         note: "Latino theatre at the Mexican Heritage Plaza, San Jose. Not read by the fetch tool yet — first run, say whether it reads." }
+    - { name: Montalvo Arts Center, url: "https://montalvoarts.org/experience/carriage-house-concerts/", cap: null,
+        venues: ["Carriage House Theatre", "Carriage House Theatre, Montalvo"],
+        note: "Added 2026-10-18. Saratoga. The Carriage House books touring concerts and comedy, about 34 in the 2026-27 season. This page lists every Carriage House date for the season, with no times; each concert's own page linked from it gives the time (Kalani Pe'a, 23 Oct, 7:30pm). Prices sit behind the ticket link, which adds an $8 fee. montalvoarts.org/events/ shows only the next six events, school shows included, and my.montalvoarts.org/events is drawn by script and reads empty." }
 
   # The `outer` region — Santa Cruz, Marin, North Bay. Thin by design: only
   # things worth the drive clear the brief, so this list stays short.
