@@ -35,6 +35,12 @@ Four keys on a `sources.yml` entry change what you do with it:
   handles a key that belongs to the venue: never print it, copy it, or write it
   into any file, and do not try to make the request yourself by another route.
   Check the city on each line before listing it.
+- **A venue that refuses this run is not read by disguise.** Some sites turn
+  away automated readers on purpose — by name in their robots.txt, or with a
+  bot challenge. Never send a browser's identity, borrowed headers, or a
+  headless browser to get past one, and never hunt for an unguarded copy on
+  the same site. Use the entry's fallbacks and report the gap. DNA Lounge
+  and SFJAZZ are the standing cases (see their notes).
 - **`coverage: partial`** — the routes that work do not carry everything the
   venue puts on, and `omits:` says what is missing. List what the routes give,
   and report the omission every week (see "What could not be reached").
@@ -80,8 +86,8 @@ nights. Close with three sections, in this order:
   ```
   - **The Regency Ballroom** — reached; its JamBase page shows one show this
     week and nothing again until the 13th.
-  - **DNA Lounge** — unreached; the October calendar page returned nothing
-    readable on three attempts, and the JamBase mirror lists one concert.
+  - **DNA Lounge** — unreached; it refuses this run by name, and its JamBase
+    and Songkick mirrors list one concert between them.
   ```
 
   *Reached* means you read the venue's calendar, or a mirror of it, and the low
