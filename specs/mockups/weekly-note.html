@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Weekly Note Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Mockup only. Colours and type are copied from the live page so the note reads
+   as part of the same site. Light only, like the site. */
+:root{
+  --ground:#FBF7EF; --rule:#C9BFA8; --line:#DED5C4; --hair:#EBE3D3;
+  --text:#1A1613; --text-soft:#33302B; --muted:#5C544A; --soft:#6E6455;
+  --label:#8A8073; --stand:#4B453B;
+  --display:"Newsreader",Georgia,serif; --body:"Source Serif 4",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace; --sans:"IBM Plex Sans",system-ui,sans-serif;
+  /* annotation colours — not part of the design, only for this mockup */
+  --ann:#1F5FA8; --ann-bg:#EAF2FB; --ann-line:#9DBFE3;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#F2EEE6;color:var(--text);font-family:var(--body);font-size:15px;line-height:1.5}
+a{color:inherit}
+.page{max-width:1180px;margin:0 auto;padding:28px 16px 80px}
+
+/* mockup chrome */
+.mk-title{font-family:var(--sans);font-size:22px;font-weight:600;margin:0 0 4px}
+.mk-sub{font-family:var(--sans);font-size:14px;color:#4a4a4a;margin:0 0 28px;max-width:70ch}
+.mk-section{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ann);margin:40px 0 12px}
+.ann{font-family:var(--sans);font-size:13.5px;line-height:1.45;color:#183a63;background:var(--ann-bg);
+  border:1px solid var(--ann-line);border-radius:6px;padding:10px 12px;margin:0 0 10px}
+.ann b{color:var(--ann)}
+.pin{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;
+  background:var(--ann);color:#fff;font-family:var(--sans);font-size:11.5px;font-weight:600;margin-right:6px;
+  vertical-align:1px;flex-shrink:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+@media (max-width:860px){.row{grid-template-columns:1fr}}
+.frame{background:var(--ground);border:1px solid var(--rule);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.frame-label{font-family:var(--sans);font-size:12px;color:#666;margin:0 0 6px}
+
+/* the site's masthead, reproduced */
+.mh{padding:34px 36px 20px;border-bottom:3px double var(--rule)}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--label);margin:0}
+.mh h1{font-family:var(--display);font-weight:700;font-size:58px;line-height:.92;letter-spacing:-.015em;margin:12px 0 0}
+.window-label{font-family:var(--display);font-size:26px;font-style:italic;color:var(--soft);margin-top:4px}
+.note-link{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text);text-decoration:none;border-bottom:1px solid var(--text);padding-bottom:1px}
+.hl{outline:2px dashed var(--ann);outline-offset:5px;border-radius:2px}
+.standfirst{font-family:var(--body);font-size:16px;line-height:1.5;color:var(--stand);max-width:46ch;margin:14px 0 0}
+.ghost{padding:18px 36px 22px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--label)}
+.ghost-row{height:12px;background:var(--hair);margin:12px 0 0;border-radius:2px}
+.ghost-row.s{width:60%}
+
+.phone{width:390px;max-width:100%}
+.phone .mh{padding:22px 16px 14px}
+.phone .eyebrow{font-size:9px;letter-spacing:.2em}
+.phone .mh h1{font-size:40px}
+.phone .window-label{font-size:18px}
+.phone .note-link{font-size:10.5px}
+.phone .ghost{padding:14px 16px 18px}
+
+.colo{padding:16px 36px 22px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--label);line-height:2;border-top:1px solid var(--rule)}
+
+/* the note page itself */
+.note{padding:40px 44px 36px}
+@media (max-width:600px){.note{padding:26px 16px}}
+.note h1{font-family:var(--display);font-weight:700;font-size:46px;line-height:.98;letter-spacing:-.01em;margin:10px 0 0}
+.note .window-label{font-size:22px}
+.note .lede{font-family:var(--body);font-size:17px;line-height:1.55;color:var(--stand);max-width:56ch;margin:16px 0 0}
+.note h2{font-family:var(--display);font-size:27px;font-weight:600;margin:34px 0 4px;padding-top:18px;border-top:1px solid var(--rule)}
+.note h2 .sub{display:block;font-family:var(--body);font-style:italic;font-weight:400;font-size:14.5px;color:var(--soft);margin-top:2px}
+.pick{padding:14px 0;border-bottom:1px solid var(--hair)}
+.pick:last-child{border-bottom:0}
+.pick-n{font-family:var(--mono);font-size:11px;color:var(--label);letter-spacing:.1em}
+.pick-t{font-family:var(--body);font-size:19.5px;font-weight:600;line-height:1.25;margin-top:2px}
+.pick-m{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:5px}
+.pick-w{font-family:var(--body);font-size:15.5px;line-height:1.55;color:var(--text-soft);margin-top:6px;max-width:62ch}
+.para{font-family:var(--body);font-size:15.5px;line-height:1.6;color:var(--text-soft);max-width:62ch;margin:10px 0 0}
+ul.plain{list-style:none;padding:0;margin:10px 0 0;max-width:64ch}
+ul.plain li{padding:9px 0;border-bottom:1px solid var(--hair);font-size:15px;line-height:1.5;color:var(--text-soft)}
+ul.plain li:last-child{border-bottom:0}
+ul.plain b{color:var(--text);font-weight:600}
+.behind{margin-top:38px;padding:4px 22px 18px;background:#F5EFE3;border:1px solid var(--line)}
+.behind h2{border-top:0;margin-top:14px;font-size:23px}
+.behind .eyebrow{margin-top:16px}
+.status{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--rule);padding:1px 6px;margin-left:6px;color:var(--muted);white-space:nowrap}
+.note-foot{margin-top:30px;padding-top:16px;border-top:3px double var(--rule);font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--label);line-height:2.2;display:flex;flex-wrap:wrap;gap:4px 22px}
+.note-foot a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--rule)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <p class="mk-title">The weekly note: mockup</p>
+  <p class="mk-sub">Two things to react to: where the link sits on the site, and the note itself.
+  The content is the 12 October week's real report, rewritten for the public. The blue boxes are
+  my notes to you and would not appear on the site.</p>
+
+  <!-- ============ 1. where the link sits ============ -->
+  <p class="mk-section">1 · Where the link sits on the site</p>
+  <div class="row">
+    <div>
+      <p class="frame-label">Computer: the top of the site</p>
+      <div class="frame">
+        <div class="mh">
+          <p class="eyebrow">Compiled Monday 12 October · 415 listings</p>
+          <h1>Culture Vulture</h1>
+          <div class="window-label">12 – 18 October</div>
+          <a class="note-link hl" href="#note">This week’s note →</a>
+          <p class="standfirst">Arts, music, and worthwhile oddities, ordered by remove from Mountain View.</p>
+        </div>
+        <div class="ghost">415 listings · sort by distance<div class="ghost-row"></div><div class="ghost-row s"></div></div>
+        <div class="colo">Brief · Schema · <span class="hl">Earlier notes</span></div>
+      </div>
+      <p class="frame-label" style="margin-top:22px">Phone: the same, at phone width</p>
+      <div class="frame phone">
+        <div class="mh">
+          <p class="eyebrow">Compiled Mon 12 Oct · 415 listings</p>
+          <h1>Culture Vulture</h1>
+          <div class="window-label">12 – 18 October</div>
+          <a class="note-link hl" href="#note">This week’s note →</a>
+        </div>
+        <div class="ghost">415 listings<div class="ghost-row"></div><div class="ghost-row s"></div></div>
+      </div>
+    </div>
+    <div>
+      <p class="ann"><span class="pin">1</span><b>One line under the dates.</b> It shows on phones too:
+        the site hides its intro sentence on phones, so the link can’t live there.</p>
+      <p class="ann"><span class="pin">2</span><b>A week with no note shows no link.</b> Nothing reads
+        “note missing”. The listings are what matter, and a note never holds a week back.</p>
+      <p class="ann"><span class="pin">3</span><b>Earlier notes</b> are linked from the small print at the
+        foot of the site. Each week’s note keeps its own permanent address.</p>
+    </div>
+  </div>
+
+  <!-- ============ 2. the note ============ -->
+  <p class="mk-section" id="note">2 · The note</p>
+  <div class="row">
+    <div class="frame">
+      <article class="note">
+        <p class="eyebrow">Culture Vulture · Weekly note</p>
+        <h1>The week of 12 October</h1>
+        <div class="window-label">Monday 12 – Sunday 18 October 2026</div>
+        <p class="lede">The busiest week we have covered: 415 listings, and Saturday alone has 94.
+        Three things stand out.</p>
+
+        <h2>Most worth doing<span class="sub">If you only go to one thing this week</span></h2>
+        <div class="pick">
+          <div class="pick-n">01</div>
+          <div class="pick-t">heavens to betsy</div>
+          <div class="pick-m">Bottom of the Hill · Sat 17 &amp; Sun 18 · $35</div>
+          <div class="pick-w">Corin Tucker and Tracy Sawyer’s band from before Sleater-Kinney, back for two nights
+          in a 350-person room. It hasn’t happened in thirty years.</div>
+        </div>
+        <div class="pick">
+          <div class="pick-n">02</div>
+          <div class="pick-t">Market Street Arts &amp; Theater Festival</div>
+          <div class="pick-m">Mid-Market, San Francisco · Sat 17, 4–11pm · free</div>
+          <div class="pick-w">Its first year: six blocks, three plazas and more than fifty performances, nearly all
+          free, including BANDALOOP dancing down the side of a building.</div>
+        </div>
+        <div class="pick">
+          <div class="pick-n">03</div>
+          <div class="pick-t">Friday Nights at OMCA</div>
+          <div class="pick-m">Oakland Museum of California · Fri 16, 5–9pm · free</div>
+          <div class="pick-w">Sixty years since the Black Panther Party was founded in Oakland. The museum holds
+          the archive and marks the anniversary, with MacArthur Maze on the garden stage.</div>
+        </div>
+        <p class="para"><b>Also:</b> Joe Bataan, who invented Latin soul in 1967, plays free in Yerba Buena
+        Gardens on Saturday at 2pm.</p>
+
+        <h2>Busy or quiet<span class="sub">What is driving the week</span></h2>
+        <p class="para">Very busy, and back-loaded. The autumn theatre season is fully under way, four acts
+        play several nights each, and three outdoor festivals land on the same Saturday. Monday is the
+        quietest night we have recorded, and that is real: almost everything starts on Thursday. The
+        Peninsula is thin now that the summer series have ended.</p>
+
+        <h2>What’s missing or uncertain<span class="sub">So you know where to double-check</span></h2>
+        <ul class="plain">
+          <li><b>Litquake is mostly missing.</b> The festival is running all week, but its schedule
+            couldn’t be read. Six of its 80-plus events are listed. Check litquake.org.</li>
+          <li><b>DNA Lounge</b> shows two concerts. That is a floor, not the whole week.</li>
+          <li><b>SFJAZZ and A.C.T.</b> don’t publish start times we can read. Their shows are listed
+            without times, or once instead of every night.</li>
+          <li><b>21 listings are uncertain</b> about a date, time or room. Each one says why in its own
+            description. The Shovels &amp; Rope date at the Guild is the one most likely to be wrong.</li>
+        </ul>
+
+        <section class="behind">
+          <h2>Behind this week<span class="sub">For anyone following how the digest is made</span></h2>
+          <p class="eyebrow">What we couldn’t reach</p>
+          <ul class="plain">
+            <li><b>14 sources</b> refused or returned empty pages this week, among them Litquake’s schedule,
+              DNA Lounge, SFJAZZ, Stanford Live and Cal Performances. Their listings came from other
+              routes, or are missing as noted above.</li>
+            <li>The Roxie’s calendar had to be read twice. The first read silently dropped Saturday.</li>
+          </ul>
+          <p class="eyebrow">Changes proposed</p>
+          <ul class="plain">
+            <li><b>Record six venues we already list</b> but hadn’t written down
+              <span class="status">waiting for review</span></li>
+            <li><b>Start watching Montalvo Arts Center</b> in Saratoga
+              <span class="status">waiting for review</span></li>
+            <li><b>Count Half Moon Bay and Stanford as Peninsula</b>
+              <span class="status">waiting for review</span></li>
+          </ul>
+          <p class="eyebrow">Open questions</p>
+          <ul class="plain">
+            <li>Has Starline Social Club in Oakland reopened? A listing says so, our notes say closed.</li>
+            <li>The SF Opera costume sale was included even though sales are normally left out, because
+              it is closer to a museum than a shop.</li>
+          </ul>
+        </section>
+
+        <div class="note-foot">
+          <a href="#">← Back to this week’s listings</a>
+          <a href="#">Earlier notes</a>
+          <span>Written by the weekly run · corrected after the fact if needed</span>
+        </div>
+      </article>
+    </div>
+    <div>
+      <p class="ann"><span class="pin">4</span><b>The reader’s part comes first</b>: what to do, how busy the
+        week is, and what might be missing. You chose this order on 12 October.</p>
+      <p class="ann"><span class="pin">5</span><b>“What’s missing or uncertain” is written as advice</b>
+        (“check litquake.org”), not as a list of errors.</p>
+      <p class="ann"><span class="pin">6</span><b>Behind this week</b> is set apart in a shaded box, so a
+        casual reader can stop before it.</p>
+      <p class="ann"><span class="pin">7</span><b>Each proposed change links to its pull request</b> and shows
+        whether it is waiting, accepted or turned down. The labels here are placeholders.</p>
+      <p class="ann"><span class="pin">8</span><b>Not shown in public:</b> file names, commands, the checks’
+        internals, the machine the run uses. The full technical report stays with the run.</p>
+      <p class="ann"><span class="pin">9</span><b>It publishes with the week</b>, unread by you, as you
+        decided. A mistake gets corrected afterwards.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
