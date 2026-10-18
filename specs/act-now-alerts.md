@@ -74,7 +74,25 @@ used (owner, 18 October). No phone number was given anywhere.
   week before the public), SFJAZZ, SF Opera, BAMPFA and SF Playhouse. Whether to
   buy any is the owner's call, outside this spec.
 
-## Delivery — open, three candidates
+## Delivery — decided 18 October: the Gmail connector sends the alert
+
+**The owner's decision:** the agent that reads the mailbox emails the owner
+itself, and decides when there is something worth sending — rather than the
+scheduling platform pushing a notice after every daily run. A message written for
+the owner, only when something needs acting on, beats a daily stream of
+automated pushes.
+
+**What the build must settle first.** The same agent reads untrusted marketing
+mail and can send mail, so an email crafted to steer it could try to make it
+write to someone else. The build must limit sending to the owner's one address —
+and establish how that limit is enforced, not merely instructed — before the
+reader runs unattended. The owner's address is kept out of this repository like
+the mailbox's.
+
+**Still open:** the reminder near the on-sale date, not only on the day the date
+is announced (two stages — see the backlog row, note (a)).
+
+The three candidates considered, for the record:
 
 The site has no backend. The alert reaches the owner by one of:
 
