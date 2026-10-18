@@ -123,7 +123,8 @@ cannot rest on the prompt. Three layers, each of which holds by itself:
    read the call.
 2. **The address lives only in a private setting on claude.ai** — the `act-now`
    cloud environment the routine runs in, which the owner created and named the
-   address in. The agent addresses every alert to the placeholder `owner` and
+   address in (as a variable, or, where the form offers none, written to a
+   file by the environment's setup script — the guard reads either). The agent addresses every alert to the placeholder `owner` and
    the guard fills in the address on the way out, so the agent is never told
    it. Where the setting is absent — any local session, any other routine — the
    guard refuses every send. Nothing in this repository names the address.

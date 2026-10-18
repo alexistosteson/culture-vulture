@@ -35,6 +35,9 @@ import subprocess
 import sys
 
 OWNER_ENV = "ACT_NOW_OWNER_ADDRESS"
+# Where the cloud environment's setup script may write the address instead, when
+# the environment form offers no variables box. The routine cannot write files.
+OWNER_FILE = os.path.join(os.path.expanduser("~"), ".act-now-owner")
 PLACEHOLDER = "owner"
 
 # Tools that can deliver mail, or stage mail for delivery. Matched on the last
@@ -86,6 +89,17 @@ def decide(tool_name, tool_input, owner):
     return None
 
 
+def owner_address():
+    """The setting if present, else the setup script's file, else nothing."""
+    if os.environ.get(OWNER_ENV, "").strip():
+        return os.environ[OWNER_ENV]
+    try:
+        with open(OWNER_FILE) as f:
+            return f.read().strip()
+    except OSError:
+        return ""
+
+
 def hook():
     try:
         event = json.load(sys.stdin)
@@ -94,7 +108,7 @@ def hook():
     except Exception:  # unreadable input is refused, whatever it was
         print("send_guard: could not read the tool call; refused", file=sys.stderr)
         return 2
-    owner = os.environ.get(OWNER_ENV, "")
+    owner = owner_address()
     reason = decide(name, tool_input, owner)
     if reason is None:
         if is_mail_tool(name) and tool_input["to"][0].strip().lower() == PLACEHOLDER:
@@ -174,6 +188,27 @@ def self_test():
     # environment: a refusal must exit 2 and must not echo the address.
     me = os.path.abspath(__file__)
     env = {**os.environ, OWNER_ENV: FAKE}
+    # The file route, on its own: an empty setting and a temporary home.
+    import tempfile
+    with tempfile.TemporaryDirectory() as home:
+        with open(os.path.join(home, ".act-now-owner"), "w") as f:
+            f.write(FAKE + "\n")
+        r = subprocess.run([sys.executable, me], capture_output=True, text=True,
+                           env={**os.environ, OWNER_ENV: "", "HOME": home},
+                           input=json.dumps({"tool_name": "mcp__Gmail__send_message",
+                                             "tool_input": {"to": ["owner"], "body": "b"}}),
+                           check=False)
+        if r.returncode != 0 or FAKE not in r.stdout:
+            bad += 1
+            print("FAIL  hook mode: the setup script's file was not read")
+        r = subprocess.run([sys.executable, me], capture_output=True, text=True,
+                           env={**os.environ, OWNER_ENV: "", "HOME": home},
+                           input=json.dumps({"tool_name": "mcp__Gmail__send_message",
+                                             "tool_input": {"to": ["x@example.com"], "body": "b"}}),
+                           check=False)
+        if r.returncode != 2:
+            bad += 1
+            print("FAIL  hook mode: the file route let a stranger through")
 
     def run_hook(tool_input):
         return subprocess.run([sys.executable, me], env=env, capture_output=True, text=True,
@@ -217,7 +252,7 @@ def self_test():
     except Exception as e:  # any failure to find the wiring is the finding
         bad += 1
         print(f"FAIL  .claude/settings.json does not wire the guard: {e}")
-    n = len(CASES) + 5
+    n = len(CASES) + 7
     print(f"send_guard self-test: {n - bad}/{n} cases as recorded")
     return 1 if bad else 0
 
