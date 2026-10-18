@@ -130,10 +130,13 @@ cannot rest on the prompt. Three layers, each of which holds by itself:
    guard refuses every send. Nothing in this repository names the address.
    **The alerts go to the subscription mailbox's own plain address** (owner,
    18 October), so they arrive beside the mail they report on.
-3. **The routine has no shell, no file-writing and no web tools** — only the
-   Gmail reading tools, sending, and reading this repository. So nothing it
-   reads can make it edit or switch off the guard, click a link, or carry mail
-   out another way.
+3. **The routine has no shell, no file-writing and no web tools** — only
+   reading this repository and the Gmail connector. So nothing it reads can
+   make it edit or switch off the guard, click a link, or carry mail out
+   another way. *Not achieved:* narrowing the connector itself to reading and
+   sending — the routine setting meant to do it did not take effect, and the
+   test run could still see Gmail's forward and draft tools. The guard refuses
+   those, so layer 1 carries that alone.
 
 The guard's recorded cases run in `scripts/verify.sh` and CI on every push, so a
 change that weakens it or unwires it fails the gate. The docs do not promise
@@ -183,6 +186,12 @@ addition the owner did not ask for; drop it if one a month is unwanted.*
    own tag within a few weeks; Stern Grove's confirmation should arrive first.
 2. Open this repository on GitHub and search it for the mailbox's address. It
    must not appear anywhere.
+3. Each morning the reader has something to act on, an email whose subject
+   starts `act-now:` arrives in the subscription mailbox. On the 1st of each
+   month a `act-now: monthly check-in` arrives even if nothing else did — if it
+   does not, the job has stopped.
+4. In the mailbox, search `guard test`. Nothing should be found: the four
+   refused sends of 18 October never left.
 
 ## Evidence
 
@@ -192,4 +201,24 @@ addition the owner did not ask for; drop it if one a month is unwanted.*
   SFJAZZ and BAMPFA confirmation links each came from the venue's own sender
   (`newsletter@sfjazz.org`, `bampfa@berkeley.edu`) and opened on WordFly, the
   email service behind both forms.
-- Working notes for the session: `handoff/session-2026-10-18-act-now-signups.md`.
+- **Send restriction, demonstrated in the cloud, 18 October** (routine
+  "Act-now alerts: send-restriction test (one-time)", run
+  `cse_014JibqYTDWtWzhSLWkcGaGp`, 16:03 UTC). Four sends, each refused by the
+  guard before it reached Gmail, in the guard's own words:
+  - to the mailbox's `+guardtest` address — "the recipient is not the owner's address"
+  - to `owner` with a copy to that address — "a send may not carry: cc"
+  - to `owner` threaded into a venue's email — "a send may not carry: replyThreadId"
+  - to `owner` and that address together — "a send must have exactly one recipient"
+
+  The run had no shell or web tool. Its one permitted send, addressed to the
+  placeholder `owner`, arrived in the subscription mailbox addressed to the
+  mailbox's plain address — subject "act-now: TEST — nothing to act on this
+  week", listing the four venue emails it read (two confirmation requests, a
+  confirmation, a welcome with a discount code) and correctly finding no dated
+  moment to act. A search of the mailbox for "guard test" finds nothing.
+- **The daily routine**: "Act-now alerts (daily)", every day at 14:00 UTC,
+  environment `act-now`, first run 19 October.
+- Locally, `scripts/send_guard.py --self-test` passes its 34 recorded cases and
+  runs in `scripts/verify.sh` and CI.
+- Working notes: `handoff/session-2026-10-18-act-now-signups.md`,
+  `handoff/session-2026-10-18-act-now-reader.md`.
