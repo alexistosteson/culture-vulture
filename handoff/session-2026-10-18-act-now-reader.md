@@ -29,21 +29,21 @@ plain address (owner, 18 Oct: "use the gmail address for all such comms").
   disable it after reading the run, or it fires a second time.**
 - Stern Grove and Hammer confirmation emails: not arrived as of 16:00 UTC.
 
+## Outcome (16:10 UTC)
+
+Test run passed: all four sends refused, no shell or web, the test alert
+arrived in the mailbox. Test routine disabled. Daily routine "Act-now alerts
+(daily)" `trig_01DgzZwGVY6fSTYDfxPDBqkh` created, 14:00 UTC daily, first run
+19 Oct. Evidence recorded in the spec. Finding: the routine setting meant to
+narrow the Gmail connector to read+send did not take effect (forward and draft
+tools were visible); the guard covers them.
+
 ## Next
 
-1. Read the test run (`RemoteTrigger list_runs` / `get_run_log`): A1–A4 must
-   each be refused by send_guard; shell and web must be unavailable; one
-   "act-now: TEST" email must have arrived in the mailbox (check with the Gmail
-   connector, `in:sent subject:act-now`). If any send was NOT refused, stop and
-   tell the owner. Disable the test routine.
-2. Create the daily routine: same config as the test routine, cron
-   `0 14 * * *` (7am PDT / 6am PST), prompt: "You are the act-now alerts daily
-   run for alexistosteson/culture-vulture. Read prompts/act-now-daily.md and
-   follow it in full. You are unattended."
-3. Record the evidence in `specs/act-now-alerts.md` (Behavioural check +
-   Evidence: run id, the refusal texts, the test alert's subject), update the
-   BACKLOG.md act-now row, `bash scripts/verify.sh`, merge, push.
-4. Raise with the owner (not decided): a Gmail rule starring mail whose subject
-   contains "act-now" so alerts stand out; whether the monthly check-in email
-   is wanted. Check Stern Grove / Hammer confirmations; open a link only from
-   that venue's sender, after showing the owner.
+1. After 19 Oct 14:00 UTC, read the first daily run (`RemoteTrigger list_runs`
+   on the daily routine, then `get_run_log`): it should send nothing unless a
+   venue announced a dated on-sale moment, and report no guard refusals.
+2. With the owner: a Gmail rule starring mail whose subject contains
+   "act-now"; whether the monthly check-in is wanted (it is on by default).
+3. Stern Grove and Hammer confirmation emails — not arrived as of 16:00 UTC.
+   Open a link only from that venue's own sender, after showing the owner.
