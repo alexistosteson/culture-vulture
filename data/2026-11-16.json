@@ -1,0 +1,6175 @@
+{
+  "meta": {
+    "window_start": "2026-11-16",
+    "window_end": "2026-11-22",
+    "compiled": "2026-11-16",
+    "origin": {
+      "label": "Mountain View",
+      "lat": 37.3861,
+      "lng": -122.0839
+    },
+    "geos": [
+      {
+        "id": "south-bay",
+        "label": "South Bay",
+        "rank": 1,
+        "blurb": "San Jose, Saratoga, Sunnyvale, Mountain View"
+      },
+      {
+        "id": "peninsula",
+        "label": "Peninsula",
+        "rank": 2,
+        "blurb": "Los Altos to Colma"
+      },
+      {
+        "id": "sf",
+        "label": "San Francisco",
+        "rank": 3,
+        "blurb": "City and county"
+      },
+      {
+        "id": "east-bay",
+        "label": "Berkeley & Oakland",
+        "rank": 4,
+        "blurb": "Across the bay"
+      },
+      {
+        "id": "outer",
+        "label": "Worth the Drive",
+        "rank": 5,
+        "blurb": "Santa Cruz, Marin, North Bay"
+      }
+    ],
+    "vocab": {
+      "type": [
+        "concert",
+        "festival",
+        "market",
+        "museum",
+        "theater",
+        "dance",
+        "film",
+        "sports",
+        "food",
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": [
+        "club",
+        "amphitheater",
+        "arena",
+        "convention-center",
+        "theater",
+        "concert-hall",
+        "church",
+        "park",
+        "street",
+        "gallery",
+        "museum",
+        "civic",
+        "winery",
+        "estate",
+        "ballpark",
+        "bar",
+        "rooftop"
+      ],
+      "cost": [
+        "free",
+        "free-ticketed",
+        "ticketed"
+      ]
+    }
+  },
+  "events": [
+    {
+      "id": "11-16-the-mountain-goats-night-two-alpha",
+      "date": "2026-11-16",
+      "title": "The Mountain Goats — Night Two: Alpha",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "Night two of a six-night Fillmore residency, each evening built on a different seam of the catalogue; tonight is the Alpha songs, the divorce-album cycle that runs through the early tape years. The venue publishes no door times."
+    },
+    {
+      "id": "11-16-manic-street-preachers",
+      "date": "2026-11-16",
+      "start": "20:00",
+      "title": "Manic Street Preachers",
+      "venue": "Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "Welsh agit-pop that has outlived every scene it was filed under — thirty-odd years of big choruses with reading lists attached. A 1,400-cap room is small for them."
+    },
+    {
+      "id": "11-16-jorja-smith-with-wesley-joseph",
+      "date": "2026-11-16",
+      "start": "20:00",
+      "title": "Jorja Smith with Wesley Joseph",
+      "venue": "Castro Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Walsall soul with a jazz singer's patience about where the beat sits. Sold out, and the Castro's balcony is the place to hear it."
+    },
+    {
+      "id": "11-16-margaret-glaspy-with-anna-tivel",
+      "date": "2026-11-16",
+      "start": "20:00",
+      "title": "Margaret Glaspy with Anna Tivel",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "price": "$24-28",
+      "note": "Glaspy writes spare, slightly abrasive guitar songs and sings them like she is arguing with herself. Tivel opens with Portland story-songs. Doors seven, $24–28."
+    },
+    {
+      "id": "11-16-finish-ticket-final-show-picture-atlantic-field-medic",
+      "date": "2026-11-16",
+      "start": "20:00",
+      "title": "Finish Ticket (Final Show), Picture Atlantic, Field Medic",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$20",
+      "note": "An East Bay band's last ever show, on a bill of Bay Area lifers, in a club that itself closes at the end of the year. Sold out. Doors seven, $20."
+    },
+    {
+      "id": "11-16-krazy-for-karaoke",
+      "date": "2026-11-16",
+      "start": "21:00",
+      "title": "Krazy for Karaoke",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "The Knockout's Monday karaoke, which is less a singalong than a floor show. Read off the venue's DICE calendar."
+    },
+    {
+      "id": "11-16-motown-on-mondays",
+      "date": "2026-11-16",
+      "start": "19:00",
+      "title": "Motown on Mondays",
+      "venue": "Madrone Art Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "free",
+      "note": "Fifteen-plus years of all-vinyl Motown and Northern soul on a Monday. Free before eight, five dollars after, and the floor fills either way."
+    },
+    {
+      "id": "11-16-japanese-tea-garden-free-admission-hour",
+      "date": "2026-11-16",
+      "start": "09:00",
+      "title": "Japanese Tea Garden Free Admission Hour",
+      "venue": "Japanese Tea Garden, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor",
+        "museum"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Nine to ten on Mondays, Wednesdays and Fridays the 1894 garden is free to all; city residents are free any time with ID. Go before the tour buses."
+    },
+    {
+      "id": "11-16-hayes-valley-comedy-night",
+      "date": "2026-11-16",
+      "start": "19:00",
+      "title": "Hayes Valley Comedy Night",
+      "venue": "The Function",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "Free with an RSVP, twenty-plus at the door without one. Standing weeknight room, useful mainly because it costs nothing."
+    },
+    {
+      "id": "11-16-mirthquake-monday-live-comedy-in-the-richmond",
+      "date": "2026-11-16",
+      "start": "20:00",
+      "title": "Mirthquake: Monday Live Comedy in the Richmond",
+      "venue": "Mirthquake",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "confidence": "low",
+      "note": "Free-ticketed stand-up in the avenues with $5 drinks, 21+. Lower-confidence listing: Funcheap names no room."
+    },
+    {
+      "id": "11-16-los-telez",
+      "date": "2026-11-16",
+      "title": "Los Telez",
+      "venue": "Evolution San Francisco",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "latin and cumbia"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Cumbia and norteño covers for a dancing crowd. Found only on the regional sweep, so the time is unconfirmed."
+    },
+    {
+      "id": "11-16-max-bien-kahn-levi-thomas-chelsea-blake",
+      "date": "2026-11-16",
+      "title": "Max Bien Kahn, Levi Thomas, Chelsea Blake",
+      "venue": "Lloyd's Records",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "gallery",
+      "genre": [
+        "folk and americana",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Three songwriters in a record shop — the kind of bill that exists because the room is small enough to allow it. Time unconfirmed."
+    },
+    {
+      "id": "11-16-comeback-kid-with-defeater-and-dead-heat",
+      "date": "2026-11-16",
+      "title": "Comeback Kid with Defeater and Dead Heat",
+      "venue": "Cornerstone",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Winnipeg hardcore with two decades of gang vocals behind it, plus Boston's Defeater and Oxnard's Dead Heat. Cornerstone's own calendar would not load; time unconfirmed."
+    },
+    {
+      "id": "11-16-town-biz-comedy-night-with-hellafunny",
+      "date": "2026-11-16",
+      "start": "19:00",
+      "title": "Town Biz Comedy Night with HellaFunny",
+      "venue": "Mesa Maguey",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "Temescal's standing Monday stand-up night, free with an RSVP."
+    },
+    {
+      "id": "11-16-son-volt-with-kelly-willis",
+      "date": "2026-11-16",
+      "start": "20:00",
+      "title": "Son Volt with Kelly Willis",
+      "venue": "The Guild Theatre",
+      "city": "Menlo Park",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "folk and americana",
+        "country"
+      ],
+      "cost": "ticketed",
+      "note": "Jay Farrar's thirty-year argument that Uncle Tupelo's harder half was the right half, with Texas country singer Kelly Willis along. Doors seven. Four minutes from Caltrain."
+    },
+    {
+      "id": "11-17-boynextdoor-knock-on-vol-2",
+      "date": "2026-11-17",
+      "start": "19:30",
+      "title": "BOYNEXTDOOR: KNOCK ON Vol.2",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "note": "Fourth-generation K-pop boy band on their second North American run, in a 2,300-cap theatre rather than an arena — which is the reason to go."
+    },
+    {
+      "id": "11-17-son-volt-with-kelly-willis",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "Son Volt with Kelly Willis",
+      "venue": "August Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "country"
+      ],
+      "cost": "ticketed",
+      "note": "The second of two Bay Area nights, after Menlo Park on Monday. August Hall lists no door time."
+    },
+    {
+      "id": "11-17-armored-saint-and-metal-church-with-livekill",
+      "date": "2026-11-17",
+      "start": "19:00",
+      "title": "Armored Saint and Metal Church with Livekill",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "price": "$35-40",
+      "note": "Two first-wave American metal bands co-headlining — Armored Saint still fronted by John Bush, Metal Church playing the speed-metal canon. Doors six, $35–40."
+    },
+    {
+      "id": "11-17-straight-no-chaser",
+      "date": "2026-11-17",
+      "start": "19:30",
+      "title": "Straight No Chaser",
+      "venue": "Palace of Fine Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "note": "Ten-man a cappella, mostly holiday repertoire by this point in the year. Findable without help; listed for completeness."
+    },
+    {
+      "id": "11-17-silverada-with-emily-nenni",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "Silverada with Emily Nenni",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "country",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "Austin honky-tonk (formerly Mike and the Moonpies) with Nashville's Emily Nenni, who sings harder country than most people signed to sing it."
+    },
+    {
+      "id": "11-17-brokencyde-dot-dot-curve-9aradox",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "Brokencyde, Dot Dot Curve, 9aradox",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$28.08",
+      "note": "Crunkcore, revived without irony, for an audience that was fourteen in 2008. Doors 7:30, $28."
+    },
+    {
+      "id": "11-17-soft-vein-with-still-ruins-and-blood-rave",
+      "date": "2026-11-17",
+      "title": "Soft Vein with Still Ruins and Blood Rave",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Darkwave and industrial on a three-band local bill. Reached only through DNA's mirrors, which carry the touring concerts and none of the club nights."
+    },
+    {
+      "id": "11-17-jammy-buffet",
+      "date": "2026-11-17",
+      "start": "19:00",
+      "title": "Jammy Buffet",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "note": "An evening of Phish-by-way-of-Margaritaville, which is either the best or the worst idea of the week. Doors seven, 21+."
+    },
+    {
+      "id": "11-17-send-for-help-tuberose-get-lost-cassidy-frost",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "Send for Help, Tuberose, Get Lost Cassidy Frost",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "Local punk and noise-pop three deep in a room that holds a hundred and fifty. From the venue's DICE calendar."
+    },
+    {
+      "id": "11-17-kilowatt-karaoke",
+      "date": "2026-11-17",
+      "start": "21:00",
+      "title": "Kilowatt Karaoke",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "The Mission's Tuesday karaoke, off Kilowatt's DICE calendar."
+    },
+    {
+      "id": "11-17-counsellor-at-law",
+      "date": "2026-11-17",
+      "start": "18:00",
+      "title": "Counsellor at Law",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "William Wyler's 1933 courtroom picture in the Roxie's Wild, Weird, Wicked series of pre-Code films — John Barrymore as a Lower East Side lawyer who made good."
+    },
+    {
+      "id": "11-17-neel-seminars-on-sonic-design-sound-as-shape",
+      "date": "2026-11-17",
+      "title": "Neel: Seminars on Sonic Design — Sound as Shape",
+      "venue": "Gray Area, Grand Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Italian techno producer on how sound occupies space, presented with Recombinant. Gray Area publishes no start time for it."
+    },
+    {
+      "id": "11-17-live-model-tuesday-sketch",
+      "date": "2026-11-17",
+      "title": "Live Model Tuesday Sketch",
+      "venue": "Madrone Art Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "market"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "Drawing from a live model in a bar, materials on the table, no instruction. A standing Tuesday; no time published."
+    },
+    {
+      "id": "11-17-hayes-valley-comedy-night",
+      "date": "2026-11-17",
+      "start": "19:30",
+      "title": "Hayes Valley Comedy Night",
+      "venue": "The Function",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "The nightly free-with-RSVP room in Hayes Valley."
+    },
+    {
+      "id": "11-17-thundercat-distracted-af-tour-with-fera",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "Thundercat: Distracted AF Tour, with Fera",
+      "venue": "Fox Theater",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "soul and funk",
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "note": "Stephen Bruner's six-string bass sits exactly between Shuggie Otis and Flying Lotus, and live he plays more of it than the records let on. Doors seven. Take BART — downtown garages shut their gates at seven on weeknights."
+    },
+    {
+      "id": "11-17-brian-culbertson",
+      "date": "2026-11-17",
+      "title": "Brian Culbertson",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "$89-139",
+      "note": "First of three nights of smooth jazz keyboard, sold out across the run. $89–139."
+    },
+    {
+      "id": "11-17-the-underachievers-with-dizzy-wright",
+      "date": "2026-11-17",
+      "title": "The Underachievers with Dizzy Wright",
+      "venue": "Cornerstone",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Brooklyn's psychedelic-leaning rap duo with Las Vegas's Dizzy Wright. Cornerstone's calendar did not load this run; found on the sweep."
+    },
+    {
+      "id": "11-17-shark-in-the-water-sharing-the-road-pied-piper-kj",
+      "date": "2026-11-17",
+      "title": "Shark in the Water, Sharing the Road, Pied Piper KJ",
+      "venue": "Ivy Room",
+      "city": "Albany",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Three local bands in the Ivy Room's narrow back half. Reached through JamBase, which gives no times — ivyroom.com fetches empty."
+    },
+    {
+      "id": "11-17-las-migas",
+      "date": "2026-11-17",
+      "title": "Las Migas",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "world and traditional"
+      ],
+      "cost": "ticketed",
+      "note": "Barcelona's all-woman flamenco quartet, who put Catalan song and Mediterranean strings into the form without sanding its edges. A seated listening room suits them."
+    },
+    {
+      "id": "11-17-mezcal-mole-comedy-night",
+      "date": "2026-11-17",
+      "start": "19:00",
+      "title": "Mezcal & Mole Comedy Night",
+      "venue": "Mesa Maguey",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "Temescal's Tuesday stand-up, free with an RSVP."
+    },
+    {
+      "id": "11-17-6-drive-in-movie-night",
+      "date": "2026-11-17",
+      "start": "20:30",
+      "title": "$6 Drive-In Movie Night",
+      "venue": "Solano 2 Drive In",
+      "city": "Concord",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$6",
+      "outdoor": true,
+      "note": "The standing Tuesday double bill at one of the last drive-ins in the region. Six dollars adults, two for children."
+    },
+    {
+      "id": "11-17-san-jose-sharks-vs-calgary-flames",
+      "date": "2026-11-17",
+      "start": "19:00",
+      "title": "San Jose Sharks vs Calgary Flames",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "sports"
+      ],
+      "venue_type": "arena",
+      "cost": "ticketed",
+      "price": "from $17",
+      "note": "A Tuesday against Calgary, which keeps the upper bowl cheap. Diridon is ten minutes' walk and the only sane way in."
+    },
+    {
+      "id": "11-17-the-who-s-tommy",
+      "date": "2026-11-17",
+      "start": "19:30",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Opening night of the touring revival of the 1993 Broadway staging — Des McAnuff's production, rebuilt with projection instead of scaffolding. Six nights here."
+    },
+    {
+      "id": "11-17-toast-the-best-of-bread",
+      "date": "2026-11-17",
+      "start": "19:00",
+      "title": "Toast: The Best of Bread",
+      "venue": "Heritage Theatre",
+      "city": "Campbell",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "note": "A tribute to David Gates's soft-rock catalogue. The brief includes tribute acts and never features them; this is why."
+    },
+    {
+      "id": "11-17-filoli-unwrapped",
+      "date": "2026-11-17",
+      "start": "11:00",
+      "title": "Filoli Unwrapped",
+      "venue": "Filoli",
+      "city": "Woodside",
+      "geo": "peninsula",
+      "type": [
+        "talk",
+        "museum"
+      ],
+      "venue_type": "estate",
+      "cost": "ticketed",
+      "note": "An hour behind the holiday decoration of the house, before the public rooms open. Also the 19th and the 22nd."
+    },
+    {
+      "id": "11-17-goddamn-gallows-with-king-sickabilly",
+      "date": "2026-11-17",
+      "title": "Goddamn Gallows with King Sickabilly",
+      "venue": "Moe's Alley",
+      "city": "Santa Cruz",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Gutter-punk bluegrass with a washboard and a banjo played like a weapon. Clears the drive only if this is already your thing — said plainly rather than talked up."
+    },
+    {
+      "id": "11-18-the-mountain-goats-night-three-stump-the-band",
+      "date": "2026-11-18",
+      "title": "The Mountain Goats — Night Three: Stump the Band",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "The requests night of the residency: the audience names songs and the band finds out whether it remembers them. For a catalogue this deep that is a genuine event."
+    },
+    {
+      "id": "11-18-hamilton-leithauser-rostam-the-joint-tour",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "Hamilton Leithauser + Rostam: The Joint Tour",
+      "venue": "Castro Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "The Walkmen's singer and Vampire Weekend's former arranger, nearly a decade on from the record they made together. Leithauser's voice is the draw and the Castro's room is kind to it."
+    },
+    {
+      "id": "11-18-icona-pop-with-sorana",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "Icona Pop with Sorana",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "note": "Swedish electropop still trading on one enormous 2012 single, playing a 500-cap club rather than a festival slot."
+    },
+    {
+      "id": "11-18-jamila-woods-10-years-of-heavn-with-hannah-mayree",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "Jamila Woods: 10 Years of HEAVN, with Hannah Mayree",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk",
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "price": "$35-40",
+      "note": "Chicago poet-singer playing her first record whole at ten years' remove — gospel harmony, Chicago house underneath, politics in plain speech. Moved here from August Hall, so the room is now half the size. Doors seven, $35–40."
+    },
+    {
+      "id": "11-18-sueco-with-jeris-johnson-and-port-london",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "Sueco with Jeris Johnson and Port London",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "punk and hardcore",
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "price": "$20.17-30",
+      "note": "Post-SoundCloud pop-punk with trap bones. Doors seven, $20–30."
+    },
+    {
+      "id": "11-18-john-carroll-kirby-with-danny-paul-grody-duo",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "John Carroll Kirby with Danny Paul Grody Duo",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "price": "$30-45",
+      "note": "Session keyboardist turned new-age-adjacent bandleader — library-music textures played by people who can actually solo. Grody's guitar duo opens, which is the right pairing. Doors seven, $30–45."
+    },
+    {
+      "id": "11-18-ninajirachi-with-mgna-crrrta",
+      "date": "2026-11-18",
+      "title": "Ninajirachi with MGNA Crrrta",
+      "venue": "Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Australian hyperpop-adjacent club producer. Lower confidence: the Regency publishes no dates of its own and the mirrors disagree about which nights this week she plays."
+    },
+    {
+      "id": "11-18-april-magazine-black-thumb-the-babygirls",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "April Magazine, Black Thumb, The Babygirls",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "San Francisco's own hazy, slow-moving guitar pop, three bands of it. From the venue's DICE calendar."
+    },
+    {
+      "id": "11-18-lapses-half-rotten-goddes-e-f-luka",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "Lapses, Half Rotten Goddes, E.F. Luka",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "Local bill in the Mission, read off Kilowatt's DICE calendar."
+    },
+    {
+      "id": "11-18-laya-with-dj-trauma",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "LAYA with DJ Trauma",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Filipina-American R&B with a light touch on the production. Sold out — waitlist only."
+    },
+    {
+      "id": "11-18-ken-russell-s-the-devils-4k-restoration",
+      "date": "2026-11-18",
+      "start": "17:45",
+      "title": "Ken Russell's The Devils (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Russell's 1971 convent-hysteria film, long cut about and now restored. Also played Monday at eight; this is the second of two."
+    },
+    {
+      "id": "11-18-staff-pick-chicago-with-drag-show",
+      "date": "2026-11-18",
+      "start": "20:20",
+      "title": "Staff Pick: Chicago, with drag show",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film",
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Zann Nolan introduces the 2002 musical and then stages a drag show after it, which is the correct response to that film."
+    },
+    {
+      "id": "11-18-free-admission-day-at-ybca",
+      "date": "2026-11-18",
+      "start": "11:00",
+      "title": "Free Admission Day at YBCA",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "Galleries free every Wednesday — Dread Scott's The Body Politic and GaHee Park's Behind the Curtain are both up. Eleven till eight."
+    },
+    {
+      "id": "11-18-free-art-workshop-velveteen-rabbit-pop-up-book",
+      "date": "2026-11-18",
+      "start": "14:00",
+      "title": "Free Art Workshop: Velveteen Rabbit Pop-up Book",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "Two till four in the Grand Lobby, all ages, free with registration."
+    },
+    {
+      "id": "11-18-progressive-art-studio-models-a-lecture-by-clea-massiani",
+      "date": "2026-11-18",
+      "start": "18:30",
+      "title": "Progressive Art Studio Models: a lecture by Cléa Massiani",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "On studio models for disabled artists, in the Front Door Gallery. Free."
+    },
+    {
+      "id": "11-18-exhibition-tour-some-particular-heaven-ideas-of-utopia-i",
+      "date": "2026-11-18",
+      "start": "12:15",
+      "title": "Exhibition Tour: Some Particular Heaven — Ideas of Utopia in the BAMPFA Collection",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "museum",
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "A lunchtime walk through BAMPFA's utopia show with a docent. Free with admission."
+    },
+    {
+      "id": "11-18-black-hole-collective-film-lab",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "Black Hole Collective Film Lab",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Hand-processed and photochemical work from the Oakland film lab — 16mm as a craft rather than a format."
+    },
+    {
+      "id": "11-18-japanese-tea-garden-free-admission-hour",
+      "date": "2026-11-18",
+      "start": "09:00",
+      "title": "Japanese Tea Garden Free Admission Hour",
+      "venue": "Japanese Tea Garden, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor",
+        "museum"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "The free hour, nine to ten. Mondays, Wednesdays and Fridays."
+    },
+    {
+      "id": "11-18-biblio-bistro-farmers-market-cooking-school",
+      "date": "2026-11-18",
+      "start": "11:00",
+      "title": "Biblio Bistro Farmers' Market Cooking School",
+      "venue": "UN Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "food",
+        "talk"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Open-air cooking demonstration built from what is on the market stalls that morning. Free."
+    },
+    {
+      "id": "11-18-sf-state-free-rooftop-stargazing",
+      "date": "2026-11-18",
+      "start": "18:30",
+      "title": "SF State Free Rooftop Stargazing",
+      "venue": "SFSU Observatory, Thornton Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "outdoor": true,
+      "note": "The university opens its roof and its telescopes, 6:30 to 8:30, free, weather permitting — which in November it may not be."
+    },
+    {
+      "id": "11-18-80s-nyc-underground-mondo-new-york",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "'80s NYC Underground: Mondo New York",
+      "venue": "Live Worms Gallery",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "gallery",
+      "cost": "free",
+      "note": "The 1988 downtown-performance documentary, free, in a North Beach storefront gallery. Karen Finley, Joey Arias, Lydia Lunch."
+    },
+    {
+      "id": "11-18-free-astronomy-talk-chile-s-giant-observatories",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "Free Astronomy Talk: Chile's Giant Observatories",
+      "venue": "Randall Museum",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "On the Atacama telescopes, free, seven till half eight on Corona Heights."
+    },
+    {
+      "id": "11-18-astronomy-on-tap-sf",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "Astronomy on Tap SF",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "free",
+      "note": "Working astronomers giving short talks in a nightclub, free with a one-drink minimum. Reliably the best value on a Wednesday."
+    },
+    {
+      "id": "11-18-40th-annual-building-lighting-and-holiday-market",
+      "date": "2026-11-18",
+      "start": "16:00",
+      "title": "40th Annual Building Lighting and Holiday Market",
+      "venue": "Downtown San Francisco",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "confidence": "low",
+      "note": "Four till six: the downtown tower lighting with a market round it. Downtown SF names no address, so the location is lower-confidence."
+    },
+    {
+      "id": "11-18-clue-live-on-stage",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "Clue: Live On Stage",
+      "venue": "San Jose Stage",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The stage version of the 1985 film, which keeps the three endings. Listed at seven on the resale feed; San Jose Stage publishes no schedule of its own."
+    },
+    {
+      "id": "11-18-the-who-s-tommy",
+      "date": "2026-11-18",
+      "start": "19:30",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Second of six performances."
+    },
+    {
+      "id": "11-18-alice-cooper",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "Alice Cooper",
+      "venue": "San Jose Civic",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "price": "from $52",
+      "note": "Still touring the guillotine at seventy-eight, and the band is better than the spectacle needs it to be. $52 up."
+    },
+    {
+      "id": "11-18-three-days-grace-with-i-prevail-and-the-funeral-portrait",
+      "date": "2026-11-18",
+      "start": "19:00",
+      "title": "Three Days Grace with I Prevail and The Funeral Portrait",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "arena",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "price": "from $35",
+      "note": "Canadian post-grunge on a double bill with I Prevail. An arena show, findable without help; listed for completeness."
+    },
+    {
+      "id": "11-18-leanna-firestone-with-sydney-sprague",
+      "date": "2026-11-18",
+      "start": "18:00",
+      "title": "Leanna Firestone with Sydney Sprague",
+      "venue": "The Ritz",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "Internet-grown confessional pop that works better in a 500-cap room than the streaming numbers suggest. Doors six."
+    },
+    {
+      "id": "11-18-roosters-comedy-showcase",
+      "date": "2026-11-18",
+      "start": "20:00",
+      "title": "Roosters Comedy Showcase",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "The club's midweek showcase of whoever is passing through. $23."
+    },
+    {
+      "id": "11-18-gianmarco-soresi",
+      "date": "2026-11-18",
+      "start": "19:30",
+      "title": "Gianmarco Soresi",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "First of a ten-show, five-night run — the New York comic whose crowd work travels better than his specials. Second show 9:45. On a wait list."
+    },
+    {
+      "id": "11-18-rachel-willis-srensen-vocal-recital",
+      "date": "2026-11-18",
+      "start": "19:30",
+      "title": "Rachel Willis-Sørensen Vocal Recital",
+      "venue": "Bing Concert Hall",
+      "city": "Stanford",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "note": "The American soprano in recital rather than in costume — a Bing Hall booking that would be a main-stage night anywhere else."
+    },
+    {
+      "id": "11-18-the-marriage-of-figaro",
+      "date": "2026-11-18",
+      "start": "19:30",
+      "title": "The Marriage of Figaro",
+      "venue": "War Memorial Opera House",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "price": "from $30",
+      "note": "San Francisco Opera's Figaro, in a run to 29 November. The Wednesday has the best remaining availability of the week. From $30."
+    },
+    {
+      "id": "11-18-jim-brickman-piano-sensation-and-a-little-bit-of-christm",
+      "date": "2026-11-18",
+      "title": "Jim Brickman: Piano Sensation and a Little Bit of Christmas",
+      "venue": "Fox Theatre",
+      "city": "Redwood City",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Adult-contemporary piano with the holiday repertoire creeping in. The Fox publishes no time."
+    },
+    {
+      "id": "11-18-as-i-lay-dying-with-the-curse-within",
+      "date": "2026-11-18",
+      "start": "19:30",
+      "title": "As I Lay Dying with The Curse Within",
+      "venue": "The Catalyst",
+      "city": "Santa Cruz",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "price": "$40-45",
+      "confidence": "low",
+      "note": "Metalcore with a complicated history. Does not clear the drive from Mountain View; noted because the band also plays Berkeley on Thursday."
+    },
+    {
+      "id": "11-18-michael-nau",
+      "date": "2026-11-18",
+      "title": "Michael Nau",
+      "venue": "The Crepe Place",
+      "city": "Santa Cruz",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Cotton Jones's songwriter, playing the smallest room on his run. Found on the sweep."
+    },
+    {
+      "id": "11-19-the-mountain-goats-night-four-the-sunset-tree",
+      "date": "2026-11-19",
+      "title": "The Mountain Goats — Night Four: The Sunset Tree",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "featured": true,
+      "note": "The Sunset Tree played whole — the 2005 record about surviving a stepfather, and the one most of the room came for. The night of the six to pick if you pick one."
+    },
+    {
+      "id": "11-19-rz-se-esta-haciendo-tarde",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "RØZ: Se Está Haciendo Tarde",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "latin and cumbia",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "Mexican alt-pop on the Monster Energy Outbreak run — a Spanish-language booking in a 2,300-cap room, which the city gets less often than it should."
+    },
+    {
+      "id": "11-19-pretty-sick-with-sex-week",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "Pretty Sick with Sex Week",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "Sabrina Fuentes's band, grunge bones with a bass player's sense of where the hook lives."
+    },
+    {
+      "id": "11-19-ruby-ibarra-with-the-balikbayans-carl-angelo-amihan",
+      "date": "2026-11-19",
+      "start": "20:30",
+      "title": "Ruby Ibarra with The Balikbayans, Carl Angelo, Amihan",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "price": "$25-30",
+      "note": "Filipina-American rapper from the South Bay who writes in English and Tagalog and whose live band gives the records teeth. A hometown bill four deep. Doors 7:30, $25 advance."
+    },
+    {
+      "id": "11-19-brothel-in-belize-machine-machine-fall-2026",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "Brothel In Belize: Machine Machine Fall 2026",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "$40.85",
+      "note": "A one-night label showcase under its own name. Doors seven, $41."
+    },
+    {
+      "id": "11-19-cannelle-with-baldgirl",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "Cannelle with Baldgirl",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "world and traditional"
+      ],
+      "cost": "ticketed",
+      "price": "$18-22",
+      "note": "French-American folk sung mostly in French, fingerpicked and very quiet. $18–22."
+    },
+    {
+      "id": "11-19-internet-girl-with-oshe",
+      "date": "2026-11-19",
+      "start": "19:00",
+      "title": "Internet Girl with OSHE",
+      "venue": "Café du Nord",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "Hyperpop built from blown-out guitars and a laptop. Doors seven, all ages."
+    },
+    {
+      "id": "11-19-dj-stingray-throttle-techno",
+      "date": "2026-11-19",
+      "title": "DJ Stingray: Throttle Techno",
+      "venue": "1015 Folsom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "Sherard Ingram in the balaclava, playing electro at the speed Drexciya meant it. One of the best DJ bookings of the month; 1015 lists no set time."
+    },
+    {
+      "id": "11-19-after-dark-industrial-dance-party",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "After Dark Industrial Dance Party",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "EBM, industrial and coldwave on the Knockout's floor. Off the DICE calendar."
+    },
+    {
+      "id": "11-19-perennial-beats-happy-hour",
+      "date": "2026-11-19",
+      "start": "18:00",
+      "title": "Perennial Beats Happy Hour",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "Records from six, no cover, before the industrial night takes the room."
+    },
+    {
+      "id": "11-19-two-runner-with-dessert-boys",
+      "date": "2026-11-19",
+      "start": "19:00",
+      "title": "Two Runner with Dessert Boys",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "A fiddle-and-banjo duo out of the Sierra foothills who play old-time music without the costume. Off the DICE calendar."
+    },
+    {
+      "id": "11-19-dj-maryzelle",
+      "date": "2026-11-19",
+      "start": "22:00",
+      "title": "DJ Maryzelle",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "free",
+      "note": "Late set after the Two Runner show, off the DICE calendar."
+    },
+    {
+      "id": "11-19-computerwife-with-double-helix-peace-treaty",
+      "date": "2026-11-19",
+      "title": "Computerwife with Double Helix Peace Treaty",
+      "venue": "4 Star Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Bedroom-made guitar pop in a converted Richmond cinema. Songkick carries the music; the repertory film side of the room is not readable."
+    },
+    {
+      "id": "11-19-stanley-kubrick-s-the-killing-4k-restoration",
+      "date": "2026-11-19",
+      "start": "18:00",
+      "title": "Stanley Kubrick's The Killing (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Kubrick's 1956 racetrack heist, the first film where the structure is the point. Restored, and short enough to make a double bill of the evening."
+    },
+    {
+      "id": "11-19-wild-at-heart-4k-restoration-costume-night",
+      "date": "2026-11-19",
+      "start": "20:30",
+      "title": "Wild at Heart (4K restoration) — costume night",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Lynch's Palme d'Or winner with free popcorn for anyone in costume. The listing still refers to Halloween, three weeks after it."
+    },
+    {
+      "id": "11-19-love-birds-with-judy-irving-in-person",
+      "date": "2026-11-19",
+      "start": "16:00",
+      "title": "Love Birds, with Judy Irving in person",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A screening with a post-film conversation moderated by Irving, who made The Wild Parrots of Telegraph Hill."
+    },
+    {
+      "id": "11-19-nightlife-you-your-friends-and-60-000-creatures",
+      "date": "2026-11-19",
+      "start": "18:00",
+      "title": "NightLife: You, Your Friends and 60,000 Creatures",
+      "venue": "California Academy of Sciences",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum",
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "price": "$26",
+      "note": "The Academy's 21+ Thursday — the aquarium, the rainforest and the planetarium after dark with a bar in them. Six till ten, last entry nine, $26."
+    },
+    {
+      "id": "11-19-waterfront-walkabout-the-holiday-season-finale",
+      "date": "2026-11-19",
+      "start": "17:00",
+      "title": "Waterfront Walkabout: The Holiday Season Finale",
+      "venue": "The Embarcadero",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor",
+        "museum"
+      ],
+      "venue_type": "street",
+      "cost": "free-ticketed",
+      "outdoor": true,
+      "note": "The last Big Art Loop stroll of the year, Pier 14 to the Exploratorium, five till eight. Free; RSVP for the guided version."
+    },
+    {
+      "id": "11-19-micro-to-macro-microorganisms-sound-and-robots",
+      "date": "2026-11-19",
+      "title": "Micro to Macro: Microorganisms, Sound and Robots",
+      "venue": "Gray Area, Grand Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "museum"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Scott Kildall and Kal Spelletich on building machines that listen to bacteria. Gray Area publishes no time."
+    },
+    {
+      "id": "11-19-transcendence-free-choral-music-and-poetry-readings",
+      "date": "2026-11-19",
+      "start": "19:30",
+      "title": "Transcendence: Free Choral Music and Poetry Readings",
+      "venue": "Transcendence",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "talk"
+      ],
+      "venue_type": "church",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "free",
+      "confidence": "low",
+      "note": "Choral music interleaved with poetry, free with a suggested donation. Funcheap names no room, so the venue is unconfirmed."
+    },
+    {
+      "id": "11-19-16th-and-mission-open-mic",
+      "date": "2026-11-19",
+      "start": "21:00",
+      "title": "16th and Mission Open Mic",
+      "venue": "16th & Mission BART Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "No stage, no microphone, no bookers. It has been running on that plaza for years and is the most purely public performance in the city."
+    },
+    {
+      "id": "11-19-salt-spirit-an-operatic-experience-rooted-in-gullah-geec",
+      "date": "2026-11-19",
+      "start": "19:30",
+      "title": "Salt & Spirit: An Operatic Experience Rooted in Gullah-Geechee Spirituals",
+      "venue": "Z Space",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "note": "Opera Parallèle's world premiere, built on Gullah-Geechee spirituals, on the Steindler Stage. Second of three remaining performances after last week's opening; the other is Saturday."
+    },
+    {
+      "id": "11-19-gwar-with-midnight-nailed-shut-and-mac-sabbath",
+      "date": "2026-11-19",
+      "start": "19:00",
+      "title": "GWAR with Midnight, Nailed Shut and Mac Sabbath",
+      "venue": "The UC Theatre",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "metal",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$45",
+      "note": "Forty years of latex and fake blood, with Cleveland's Midnight and a McDonald's-themed Sabbath tribute beneath them. Sold out. Doors six, show 7:45, $45."
+    },
+    {
+      "id": "11-19-pretty-lights",
+      "date": "2026-11-19",
+      "start": "19:30",
+      "title": "Pretty Lights",
+      "venue": "Fox Theater",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "First of three nights of Derek Vincent Smith's sample-built electro-soul, now with a live band. Doors 6:30. BART — the garage gates shut at seven."
+    },
+    {
+      "id": "11-19-katseye",
+      "date": "2026-11-19",
+      "title": "KATSEYE",
+      "venue": "Oakland Arena",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "arena",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "note": "The globally assembled girl group's arena run. Deprioritised by the brief and findable without it; listed for completeness."
+    },
+    {
+      "id": "11-19-as-i-lay-dying",
+      "date": "2026-11-19",
+      "title": "As I Lay Dying",
+      "venue": "Cornerstone",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Berkeley date, a night after Santa Cruz. Cornerstone's calendar did not load; found on the sweep."
+    },
+    {
+      "id": "11-19-brian-culbertson",
+      "date": "2026-11-19",
+      "title": "Brian Culbertson",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "$89-139",
+      "note": "Third and last of the sold-out run. $89–139."
+    },
+    {
+      "id": "11-19-corey-harris-with-cedric-watson",
+      "date": "2026-11-19",
+      "title": "Corey Harris with Cedric Watson",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "folk and americana",
+        "world and traditional"
+      ],
+      "cost": "ticketed",
+      "note": "Delta blues guitar and Creole fiddle on one bill — Harris plays the pre-war repertoire straight, Watson sings in Louisiana French."
+    },
+    {
+      "id": "11-19-el-tee-with-maiden-mare-and-hallie-austin",
+      "date": "2026-11-19",
+      "title": "El Tee with Maiden Mare and Hallie Austin",
+      "venue": "Ivy Room",
+      "city": "Albany",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Three songwriters on an Albany bill. Through JamBase, which gives no time."
+    },
+    {
+      "id": "11-19-cycotic-youth-terminally-ill-and-more",
+      "date": "2026-11-19",
+      "start": "18:20",
+      "title": "Cycotic Youth, Terminally Ill and more",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Five dollars, all ages, volunteer-run, as it has been since 1986."
+    },
+    {
+      "id": "11-19-la-chinoise",
+      "date": "2026-11-19",
+      "start": "19:00",
+      "title": "La Chinoise",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Godard's 1967 film about students playing at Maoism, which is funnier and crueller than its reputation."
+    },
+    {
+      "id": "11-19-poc-comedy-night",
+      "date": "2026-11-19",
+      "start": "19:00",
+      "title": "POC Comedy Night",
+      "venue": "Mesa Maguey",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "Temescal's Thursday room, free with an RSVP."
+    },
+    {
+      "id": "11-19-the-who-s-tommy",
+      "date": "2026-11-19",
+      "start": "19:30",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Third of six performances."
+    },
+    {
+      "id": "11-19-gianmarco-soresi",
+      "date": "2026-11-19",
+      "start": "19:30",
+      "title": "Gianmarco Soresi",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "Second night of the run; late show 9:45."
+    },
+    {
+      "id": "11-19-corey-o-brien",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "Corey O'Brien",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "A night of the Sunnyvale club's own booking. $40."
+    },
+    {
+      "id": "11-19-world-ballet-company-swan-lake",
+      "date": "2026-11-19",
+      "title": "World Ballet Company: Swan Lake",
+      "venue": "Heritage Theatre",
+      "city": "Campbell",
+      "geo": "south-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A touring Swan Lake. The Heritage publishes no time and its own events page shows nothing this week; from the resale feed."
+    },
+    {
+      "id": "11-19-free-grant-yun-interactive-3d-landscape-art-experience",
+      "date": "2026-11-19",
+      "start": "12:00",
+      "title": "Free Grant Yun Interactive 3D Landscape Art Experience",
+      "venue": "180 University Avenue",
+      "city": "Palo Alto",
+      "geo": "peninsula",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "gallery",
+      "cost": "free",
+      "note": "A free walk-in installation of the painter's flat-plane landscapes rebuilt in three dimensions, noon till ten."
+    },
+    {
+      "id": "11-19-filoli-unwrapped",
+      "date": "2026-11-19",
+      "start": "11:00",
+      "title": "Filoli Unwrapped",
+      "venue": "Filoli",
+      "city": "Woodside",
+      "geo": "peninsula",
+      "type": [
+        "talk",
+        "museum"
+      ],
+      "venue_type": "estate",
+      "cost": "ticketed",
+      "note": "The second of three this week."
+    },
+    {
+      "id": "11-19-michael-nau",
+      "date": "2026-11-19",
+      "title": "Michael Nau",
+      "venue": "HopMonk Tavern",
+      "city": "Novato",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Session Room date, a night after Santa Cruz. Does not clear the drive; recorded rather than recommended."
+    },
+    {
+      "id": "11-19-rosebud-and-shaky-feelin",
+      "date": "2026-11-19",
+      "title": "Rosebud and Shaky Feelin'",
+      "venue": "Felton Music Hall",
+      "city": "Felton",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "reggae"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Local reggae-rock double bill in the redwoods. Below the outer bar."
+    },
+    {
+      "id": "11-20-the-mountain-goats-night-five-cast-of-thousands",
+      "date": "2026-11-20",
+      "title": "The Mountain Goats — Night Five: Cast of Thousands",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "Night five goes back to 2002's Cast of Thousands, the record that marked the end of the boombox years. No door time published."
+    },
+    {
+      "id": "11-20-the-complete-philip-glass-piano-etudes",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "The Complete Philip Glass Piano Etudes",
+      "venue": "Zellerbach Hall",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "featured": true,
+      "note": "All twenty etudes in one sitting, divided among ten pianists — Timo Andres, Aaron Diehl, Daniela Liebman and Jason Moran among them. Glass is not attending. The most ambitious single programme of the week and it only happens once."
+    },
+    {
+      "id": "11-20-hug-gyan-riley-devendra-banhart-noah-georgeson",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "HUG: Gyan Riley, Devendra Banhart, Noah Georgeson",
+      "venue": "Bimbo's 365 Club",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "note": "Three players who have orbited each other for twenty years — Riley's classical guitar, Banhart's voice, Georgeson's production — in a room with red velvet and a chandelier. Doors seven."
+    },
+    {
+      "id": "11-20-carl-cox-with-seth-troxler",
+      "date": "2026-11-20",
+      "title": "Carl Cox with Seth Troxler",
+      "venue": "Pier 48",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Two generations of techno in a warehouse on the waterfront. Found on the sweep; no set times published, and a pier is not a venue with a calendar."
+    },
+    {
+      "id": "11-20-earthless-with-terry-gross-and-carlton-melton",
+      "date": "2026-11-20",
+      "start": "20:30",
+      "title": "Earthless with Terry Gross and Carlton Melton",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "price": "$25-30",
+      "note": "San Diego instrumental psych that treats a riff as a twenty-minute proposition, on a bill with two Bay Area bands of the same mind. Sold out. Doors 7:30, $25 advance."
+    },
+    {
+      "id": "11-20-eivr-with-midori-jaeger",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "Eivør with midori jaeger",
+      "venue": "August Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "world and traditional",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "Faroese singer whose records sit between folk ballad and electronic drone; the voice carries most of it unaccompanied."
+    },
+    {
+      "id": "11-20-maddie-zahm-everything-all-the-time-with-oston",
+      "date": "2026-11-20",
+      "start": "21:00",
+      "title": "Maddie Zahm: Everything All The Time, with OSTON",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "price": "$28-33",
+      "note": "Confessional pop about leaving evangelical Idaho. Doors eight, $28–33."
+    },
+    {
+      "id": "11-20-natural-child-with-buzzed-lightbeer-milk-for-the-angry-c",
+      "date": "2026-11-20",
+      "start": "21:00",
+      "title": "Natural Child with Buzzed Lightbeer, Milk for the Angry, Catnip",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore",
+        "country"
+      ],
+      "cost": "ticketed",
+      "price": "$25-30",
+      "note": "Nashville boogie-rock, loose on purpose, with three local bands under them. Doors eight, $25–30."
+    },
+    {
+      "id": "11-20-anthony-jeselnik",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "Anthony Jeselnik",
+      "venue": "The Masonic",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "note": "Two nights of the most precisely written mean jokes in American stand-up. No support."
+    },
+    {
+      "id": "11-20-danna-the-bedroom-sessions",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "DANNA: The Bedroom Sessions",
+      "venue": "Castro Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "latin and cumbia",
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "note": "Danna Paola, the Mexican pop star, in a 1,400-seat cinema rather than an arena — the stripped-back version of the show."
+    },
+    {
+      "id": "11-20-layton-giordani",
+      "date": "2026-11-20",
+      "title": "Layton Giordani",
+      "venue": "Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "New York techno, built for big rooms. The Regency publishes no times."
+    },
+    {
+      "id": "11-20-james-hype-with-hans-glader",
+      "date": "2026-11-20",
+      "title": "James Hype with Hans Glader",
+      "venue": "The Midway",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Technical, tightly mixed house for a very large room. Through Songkick; The Midway lists no set times."
+    },
+    {
+      "id": "11-20-hiroko-yamamura-and-fjaak",
+      "date": "2026-11-20",
+      "title": "Hiroko Yamamura and FJAAK",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Chicago techno and Berlin hardware live. Public Works' own site sat behind a verification wall this run; from the sweep."
+    },
+    {
+      "id": "11-20-westend-with-tobehonest",
+      "date": "2026-11-20",
+      "start": "22:00",
+      "title": "Westend with TOBEHONEST",
+      "venue": "1015 Folsom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Tech-house on the main floor. No set time published."
+    },
+    {
+      "id": "11-20-cool-customer-and-chris-karns",
+      "date": "2026-11-20",
+      "start": "22:00",
+      "title": "Cool Customer and Chris Karns",
+      "venue": "The Foundry SF",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "note": "Doors ten, 21+. Karns is a turntablist with a DMC title behind him."
+    },
+    {
+      "id": "11-20-paul-collins-the-best-of-the-nerves-the-beat-and-the-exp",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Paul Collins: The Best of The Nerves, The Beat and The Exploding Hearts — Night 1",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "punk and hardcore",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "Collins wrote Hanging on the Telephone before Blondie recorded it, and this is two nights of that songbook in a 150-cap bar. Off the DICE calendar."
+    },
+    {
+      "id": "11-20-bop-nite-djs",
+      "date": "2026-11-20",
+      "start": "22:00",
+      "title": "Bop Nite DJs",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Sold out. The late room after the Paul Collins set."
+    },
+    {
+      "id": "11-20-love-t-k-o-disco-dance-party",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "Love T.K.O. Disco Dance Party",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "Seventies disco and sweet soul on 45s. Off the DICE calendar, which carries this night twice; it is one party."
+    },
+    {
+      "id": "11-20-black-vinyl-happy-hour",
+      "date": "2026-11-20",
+      "start": "17:00",
+      "title": "Black Vinyl Happy Hour",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "free",
+      "note": "Records from five, no cover."
+    },
+    {
+      "id": "11-20-babehoven",
+      "date": "2026-11-20",
+      "title": "Babehoven",
+      "venue": "4 Star Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Maya Bon's slow, close-miked songs in the Richmond cinema. Songkick gives no time."
+    },
+    {
+      "id": "11-20-zhang-yimou-s-raise-the-red-lantern-4k-restoration",
+      "date": "2026-11-20",
+      "start": "18:00",
+      "title": "Zhang Yimou's Raise the Red Lantern (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The 1991 film restored, co-presented with the Bay Area Chinese Culture Salon. Gong Li in the role that made her."
+    },
+    {
+      "id": "11-20-new-people-soul-patrol-with-j-m-harper-in-person",
+      "date": "2026-11-20",
+      "start": "18:00",
+      "title": "New People: Soul Patrol, with J.M. Harper in person",
+      "venue": "New People Cinema",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The director in the room afterwards. Japantown, 1746 Post Street."
+    },
+    {
+      "id": "11-20-new-people-in-the-mood-for-love",
+      "date": "2026-11-20",
+      "start": "20:40",
+      "title": "New People: In the Mood for Love",
+      "venue": "New People Cinema",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Wong Kar-wai's 2000 film in the Japantown cinema — the right size of screen for it."
+    },
+    {
+      "id": "11-20-aliens-special-edition",
+      "date": "2026-11-20",
+      "start": "20:45",
+      "title": "Aliens (Special Edition)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The long cut, with the sentry guns back in."
+    },
+    {
+      "id": "11-20-movies-at-mechanics-presents",
+      "date": "2026-11-20",
+      "start": "18:00",
+      "title": "Movies at Mechanics' Presents",
+      "venue": "Mechanics' Institute",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Six till eight at 57 Post Street, in the 1854 library's own room. $5 members, $10 otherwise; the title is not published in advance on the readable listing."
+    },
+    {
+      "id": "11-20-odc-presents-global-dance-passport-fall-2026",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "ODC Presents: Global Dance Passport Fall 2026",
+      "venue": "ODC Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "ODC's survey of resident and visiting companies — the Mission's dance house doing what it is for. Three performances across Friday and Saturday."
+    },
+    {
+      "id": "11-20-japanese-tea-garden-free-admission-hour",
+      "date": "2026-11-20",
+      "start": "09:00",
+      "title": "Japanese Tea Garden Free Admission Hour",
+      "venue": "Japanese Tea Garden, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor",
+        "museum"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "The last free hour of the week, nine to ten."
+    },
+    {
+      "id": "11-20-from-the-e-harvest-night-market",
+      "date": "2026-11-20",
+      "start": "16:30",
+      "title": "From the E: Harvest Night Market",
+      "venue": "Ocean Avenue at Mission Street",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free-ticketed",
+      "outdoor": true,
+      "note": "An Outer Mission street market with food stalls and makers, free with an RSVP — the sort of neighbourhood programming that never reaches a ticketing platform."
+    },
+    {
+      "id": "11-20-film-defiant-to-the-last-the-tule-lake-jail",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Film: Defiant to the Last — the Tule Lake Jail",
+      "venue": "Tule Lake film screening",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "confidence": "low",
+      "note": "A free documentary on the stockade at the Tule Lake incarceration camp. Funcheap names no room, so the venue is unconfirmed."
+    },
+    {
+      "id": "11-20-john-waters-cult-cinema-night-cry-baby-and-serial-mom",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "John Waters Cult Cinema Night: Cry-Baby and Serial Mom",
+      "venue": "John Waters double bill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$15-25",
+      "confidence": "low",
+      "note": "A double bill of Waters's two most watchable studio pictures. $15–25; the listing names no cinema."
+    },
+    {
+      "id": "11-20-trash-prom-walk-of-shame-runway-as-performance-art",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Trash Prom Walk of Shame: Runway as Performance Art",
+      "venue": "Monument",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "theater"
+      ],
+      "venue_type": "gallery",
+      "cost": "ticketed",
+      "price": "$25",
+      "note": "Wearable sculpture made from refuse, walked down a runway in a design showroom. $25."
+    },
+    {
+      "id": "11-20-lofi-lounge-vinyl-dj-pop-up",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Lofi Lounge Vinyl DJ Pop Up",
+      "venue": "PABU Izakaya",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "Seven till ten, records in a downtown izakaya. Free."
+    },
+    {
+      "id": "11-20-sf-neo-futurists-the-infinite-wrench",
+      "date": "2026-11-20",
+      "start": "21:00",
+      "title": "SF Neo-Futurists: The Infinite Wrench",
+      "venue": "447 Minna Street",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$13-16",
+      "note": "Thirty plays in sixty minutes, the order set by the audience shouting numbers. Running weekly; $13 at the door, $16 online."
+    },
+    {
+      "id": "11-20-pretty-lights",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "Pretty Lights",
+      "venue": "Fox Theater",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Second of three nights. Doors 6:30; take BART."
+    },
+    {
+      "id": "11-20-gerald-albright",
+      "date": "2026-11-20",
+      "title": "Gerald Albright",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$38-89",
+      "note": "Two nights of the saxophonist's funk-leaning jazz. $38–89."
+    },
+    {
+      "id": "11-20-haley-heynderickx-with-greg-mendez",
+      "date": "2026-11-20",
+      "title": "Haley Heynderickx with Greg Mendez",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "Portland fingerstyle songs that take sudden loud turns, with Philadelphia's Greg Mendez, who writes the quietest devastating verses going. The best folk bill of the week."
+    },
+    {
+      "id": "11-20-mdc-with-damage-party-and-fast-friends",
+      "date": "2026-11-20",
+      "title": "MDC with Damage Party and Fast Friends",
+      "venue": "Ivy Room",
+      "city": "Albany",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Millions of Dead Cops, forty-plus years on, the night before they co-headline Potrero. Through JamBase; no time."
+    },
+    {
+      "id": "11-20-dev-lemons",
+      "date": "2026-11-20",
+      "title": "Dev Lemons",
+      "venue": "Cornerstone",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Pop songwriting explained and then performed. Cornerstone's calendar did not load; from the sweep."
+    },
+    {
+      "id": "11-20-bad-camper-dark-satellite-the-morning-drive",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Bad Camper, Dark Satellite, The Morning Drive",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Five dollars, all ages."
+    },
+    {
+      "id": "11-20-harakiri",
+      "date": "2026-11-20",
+      "start": "16:00",
+      "title": "Harakiri",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Kobayashi's 1962 film, the one that takes the samurai code apart from the inside. Four in the afternoon."
+    },
+    {
+      "id": "11-20-cinespin-he-who-gets-slapped",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "CineSpin: He Who Gets Slapped",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film",
+        "concert"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "The 1924 Chaney silent with a live score — BAMPFA's CineSpin series, which is the best reason to be in Berkeley on a Friday night."
+    },
+    {
+      "id": "11-20-hellasecret-speakeasy-comedy-show",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "HellaSecret Speakeasy Comedy Show",
+      "venue": "HellaSecret",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "confidence": "low",
+      "note": "Address sent on RSVP, free with the code. Standing Friday night."
+    },
+    {
+      "id": "11-20-free-all-bipoc-drag-king-show-with-dark-electronic-djs",
+      "date": "2026-11-20",
+      "start": "22:00",
+      "title": "Free All-BIPOC Drag King Show with Dark Electronic DJs",
+      "venue": "there/there",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "ticketed",
+      "price": "$5-15",
+      "note": "A drag king bill with industrial DJs after, sliding scale $5–15 and free for Black queer and trans attendees."
+    },
+    {
+      "id": "11-20-the-who-s-tommy",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Fourth of six performances."
+    },
+    {
+      "id": "11-20-opera-san-jose-fiddler-on-the-roof",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "Opera San José: Fiddler on the Roof",
+      "venue": "California Theatre",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "note": "Opera San José staging Bock and Harnick with opera voices and an orchestra in the pit, which changes the show. In a run to 29 November."
+    },
+    {
+      "id": "11-20-shoreline-mafia-who-want-the-smoke-2026",
+      "date": "2026-11-20",
+      "start": "18:00",
+      "title": "Shoreline Mafia: Who Want The Smoke 2026",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "arena",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "note": "A West Coast rap package — SOB x RBE, Mike Sherm, 03 Greedo, Kamaiyah and more beneath Shoreline Mafia. An arena bill, but an unusually deep one."
+    },
+    {
+      "id": "11-20-mike-sherm",
+      "date": "2026-11-20",
+      "start": "22:00",
+      "title": "Mike Sherm",
+      "venue": "PURE Nightclub",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "note": "An afterparty set the same night he plays the SAP Center package. Ten o'clock, 21+."
+    },
+    {
+      "id": "11-20-gianmarco-soresi",
+      "date": "2026-11-20",
+      "start": "19:30",
+      "title": "Gianmarco Soresi",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "Third night; late show 9:45."
+    },
+    {
+      "id": "11-20-ryan-goodcase",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "Ryan Goodcase",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "Two nights at the Sunnyvale club. $39."
+    },
+    {
+      "id": "11-20-harriet-trying-to-get-the-feeling-again",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Harriet: Trying to Get the Feeling Again",
+      "venue": "Heritage Theatre",
+      "city": "Campbell",
+      "geo": "south-bay",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A one-woman Karen Carpenter show. From the resale feed; the Heritage's own events page shows nothing this week."
+    },
+    {
+      "id": "11-20-pablo-cruise",
+      "date": "2026-11-20",
+      "title": "Pablo Cruise",
+      "venue": "Carriage House Theatre, Montalvo",
+      "city": "Saratoga",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "pop and k-pop"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "San Francisco yacht-rock, still fronted by Dave Jenkins. Montalvo's season page carries the date and no time."
+    },
+    {
+      "id": "11-20-neuroscience-for-drummers-fred-armisen-and-dr-david-eagl",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Neuroscience for Drummers: Fred Armisen and Dr David Eagleman",
+      "venue": "The Guild Theatre",
+      "city": "Menlo Park",
+      "geo": "peninsula",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Armensen drums, Eagleman explains what the brain is doing while he does. Odd, specific and exactly what the brief's talks-and-oddities column is for. Doors six."
+    },
+    {
+      "id": "11-20-asim-azhar-live-in-bay-area",
+      "date": "2026-11-20",
+      "title": "Asim Azhar Live in Bay Area",
+      "venue": "Fox Theatre",
+      "city": "Redwood City",
+      "geo": "peninsula",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "pop and k-pop",
+        "world and traditional"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Pakistani pop singer on a promoter-sold date; the Fox directs ticket questions to the promoter and publishes no time."
+    },
+    {
+      "id": "11-20-colma-asian-night-market-and-parol-lantern-workshop",
+      "date": "2026-11-20",
+      "start": "17:00",
+      "title": "Colma Asian Night Market and Parol Lantern Workshop",
+      "venue": "Colma Community Center",
+      "city": "Colma",
+      "geo": "peninsula",
+      "type": [
+        "market",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "outdoor": true,
+      "featured": true,
+      "note": "Free night market on the community centre lot with a Filipino lantern-making workshop in it. BART Colma genuinely beats driving."
+    },
+    {
+      "id": "11-20-the-seeds-and-love-with-johnny-echols",
+      "date": "2026-11-20",
+      "title": "The Seeds and Love with Johnny Echols",
+      "venue": "Sweetwater Music Hall",
+      "city": "Mill Valley",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Echols played lead guitar on Forever Changes, which is a real reason to drive to Marin — but it is one of two legacy bills in the same week and Berkeley has the stronger one."
+    },
+    {
+      "id": "11-20-andrew-mcmahon-and-his-piano-with-ivory-layne",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "Andrew McMahon and his piano, with Ivory Layne",
+      "venue": "Felton Music Hall",
+      "city": "Felton",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The solo piano version, a night before the San Francisco date. Does not clear the drive when the same show plays the Great American on Saturday."
+    },
+    {
+      "id": "11-20-city-center-tree-lighting-celebration",
+      "date": "2026-11-20",
+      "start": "18:00",
+      "title": "City Center Tree Lighting Celebration",
+      "venue": "City Center Bishop Ranch",
+      "city": "San Ramon",
+      "geo": "east-bay",
+      "type": [
+        "outdoor",
+        "festival"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "confidence": "low",
+      "note": "Free, outdoors, six o'clock. San Ramon is not in any region's list; filed east-bay by proximity."
+    },
+    {
+      "id": "11-21-the-mountain-goats-night-six-closers",
+      "date": "2026-11-21",
+      "title": "The Mountain Goats — Night Six: Closers",
+      "venue": "The Fillmore",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "indie and art rock",
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "The last night of six, built from album closers — which for this band is a set of endings rather than a greatest hits. No door time published."
+    },
+    {
+      "id": "11-21-jason-moran-and-the-harlem-hellfighters-james-reese-euro",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "Jason Moran and the Harlem Hellfighters: James Reese Europe and the Absence of Ruin",
+      "venue": "Zellerbach Hall",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "from $59",
+      "featured": true,
+      "note": "Moran's piece on James Reese Europe, who took ragtime to the trenches with the 369th and was killed by his own drummer — a seven-piece horn section and Bradford Young's images. Cal Performances' Illuminations strand. From $59."
+    },
+    {
+      "id": "11-21-salt-spirit-an-operatic-experience-rooted-in-gullah-geec",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "Salt & Spirit: An Operatic Experience Rooted in Gullah-Geechee Spirituals",
+      "venue": "Z Space",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "featured": true,
+      "note": "The last performance of Opera Parallèle's world premiere on the Steindler Stage. It will not come round in this form."
+    },
+    {
+      "id": "11-21-the-42nd-great-dickens-christmas-fair",
+      "date": "2026-11-21",
+      "start": "10:00",
+      "title": "The 42nd Great Dickens Christmas Fair",
+      "venue": "Cow Palace",
+      "city": "Daly City",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "market",
+        "theater"
+      ],
+      "venue_type": "convention-center",
+      "cost": "ticketed",
+      "price": "from $35",
+      "note": "Opening weekend of the five-acre Victorian London built inside the Cow Palace — music halls, a dozen stages, hundreds of costumed performers. Ten till six, online tickets only from about $35, $20 to park. Daly City is in no region's list; filed peninsula by proximity."
+    },
+    {
+      "id": "11-21-the-residents-eskimo-live",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "The Residents: ESKIMO LIVE",
+      "venue": "Palace of Fine Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "theater"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "featured": true,
+      "note": "The eyeball-headed San Francisco institution performing their 1979 Eskimo whole. Fifty-plus years of anonymity and nobody has yet made a better case for it."
+    },
+    {
+      "id": "11-21-brutalismus-3000-harmony-us-tour",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "Brutalismus 3000: Harmony US Tour",
+      "venue": "The Warfield",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "electronic and club",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "Berlin's gabber-punk duo with four local DJs under them. The venue's own site has this date; the mirrors also put the act at the Regency on Sunday, which may be an error in them."
+    },
+    {
+      "id": "11-21-q-with-rahm",
+      "date": "2026-11-21",
+      "start": "21:00",
+      "title": "Q with RAHM",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Q Marsden's warped, slow R&B, closer to Shuggie Otis than to anything current."
+    },
+    {
+      "id": "11-21-m-d-c-and-frightwig-with-class-of-77",
+      "date": "2026-11-21",
+      "start": "20:30",
+      "title": "M.D.C. and Frightwig with Class of '77",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$20-23",
+      "note": "Two first-wave bands co-headlining — Texas's MDC and San Francisco's Frightwig, who were doing it here first. In a club with six weeks left to live. Doors eight, $20."
+    },
+    {
+      "id": "11-21-andrew-mcmahon-and-his-piano-with-ivory-layne",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Andrew McMahon and his piano, with Ivory Layne",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "cost": "ticketed",
+      "price": "$51-85",
+      "note": "Doors six, show seven. $51–85."
+    },
+    {
+      "id": "11-21-agriculture-with-dry-socket-and-pure-hex",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "Agriculture with Dry Socket and Pure Hex",
+      "venue": "August Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "note": "Los Angeles's self-described ecstatic black metal, which is a real description and not a joke."
+    },
+    {
+      "id": "11-21-poi-dog-pondering-with-archer-monk",
+      "date": "2026-11-21",
+      "start": "21:00",
+      "title": "Poi Dog Pondering with Archer Monk",
+      "venue": "The Chapel",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana",
+        "world and traditional"
+      ],
+      "cost": "ticketed",
+      "price": "$28-33",
+      "note": "The Honolulu-then-Austin-then-Chicago collective, reassembled. Doors eight, $28–33."
+    },
+    {
+      "id": "11-21-emo-nite-at-rickshaw-stop",
+      "date": "2026-11-21",
+      "start": "21:00",
+      "title": "EMO NITE at Rickshaw Stop",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "price": "$20-22",
+      "note": "Guest DJs playing 2005 at volume. $20–22."
+    },
+    {
+      "id": "11-21-christian-death-with-black-season-witch",
+      "date": "2026-11-21",
+      "title": "Christian Death with Black Season Witch",
+      "venue": "DNA Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore",
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Deathrock's founding act, under Valor Kand for four decades now. Through DNA's mirrors only."
+    },
+    {
+      "id": "11-21-bertha-grateful-drag",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "BERTHA: Grateful Drag",
+      "venue": "Castro Theatre",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "note": "Drag performers doing the Grateful Dead songbook, which is a more natural fit than it sounds. Sold out."
+    },
+    {
+      "id": "11-21-wuki-with-jake-shore-and-9b49",
+      "date": "2026-11-21",
+      "title": "Wuki with Jake Shore and 9B49",
+      "venue": "The Midway",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "House and bass. No set times published."
+    },
+    {
+      "id": "11-21-deathpact-with-jiqui",
+      "date": "2026-11-21",
+      "title": "Deathpact with Jiqui",
+      "venue": "Public Works",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Anonymous bass music. Public Works' own site was behind a verification wall this run."
+    },
+    {
+      "id": "11-21-maddy-o-neal-with-thought-process",
+      "date": "2026-11-21",
+      "start": "22:00",
+      "title": "Maddy O'Neal with Thought Process",
+      "venue": "The Foundry SF",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "Doors ten. Livetronica, built from samples."
+    },
+    {
+      "id": "11-21-dj-paypal-with-cakedog-mars-kasei-tomu-dj-discnogirl",
+      "date": "2026-11-21",
+      "title": "DJ PAYPAL with cakedog, Mars Kasei, Tomu DJ, Discnogirl",
+      "venue": "F8",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Footwork and juke on a deep local bill — cakedog is Rashad Becker's partner in Teklife lineage and Tomu DJ is one of the best in the city. No set time published."
+    },
+    {
+      "id": "11-21-paul-collins-the-best-of-the-nerves-the-beat-and-the-exp",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Paul Collins: The Best of The Nerves, The Beat and The Exploding Hearts — Night 2",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "punk and hardcore",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "The second of two. Off the DICE calendar."
+    },
+    {
+      "id": "11-21-a-nuit-moderne-mod-and-soul-night",
+      "date": "2026-11-21",
+      "start": "23:00",
+      "title": "A Nuit Moderne: Mod and Soul Night",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Sold out. Northern soul and French yé-yé on 45s."
+    },
+    {
+      "id": "11-21-matinee-show-vaxholes-cheat-the-reaper-erik-core",
+      "date": "2026-11-21",
+      "start": "16:00",
+      "title": "Matinee Show: Vaxholes, Cheat the Reaper, Erik Core",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "A four o'clock punk matinee, which is the civilised way to do it. Off the DICE calendar."
+    },
+    {
+      "id": "11-21-love-supreme-dance-party-san-francisco-edition",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "Love Supreme Dance Party: San Francisco Edition",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "Soul and disco on the Knockout's floor after the matinee clears."
+    },
+    {
+      "id": "11-21-free-de-young-museum-day-for-bay-area-residents",
+      "date": "2026-11-21",
+      "start": "09:30",
+      "title": "Free de Young Museum Day for Bay Area Residents",
+      "venue": "de Young Museum, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "free-ticketed",
+      "note": "Free for Bay Area residents with ID on timed tickets — the monthly Saturday. Book ahead; it goes."
+    },
+    {
+      "id": "11-21-free-legion-of-honor-day-for-bay-area-residents",
+      "date": "2026-11-21",
+      "start": "09:30",
+      "title": "Free Legion of Honor Day for Bay Area Residents",
+      "venue": "Legion of Honor",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "free-ticketed",
+      "note": "Same museum group, same free Saturday, and the quieter of the two buildings."
+    },
+    {
+      "id": "11-21-sabado-gigante-free-native-arts-and-culture-fest",
+      "date": "2026-11-21",
+      "start": "11:00",
+      "title": "Sábado Gigante: Free Native Arts and Culture Fest",
+      "venue": "16th & Mission BART Plaza",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "festival",
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "featured": true,
+      "note": "Eleven till four on the plaza — Native makers, dance and music, free and outdoors. The best free thing in the city this Saturday."
+    },
+    {
+      "id": "11-21-fall-native-plant-fest-with-free-wildflower-seeds",
+      "date": "2026-11-21",
+      "start": "11:00",
+      "title": "Fall Native Plant Fest with Free Wildflower Seeds",
+      "venue": "Black Point Historic Gardens, Fort Mason",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Eleven till two in the Fort Mason gardens, free, and they send you home with seed."
+    },
+    {
+      "id": "11-21-secondhand-saturday-with-sunset-mercantile-season-finale",
+      "date": "2026-11-21",
+      "start": "10:00",
+      "title": "Secondhand Saturday with Sunset Mercantile — season finale",
+      "venue": "Sunset Community Mercantile",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "The last secondhand market of the year out in the Sunset. Free to browse."
+    },
+    {
+      "id": "11-21-sun-down-bass-up-free-dj-pop-up",
+      "date": "2026-11-21",
+      "start": "12:00",
+      "title": "Sun Down Bass Up: Free DJ Pop-Up",
+      "venue": "Crissy Field",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Records on the Airstrip Overlook trail with the bridge behind the decks. Free, RSVP requested, and bring a coat — it is Crissy Field in November."
+    },
+    {
+      "id": "11-21-winter-squash-celebration",
+      "date": "2026-11-21",
+      "start": "11:00",
+      "title": "Winter Squash Celebration",
+      "venue": "Ferry Building",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "food",
+        "market"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Eleven till one at the Saturday market: squash varieties you cannot buy in a shop, and cooks explaining what to do with them."
+    },
+    {
+      "id": "11-21-touki-bouki",
+      "date": "2026-11-21",
+      "start": "14:00",
+      "title": "Touki Bouki",
+      "venue": "Yerba Buena Center for the Arts",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "price": "$15",
+      "note": "Djibril Diop Mambéty's 1973 Senegalese film, the one that broke the realist mould of African cinema. $15 including gallery admission; $7.50 concessions."
+    },
+    {
+      "id": "11-21-the-host-4k-restoration",
+      "date": "2026-11-21",
+      "start": "21:15",
+      "title": "The Host (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Bong Joon-ho's monster picture at twenty, restored. Still the best argument that a creature feature can carry a political one."
+    },
+    {
+      "id": "11-21-odc-presents-global-dance-passport-fall-2026",
+      "date": "2026-11-21",
+      "start": "17:30",
+      "title": "ODC Presents: Global Dance Passport Fall 2026",
+      "venue": "ODC Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The 5:30 performance; there is a second at eight."
+    },
+    {
+      "id": "11-21-odc-presents-global-dance-passport-fall-2026-2",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "ODC Presents: Global Dance Passport Fall 2026",
+      "venue": "ODC Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The evening performance."
+    },
+    {
+      "id": "11-21-john-proctor-is-the-villain-teen-matinee",
+      "date": "2026-11-21",
+      "start": "14:00",
+      "title": "John Proctor Is the Villain — teen matinee",
+      "venue": "Toni Rembe Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Kimberly Belflower's play about a high-school Crucible unit and a Title IX complaint, in A.C.T.'s main house. The teen matinee at two is the only curtain time A.C.T. publishes this week — the company publishes no regular schedule anywhere on its site."
+    },
+    {
+      "id": "11-21-peter-pan-goes-wrong",
+      "date": "2026-11-21",
+      "title": "Peter Pan Goes Wrong",
+      "venue": "San Francisco Playhouse",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Mischief company's panto-disaster piece, in a run to 28 November. SF Playhouse publishes no per-performance times on any readable page, so this is the run and not a confirmed curtain."
+    },
+    {
+      "id": "11-21-sf-neo-futurists-the-infinite-wrench",
+      "date": "2026-11-21",
+      "start": "21:00",
+      "title": "SF Neo-Futurists: The Infinite Wrench",
+      "venue": "447 Minna Street",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$13-16",
+      "note": "Thirty plays in sixty minutes. $13 at the door with a die roll, $16 online."
+    },
+    {
+      "id": "11-21-lolah-with-strangepride-and-kiroshi",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Lolah with STRANGEPRIDE and kiroshi",
+      "venue": "O'Reilly's Pub",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A North Beach pub bill. From the sweep; no time published."
+    },
+    {
+      "id": "11-21-the-jungo-swank",
+      "date": "2026-11-21",
+      "title": "The Jungo Swank",
+      "venue": "Make-Out Room",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Mission bar, live band. From the sweep; no time."
+    },
+    {
+      "id": "11-21-spencer-day",
+      "date": "2026-11-21",
+      "title": "Spencer Day",
+      "venue": "Feinstein's at Hotel Nikko",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Cabaret and standards in the hotel room that books them. From the sweep."
+    },
+    {
+      "id": "11-21-no-fucking-good-with-die-mad",
+      "date": "2026-11-21",
+      "title": "No Fucking Good with Die Mad",
+      "venue": "Hotel Utah Saloon",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The city's oldest saloon stage, two loud bands. From the sweep; no time."
+    },
+    {
+      "id": "11-21-pretty-lights",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "Pretty Lights",
+      "venue": "Fox Theater",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "electronic and club",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "note": "The third and last of the run. Doors 6:30; take BART."
+    },
+    {
+      "id": "11-21-ozomatli-with-deuce-eclipse",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "Ozomatli with Deuce Eclipse",
+      "venue": "The UC Theatre",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "latin and cumbia",
+        "hip-hop",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$35",
+      "note": "Thirty years of Los Angeles cumbia-funk-hip-hop with the horn section intact. Sold out. Doors seven, $35."
+    },
+    {
+      "id": "11-21-martin-lawrence-y-all-still-know-what-it-is-with-loni-lo",
+      "date": "2026-11-21",
+      "title": "Martin Lawrence: Y'all Still Know What It Is, with Loni Love and Benji Brown",
+      "venue": "Paramount Theatre",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "In the Paramount's art deco house, which is worth the ticket on its own. No time published."
+    },
+    {
+      "id": "11-21-gerald-albright",
+      "date": "2026-11-21",
+      "title": "Gerald Albright",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz",
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "price": "$38-89",
+      "note": "The second of two nights. $38–89."
+    },
+    {
+      "id": "11-21-lucy-kaplansky",
+      "date": "2026-11-21",
+      "title": "Lucy Kaplansky",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "ticketed",
+      "note": "Thirty-five years of New York folk songwriting, sung in a room built to hear it."
+    },
+    {
+      "id": "11-21-trans-day-of-revenge-a-benefit-show",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "Trans Day of Revenge: A Benefit Show",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Five dollars, all ages, and the money goes somewhere. Gilman at its most itself."
+    },
+    {
+      "id": "11-21-make-do-and-mend-with-hushmoney-and-mutt",
+      "date": "2026-11-21",
+      "title": "Make Do and Mend with HUSHMONEY and Mutt",
+      "venue": "Thee Stork Club",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Connecticut post-hardcore. Found on the sweep — Thee Stork Club's own calendar returned no dates this run."
+    },
+    {
+      "id": "11-21-surely-tempo-with-carver-commodore",
+      "date": "2026-11-21",
+      "title": "Surely Tempo with Carver Commodore",
+      "venue": "Cornerstone",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "From the sweep; Cornerstone's calendar did not load."
+    },
+    {
+      "id": "11-21-bbymutha",
+      "date": "2026-11-21",
+      "title": "Bbymutha",
+      "venue": "CryBaby",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Chattanooga rapper with one of the sharpest pens in Southern rap, in a small Oakland room. From the sweep; no time published."
+    },
+    {
+      "id": "11-21-asha-wells-with-sophia-yau-weeks-and-nuxia",
+      "date": "2026-11-21",
+      "title": "Asha Wells with Sophia Yau-Weeks and Nüxia",
+      "venue": "Martial Arts",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "gallery",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "An artist-run space in Oakland, three acts. From the sweep."
+    },
+    {
+      "id": "11-22-aluminum-with-tricky-fm-and-blous3",
+      "date": "2026-11-22",
+      "title": "Aluminum with TRICKY FM and Blous3",
+      "venue": "Thee Stork Club",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Chicago post-punk, three deep, on a Sunday. From the sweep — Thee Stork Club's own calendar returned no dates this run."
+    },
+    {
+      "id": "11-21-samurai-rebellion",
+      "date": "2026-11-21",
+      "start": "15:30",
+      "title": "Samurai Rebellion",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Kobayashi and Mifune, 1967 — the second Kobayashi of the weekend and the angrier one."
+    },
+    {
+      "id": "11-21-raging-bull",
+      "date": "2026-11-21",
+      "start": "18:30",
+      "title": "Raging Bull",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Scorsese's 1980 film in the retrospective."
+    },
+    {
+      "id": "11-21-panel-hassinger-s-moving-image-work",
+      "date": "2026-11-21",
+      "start": "13:00",
+      "title": "Panel: Hassinger's Moving Image Work",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Leigh Raiford, Zana Sanders, Robyn Farrell and Kristin Juarez on Maren Hassinger's film and video, one till half two."
+    },
+    {
+      "id": "11-21-smuin-contemporary-ballet-the-christmas-ballet",
+      "date": "2026-11-21",
+      "start": "14:00",
+      "title": "Smuin Contemporary Ballet: The Christmas Ballet",
+      "venue": "Lesher Center for the Arts",
+      "city": "Walnut Creek",
+      "geo": "east-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Opening matinee of Smuin's annual double bill — a classical first half and a deliberately unserious second. The company tours Walnut Creek, Mountain View and San Francisco; these are the first dates of the run."
+    },
+    {
+      "id": "11-21-smuin-contemporary-ballet-the-christmas-ballet-2",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "Smuin Contemporary Ballet: The Christmas Ballet",
+      "venue": "Lesher Center for the Arts",
+      "city": "Walnut Creek",
+      "geo": "east-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The evening performance."
+    },
+    {
+      "id": "11-21-arts-for-oakland-kids-holiday-market",
+      "date": "2026-11-21",
+      "start": "12:00",
+      "title": "Arts for Oakland Kids Holiday Market",
+      "venue": "Arts for Oakland Kids Holiday Market",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "confidence": "low",
+      "note": "Free holiday market raising money for arts in Oakland schools. Funcheap names no address."
+    },
+    {
+      "id": "11-21-oakland-comedy-saturday-night-at-a-secret-speakeasy",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Oakland Comedy Saturday Night at a Secret Speakeasy",
+      "venue": "HellaSecret",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "confidence": "low",
+      "note": "Seven and nine, address on RSVP, free with the code."
+    },
+    {
+      "id": "11-21-hex-pest-with-the-queen-i-alpine-decline-and-flowers-for",
+      "date": "2026-11-21",
+      "title": "Hex Pest with The Queen & I, Alpine Decline and Flowers for Angela",
+      "venue": "Up The Creek Records",
+      "city": "Walnut Creek",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "gallery",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A record shop in Walnut Creek putting on four bands. From the sweep."
+    },
+    {
+      "id": "11-21-fieldress-with-sky-is-alright-starbelliedbug-and-seeyoua",
+      "date": "2026-11-21",
+      "title": "Fieldress with Sky Is Alright, starbelliedbug and seeyouatwork!",
+      "venue": "Spats",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Four-band Berkeley bill. From the sweep."
+    },
+    {
+      "id": "11-21-timex-social-club",
+      "date": "2026-11-21",
+      "title": "Timex Social Club",
+      "venue": "Historic BAL Theatre",
+      "city": "San Leandro",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Vallejo group behind Rumors, in a 1940s neighbourhood cinema. San Leandro is in no region's list; filed east-bay by proximity."
+    },
+    {
+      "id": "11-21-science-cal-lecture",
+      "date": "2026-11-21",
+      "start": "11:00",
+      "title": "Science@Cal Lecture",
+      "venue": "UC Berkeley",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "confidence": "low",
+      "note": "The free monthly public science lecture on campus. Funcheap names no hall."
+    },
+    {
+      "id": "11-21-arcangel",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Arcángel",
+      "venue": "San Jose Civic",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "latin and cumbia",
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Puerto Rican reggaetonero whose early mixtapes built half the genre's vocabulary. The Civic publishes no time."
+    },
+    {
+      "id": "11-21-san-jose-sharks-vs-seattle-kraken-anime-night",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "San Jose Sharks vs Seattle Kraken: Anime Night",
+      "venue": "SAP Center",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "sports"
+      ],
+      "venue_type": "arena",
+      "cost": "ticketed",
+      "note": "The Kraken in, with an anime theme round it. Cheap, walkable from Diridon and atmospheric, which is the whole case for minor-league-feeling NHL."
+    },
+    {
+      "id": "11-21-the-who-s-tommy",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Fifth of six performances."
+    },
+    {
+      "id": "11-21-the-wizard-of-oz",
+      "date": "2026-11-21",
+      "start": "14:00",
+      "title": "The Wizard of Oz",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "from $47",
+      "note": "A touring Wizard of Oz in Mountain View's own hall — the matinee at two, with an evening performance at half seven. From $47."
+    },
+    {
+      "id": "11-21-the-wizard-of-oz-2",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "The Wizard of Oz",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The evening performance."
+    },
+    {
+      "id": "11-21-the-1940s-radio-hour",
+      "date": "2026-11-21",
+      "title": "The 1940s Radio Hour",
+      "venue": "City Lights Theater Company",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A 1942 radio broadcast staged live, in a run to 20 December. City Lights publishes no performance times and its own pages disagree about the opening date, so this is the run and not a confirmed curtain."
+    },
+    {
+      "id": "11-21-slushii",
+      "date": "2026-11-21",
+      "start": "22:00",
+      "title": "SLUSHII",
+      "venue": "PURE Nightclub",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "note": "Ten o'clock, 21+."
+    },
+    {
+      "id": "11-21-gianmarco-soresi",
+      "date": "2026-11-21",
+      "start": "19:30",
+      "title": "Gianmarco Soresi",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "Fourth night; two shows."
+    },
+    {
+      "id": "11-21-cristela-alonzo",
+      "date": "2026-11-21",
+      "title": "Cristela Alonzo",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Two shows the same night the Soresi run is in the other slot — check which room. From the sweep."
+    },
+    {
+      "id": "11-21-sfcc-presents-stand-up-stars-what-the-cluck",
+      "date": "2026-11-21",
+      "start": "15:00",
+      "title": "SFCC presents Stand Up Stars: What The Cluck",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "A three o'clock showcase."
+    },
+    {
+      "id": "11-21-ryan-goodcase",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Ryan Goodcase",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "The second of two nights."
+    },
+    {
+      "id": "11-21-sholeh-asgary",
+      "date": "2026-11-21",
+      "title": "Sholeh Asgary",
+      "venue": "San Jose Museum of Art",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert",
+        "museum"
+      ],
+      "venue_type": "museum",
+      "genre": [
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Iranian-American sound artist performing in the museum — santur, water and oscillators. The museum's calendar returned a server error, so this is from the sweep."
+    },
+    {
+      "id": "11-21-myles-weber",
+      "date": "2026-11-21",
+      "title": "Myles Weber",
+      "venue": "Tiki Pete",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A downtown San Jose tiki bar with a stage. From the sweep."
+    },
+    {
+      "id": "11-21-filoli-holiday-daytime-and-holiday-lights",
+      "date": "2026-11-21",
+      "start": "10:00",
+      "title": "Filoli Holiday Daytime and Holiday Lights",
+      "venue": "Filoli",
+      "city": "Woodside",
+      "geo": "peninsula",
+      "type": [
+        "outdoor",
+        "museum"
+      ],
+      "venue_type": "estate",
+      "cost": "ticketed",
+      "outdoor": true,
+      "note": "The holiday season is open: the house and gardens ten till half three daily to 10 January, and Holiday Lights four till ten to 11 December. The hillside lot is $10 and fills on a Saturday."
+    },
+    {
+      "id": "11-21-arion-press-public-tour",
+      "date": "2026-11-21",
+      "start": "10:00",
+      "title": "Arion Press Public Tour",
+      "venue": "Fort Mason Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "museum"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The third-Saturday tour of a working letterpress and type foundry — hot metal, hand binding, a full shop still in use."
+    },
+    {
+      "id": "11-21-queer-history-tour-unspeakable-vice",
+      "date": "2026-11-21",
+      "start": "10:00",
+      "title": "Queer History Tour: Unspeakable Vice",
+      "venue": "San Francisco Historical Society",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Ten till half eleven. One of three Historical Society walks on Saturday."
+    },
+    {
+      "id": "11-21-queer-history-tour-valley-of-the-queens",
+      "date": "2026-11-21",
+      "start": "13:00",
+      "title": "Queer History Tour: Valley of the Queens",
+      "venue": "San Francisco Historical Society",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "One till half two."
+    },
+    {
+      "id": "11-21-walking-tour-the-1906-earthquake-and-fire",
+      "date": "2026-11-21",
+      "start": "11:00",
+      "title": "Walking Tour: The 1906 Earthquake and Fire",
+      "venue": "San Francisco Historical Society",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Eleven till half twelve."
+    },
+    {
+      "id": "11-21-walking-tour-bar-and-cocktail-history",
+      "date": "2026-11-21",
+      "start": "14:30",
+      "title": "Walking Tour: Bar and Cocktail History",
+      "venue": "The Landing at Leidesdorff",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "food"
+      ],
+      "venue_type": "street",
+      "cost": "ticketed",
+      "note": "Half two till quarter past four, which is the correct time of day for it."
+    },
+    {
+      "id": "11-22-golden-state-warriors-vs-boston-celtics",
+      "date": "2026-11-22",
+      "start": "17:30",
+      "title": "Golden State Warriors vs Boston Celtics",
+      "venue": "Chase Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "sports"
+      ],
+      "venue_type": "arena",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The only Warriors home game in the window — they are away the 16th to the 19th. Chase Center's own events page returned nothing readable this run, so the tip-off time is from a resale listing."
+    },
+    {
+      "id": "11-22-divine-offering-celebrating-the-legacy-of-alice-coltrane",
+      "date": "2026-11-22",
+      "start": "20:00",
+      "title": "Divine Offering: Celebrating the Legacy of Alice Coltrane, with Sita Michelle Coltrane",
+      "venue": "Great American Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "jazz",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "price": "$39.50-45",
+      "featured": true,
+      "note": "Alice Coltrane's granddaughter among the players in a night of the harp-and-organ devotional music — the Journey in Satchidananda side of the catalogue rather than the free-jazz side. Doors seven, $39.50–45."
+    },
+    {
+      "id": "11-22-brian-blade-fellowship",
+      "date": "2026-11-22",
+      "title": "Brian Blade Fellowship",
+      "venue": "Miner Auditorium, SFJAZZ",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Blade's own band rather than the Wayne Shorter chair — the drummer as a composer of quiet, gospel-shaped tunes. The only SFJAZZ main-hall date this week, and JamBase, the usual route in, did not have it; found on the sweep."
+    },
+    {
+      "id": "11-22-mark-william-lewis-with-claire-rousay",
+      "date": "2026-11-22",
+      "start": "20:00",
+      "title": "Mark William Lewis with claire rousay",
+      "venue": "The Independent",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "experimental and improv",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "note": "Lewis's spare, tape-saturated songs, with claire rousay — whose field-recording ambient work has become one of the most imitated sounds of the decade — opening."
+    },
+    {
+      "id": "11-22-boston-manor-with-ben-quad-and-super-sometimes",
+      "date": "2026-11-22",
+      "start": "20:00",
+      "title": "Boston Manor with Ben Quad and Super Sometimes",
+      "venue": "August Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "Blackpool post-hardcore that has grown heavier with each record."
+    },
+    {
+      "id": "11-22-qendresa",
+      "date": "2026-11-22",
+      "start": "20:00",
+      "title": "Qendresa",
+      "venue": "Rickshaw Stop",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "$25-28",
+      "confidence": "low",
+      "note": "Support unannounced at time of writing. Doors seven, $25–28."
+    },
+    {
+      "id": "11-22-verst-with-browntown-west-and-sweet-chariot",
+      "date": "2026-11-22",
+      "start": "16:30",
+      "title": "Verst with Browntown West and Sweet Chariot",
+      "venue": "Bottom of the Hill",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "price": "$15-20",
+      "note": "A half-four Sunday matinee, three local bands, $15 advance. Doors four."
+    },
+    {
+      "id": "11-22-brutalismus-3000",
+      "date": "2026-11-22",
+      "title": "Brutalismus 3000",
+      "venue": "Regency Ballroom",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Both mirrors put the duo here tonight, a day after the Warfield has them on its own site. One of the two is probably wrong and the Regency publishes nothing to settle it."
+    },
+    {
+      "id": "11-22-al-from-hell-fest-with-dylan-carlson-of-earth-esther-blu",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "AL From Hell Fest, with Dylan Carlson of Earth, Esther Blue, DJ Puto Escobar",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "festival"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "metal",
+        "experimental and improv"
+      ],
+      "cost": "ticketed",
+      "note": "An all-day benefit with Dylan Carlson — Earth's guitarist, who more or less invented drone metal — playing a 150-cap bar in the afternoon. Off the DICE calendar."
+    },
+    {
+      "id": "11-22-punksgiving-janky-band-sparkle-plenty-plaq",
+      "date": "2026-11-22",
+      "start": "19:00",
+      "title": "Punksgiving: Janky Band, Sparkle Plenty, PLAQ",
+      "venue": "Kilowatt",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "The evening half of Kilowatt's Sunday, three local punk bands."
+    },
+    {
+      "id": "11-22-reggae-sunday-strictly-rockers-reggae-dance-party",
+      "date": "2026-11-22",
+      "start": "21:00",
+      "title": "Reggae Sunday: Strictly Rockers Reggae Dance Party",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "reggae"
+      ],
+      "cost": "ticketed",
+      "note": "Roots and rockers on 45s, as every Sunday. Off the DICE calendar."
+    },
+    {
+      "id": "11-22-the-90s-simpsons-trivia-happy-hour",
+      "date": "2026-11-22",
+      "start": "17:00",
+      "title": "The '90s Simpsons Trivia Happy Hour",
+      "venue": "The Knockout",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free",
+      "note": "Five o'clock, and the DICE calendar lists it twice; it is one event."
+    },
+    {
+      "id": "11-22-lindy-in-the-park",
+      "date": "2026-11-22",
+      "start": "11:00",
+      "title": "Lindy in the Park",
+      "venue": "JFK Drive, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Thirty-odd years of free swing dancing on a closed stretch of JFK Drive, eleven till two, with a free lesson at the start. Weather permitting, which in November means check."
+    },
+    {
+      "id": "11-22-golden-gate-park-sunday-roller-disco",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "Golden Gate Park Sunday Roller Disco",
+      "venue": "Skatin' Place, Golden Gate Park",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "dance",
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "cost": "free",
+      "outdoor": true,
+      "note": "One till five at the Sixth Avenue skate circle. Free, sound system, and the best free spectacle in the park."
+    },
+    {
+      "id": "11-22-san-francisco-fall-holiday-chocolate-salon",
+      "date": "2026-11-22",
+      "start": "11:00",
+      "title": "San Francisco Fall Holiday Chocolate Salon",
+      "venue": "San Francisco County Fair Building",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "food",
+        "festival"
+      ],
+      "venue_type": "civic",
+      "cost": "ticketed",
+      "price": "$18.47",
+      "note": "Small chocolate makers from across the state, tasting all day in the old County Fair Building. $18.47 early bird."
+    },
+    {
+      "id": "11-22-sundays-at-the-beach-free-yoga",
+      "date": "2026-11-22",
+      "start": "12:00",
+      "title": "Sundays at the Beach: Free Yoga",
+      "venue": "The Great Highway",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Free yoga on the car-free Great Highway at noon."
+    },
+    {
+      "id": "11-22-free-heydoh-tasting-pop-up",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "Free Heydoh Tasting Pop-Up",
+      "venue": "Ferry Building",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "food"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "note": "A free tasting in the Ferry Building, one o'clock."
+    },
+    {
+      "id": "11-22-fort-mason-farmers-market",
+      "date": "2026-11-22",
+      "start": "09:30",
+      "title": "Fort Mason Farmers Market",
+      "venue": "Fort Mason Center",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "market",
+        "food",
+        "outdoor"
+      ],
+      "venue_type": "civic",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Half nine till half one on the Fort Mason parade ground, every Sunday."
+    },
+    {
+      "id": "11-22-s-f-comedy-showcase",
+      "date": "2026-11-22",
+      "start": "19:00",
+      "title": "S.F. Comedy Showcase",
+      "venue": "Punch Line Comedy Club",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "The Punch Line's long-running Sunday showcase, which is where most Bay Area comics were first seen."
+    },
+    {
+      "id": "11-22-punch-line-secret-guest-list-your-next-comic",
+      "date": "2026-11-22",
+      "start": "16:00",
+      "title": "Punch Line Secret Guest List: Your Next Comic",
+      "venue": "Punch Line Comedy Club",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "free-ticketed",
+      "note": "A new-faces showcase, free with an RSVP."
+    },
+    {
+      "id": "11-22-free-sunday-comedy-night",
+      "date": "2026-11-22",
+      "start": "19:00",
+      "title": "Free Sunday Comedy Night",
+      "venue": "The Function",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "The nightly room's Sunday edition."
+    },
+    {
+      "id": "11-22-sunday-b3-sessions",
+      "date": "2026-11-22",
+      "title": "Sunday B3 Sessions",
+      "venue": "Madrone Art Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "bar",
+      "genre": [
+        "soul and funk",
+        "jazz"
+      ],
+      "cost": "free",
+      "note": "Hammond organ trio in the Divisadero bar, as every Sunday. No time published."
+    },
+    {
+      "id": "11-22-thick-tired-a-drag-show-with-fierce-fat-flea-market",
+      "date": "2026-11-22",
+      "title": "Thick & Tired: A Drag Show, with Fierce Fat Flea Market",
+      "venue": "Madrone Art Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "theater",
+        "market"
+      ],
+      "venue_type": "bar",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A drag show with a fat-positive flea market round it. Madrone publishes no times."
+    },
+    {
+      "id": "11-22-rouge",
+      "date": "2026-11-22",
+      "start": "18:00",
+      "title": "Rouge",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Stanley Kwan's 1988 Hong Kong ghost story, with Anita Mui."
+    },
+    {
+      "id": "11-22-the-human-condition-iii-a-soldier-s-prayer",
+      "date": "2026-11-22",
+      "start": "13:30",
+      "title": "The Human Condition III: A Soldier's Prayer",
+      "venue": "BAMPFA",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "film"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "The last part of Kobayashi's nine-hour trilogy, which closes the weekend's run of him. Half one — clear the afternoon."
+    },
+    {
+      "id": "11-22-the-oz-noy-trio-featuring-dave-weckl",
+      "date": "2026-11-22",
+      "start": "19:00",
+      "title": "The Oz Noy Trio featuring Dave Weckl",
+      "venue": "Yoshi's",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "price": "$36-79",
+      "note": "Israeli-American guitarist with one of fusion's most-recorded drummers. $36–79."
+    },
+    {
+      "id": "11-22-uc-jazz-ensembles",
+      "date": "2026-11-22",
+      "title": "UC Jazz Ensembles",
+      "venue": "Freight & Salvage",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "concert-hall",
+      "genre": [
+        "jazz"
+      ],
+      "cost": "ticketed",
+      "note": "The university's student big bands and combos in a professional room, which is how they should be heard."
+    },
+    {
+      "id": "11-22-power-rob-eclectotron-bi-score",
+      "date": "2026-11-22",
+      "start": "18:30",
+      "title": "Power Rob, Eclectotron, BI-SCORE",
+      "venue": "924 Gilman",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "price": "$5",
+      "note": "Five dollars, all ages."
+    },
+    {
+      "id": "11-22-motorbabe-with-a-rock-legend-and-three-towers",
+      "date": "2026-11-22",
+      "title": "Motorbäbe with A Rock Legend and Three Towers",
+      "venue": "Ivy Room",
+      "city": "Albany",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "tribute and legacy acts"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "An all-woman Mötley Crüe tribute with a Thin Lizzy tribute under it. Through JamBase; no time."
+    },
+    {
+      "id": "11-22-hawaiian-arts-fest-with-kumu-kawika-alfiche-and-halau-o",
+      "date": "2026-11-22",
+      "start": "12:00",
+      "title": "Hawaiian Arts Fest with Kumu Kawika Alfiche and Hālau o Keikiali'i",
+      "venue": "Oakland Asian Cultural Center",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "festival",
+        "dance",
+        "talk"
+      ],
+      "venue_type": "civic",
+      "cost": "free-ticketed",
+      "note": "Noon till five of hula, chant and craft with one of the Bay Area's senior kumu hula. Free with registration, and the single best free cultural event of the Sunday."
+    },
+    {
+      "id": "11-22-free-oakland-up-market",
+      "date": "2026-11-22",
+      "start": "12:00",
+      "title": "Free Oakland Up Market",
+      "venue": "Free Oakland Up",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "market",
+        "outdoor"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "Noon till four: everything outdoors is free to take, one indoor item free per person. A giveaway rather than a market."
+    },
+    {
+      "id": "11-22-smuin-contemporary-ballet-the-christmas-ballet",
+      "date": "2026-11-22",
+      "start": "14:00",
+      "title": "Smuin Contemporary Ballet: The Christmas Ballet",
+      "venue": "Lesher Center for the Arts",
+      "city": "Walnut Creek",
+      "geo": "east-bay",
+      "type": [
+        "dance"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The third and last Walnut Creek performance; the run moves to Mountain View in December."
+    },
+    {
+      "id": "11-22-jamie-swing-with-dj-c1-mario-dubbz-and-mike-carpenter",
+      "date": "2026-11-22",
+      "title": "Jamie Swing with DJ C1, Mario Dubbz and Mike Carpenter",
+      "venue": "Dragon Gate",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Four DJs in an Oakland room. From the sweep."
+    },
+    {
+      "id": "11-22-the-who-s-tommy",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The matinee; the run closes with a 6:30 performance."
+    },
+    {
+      "id": "11-22-the-who-s-tommy-2",
+      "date": "2026-11-22",
+      "start": "18:30",
+      "title": "The Who's Tommy",
+      "venue": "San Jose Center for the Performing Arts",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Closing performance of six."
+    },
+    {
+      "id": "11-22-opera-san-jose-fiddler-on-the-roof",
+      "date": "2026-11-22",
+      "start": "14:00",
+      "title": "Opera San José: Fiddler on the Roof",
+      "venue": "California Theatre",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "theater",
+        "concert"
+      ],
+      "venue_type": "theater",
+      "genre": [
+        "classical and opera"
+      ],
+      "cost": "ticketed",
+      "note": "The Sunday matinee. The run continues to 29 November."
+    },
+    {
+      "id": "11-22-the-wizard-of-oz",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "The Wizard of Oz",
+      "venue": "Mountain View Center for the Performing Arts",
+      "city": "Mountain View",
+      "geo": "south-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The closing matinee."
+    },
+    {
+      "id": "11-22-concision-with-as-my-ashes-blur-the-sky-a-november-morni",
+      "date": "2026-11-22",
+      "start": "18:00",
+      "title": "Concision with As My Ashes Blur the Sky, A November Morning, State of Reliance, Wallie",
+      "venue": "The Ritz",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal",
+        "punk and hardcore"
+      ],
+      "cost": "ticketed",
+      "note": "Five-band metalcore bill, doors six. The deepest local bill in the South Bay this week."
+    },
+    {
+      "id": "11-22-johnny-taylor-jr",
+      "date": "2026-11-22",
+      "start": "19:00",
+      "title": "Johnny Taylor Jr.",
+      "venue": "Rooster T. Feathers",
+      "city": "Sunnyvale",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "Sunday night at the Sunnyvale club."
+    },
+    {
+      "id": "11-22-gianmarco-soresi",
+      "date": "2026-11-22",
+      "start": "19:30",
+      "title": "Gianmarco Soresi",
+      "venue": "San Jose Improv",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "note": "The last of the ten-show run."
+    },
+    {
+      "id": "11-22-sebastian-ayala",
+      "date": "2026-11-22",
+      "title": "Sebastián Ayala",
+      "venue": "El Nuevo Rodeo San José",
+      "city": "San Jose",
+      "geo": "south-bay",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "latin and cumbia"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Regional Mexican at a San Jose dance hall. From the sweep; no time."
+    },
+    {
+      "id": "11-22-sunday-music-in-the-square-jimbo-trout",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "Sunday Music in the Square: JimBo Trout",
+      "venue": "Noe Valley Town Square",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "An hour of old-time and jug-band music on the square, free. Amy Obenski follows at two."
+    },
+    {
+      "id": "11-22-sunday-music-in-the-square-amy-obenski",
+      "date": "2026-11-22",
+      "start": "14:00",
+      "title": "Sunday Music in the Square: Amy Obenski",
+      "venue": "Noe Valley Town Square",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert",
+        "outdoor"
+      ],
+      "venue_type": "park",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "free",
+      "outdoor": true,
+      "note": "Santa Cruz songwriter, second of the square's two free Sunday sets."
+    },
+    {
+      "id": "11-22-filoli-unwrapped",
+      "date": "2026-11-22",
+      "start": "11:00",
+      "title": "Filoli Unwrapped",
+      "venue": "Filoli",
+      "city": "Woodside",
+      "geo": "peninsula",
+      "type": [
+        "talk",
+        "museum"
+      ],
+      "venue_type": "estate",
+      "cost": "ticketed",
+      "note": "The last of three this week."
+    },
+    {
+      "id": "11-22-free-spanish-language-tour-of-the-cantor-arts-center",
+      "date": "2026-11-22",
+      "start": "14:00",
+      "title": "Free Spanish-Language Tour of the Cantor Arts Center",
+      "venue": "Cantor Arts Center",
+      "city": "Stanford",
+      "geo": "peninsula",
+      "type": [
+        "museum",
+        "talk"
+      ],
+      "venue_type": "museum",
+      "cost": "free",
+      "note": "A free docent tour in Spanish, two o'clock, no reservation. The Cantor is free anyway and this is the better way through it."
+    },
+    {
+      "id": "11-22-the-42nd-great-dickens-christmas-fair",
+      "date": "2026-11-22",
+      "start": "10:00",
+      "title": "The 42nd Great Dickens Christmas Fair",
+      "venue": "Cow Palace",
+      "city": "Daly City",
+      "geo": "peninsula",
+      "type": [
+        "festival",
+        "market",
+        "theater"
+      ],
+      "venue_type": "convention-center",
+      "cost": "ticketed",
+      "price": "from $35",
+      "note": "Second day of the opening weekend, ten till six. Online tickets only. Daly City is in no region's list; filed peninsula by proximity."
+    },
+    {
+      "id": "11-22-agriculture",
+      "date": "2026-11-22",
+      "title": "Agriculture",
+      "venue": "Felton Music Hall",
+      "city": "Felton",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "metal"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The Felton date after August Hall on Saturday, which is the one to take."
+    },
+    {
+      "id": "11-22-marin-bluegrass-sessions",
+      "date": "2026-11-22",
+      "start": "12:00",
+      "title": "Marin Bluegrass Sessions",
+      "venue": "Sweetwater Music Hall",
+      "city": "Mill Valley",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "folk and americana"
+      ],
+      "cost": "free",
+      "note": "Free, noon, no ticket — a monthly open bluegrass session in a proper music hall. The only outer-region listing this week that is free."
+    },
+    {
+      "id": "11-22-the-anthony-paule-soul-orchestra",
+      "date": "2026-11-22",
+      "start": "20:00",
+      "title": "The Anthony Paule Soul Orchestra",
+      "venue": "Sweetwater Music Hall",
+      "city": "Mill Valley",
+      "geo": "outer",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "soul and funk"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "A ten-piece Bay Area soul revue with a horn section that has backed most of the surviving West Coast blues singers. Doors seven."
+    },
+    {
+      "id": "11-16-closure",
+      "date": "2026-11-16",
+      "start": "18:00",
+      "title": "Closure",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A limited run at the Roxie; the calendar names no series for it."
+    },
+    {
+      "id": "11-16-fatherland",
+      "date": "2026-11-16",
+      "start": "18:00",
+      "title": "Fatherland",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Playing across the week in a limited run — the Roxie's calendar names no series, so what it belongs to is unconfirmed."
+    },
+    {
+      "id": "11-16-the-history-of-concrete",
+      "date": "2026-11-16",
+      "start": "20:20",
+      "title": "The History of Concrete",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Late-night programming in a limited run. No series named."
+    },
+    {
+      "id": "11-17-naza",
+      "date": "2026-11-17",
+      "start": "18:00",
+      "title": "NAZA",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A limited run with two showtimes across the week. No series named."
+    },
+    {
+      "id": "11-17-la-bola-negra",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "La Bola Negra",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The week's most-screened title at the Roxie — five showtimes between Tuesday and Sunday, one of them open-captioned. No series named. This showtime is open captioned."
+    },
+    {
+      "id": "11-17-fjord",
+      "date": "2026-11-17",
+      "start": "20:00",
+      "title": "Fjord",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "One showtime, open-captioned. No series named."
+    },
+    {
+      "id": "11-18-the-history-of-concrete",
+      "date": "2026-11-18",
+      "start": "18:00",
+      "title": "The History of Concrete",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Late-night programming in a limited run. No series named."
+    },
+    {
+      "id": "11-19-los-domingos",
+      "date": "2026-11-19",
+      "start": "18:00",
+      "title": "Los Domingos",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A single Thursday showtime in a limited run."
+    },
+    {
+      "id": "11-19-la-bola-negra",
+      "date": "2026-11-19",
+      "start": "20:00",
+      "title": "La Bola Negra",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The week's most-screened title at the Roxie — five showtimes between Tuesday and Sunday, one of them open-captioned. No series named."
+    },
+    {
+      "id": "11-20-on-the-road-en-el-camino",
+      "date": "2026-11-20",
+      "start": "18:00",
+      "title": "On the Road (En el Camino)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A limited run, three showtimes across the weekend."
+    },
+    {
+      "id": "11-20-who-killed-alex-odeh",
+      "date": "2026-11-20",
+      "start": "20:10",
+      "title": "Who Killed Alex Odeh?",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The documentary on the 1985 killing of the Arab-American Anti-Discrimination Committee's West Coast director in Santa Ana, which remains unsolved. Four showtimes."
+    },
+    {
+      "id": "11-21-la-bola-negra",
+      "date": "2026-11-21",
+      "start": "13:10",
+      "title": "La Bola Negra",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The week's most-screened title at the Roxie — five showtimes between Tuesday and Sunday, one of them open-captioned. No series named."
+    },
+    {
+      "id": "11-21-naza",
+      "date": "2026-11-21",
+      "start": "15:00",
+      "title": "NAZA",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A limited run with two showtimes across the week. No series named."
+    },
+    {
+      "id": "11-21-on-the-road-en-el-camino",
+      "date": "2026-11-21",
+      "start": "16:20",
+      "title": "On the Road (En el Camino)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A limited run, three showtimes across the weekend."
+    },
+    {
+      "id": "11-21-who-killed-alex-odeh",
+      "date": "2026-11-21",
+      "start": "16:50",
+      "title": "Who Killed Alex Odeh?",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The documentary on the 1985 killing of the Arab-American Anti-Discrimination Committee's West Coast director in Santa Ana, which remains unsolved. Four showtimes."
+    },
+    {
+      "id": "11-21-zhang-yimou-s-raise-the-red-lantern-4k-restoration",
+      "date": "2026-11-21",
+      "start": "18:35",
+      "title": "Zhang Yimou's Raise the Red Lantern (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The 1991 film restored — Gong Li in the role that made her. Four more showtimes after Friday's co-presentation."
+    },
+    {
+      "id": "11-21-fatherland",
+      "date": "2026-11-21",
+      "start": "18:45",
+      "title": "Fatherland",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Playing across the week in a limited run — the Roxie's calendar names no series, so what it belongs to is unconfirmed."
+    },
+    {
+      "id": "11-21-la-bola-negra-2",
+      "date": "2026-11-21",
+      "start": "20:40",
+      "title": "La Bola Negra",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The week's most-screened title at the Roxie — five showtimes between Tuesday and Sunday, one of them open-captioned. No series named."
+    },
+    {
+      "id": "11-22-zhang-yimou-s-raise-the-red-lantern-4k-restoration",
+      "date": "2026-11-22",
+      "start": "12:20",
+      "title": "Zhang Yimou's Raise the Red Lantern (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The 1991 film restored — Gong Li in the role that made her. Four more showtimes after Friday's co-presentation."
+    },
+    {
+      "id": "11-22-birds-of-war",
+      "date": "2026-11-22",
+      "start": "15:00",
+      "title": "Birds of War",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A documentary with a post-film conversation, three o'clock Sunday. This showtime is with a post-film Q&A."
+    },
+    {
+      "id": "11-22-who-killed-alex-odeh",
+      "date": "2026-11-22",
+      "start": "15:05",
+      "title": "Who Killed Alex Odeh?",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The documentary on the 1985 killing of the Arab-American Anti-Discrimination Committee's West Coast director in Santa Ana, which remains unsolved. Four showtimes."
+    },
+    {
+      "id": "11-22-on-the-road-en-el-camino",
+      "date": "2026-11-22",
+      "start": "17:00",
+      "title": "On the Road (En el Camino)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A limited run, three showtimes across the weekend."
+    },
+    {
+      "id": "11-22-zhang-yimou-s-raise-the-red-lantern-4k-restoration-2",
+      "date": "2026-11-22",
+      "start": "17:40",
+      "title": "Zhang Yimou's Raise the Red Lantern (4K restoration)",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The 1991 film restored — Gong Li in the role that made her. Four more showtimes after Friday's co-presentation."
+    },
+    {
+      "id": "11-22-fatherland",
+      "date": "2026-11-22",
+      "start": "19:05",
+      "title": "Fatherland",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Playing across the week in a limited run — the Roxie's calendar names no series, so what it belongs to is unconfirmed."
+    },
+    {
+      "id": "11-22-la-bola-negra",
+      "date": "2026-11-22",
+      "start": "20:15",
+      "title": "La Bola Negra",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The week's most-screened title at the Roxie — five showtimes between Tuesday and Sunday, one of them open-captioned. No series named."
+    },
+    {
+      "id": "11-22-the-history-of-concrete",
+      "date": "2026-11-22",
+      "start": "21:00",
+      "title": "The History of Concrete",
+      "venue": "Roxie Theater",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Late-night programming in a limited run. No series named."
+    },
+    {
+      "id": "11-18-new-people-minotaur",
+      "date": "2026-11-18",
+      "start": "18:30",
+      "title": "New People: Minotaur",
+      "venue": "New People Cinema",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "In the Japantown cinema's own series. The title appears only in the Roxie's calendar grid."
+    },
+    {
+      "id": "11-22-new-people-a-deeper-love-the-story-of-miss-peppermint",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "New People: A Deeper Love — The Story of Miss Peppermint",
+      "venue": "New People Cinema",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "The documentary on the drag performer and Broadway actor, in the Japantown series."
+    },
+    {
+      "id": "11-22-new-people-in-the-mood-for-love",
+      "date": "2026-11-22",
+      "start": "13:00",
+      "title": "New People: In the Mood for Love",
+      "venue": "New People Cinema",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "A second Sunday showtime for the Wong Kar-wai, at the same hour as the Peppermint film — the two clash inside one building."
+    },
+    {
+      "id": "11-22-new-people-asako-i-ii",
+      "date": "2026-11-22",
+      "start": "15:15",
+      "title": "New People: Asako I & II",
+      "venue": "New People Cinema",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "film"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "note": "Ryusuke Hamaguchi's 2018 film, before Drive My Car made his name here."
+    },
+    {
+      "id": "11-20-bayonne-the-filters-tour-with-bobbing",
+      "date": "2026-11-20",
+      "start": "21:00",
+      "title": "Bayonne: The Filters Tour, with Bobbing",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club",
+        "indie and art rock"
+      ],
+      "cost": "ticketed",
+      "price": "$34.77",
+      "note": "Roger Sellers's one-man loop-built electronic pop, which is more physical live than on record. Sold out. Doors eight, $35."
+    },
+    {
+      "id": "11-21-veggi",
+      "date": "2026-11-21",
+      "title": "veggi",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "On the sweep only; Brick & Mortar's own calendar stops before this date."
+    },
+    {
+      "id": "11-21-la-reezy",
+      "date": "2026-11-21",
+      "title": "La Reezy",
+      "venue": "Brick & Mortar Music Hall",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "hip-hop"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Bay Area rap, second billing of the night at Brick & Mortar. From the sweep."
+    },
+    {
+      "id": "11-21-covenant",
+      "date": "2026-11-21",
+      "title": "Covenant",
+      "venue": "Peet's Theatre, Berkeley Rep",
+      "city": "Berkeley",
+      "geo": "east-bay",
+      "type": [
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Berkeley Rep's run of the Southern Gothic chamber piece about a bluesman said to have sold his soul, in a run from 6 November to 13 December. berkeleyrep.org redirect-looped this run and TodayTix carries no per-performance times, so this is the run and not a confirmed curtain."
+    },
+    {
+      "id": "11-21-behere-1942-a-new-lens-on-the-japanese-american-incarcer",
+      "date": "2026-11-21",
+      "title": "BeHere / 1942: A New Lens on the Japanese American Incarceration",
+      "venue": "Oakland Museum of California",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Augmented-reality portraits built from the 1942 removal photographs, shown in the Great Hall. On view."
+    },
+    {
+      "id": "11-21-collecting-a-moment",
+      "date": "2026-11-21",
+      "title": "Collecting a Moment",
+      "venue": "Oakland Museum of California",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "A hang drawn from recent acquisitions. On view in the Art Gallery."
+    },
+    {
+      "id": "11-21-you-are-here-california-stories-on-the-map",
+      "date": "2026-11-21",
+      "title": "You Are Here: California Stories on the Map",
+      "venue": "Oakland Museum of California",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "Maps as argument rather than reference. On view."
+    },
+    {
+      "id": "11-21-black-power",
+      "date": "2026-11-21",
+      "title": "Black Power",
+      "venue": "Oakland Museum of California",
+      "city": "Oakland",
+      "geo": "east-bay",
+      "type": [
+        "museum"
+      ],
+      "venue_type": "museum",
+      "cost": "ticketed",
+      "note": "The Oakland chapter of the story, told where it happened. On view in the History Gallery."
+    },
+    {
+      "id": "11-20-hellasecret-crazy-funny-asians-comedy-showcase",
+      "date": "2026-11-20",
+      "start": "19:00",
+      "title": "HellaSecret: Crazy Funny Asians Comedy Showcase",
+      "venue": "Secret San Francisco location",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "confidence": "low",
+      "note": "Address sent on RSVP, free with suggested $5–10 donations. A standing room rather than a one-off."
+    },
+    {
+      "id": "11-21-hellasecret-desi-comedy-night",
+      "date": "2026-11-21",
+      "start": "21:00",
+      "title": "HellaSecret: Desi Comedy Night",
+      "venue": "Secret San Francisco location",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "confidence": "low",
+      "note": "Seven and nine o'clock shows, free for the first hundred with an RSVP, $25 at the door. Address on RSVP."
+    },
+    {
+      "id": "11-21-crazy-funny-asians-free-comedy-showcase",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Crazy Funny Asians Free Comedy Showcase",
+      "venue": "The Function",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "The Function's Saturday booking of the same touring showcase, free with an RSVP."
+    },
+    {
+      "id": "11-21-golden-gate-comedy-night",
+      "date": "2026-11-21",
+      "start": "19:00",
+      "title": "Golden Gate Comedy Night",
+      "venue": "The Function",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "Downtown, free with an RSVP, 21+."
+    },
+    {
+      "id": "11-21-the-confessional-improv",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "The Confessional: Improv",
+      "venue": "Endgames Improv Theater & Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$11.94",
+      "note": "Long-form improv built from audience confessions. $12 with the Funcheap code."
+    },
+    {
+      "id": "11-21-your-fucked-up-relationship",
+      "date": "2026-11-21",
+      "start": "21:00",
+      "title": "Your Fucked Up Relationship",
+      "venue": "Endgames Improv Theater & Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$16.37",
+      "note": "Improv from a volunteered relationship history. $16 with the code."
+    },
+    {
+      "id": "11-20-the-confessional-improv",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "The Confessional: Improv",
+      "venue": "Endgames Improv Theater & Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$11.94",
+      "note": "The Friday performance. $12 with the Funcheap code."
+    },
+    {
+      "id": "11-20-your-fucked-up-relationship",
+      "date": "2026-11-20",
+      "start": "21:00",
+      "title": "Your Fucked Up Relationship",
+      "venue": "Endgames Improv Theater & Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$16.37",
+      "note": "The Friday performance. $16 with the code."
+    },
+    {
+      "id": "11-20-the-ritual",
+      "date": "2026-11-20",
+      "start": "22:15",
+      "title": "The Ritual",
+      "venue": "Endgames Improv Theater & Bar",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$12.16",
+      "note": "The late improv slot, quarter past ten. $12 with the code."
+    },
+    {
+      "id": "11-20-the-stoner-comedy-jam",
+      "date": "2026-11-20",
+      "start": "20:00",
+      "title": "The Stoner Comedy Jam",
+      "venue": "Moe Greens",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "Stand-up in a consumption lounge, free with an RSVP, 21+, one-item minimum."
+    },
+    {
+      "id": "11-21-puff-puff-laugh-cannabis-lounge-comedy-show",
+      "date": "2026-11-21",
+      "start": "20:00",
+      "title": "Puff Puff Laugh Cannabis Lounge Comedy Show",
+      "venue": "Moe Greens",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk"
+      ],
+      "venue_type": "bar",
+      "cost": "free-ticketed",
+      "note": "The Saturday edition of the same room, free with an RSVP."
+    },
+    {
+      "id": "11-21-drunk-theatre",
+      "date": "2026-11-21",
+      "start": "21:30",
+      "title": "Drunk Theatre",
+      "venue": "Eclectic Box",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "talk",
+        "theater"
+      ],
+      "venue_type": "theater",
+      "cost": "ticketed",
+      "price": "$23.18",
+      "note": "Improvised theatre with one cast member drinking. Free for the first fifteen with the Funcheap code, $23 otherwise."
+    },
+    {
+      "id": "11-21-san-francisco-midnight-mystery-ride",
+      "date": "2026-11-21",
+      "start": "23:59",
+      "title": "San Francisco Midnight Mystery Ride",
+      "venue": "Secret San Francisco location",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "outdoor",
+        "festival"
+      ],
+      "venue_type": "street",
+      "cost": "free",
+      "outdoor": true,
+      "note": "A free group bike ride leaving at midnight from an address announced on the day. Thirty years of it now."
+    },
+    {
+      "id": "11-20-battle-of-the-decades-dj-party",
+      "date": "2026-11-20",
+      "start": "17:00",
+      "title": "Battle of the Decades DJ Party",
+      "venue": "Monroe",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "free-ticketed",
+      "note": "Free with an Eventbrite RSVP, from five, in a North Beach basement."
+    },
+    {
+      "id": "11-19-inner-circle-dance-party",
+      "date": "2026-11-19",
+      "start": "21:00",
+      "title": "Inner Circle Dance Party",
+      "venue": "White Rabbit",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "free-ticketed",
+      "note": "The standing Thursday, free with an RSVP."
+    },
+    {
+      "id": "11-19-level-up-thursdays-free-video-dj-dance-party",
+      "date": "2026-11-19",
+      "start": "21:00",
+      "title": "Level Up Thursdays: Free Video DJ Dance Party",
+      "venue": "Raven Bar & Lounge",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "free",
+      "note": "Free video DJ night on Folsom Street, nine till two."
+    },
+    {
+      "id": "11-22-mr-v",
+      "date": "2026-11-22",
+      "start": "21:00",
+      "title": "Mr V",
+      "venue": "White Rabbit",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "The New York house DJ's second Bay Area set of the weekend, after Saturday in the Mission. From the sweep; no set time published."
+    },
+    {
+      "id": "11-21-mr-v-with-julius-papp-and-franky-boissy",
+      "date": "2026-11-21",
+      "title": "Mr V with Julius Papp and Franky Boissy",
+      "venue": "Bella",
+      "city": "San Francisco",
+      "geo": "sf",
+      "type": [
+        "concert"
+      ],
+      "venue_type": "club",
+      "genre": [
+        "electronic and club"
+      ],
+      "cost": "ticketed",
+      "confidence": "low",
+      "note": "Three deep-house veterans, two of them San Franciscans. From the sweep."
+    }
+  ]
+}
